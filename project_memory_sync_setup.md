@@ -25,6 +25,12 @@ metadata:
 - 眉角：`git credential approve` 用 PowerShell 多行 stdin 一直報 missing field，但其實 push 當下 GCM 已自動存好認證，不必硬塞。git 不在 PATH，要用完整路徑 `C:\Users\Seal_Lo\AppData\Local\Programs\Git\cmd\git.exe`。
 - token 可隨時在 https://github.com/settings/tokens?type=beta Revoke。
 
+## ✅ 自動同步（2026/06/09 加裝）
+- 裝了 **Stop hook**（`~/.claude/settings.json`）：每次 Claude 回完話自動跑 `~/.claude/hooks/memory-autopush.ps1` → 對記憶 repo `git add -A`＋commit＋push，沒變更就安靜跳過、push 失敗不阻擋。
+- 腳本訊息**刻意用純英文**：PowerShell 5.1 無 BOM 會用 Big5 誤讀中文導致解析失敗。
+- 效果：使用者再也不用手動 push，這台電腦的記憶改動會自動上雲；手機/別台 pull 即同步。
+- 與既有 UserPromptSubmit hook（stock-conflicts-reminder.ps1）並存，互不影響。
+
 ## 完成後的下一步（教使用者）
 - 其他電腦：`git clone` 這個 repo。
 - 手機/別台：瀏覽器開 **claude.ai/code** → 連這個 GitHub repo → 就能用 Code 強度並接上記憶。
