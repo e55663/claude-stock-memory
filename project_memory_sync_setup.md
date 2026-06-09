@@ -25,11 +25,22 @@ metadata:
 - 眉角：`git credential approve` 用 PowerShell 多行 stdin 一直報 missing field，但其實 push 當下 GCM 已自動存好認證，不必硬塞。git 不在 PATH，要用完整路徑 `C:\Users\Seal_Lo\AppData\Local\Programs\Git\cmd\git.exe`。
 - token 可隨時在 https://github.com/settings/tokens?type=beta Revoke。
 
-## ✅ 自動同步（2026/06/09 加裝）
-- 裝了 **Stop hook**（`~/.claude/settings.json`）：每次 Claude 回完話自動跑 `~/.claude/hooks/memory-autopush.ps1` → 對記憶 repo `git add -A`＋commit＋push，沒變更就安靜跳過、push 失敗不阻擋。
+## ✅ 自動同步（2026/06/09 加裝＋強化）
+- **Stop hook**（自動 push）：每次回完話跑 `~/.claude/hooks/memory-autopush.ps1` → `git add -A`＋commit＋push，沒變更安靜跳過。**已強化**：push 被拒（別台先推）時自動 `pull --rebase --autostash` 後重推一次，避免衝突卡死。
+- **SessionStart hook**（自動 pull，2026/06/09 新增）：每次這台開 Claude 自動跑 `~/.claude/hooks/memory-autopull.ps1` → `git pull --rebase --autostash`，**解決「換台這台不會自動更新」**。實測成功。
 - 腳本訊息**刻意用純英文**：PowerShell 5.1 無 BOM 會用 Big5 誤讀中文導致解析失敗。
-- 效果：使用者再也不用手動 push，這台電腦的記憶改動會自動上雲；手機/別台 pull 即同步。
+- 效果：這台＝開場自動拉最新、回完話自動推；**真正的雙向自動同步**。
 - 與既有 UserPromptSubmit hook（stock-conflicts-reminder.ps1）並存，互不影響。
+
+## 🔐 資安清理（2026/06/09）
+- **問題**：PAT token 曾以**明文**散在 `settings.local.json` 的多條 allow 權限裡（且曾在對話中被印出 → 已外洩進 session 紀錄）。
+- **已清**：刪掉 settings.local.json 所有含 token 的 git 指令權限；確認 hook 腳本、settings.json、remote URL 全部**無 token 明文**。token 現在只存在 Windows 認證管理員（加密、正解）。
+- **⚠️ 強烈建議使用者做（我做不到，需 GitHub 登入）**：因 token 已外洩進對話紀錄，去 https://github.com/settings/tokens?type=beta **Revoke 舊 token、重新產一個**。重產後舊的認證快取會失效，下次 push 會失敗 → 需更新 Windows 認證管理員那筆 `git:https://github.com`（或重跑一次帶新 token 的 push 讓 GCM 重存）。
+
+## 📱 手機/雲端同步（2026/06/09 說明）
+- **無法從這台幫手機裝自動 hook**（settings.json 是各機各自的，雲端環境碰不到）。
+- 折衷：在 repo 的 `CLAUDE.md` 寫進「開場先 pull、改完 push」紀律＋「一次只在一台改」警告 → 隨 repo 同步到手機，手機 Claude 讀 CLAUDE.md 會照做（靠指示、非硬性 hook）。
+- 紀律：**一次只在一台改**，換台前先確認這台已 push、那台開場先 pull，避免雙邊改同檔衝突。
 
 ## 完成後的下一步（教使用者）
 - 其他電腦：`git clone` 這個 repo。
