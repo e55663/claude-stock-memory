@@ -1,6 +1,6 @@
 ---
 name: project-memory-sync-setup
-description: 跨裝置記憶同步進度（2026/06/08 起）：把記憶資料夾做成 GitHub repo，讓其他電腦/手機(claude.ai/code)也能接上記憶。git/init/commit/remote 都好了，只差最後 push 認證——明天用 PAT 完成
+description: 跨裝置記憶同步：把記憶資料夾做成私人 GitHub repo(e55663/claude-stock-memory)，讓其他電腦/手機(claude.ai/code)接上記憶。✅2026/06/09 已完成 push＋認證快取，雲端同步已通。下一步是在其他裝置 clone/連 repo
 metadata:
   node_type: memory
   type: project
@@ -17,18 +17,13 @@ metadata:
 - 已設 `user.name=Seal Lo`、`user.email=e55663@gmail.com`、`core.autocrlf=true`、全域 `credential.helper=manager`。
 - 已加 remote：`origin = https://github.com/e55663/claude-stock-memory.git`（GitHub 上 repo 已建，私人，空的）。
 
-## ⏳ 還沒做：最後一步 push（明天做）
-push 一直失敗（exit 128）。**根因**：Claude Code 的工具/`!` 都是非互動環境，GCM 的瀏覽器登入視窗彈不出來。**不要再試彈窗認證**。
-
-**改用 Fine-grained PAT（已跟使用者講好，明天他來用）：**
-1. 使用者到 https://github.com/settings/tokens?type=beta 產生 token：
-   - Repository access → Only select repositories → `claude-stock-memory`
-   - Permissions → Repository permissions → **Contents = Read and write**
-2. 使用者把 `github_pat_...` 貼給我。
-3. 我用 token 完成 push，例如：
-   `& $git -C $repo push https://e55663:<TOKEN>@github.com/e55663/claude-stock-memory.git main:main`
-   推完把 token 存進認證管理員、把 remote URL 還原乾淨（不要把 token 留在 .git/config 明文）、`git branch --set-upstream-to=origin/main main`。
-4. 提醒使用者 token 可隨時在同頁 Revoke。
+## ✅ 已完成（2026/06/09）push 與認證
+- 用 Fine-grained PAT（Contents=R/W、Metadata=R 自動帶、90天到期、到期前約1週GitHub會寄信到 e55663@gmail.com 提醒）完成首次 push：`& $git -C $repo push https://e55663:<TOKEN>@github.com/...git main:main`。
+- 認證已被 **Windows 認證管理員快取**：之後 push/pull 不用再貼 token；實測 `GIT_TERMINAL_PROMPT=0` 下 `ls-remote origin` 仍可讀＝免互動可用。
+- remote URL **乾淨無 token 明文**（token 只用在那一次性 push URL，沒寫進 .git/config）。
+- upstream 已設：`main` 追蹤 `origin/main`。
+- 眉角：`git credential approve` 用 PowerShell 多行 stdin 一直報 missing field，但其實 push 當下 GCM 已自動存好認證，不必硬塞。git 不在 PATH，要用完整路徑 `C:\Users\Seal_Lo\AppData\Local\Programs\Git\cmd\git.exe`。
+- token 可隨時在 https://github.com/settings/tokens?type=beta Revoke。
 
 ## 完成後的下一步（教使用者）
 - 其他電腦：`git clone` 這個 repo。

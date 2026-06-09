@@ -1,6 +1,6 @@
 # Memory Index
 
-- [跨裝置記憶同步設定](project_memory_sync_setup.md) — **進行中**：記憶資料夾已做成 git repo(commit 74b1e77)、remote 接好；**只差最後 push**，明天用 Fine-grained PAT(Contents讀寫)完成→之後手機可用 claude.ai/code 接上
+- [跨裝置記憶同步設定](project_memory_sync_setup.md) — **✅已完成(2026/06/09)**：記憶資料夾=私人GitHub repo(e55663/claude-stock-memory)，已push、認證快取(免再貼token)、remote乾淨。下一步：在手機/其他電腦用 claude.ai/code 連此repo 或 git clone 接上記憶
 - [不要問確認問題](feedback_no_clarifying_questions.md) — 直接回答，不在執行前問「是否要繼續」等確認問題
 - [選股與操作邏輯](stock_selection_logic.md) — 來自課程筆記的完整選股邏輯：大環境判斷、抗跌領頭羊、五檔口訣、操作紀律等
 - [持倉與觀察名單](portfolio_watchlist.md) — 持倉奇鋐(成本2695，6/3收2855+5.9%，停損2700，今晚博通定生死)；**6/4觀察清單**：聯詠5-8%(布局首選,最低估最安靜)/創見+瑞昱等回測/亞信博通條件型；6/3被動元件整族反轉，信昌電亞信潛伏證偽移除；大盤連2大漲+雞犬升天+乖離>12%近頂
