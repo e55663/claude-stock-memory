@@ -4,6 +4,7 @@
 
 - [跨裝置記憶同步設定](project_memory_sync_setup.md) — **✅雙向自動同步(2026/06/09)**：記憶=私人GitHub repo(e55663/claude-stock-memory)；這台 SessionStart自動pull+Stop自動push(含衝突自動rebase)；手機靠CLAUDE.md指示手動pull/push。資安：token明文已從設定檔清除(只留Windows認證管理員)，**⚠️待使用者Revoke重產token**(曾外洩進對話)。紀律：一次只在一台改
 - [不要問確認問題](feedback_no_clarifying_questions.md) — 直接回答，不在執行前問「是否要繼續」等確認問題
+- [不要自動產獨立檔案](feedback_no_standalone_artifacts.md) — **(6/10)** 選股/看盤結果直接對話講，別自動另存掃描txt/網頁儀表板/HTML工具(已刪桌面那兩個);使用者直接跟我談、那些是負擔。例外:記帳Excel數字清單
 - [三層權限政策](feedback_permission_tiers.md) — **✅定案(2026/06/09)**：安全操作自動放行(唯讀/改記憶/同步腳本/查股票)、危險操作一律保留確認(刪庫外檔/force push/token/裝軟體/臨時PS/對外發送/下單)；不開bypass全自動。釐清:yes/no彈窗多是harness權限關卡非我問，靠settings.local.json白名單放行
 - [重要決定自動落檔](feedback_auto_save_decisions.md) — 重要決定/計畫/結論談完，主動濃縮寫成記憶.md+更新索引，不用等使用者提醒；只存結論非流水帳
 - [信貸100W投資計畫](loan_investment_plan.md) — **討論中未實際借款**：借~100W/10年/利率希望2-3%/月付1萬(薪水1/6)/薪水還款；投0050為主台積電為輔(個股<30%)；混合分批(月定額+逢跌階梯-3/-7/-12/-20%)；停利=賺20%賣一半還本金降槓桿不空手；保命錢6個月另存；待確認利率固定/機動+APR。**(6/9更新)房貸增貸是媽媽繳非使用者→個人負債比=只有信貸1萬=1/6薪,affordability過關;卡點只剩市場風險(順序/0050集中度/熊市別砍/別吃本金)+利率細節;股票少質押排除;富邦保單可借6.3W@3.25%定位緊急緩衝非投資彈藥**
