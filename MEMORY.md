@@ -1,6 +1,6 @@
 # Memory Index
 
-- [個人記帳Excel系統](project_budget_spreadsheet.md) — **(2026/06/10)** 使用者原有成熟Excel`Downloads\數字清單.xlsx`(多卡負債/分期/里程導向,非流水帳);我做增強版`桌面\數字清單_增強版.xlsx`(總覽儀表板+日常收支+分期引擎,公式連動原資料,原檔不動有備份)。⚠️月份欄是日期序號非文字;往後要在增強版輸入。COM雷:H是別名/Value2用[double]/ps1要UTF8-BOM
+- [個人記帳Excel系統](project_budget_spreadsheet.md) — **(2026/06/10)** 使用者原有成熟Excel`Downloads\數字清單.xlsx`(多卡負債/分期/里程導向,非流水帳);我做增強版`桌面\數字清單_增強版.xlsx`(總覽儀表板+日常收支+分期引擎,公式連動原資料,原檔不動有備份)。⚠️月份欄是日期序號非文字。**(6/10)使用者決定繼續用原版,之後叫我比對原版差異→反推習慣→對症下藥改增強版;盈餘已縮12pt不放大**。COM雷:H是別名/Value2用[double]/ps1要UTF8-BOM
 
 - [跨裝置記憶同步設定](project_memory_sync_setup.md) — **✅雙向自動同步(2026/06/09)**：記憶=私人GitHub repo(e55663/claude-stock-memory)；這台 SessionStart自動pull+Stop自動push(含衝突自動rebase)；手機靠CLAUDE.md指示手動pull/push。資安：token明文已從設定檔清除(只留Windows認證管理員)，**⚠️待使用者Revoke重產token**(曾外洩進對話)。紀律：一次只在一台改
 - [不要問確認問題](feedback_no_clarifying_questions.md) — 直接回答，不在執行前問「是否要繼續」等確認問題
