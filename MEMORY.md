@@ -5,6 +5,7 @@
 - [個人記帳Excel系統](project_budget_spreadsheet.md) — **(2026/06/10)** 使用者原有成熟Excel`Downloads\數字清單.xlsx`(多卡負債/分期/里程導向,非流水帳);我做增強版`桌面\數字清單_增強版.xlsx`(總覽儀表板+日常收支+分期引擎,公式連動原資料,原檔不動有備份)。⚠️月份欄是日期序號非文字。**(6/10)使用者決定繼續用原版,之後叫我比對原版差異→反推習慣→對症下藥改增強版;盈餘已縮12pt不放大**。COM雷:H是別名/Value2用[double]/ps1要UTF8-BOM
 
 - [法國巴黎旅遊規劃](project_france_trip.md) — **(2026/06/10起規劃)** 9/17-9/27首次去巴黎(跟男友情侶遊,約10晚);什麼都想要;客家人能省則省但巴黎物價高→要省得聰明攻略。巴黎當基地+近郊一日遊;台灣免簽⚠️查ETIAS;下一步先搞機票(最會漲)再住宿再行程表
+- [AI agent自動化建置](project_ai_agent_automation.md) — **(2026/06/11起)** 使用者要把Claude打造成AI agent(參謀+管家,動錢那下留他按,守[[feedback_permission_tiers]]紅線)。選3塊:✅每日盤前股市簡報(雲端routine已建`trig_01VvpscHwEzPRodfn7azHCg3`,週一~五台北8:00,sonnet,clone記憶repo+WebFetch Yahoo,已run測試待驗證web存取/格式/push)、⏳瑣事待辦管家(待給瑣事清單)、⏳記帳整理(Excel在本機雲端碰不到,每月提醒制,待給日子)。雲端routine限制:碰不到本機檔、cron用UTC最小1hr、刪要去claude.ai/code/routines
 - [跨裝置記憶同步設定](project_memory_sync_setup.md) — **✅雙向自動同步(2026/06/09)**：記憶=私人GitHub repo(e55663/claude-stock-memory)；這台 SessionStart自動pull+Stop自動push(含衝突自動rebase)；手機靠CLAUDE.md指示手動pull/push。資安：token明文已從設定檔清除(只留Windows認證管理員)，**⚠️待使用者Revoke重產token**(曾外洩進對話)。紀律：一次只在一台改
 - [不要問確認問題](feedback_no_clarifying_questions.md) — 直接回答，不在執行前問「是否要繼續」等確認問題
 - [不要自動產獨立檔案](feedback_no_standalone_artifacts.md) — **(6/10)** 選股/看盤結果直接對話講，別自動另存掃描txt/網頁儀表板/HTML工具(已刪桌面那兩個);使用者直接跟我談、那些是負擔。例外:記帳Excel數字清單
