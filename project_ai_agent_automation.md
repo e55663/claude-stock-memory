@@ -24,7 +24,9 @@ metadata:
 - **排程:** cron `0 0 * * 1-5` = 週一~五 台北08:00(=UTC 00:00);下次 2026/06/12 08:00。
 - **環境:** env_016zgy9CveDNXym6RXLFbuBd(anthropic_cloud);**模型 claude-sonnet-4-6**;source repo=e55663/claude-stock-memory;tools=Bash/Read/Write/Edit/Glob/Grep/WebFetch/WebSearch。
 - **內容:** clone 記憶repo→讀五區塊系統等→WebFetch Yahoo(加權/漲幅榜/族群/投信外資買超)+觀察名單→輸出大盤儀表板+五區塊菜單→最終訊息給使用者 + 寫 daily_briefing_latest.md 並 git push。
-- **🔬 2026/06/11 已手動 run 一次測試(action=run)。待驗證三件:①雲端連不連得到 Yahoo(web存取)②有沒有照五區塊格式 ③repo 有沒有成功 push daily_briefing_latest.md。哪件掛就針對修(最可能是雲端web存取或push權限)。**
+- **🔬 2026/06/11 已手動 run 一次測試(action=run)。待驗證三件:①雲端連不連得到 Yahoo(web存取)②有沒有照五區塊格式 ③repo 有沒有成功 push daily_briefing_latest.md。**
+- **✅ 2026/06/16 驗證完成(使用者問「我都沒看到要怎麼看」):routine 正常每交易日08:00觸發(last_fired 6/16 00:02Z)、五區塊格式✅、push✅(daily_briefing_latest.md 已自動同步到本機 memory 夾)。❌唯一掛點=雲端 WebFetch 全被403封鎖→agent 改用 WebSearch 多源交叉比對,數字仍出但部分技術位/盤中量是「估」。📌待修方向:routine 改全走 WebSearch 或換可抓資料源,解掉403。**
+- **📍交付/觀看方式(使用者本來不知道往哪看):最省事=每天在本機 Claude Code 問一句「今天簡報」,我直接讀同步下來的 daily_briefing_latest.md;備援=手機開 routine 管理頁看最新 run 最終訊息,或看 repo 該檔。🔴使用者偏好不是「每天人工問我看盤再手動下單」(那會重蹈要盯盤的覆轍)→簡報自動跑到本機、穩定桶靠階梯掛單自動接,人工判斷只留飆股桶。詳見[[feedback_brainless_order_system]]檢討(止穩人工判斷不得覆蓋穩定桶階梯掛單)。**
 
 ## 機制重點（雲端 routine 限制,日後沿用）
 - 雲端 isolated session,clone 指定 repo,跟本機無關、關機照跑。**碰不到本機檔案/環境變數**。
