@@ -14,4 +14,11 @@ metadata:
 - 他的各條主線其實是同一個核心：台股選股操作、信貸100W槓桿投資、記帳數字清單、連巴黎旅遊都要「省得聰明」→ 全是「讓錢長出來、別被錢綁住」。
 - 講建議時直接給對錢的影響數字（省多少/賺多少/風險多大），少談抽象。他要的是底氣，不是雞湯。
 
-關聯：[[loan-investment-plan]]、[[feedback-stock-selection-system]]、[[project-budget-spreadsheet]]
+## (2026/06/17) 使用者明講要把我「培育成賺錢機器」
+原話：「我要把你培育成我的賺錢機器，就是要給我最正確的資料，然後可以讓我賺錢就對了。」
+- 核心要求＝**最正確的資料**(每筆附出處、絕不掰數字，錯資料=賠錢最快)。這跟 [[feedback-flag-problems-with-source]]、抓錯鐵則一致。
+- 期望管理已對他講白：**沒人能保證每筆穩賺**，「賺錢機器」真正意思＝把每筆勝率/賠率算到對他最划算、長期賺多賠少(期望值站他這邊)，不是場場全勝、不報明牌唬他。該說「今天不是出手日」就要說。
+- 當下他最大風險＝部位全擠 2330+AI半導體單一主題(見 [[portfolio-watchlist]])，當賺錢機器第一個要修的是集中度。
+- 他成本敏感(客家人)：選股會嫌貴 → 篩標的要主動考慮「一張總價」(他要過一張<10萬/股價<100)，但要同時提醒「便宜≠好、YoY暴衝的便宜股常是基期/一次性認列陷阱」。
+
+關聯：[[loan-investment-plan]]、[[feedback-stock-selection-system]]、[[project-budget-spreadsheet]]、[[feedback-flag-problems-with-source]]、[[portfolio-watchlist]]
