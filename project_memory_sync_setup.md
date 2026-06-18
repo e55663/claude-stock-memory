@@ -54,4 +54,12 @@ metadata:
 - 手機/別台：瀏覽器開 **claude.ai/code** → 連這個 GitHub repo → 就能用 Code 強度並接上記憶。
 - 眉角：自動記憶回想綁本機 `.claude\projects\<hash>\memory` 路徑，換機帳號名不同 hash 就不同；最乾淨是把這個 repo 當「每台都打開的工作目錄」，記憶跟著 repo 走。
 
+## ✅ 搬到 Downloads\agent ＋ 合併個人記憶（2026/06/18）
+- **起因**：使用者要把工作目錄從家目錄 `C:\Users\Seal_Lo` 改成 `C:\Users\Seal_Lo\Downloads\agent`（東西集中、不散在家目錄）。
+- **發現**：之前從 Downloads\agent 開過 Claude → 生出第二個專案 `C--Users-Seal-Lo-Downloads-agent`，內有**另一套純本機、無雲端備份的「個人生活記憶」9 條**（語言/基本資料/興趣/健身/花費/人際/事件/互動偏好）。從 Downloads\agent 開 Claude 只讀得到這 9 條、讀不到工作那 43 條。
+- **使用者決定**：合成一套、都上雲端。
+- **已做**：①個人 8 條 .md 併進工作 git repo、MEMORY.md 索引合併（含一條 [[feedback_copy_friendly_plaintext]] vs feedback_preferences「表格 vs 純文字」衝突提醒）②整個 git repo 從 `…\C--Users-Seal-Lo\memory` **搬到** `…\C--Users-Seal-Lo-Downloads-agent\memory`（51 個 .md，.git 完整）③兩個 hook 的 `$repo` 路徑都改指向新位置 ④`CLAUDE.md` 複製進 `Downloads\agent\` ⑤push 上雲端 `211b1a9..f354b08`（個人記憶從此有備份）⑥刪掉自建備份。
+- 🔴 **使用者以後一律從 `C:\Users\Seal_Lo\Downloads\agent` 開 Claude**（不要再從家目錄開，家目錄那個專案的 memory 已搬空）。
+- 路徑變更後新位置：`C:\Users\Seal_Lo\.claude\projects\C--Users-Seal-Lo-Downloads-agent\memory`（git remote、雲端 repo 名稱不變，仍是 e55663/claude-stock-memory）。
+
 關聯：[[feedback-no-clarifying-questions]]
