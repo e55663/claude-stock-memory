@@ -61,5 +61,6 @@ metadata:
 - **已做**：①個人 8 條 .md 併進工作 git repo、MEMORY.md 索引合併（含一條 [[feedback_copy_friendly_plaintext]] vs feedback_preferences「表格 vs 純文字」衝突提醒）②整個 git repo 從 `…\C--Users-Seal-Lo\memory` **搬到** `…\C--Users-Seal-Lo-Downloads-agent\memory`（51 個 .md，.git 完整）③兩個 hook 的 `$repo` 路徑都改指向新位置 ④`CLAUDE.md` 複製進 `Downloads\agent\` ⑤push 上雲端 `211b1a9..f354b08`（個人記憶從此有備份）⑥刪掉自建備份。
 - 🔴 **使用者以後一律從 `C:\Users\Seal_Lo\Downloads\agent` 開 Claude**（不要再從家目錄開，家目錄那個專案的 memory 已搬空）。
 - 路徑變更後新位置：`C:\Users\Seal_Lo\.claude\projects\C--Users-Seal-Lo-Downloads-agent\memory`（git remote、雲端 repo 名稱不變，仍是 e55663/claude-stock-memory）。
+- **使用者啟動方式＝終端機打 `cc`**。`cc` 有兩條定義都已統一切到 Downloads\agent：①PowerShell profile 函式 `CC`（`Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`）原本就 `Set-Location Downloads\agent; claude` ②`C:\Users\Seal_Lo\.local\bin\CC.cmd` 2026/06/18 改成 `cd /d Downloads\agent` 後再 `claude %*`（原本只 `claude %*` 會在當下資料夾開→曾誤開家目錄載到錯記憶）。所以使用者習慣不用改、照打 `cc` 就一定開到 Downloads\agent。
 
 關聯：[[feedback-no-clarifying-questions]]
