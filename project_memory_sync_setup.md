@@ -37,6 +37,13 @@ metadata:
 - **已清**：刪掉 settings.local.json 所有含 token 的 git 指令權限；確認 hook 腳本、settings.json、remote URL 全部**無 token 明文**。token 現在只存在 Windows 認證管理員（加密、正解）。
 - **⚠️ 強烈建議使用者做（我做不到，需 GitHub 登入）**：因 token 已外洩進對話紀錄，去 https://github.com/settings/tokens?type=beta **Revoke 舊 token、重新產一個**。重產後舊的認證快取會失效，下次 push 會失敗 → 需更新 Windows 認證管理員那筆 `git:https://github.com`（或重跑一次帶新 token 的 push 讓 GCM 重存）。
 
+## ✅ 重新授權＋寫入同步修復（2026/06/18）
+- 使用者前一晚(6/17)在 **Mac 重新 regenerate 憑證**（即 6/09 一直待辦的「Revoke 舊 token 重產」終於做了）→ 這台 Windows 的舊寫入憑證失效。
+- 隔天開 Windows，背景同步想 push 失敗 → **Git Credential Manager(GCM) 自動彈出 GitHub 登入視窗**，並產生 `http://127.0.0.1:<port>/...oauth/authorize?...code_challenge...scope=repo+gist+workflow` 這類連結。
+- 🔴 **判讀這種連結的口訣**：那是 GCM 的「本機 OAuth 重新登入」彈窗，不是外部威脅。`redirect_uri=127.0.0.1:<port>` 代表只能在本機完成。**若是過期殘留**（用 `Get-NetTCPConnection -LocalPort <port>` 查無程式在聽 = 門已關）→ 忽略即可、按了也接不起來；**若是當下剛觸發的活視窗** → 登入 `e55663`→Authorize 完成它。
+- 6/18 實測：`fetch`(讀) 早就通(exit 0)，但 `push`(寫) 觸發 GCM 彈窗 → 使用者在活視窗完成授權 → push 成功 `c3ab0db..f086707 main->main`、狀態回 `main...origin/main`。**寫入同步已修復**。GCM 已把新認證存進 Windows 認證管理員，之後免再登入。
+- 認證方式已從 6/09 的明文 PAT 改為 **GCM OAuth**（更安全，無 token 明文）。
+
 ## 📱 手機/雲端同步（2026/06/09 說明）
 - **無法從這台幫手機裝自動 hook**（settings.json 是各機各自的，雲端環境碰不到）。
 - 折衷：在 repo 的 `CLAUDE.md` 寫進「開場先 pull、改完 push」紀律＋「一次只在一台改」警告 → 隨 repo 同步到手機，手機 Claude 讀 CLAUDE.md 會照做（靠指示、非硬性 hook）。
