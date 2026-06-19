@@ -44,10 +44,17 @@ metadata:
 - 6/18 實測：`fetch`(讀) 早就通(exit 0)，但 `push`(寫) 觸發 GCM 彈窗 → 使用者在活視窗完成授權 → push 成功 `c3ab0db..f086707 main->main`、狀態回 `main...origin/main`。**寫入同步已修復**。GCM 已把新認證存進 Windows 認證管理員，之後免再登入。
 - 認證方式已從 6/09 的明文 PAT 改為 **GCM OAuth**（更安全，無 token 明文）。
 
-## 📱 手機/雲端同步（2026/06/09 說明）
-- **無法從這台幫手機裝自動 hook**（settings.json 是各機各自的，雲端環境碰不到）。
-- 折衷：在 repo 的 `CLAUDE.md` 寫進「開場先 pull、改完 push」紀律＋「一次只在一台改」警告 → 隨 repo 同步到手機，手機 Claude 讀 CLAUDE.md 會照做（靠指示、非硬性 hook）。
-- 紀律：**一次只在一台改**，換台前先確認這台已 push、那台開場先 pull，避免雙邊改同檔衝突。
+## 📱 手機/雲端同步（2026/06/09 初版說明，已被下方 2026/06/19 修正取代）
+- ~~無法從這台幫手機裝自動 hook（settings.json 是各機各自的，雲端環境碰不到）~~ ← **這個判斷錯了，見下方修正**。
+- 舊折衷：在 repo 的 `CLAUDE.md` 寫進「開場先 pull、改完 push」紀律，靠 Claude 讀指示照做（非硬性 hook）。
+
+## ✅ 手機/雲端真自動雙向同步（2026/06/19 修正＋補完）
+- **發現**：`~/.claude/settings.json` 才是「各機各自、雲端碰不到」；但 **repo 內的 `.claude/settings.json`（專案層級設定）會跟著 git 一起同步到每台裝置**，包括手機/雲端的 claude.ai/code（雲端每次開新 session 就是重新 clone 這個 repo，專案層級設定也會被讀到）。
+- **已有**(更早就建好,2026/06/17)：`.claude/settings.json` 的 `SessionStart` hook → 跑 `.claude/hooks/session-start.sh`：用環境變數 `CLAUDE_CODE_REMOTE=true` 判斷「這是雲端/手機環境」才動作，自動 `git fetch origin main` + merge，等於手機/雲端開場自動pull。
+- **新增**(2026/06/19)：補上對應的 `Stop` hook → 跑 `.claude/hooks/stop-sync.sh`：同樣只在 `CLAUDE_CODE_REMOTE=true` 時動作，`git add -A`→有變更才commit→`push origin HEAD:main`（推不上去就fetch+merge再重推，最多試3次）。
+- **效果**：手機/雲端的 claude.ai/code 現在跟 Windows 那台一樣是**真正雙向自動同步**：開場自動pull、結束自動push到main，不用再靠人/Claude手動記得pull/push。
+- 跟 Windows 那台的 user-level hook（`~/.claude/hooks/memory-autopush.ps1` 等）是兩套獨立機制，互不衝突：Windows 那套本來就只在本機跑；這套是專案層級、隨repo走、只在雲端環境(`CLAUDE_CODE_REMOTE=true`)觸發。
+- 殘留的舊紀律（CLAUDE.md「一次只在一台改」）現在比較像保險，不再是唯一防線——但雙邊**同時**改同一份檔案還是可能衝突，建議還是盡量不要兩台同時改。
 
 ## 完成後的下一步（教使用者）
 - 其他電腦：`git clone` 這個 repo。
