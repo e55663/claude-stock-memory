@@ -19,7 +19,10 @@ metadata:
 2. ⏳ **每日瑣事/待辦管家** — 待建。方案:repo 放 todo.md,雲端每日讀+推提醒;**待使用者給「平常每天的瑣事清單」**。
 3. ⏳ **記帳/帳務定期整理** — 待建。⚠️Excel在本機(Downloads\數字清單.xlsx)雲端碰不到→只能「每月固定一天提醒+開這台時我比對」;**待使用者給方便的日子(月初/發薪日)**。
 
-## ✅ 已建:每日盤前台股簡報(雲端 routine)
+## ❌ 已取消:每日盤前台股簡報(雲端 routine)
+**2026/06/20 使用者決定取消**：沒有實際用到、感覺多餘。請手動到 claude.ai/code/routines 刪除 routine。用不用再看有沒有感覺到價值再說。
+
+原記錄備查：
 - **routine ID:** `trig_01VvpscHwEzPRodfn7azHCg3`(管理頁 https://claude.ai/code/routines/trig_01VvpscHwEzPRodfn7azHCg3,刪除只能去 claude.ai/code/routines)
 - **排程:** cron `0 0 * * 1-5` = 週一~五 台北08:00(=UTC 00:00);下次 2026/06/12 08:00。
 - **環境:** env_016zgy9CveDNXym6RXLFbuBd(anthropic_cloud);**模型 claude-sonnet-4-6**;source repo=e55663/claude-stock-memory;tools=Bash/Read/Write/Edit/Glob/Grep/WebFetch/WebSearch。
