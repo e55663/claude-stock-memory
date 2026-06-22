@@ -15,6 +15,7 @@
 - [一批檔跑完問題寫進docs/todo.md](feedback_batch_todo_workflow.md) — **(6/22)** 使用者新標準流程省額度:一次丟一堆檔→我自辨請款單/修改單/入預算+跑核對+該打的產出直接打→所有問題集中寫`docs/todo.md`(問題/影響/建議方案/優先級),不在對話長列、不中途問。🔴缺料/要確認也寫進todo.md標🔴絕不自填;todo.md永遠產出一檔(沒問題開頭寫✅一行);附件查檢併進當一區塊;🔴歸檔仍留他按(整理夾開Downloads、計價打好但不搬,講「歸檔」才搬)。他最終動作=丟檔→看todo.md→講歸檔+收尾+clear
 - [歸檔前先放下載整理夾](feedback_stage_in_downloads_before_archive.md) — **(6/18)** 請款跑完別直接歸檔工地;先在Downloads開整理夾(夾名=請款資料夾命名)放好+打計價Excel→停下等使用者確認→OK才搬進工地。歸檔=最後關卡需明確指令(類似動錢留他按);計價本登錄可在確認前做
 - [檔案必須讀完整](feedback_read_files_completely.md) — 讀記憶/資料檔不加 limit 截斷，使用者說可以等，寧慢不漏；分段讀要主動告知
+- [搬檔進新夾先驗證夾存在](feedback_move_into_dir_verify_exists.md) — **(6/22踩雷掉檔)** `New-Item`在PS5.1不吃`-LiteralPath`(要`-Path`)→建夾靜默失敗→`Move-Item`到不存在路徑變改名、第二個檔`-Force`把第一個覆蓋永久遺失(不進回收桶)。鐵則:建夾用`-Path`+`Test-Path`驗證再搬;絕不對不確定存在的路徑連續`Move-Item -Force`;搬完驗證整理夾有/根目錄沒有
 - [備份用完即刪](feedback_delete_temp_backups.md) — **(6/17)** 我改檔前自建的備份/暫存,任務做完驗證OK就主動刪,別留桌面;只刪我自己建的、使用者原有檔絕不亂刪
 - [銘亮加班倍率觀察](project_mingliang_overtime_watch.md) — **(6/17)** 銘亮加班前2hr用×1.34(行通表×1.33)小超領,#9這次放過memo維持「符合」;🔴下次銘亮再犯就主動提醒、不再寬貸
 - [全市場選股流程](reference_full_market_screen.md) — **(6/17鐵則)** 每次「幫我選股」固定=①TWSE OpenAPI全市場海選(WebClient+UTF8解碼避亂碼;BWIBBU_ALL本益比/STOCK_DAY_ALL價量/t187ap05_L月營收年增/T86法人傍晚才有;排除金融ETF)②完整列出所有模式(五區塊全列+大盤儀表板+5題檢查清單+兩桶+集中度)使用者每次都要看到;純文字
