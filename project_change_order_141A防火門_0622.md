@@ -13,4 +13,4 @@ memo 基準＝「收入與成本比較表.xlsx」（內部自洽：成本3,003,8
 
 🔴 三來源檔金額互相打架，未送呈、待成管/工地確認（全寫進 `docs/todo.md`）：①追減單價衝突最嚴重（統計表 SD3A等原合約單價 vs 比較表差約198萬，追減合計10,407,401 vs 8,431,624）②安和報價14,410,396(226樘) vs 估價單/列控表11,435,425(178樘)差約297萬＝可能成本超編③統計表淨+1,028,024 vs 比較表淨+3,003,801。另：來源檔殘留他案分頁（數量.xlsx 護坡噴漿、比較表 組合式水箱成本分析表）；核決權限PDF本機沒找到，新增門型若走新增類可能要拉到董事長。
 
-待辦：成管確認金額→更新memo；修改單資料夾未開（命名 141A、(門)防火門(安和)-修改單 115.06.22）；歸檔留他按。流程同 [[reference_change_order_template]] [[reference_approval_authority_table]]，紅線 [[feedback_flag_source_errors_vendor_by_invoice]]。
+待辦：成管確認金額→更新memo→才送呈。**整理夾已開**：Downloads\`141A、(業變)防火門工程(安和)-修改單 115.06.22`，13個安和散檔（報價單/收入成本比較表/數量/統計表/施工圖新4張/圖說舊4張/上色新增圖）已全部收進、根目錄清空；🔴仍只在Downloads整理夾未搬工地，講「歸檔」才搬進 `工地\2.141A 嘉科AP7P1-OFFICE\4.修改單\`（同層有玻璃欄杆(佑億)、金屬工程(翔博)兩張）。命名比對既有範例＝業變故類別寫(業變)非(門)。流程同 [[reference_change_order_template]] [[reference_approval_authority_table]]，紅線 [[feedback_flag_source_errors_vendor_by_invoice]]、歸檔留他按 [[feedback_stage_in_downloads_before_archive]]。
