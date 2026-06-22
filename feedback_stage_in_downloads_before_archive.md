@@ -12,3 +12,5 @@ metadata:
 **Why:** 2026/06/18 我幫 141E 祥欣保全#4 核對完後，自作主張直接把6個檔歸進工地 115.06，使用者糾正「先不歸檔、先整理放下載、等我確認好再歸檔」。歸檔是動到既有檔案結構的動作，搬錯/搬早他要回頭找。
 
 **How to apply:** 歸檔當成最後一道、需明確指令的關卡（類似動到錢留他按）。計價本登錄可在確認前做（那步是產出、不是搬檔）。延續 [[reference_site_archive_convention]]、[[reference_billing_statement_template]] 的「等確認→歸檔」，這裡把「先放下載整理夾」講死。呼應 [[feedback_only_do_whats_asked]]。
+
+🔴**(2026/06/22)放料進整理夾要「搬移」不要「複製」**：我用 Copy-Item 把列控表/估價單放進整理夾，卻沒刪 Downloads 根目錄的原檔→裡外各一份重複，使用者抓到問「為啥重複」。鐵則：放進整理夾後 Downloads 根目錄就不該再有同檔。作法二選一——(a) Move-Item 直接搬；或 (b) Copy-Item 後立刻 Remove-Item 刪根目錄原檔。**完成後一定驗證「同一檔只存在整理夾、根目錄沒有」**。Remove-Item 用直接 LiteralPath 單行刪（別放 foreach 迴圈變數會被沙箱整段擋）。
