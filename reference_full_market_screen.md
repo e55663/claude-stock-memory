@@ -12,7 +12,7 @@ metadata:
 ## 一、全市場海選（不是只看漲幅榜/觀察名單！）
 用 **TWSE OpenAPI 一次撈全上市股**，PowerShell 本機篩。🔴**用 `New-Object System.Net.WebClient` + `.Encoding=UTF8` + `DownloadString` + `ConvertFrom-Json`**（直接 `Invoke-RestMethod` 中文會變亂碼！`[Console]::OutputEncoding=UTF8`）。端點：
 - 本益比/殖利率/PB：`https://openapi.twse.com.tw/v1/exchangeReport/BWIBBU_ALL`（欄 Code/PEratio/DividendYield/PBratio，約1078檔）
-- 今日價量漲跌：`https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL`（Code/Name/ClosingPrice/Change/TradeVolume；漲幅%=Change/(Close−Change)×100；量張=TradeVolume/1000）
+- 今日價量漲跌：`https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL`（Code/Name/ClosingPrice/Change/TradeVolume；漲幅%=Change/(Close−Change)×100；量張=TradeVolume/1000）。🔴**(2026/06/22踩到)OpenAPI 盤後常滯後**：週一/連假後盤後一段時間，STOCK_DAY_ALL 與 BWIBBU 可能還停在「上週四收盤」(6/22 當天仍顯示 Date=1150618)；海選用它沒問題(全市場相對比較)，但**推薦/對帳要報的「個股當前價」一定要再用 WebFetch `https://tw.stock.yahoo.com/quote/XXXX.TW` 抓真價(回傳含資料時間13:30收盤或盤中)**，別把 OpenAPI 的舊收盤當今日價報給使用者(會被即時看盤抓包)。見[[feedback_always_show_price_with_timestamp]]。
 - 月營收年增：`https://openapi.twse.com.tw/v1/opendata/t187ap05_L`（公司代號＋「營業收入-去年同月增減(%)」）
 - 三大法人(外資/投信)：OpenAPI `https://openapi.twse.com.tw/v1/fund/T86` 只給「今日」收盤後傍晚才有。🔴**(2026/06/18修正，別再說「資料不足」當藉口)：前一交易日的法人隨時抓得到！用日期端點** `https://www.twse.com.tw/rwd/zh/fund/T86?date=YYYYMMDD&selectType=ALLBUT0999&response=json`（西元日期、加 `User-Agent` header）。⚠️回傳 `data` 是**位置陣列**(非具名)：第0欄證券代號、第4欄外陸資買賣超股數、第10欄投信買賣超股數；值含逗號要 `-replace ',',''`；股數/1000=張。**抓近3個交易日(連續)→判外資/投信「連3買/連3賣」**(連買=核心進場訊號、連賣=出場訊號)。投信連3賣 vs 外資連3買「打架」的剔除。⚠️若白天 OpenAPI 回空，改用此日期端點抓前一日，不要停。
 - 季均量(潛伏層「靜置」用)：`https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=YYYYMM01&stockNo=XXXX&response=json` 抓單檔整月日量(data位置陣列、第1欄成交股數)，抓近3個月平均=季均量；今日量/季均≤1=靜置✔、>1.5=已放量✘。只對潛伏候選股算(不用全市場)。
