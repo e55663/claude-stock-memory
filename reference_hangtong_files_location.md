@@ -21,4 +21,11 @@ metadata:
 - `114年第4季租工、打石工、體力清潔工、技術工行情通報(匯入檔)245項(更新).xlsx`（檔名實際為238/245，以桌面為準）
 - `114年第3季租工、打石工、體力清潔工、技術工行情通報(匯入檔)238項(更新).xlsx`
 
-用法：點租工/體力/技術工→租工本；吊車/機具租金→機具本；季別對「計價季」。對應 [[reference_billing_control_sheet_format]] 單價核對、[[reference_billing_book_format_rules]]、[[reference_invoice_audit_context]]。
+用法：點租工/體力/技術工→租工本；吊車/機具租金→機具本；季別對「計價季」。
+
+🔴 **行通表比對方式（6/23 使用者定的標準步驟）**：
+1. **先確認行通表內有沒有「同一廠商」**；如果沒有 → 看品項描述找「**類似品項**」（同噸別／同工種）當對照基準。
+2. **逐項比**計價單價 vs 行通表品項單價，**「大於／等於／小於」三種都要告知**（不是只抓超領，等於、小於也要講出來）。
+3. **比對結果呈現在 Excel**（做成單價對照表）。
+
+對應 [[reference_billing_control_sheet_format]] 單價核對、[[reference_billing_book_format_rules]]、[[reference_invoice_audit_context]]。
