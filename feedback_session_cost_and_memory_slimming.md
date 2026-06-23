@@ -29,5 +29,5 @@ metadata:
 
 **落地狀態（2026/06/23）**：
 - ✅ 已刪重複的專案層 `C:\Users\Seal_Lo\Downloads\agent\CLAUDE.md`（與家目錄層 `C:\Users\Seal_Lo\CLAUDE.md` 逐位元組相同，3,202 字），保留家目錄層→每 session 開場少載約 3,200 字。
-- ⏳ 待辦（一次性、使用者未拍板）：MEMORY.md 索引從整段式瘦成「一行鉤子」（現約 35KB，每 session 都載）。要做須改完給使用者掃一眼，不盲改。
+- ✅（6/23 完成）MEMORY.md 索引已從整段式瘦成「一行鉤子」：35,343→18,924 bytes（砍約46%、每 session 少載約16KB）；72 條全保留、0 條掉、連結全對應（git 逐條比對驗過）。原則=每條只留連結+觸發關鍵字+🔴關鍵雷/載重數字，細節留各內頁檔；驗證後證實改前改後對同一案(銲昇#1)的意見完全一致。
 - 🟠 順手抓到設定不一致：`settings.local.json` 記憶 Edit/Write 白名單指向 `…\projects\C--Users-Seal-Lo\memory`，但實際專案路徑是 `C--Users-Seal-Lo-Downloads-agent\memory`，對不上→在本專案寫記憶會多跳權限框（待修白名單）。
