@@ -33,4 +33,6 @@ metadata:
 
 10. **🔴 工程項目不放單價行**(打法說明 R6 早有、我6/25又違反被使用者拿掉):點租工/機具/吊車才在 memo 寫「單價與X季行通表,符合」;**工程項目(如鋼筋成型加工、鋼網牆、高壓水泥磚)單價對的是合約報價單,memo 不另寫單價符合行**。檢附行照實際給的檔列(給合約就寫合約,如 `列控表,合約,請款單,磅料單`)。
 
+11. **🔴(6/25 使用者糾正)問題/退件件「保留分頁+tab標色」,不要刪分頁。** 暫緩→tab橘(ColorIndex=45/46)、退件或異常→tab紅(ColorIndex=3);memo 把問題/退件原因寫進去(不寫「符合」),金額留廠商請款值。**絕不整個刪分頁/清列**——刪了之後改正回來還要重建=多耗額度(我6/25對弘隆#11先刪分頁再被糾正重建,白做一輪)。改正版回來時:更新數字+memo、tab轉回正常色即可。對應 [[feedback_session_cost_and_memory_slimming]](省額度)。
+
 延續 [[reference_billing_statement_template]]、[[reference_batch_memo_filing]]。對應 [[feedback_flag_problems_with_source]]、絕不掰。
