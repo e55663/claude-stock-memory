@@ -21,6 +21,8 @@ metadata:
 - 同步把計價本該分頁的橘標暫緩解除(若仍缺發票等附件,比照銲昇:可歸檔但計價本/送呈維持「發票到再送呈」)。
 - ⚠️ 例外(絕不掰底線):若打開夾發現的不是小缺件、而是**硬矛盾**(例:標為「請款單」的檔內容根本是別的文件、金額三來源打架),先講一句點出再搬,不把錯誤內容當正確的歸進工地永久檔。
 
+🔴 **使用者會把問題夾收進「待」bucket(6/25觀察)**:他在 `Downloads\` 開了一個夾名是一排 `-` 的「`--------------------待`」夾,把所有待處理/退件/缺件案(天九、亦鑫、潤泰、敏傑、朋洋、安和、承園、國廣、銘亮#10…)整批移進去集中放,並在各夾名後綴自己的狀態字(「退件」「缺件」「退件 沒有給第X期」等)。所以**問題夾可能不在 Downloads 根目錄、而在這個「待」夾底下**——找不到別以為掉了,先 `Get-ChildItem -Recurse` 或 Glob 用唯一檔(如單號)定位,用磁碟物件 `.FullName` 操作(emoji/中文路徑字面值會解析失敗 [[feedback_ps_chinese_literal_encoding]])。
+
 執行紀律:
 - 建夾/改名 `-Path`+`Test-Path` 驗證;搬檔 `Move-Item -LiteralPath` 不加 `-Force`,搬完驗夾內有/原位無 [[feedback_move_into_dir_verify_exists]]。
 - 中文夾名/檔名/txt 用 Write 寫 .ps1 → 補 UTF8-BOM → 執行 [[feedback_ps_chinese_literal_encoding]];純文字條列複製友善 [[feedback_copy_friendly_plaintext]]。
