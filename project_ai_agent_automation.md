@@ -22,6 +22,8 @@ metadata:
 ## ❌ 已取消:每日盤前台股簡報(雲端 routine)
 **2026/06/20 使用者決定取消**：沒有實際用到、感覺多餘。請手動到 claude.ai/code/routines 刪除 routine。用不用再看有沒有感覺到價值再說。
 
+**🔴(2026/06/25)取消後仍照常觸發**：今天這個已標記取消的 routine 又自動跑了一次，代表 6/20 那次「請手動刪」沒有真的去 claude.ai/code/routines 點刪除（API 刪不掉，只能手動）。同次也確認**雲端網路白名單把 Yahoo 股市(`tw.stock.yahoo.com`)、Yahoo Finance JSON(`query1.finance.yahoo.com`)、TWSE OpenAPI(`openapi.twse.com.tw`) 三個全部 403 policy-deny**（用 `$HTTPS_PROXY/__agentproxy/status` 診斷確認，不是單一網站擋，是這個雲端環境的網路政策本身擋掉所有股市資料源）。WebSearch 能用但只給片段/落後一天以上的快取數字，不夠可靠拿來下單。**結論：這個 routine 在雲端環境下structurally 跑不出可靠盤面數據，不是暫時性問題；建議直接去刪掉、選股一律改本機 CLI 跑（見[[reference_full_market_screen]]既有結論）。**
+
 原記錄備查：
 - **routine ID:** `trig_01VvpscHwEzPRodfn7azHCg3`(管理頁 https://claude.ai/code/routines/trig_01VvpscHwEzPRodfn7azHCg3,刪除只能去 claude.ai/code/routines)
 - **排程:** cron `0 0 * * 1-5` = 週一~五 台北08:00(=UTC 00:00);下次 2026/06/12 08:00。

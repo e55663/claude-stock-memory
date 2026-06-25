@@ -43,7 +43,7 @@
 - [行通表檔案位置](reference_hangtong_files_location.md) — 🔴行通表(行情通報匯入檔)8個季度檔固定在桌面`C:\Users\Seal_Lo\Desktop\`,核單價依季別+機具/租工別自己取用別再跟使用者要;Q2機具=`115年第2季機具行情通報(匯入檔)2185項.xlsx`(全吊/吊車核這本);點工→租工本、吊車機具→機具本
 - [核決權限表讀法](reference_approval_authority_table.md) — 修改單+請款單核決層級怎麼判(類別×金額級距→送誰◎決);🔴追加減看淨額非加帳、新增門檻20萬、請款PO/SC/§2.3專案付款各級距,全在檔
 - [請款對帳抓錯脈絡](reference_invoice_audit_context.md) — 幫根基營造審吊卡/機具租金請款抓錯(台積AP7嘉義/成駿/OA015010000)每月一批;計價總表彙整(27分頁,PO左SC右,項目欄超連結);🔴判重唯一鍵=單號;🔴>20萬先送採購議價議完才審核;🔴扣款=內扣(出全額正常但要攤開算給他核);對帳=簽單→彙總→請款單三層算術+加班時段逐筆;COM SaveAs($path,51)。細節在檔
-- [AI agent自動化建置](project_ai_agent_automation.md) — 每日盤前routine已取消(多餘,手動刪routines頁);瑣事管家/記帳提醒暫擱;雲端routine限制:碰不到本機/cron最小1hr
+- [AI agent自動化建置](project_ai_agent_automation.md) — 每日盤前routine已取消(多餘,手動刪routines頁)但🔴(6/25)仍照常觸發=沒人真的去頁面刪掉;同次確認雲端網路白名單把Yahoo股市/Yahoo Finance JSON/TWSE OpenAPI三個資料源全部403擋死(非暫時性,結構性擋);瑣事管家/記帳提醒暫擱;雲端routine限制:碰不到本機/cron最小1hr
 - [模擬倉追蹤](project_paper_trading.md) — Claude自選自判模擬倉100萬/每檔20萬/-5%停損;🔴說「幫我選股」先對帳再出新選股;第一期5檔6/22入(長榮194.5/力成365/旺宏177/廣達378.5/南茂108);追蹤各模式勝率
 - [選股框架重整待放行](project_stock_framework_refactor.md) — 使用者問選股有沒有出錯=部分認同;真毛病3(重複計分高估勝率/沒宣告時框/固定PE殺成長股);提議三角色分離(名單→淘汰閘門→分數只排序)+時框標籤+模糊詞寫死;🔴未動手,使用者說「出/做」才產決策樹更新[[feedback_stock_selection_system]],之前照現行九區塊
 - [Mac裝置更新與VM待辦](project_mac_device_update.md) — 家用M1 Pro Mac更新Tahoe(無備份);PD+Windows盜版暫緩;清理硬碟待辦
