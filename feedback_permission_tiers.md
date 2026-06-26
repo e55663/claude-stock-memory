@@ -14,7 +14,7 @@ metadata:
 - 🟡 **我自己判斷直接做**：記憶庫範圍內的整理／改寫／落檔決定，做完告知。
 - 🔴 **一律先問（永遠保留確認）**：刪除/覆蓋記憶庫**以外**的檔、`force push`/`reset --hard`/動 git 歷史、動 token/安全設定、裝/移除軟體、任何臨時 PowerShell、對外發送（寄信/貼文/丟外部服務）、真金白銀下單（本來就在券商做）。
 
-**🔴(2026/06/26 使用者覆寫此條)已改開 `bypassPermissions`（全自動）**：使用者拿雷蒙「安全三件套」macOS文件來裝、二次確認後仍選 bypass。已寫進 `~/.claude/settings.json`：`permissions.defaultMode=bypassPermissions` + `skipDangerousModePermissionPrompt=true` + 22條 deny 黑名單(毀滅級:Format-Volume/Clear-Disk/Remove-Partition/Clear-RecycleBin/Stop-Computer/Restart-Computer/shutdown/diskpart/format/cipher /w,PowerShell與Bash雙寫;不含一般Remove-Item/Move-Item以免擋到Excel/備份/歸檔)。⚠️**先前『不開bypass』的原因=曾出過token外洩**,現拆網了要留意。
+**🔴(2026/06/26 使用者覆寫此條)已改開 `bypassPermissions`（全自動）**：使用者拿雷蒙「安全三件套」macOS文件來裝、二次確認後仍選 bypass。已寫進 `~/.claude/settings.json`：`permissions.defaultMode=bypassPermissions` + `skipDangerousModePermissionPrompt=true` + 22條 deny 黑名單(毀滅級:Format-Volume/Clear-Disk/Remove-Partition/Clear-RecycleBin/Stop-Computer/Restart-Computer/shutdown/diskpart/format/cipher /w,PowerShell與Bash雙寫;不含一般Remove-Item/Move-Item以免擋到Excel/備份/歸檔)。⚠️**先前『不開bypass』的原因之一=6/09架記憶同步時曾token外洩**,但🔴**已remediated**(6/17撤銷舊PAT換GCM OAuth、無明文token;6/26重掃settings/hooks/git config全乾淨)→那把外洩金鑰已作廢、非現在進行式漏洞,別再當成開放中的風險嚇使用者(6/26使用者問「token外洩我怎不知道」=他沒當成事件,我引用記憶沒講清楚害他緊張)。詳見[[project_memory_sync_setup]]。bypass的真實風險改看「Windows護欄薄」那點。
 🔴**Windows安全網薄弱真相(老實講)**：deny規則是「前綴比對」(`Bash(git *)`式),抓不到包裝過/順序變化的指令;而且我幾乎都用 `& powershell.exe -File x.ps1` 跑腳本→deny/hook只看得到那行命令字串、看不到.ps1檔內容→腳本內的危險指令繞過所有自動護欄。所以bypass下真正的保護=①我自己的紀律(改檔前先備份/驗證/只刪自建備份/搬檔前驗路徑)②OS層(資源回收桶/OneDrive/File History要開著才救得回)③隨時可改回模式。垃圾桶層(trash/brew/zsh)是macOS的,Windows裝不起來(我跑-NoProfile)。
 **舊版(已不適用,留參考):** 不開 `bypassPermissions`（全自動）——等於拆掉安全網，使用者剛出過 token 外洩，更不該。正解是「白名單放行安全的、危險的繼續攔」。
 
