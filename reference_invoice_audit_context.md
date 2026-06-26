@@ -46,7 +46,7 @@ metadata:
 - 可加值：總表多一欄「單號防重複」公式（COUNTIF>1標紅），未來貼新項目撞號即跳——待使用者點頭再做。
 
 ## 對帳/抓錯方法（已驗證有效）
-- 🔴🔴**(2026/06/26 兩次才修對)存桌面計價本別讓圖示跑位 — 正解=原位元組覆寫**:`SaveAs`與`$wb.Save()`都會讓Excel刪舊檔重建→Explorer把該檔圖示重設到空位(跑到數字清單後面)。`Save()`+還原時間**沒用**(使用者實測仍跑)。✅**正解流程**:①Copy-Item原檔→agent backup;②記`$wt=LastWriteTime`/`$ct=CreationTime`;③Excel開原檔、編輯、**`$wb.SaveAs($tmp,51)`存到暫存檔(不是原檔)**、Close/Quit、ReleaseComObject、[GC]::Collect+Sleep 800ms;④**`[System.IO.File]::WriteAllBytes($book,[System.IO.File]::ReadAllBytes($tmp))`** 把暫存內容原位覆寫回原檔(同一檔案物件、名稱不消失→Explorer不重設圖示);⑤還原`$fi.LastWriteTime=$wt;$fi.CreationTime=$ct`;⑥刪暫存;⑦重開唯讀驗證內容。若這樣還跑=桌面「自動排列圖示/對齊格線」設定,要使用者桌面右鍵→檢視關掉(我改不了)。
+- 🔴🔴**(2026/06/26 兩次才修對)存桌面計價本別讓圖示跑位 — 正解=原位元組覆寫**:`SaveAs`與`$wb.Save()`都會讓Excel刪舊檔重建→Explorer把該檔圖示重設到空位(跑到數字清單後面)。`Save()`+還原時間**沒用**(使用者實測仍跑)。✅**正解流程(6/26使用者實測沒移動、確認有效)**:①Copy-Item原檔→agent backup;②記`$wt=LastWriteTime`/`$ct=CreationTime`;③Excel開原檔、編輯、**`$wb.SaveAs($tmp,51)`存到暫存檔(不是原檔)**、Close/Quit、ReleaseComObject、[GC]::Collect+Sleep 800ms;④**`[System.IO.File]::WriteAllBytes($book,[System.IO.File]::ReadAllBytes($tmp))`** 把暫存內容原位覆寫回原檔(同一檔案物件、名稱不消失→Explorer不重設圖示);⑤還原`$fi.LastWriteTime=$wt;$fi.CreationTime=$ct`;⑥刪暫存;⑦重開唯讀驗證內容。若這樣還跑=桌面「自動排列圖示/對齊格線」設定,要使用者桌面右鍵→檢視關掉(我改不了)。
 - 🔴**(2026/06/26 使用者要求,我漏過)同步字體**:加分頁/加總表列/堆新期後,新內容字體要跟既有一致,別用預設(我直接Value2寫總表現代/刮泥那兩列→變成「Microsoft JhengHei UI」,但總表標準是「標楷體/12」被抓包)。做法:Name/Size取既有項目格(總表G2、或分頁範本),`$rng.Font.Name=$fn;$rng.Font.Size=$fs`套到A2..最後列(不動粗體/顏色)。複製整列(A4:K4→新列)會自動帶字體,但直接Value2寫格不會→要補。已寫進「請款單打法說明」分頁二.9。
 - xlsx 用 PowerShell Excel COM dump 全表(`.Value2`),量大會 persist 到檔案再讀。
 - 驗算鏈:**簽單→彙總→請款單** 三層算術 + 每列「時數 vs 簽到時間區段(0700-0800/1700-XX 等加班時段)」逐筆核,夜間/加班時數逐列加總要等於總列。
