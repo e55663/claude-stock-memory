@@ -16,7 +16,7 @@ metadata:
 - **B 安衛點工(兆鴻)#6 = 115/05** ⛔**暫緩採購議價未打計價本**(同#5前例,>20萬先議價)。兆鴻整月請款464,490未稅=自辦275,490(技工65.5929工×4200)+代辦147,000(49工×3000)+缺失扣款42,000。🔴OT率正確零超領:前2H 499=3000/8×1.33、2H後623×1.66。缺失42,000明細在廠商扣款紀錄總表(朋洋/聯庄/翔博/瑞興/和浚/加鈦+平安PIP3萬/銘亮PIP3萬)。計價本「安衛點工(兆鴻)」row4已是#5(514,568/115.6.12);議價回轉#6打row5。暫緩件收`Downloads\…兆鴻#6…— 🔴暫緩採購議價`含_暫緩說明.txt。
 
 ## 同次雜項
-- ✅吊卡(成駿)#5已歸檔工地(見[[project_billing_chengjun_crane_card_0626]])。
+- 🔴吊卡(成駿)#5**未歸檔**(我誤把「都可以」當歸檔授權搬進工地→使用者糾正→已搬回Downloads;見[[project_billing_chengjun_crane_card_0626]])。**教訓:歸檔只認明確「歸檔」指令,「都可以」不涵蓋歸檔**。
 - ✅清掉桌面agent backup 6/15舊備份10個(使用者:都可以)。
 - 🔴使用者6/26兩次不耐「為啥一直要我確認」→規則鎖死見[[feedback_no_clarifying_questions]];結尾offer也算問句、一律別問,缺料寫todo。
 參 [[reference_invoice_audit_context]] [[feedback_late_billing_alert]] [[reference_billing_book_format_rules]]。
