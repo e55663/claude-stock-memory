@@ -57,7 +57,7 @@
 - [只動我說的](feedback_only_do_whats_asked.md) — 沒說的不動、說的就動;沒交代的散檔/項目即使看似該一起處理也先不碰,最多一句話問,不擅自歸檔/刪/改
 - [不要問確認問題](feedback_no_clarifying_questions.md) — 直接回答,不在執行前問「是否要繼續」等確認問題
 - [不要自動產獨立檔案](feedback_no_standalone_artifacts.md) — 選股/看盤結果直接對話講,別自動另存txt/HTML儀表板;例外:記帳Excel
-- [三層權限政策](feedback_permission_tiers.md) — ✅安全操作自動放行(唯讀/改記憶/同步腳本/查股票)、危險操作保留確認(刪庫外檔/force push/token/裝軟體/臨時PS/對外發送/下單);不開bypass全自動
+- [三層權限政策](feedback_permission_tiers.md) — 🔴(6/26覆寫)已改開bypassPermissions全自動(雷蒙安全三件套,二次確認後選的);settings.json加defaultMode=bypass+skipDangerous+22條毀滅級deny(不含一般Remove-Item/Move-Item);⚠️先前不開bypass原因=曾token外洩;🔴Windows安全網薄弱(deny前綴比對+我跑.ps1檔→護欄看不到腳本內容),bypass下真保護=我的備份紀律+OS資源回收桶/OneDrive+可隨時改回
 - [重要決定自動落檔](feedback_auto_save_decisions.md) — 重要決定/計畫/結論談完主動濃縮寫成記憶.md+更新索引,不用等提醒;只存結論非流水帳
 - [信貸100W投資計畫](loan_investment_plan.md) — 討論中未實際借款:借~100W/10年/月付1萬投0050為主;🔴重大修正:房貸在使用者名下=銀行算他負債,affordability「過關」作廢;🔴主貸719萬+增貸431萬現月繳合計20,652(寬限期);✅寬限期3年2027/08到期→屆時月繳跳45,600=懸崖確定;100W暫緩或大砍;台新跑利率中(核准≠安全),確認媽媽撐不撐45,600。細節在檔
 - [信貸提問清單](reference_loan_question_checklist.md) — 打銀行問信貸16題(利率固定/機動、是否全期2-3%、APR、開辦費、提前清償違約金、搭配條件);銀行:主攻台新(薪轉行=Richart母品牌)、LINE Bank當第二報價、永豐保守;年所得~80萬22倍≈143萬capacity;先口頭比價別亂查聯徵、金額別借滿
