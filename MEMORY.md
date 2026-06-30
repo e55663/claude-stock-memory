@@ -86,3 +86,4 @@
 - [人際關係](user_relationships.md) — 男友(醫生)、母親、寵物(狗與貓)
 - [重要事件與計畫](project_events.md) — 東京行、新工作、漏水問題、定期定額投資
 - [互動偏好](feedback_preferences.md) — 無糖預設、海外勸阻購物、平面表格、AI決策習慣 ⚠️「平面表格」與工作那套[[feedback_copy_friendly_plaintext]]「純文字不要表格」可能衝突,視情境而定
+- [精品手環購買計畫](project_luxury_bracelet_purchase_plan.md) — VCA虎眼石老花日常疊戴搭LOVE Unlimited最百搭;30萬預算三選一(Cartier LOVE Unlimited/Bulgari Serpenti Viper/Cartier Clash de Cartier)依漲價動能排序:①LOVE Unlimited(正處漲價周期+預算剛好卡上)②Serpenti Viper(經典保值無急迫性)③Clash de Cartier(2025未調漲不急)
