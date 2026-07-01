@@ -7,6 +7,9 @@ metadata:
   originSessionId: 3f30dab3-cf1f-4524-899c-0368d5e87354
 ---
 
+## Mac 路徑（2026/06/30 確認）
+`數字清單.xlsx` 在 Mac 上路徑為 `/Users/sungvng/Downloads/數字清單.xlsx`，可用 Python openpyxl 直接讀取，無需 COM。
+
 ## 使用者的記帳系統（2026/06/10 升級）
 
 使用者**不是新手**，已有一套成熟的Excel：`C:\Users\Seal_Lo\Downloads\數字清單.xlsx`。風格是「**信用卡＋分期＋負債＋里程**」導向，非傳統流水帳。原檔分頁：
