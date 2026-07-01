@@ -57,6 +57,7 @@
 - [選股框架重整待放行](project_stock_framework_refactor.md) — 使用者問選股有沒有出錯=部分認同;真毛病3(重複計分高估勝率/沒宣告時框/固定PE殺成長股);提議三角色分離(名單→淘汰閘門→分數只排序)+時框標籤+模糊詞寫死;🔴未動手,使用者說「出/做」才產決策樹更新[[feedback_stock_selection_system]],之前照現行九區塊
 - [Mac裝置更新與VM待辦](project_mac_device_update.md) — 家用M1 Pro Mac更新Tahoe(無備份);PD+Windows盜版暫緩;清理硬碟待辦
 - [跨裝置記憶同步設定](project_memory_sync_setup.md) — ✅雙向自動同步:記憶=私人GitHub repo(e55663/claude-stock-memory);Windows這台user-level hook自動pull+push;手機/雲端靠repo內.claude/settings.json hook(CLAUDE_CODE_REMOTE=true);紀律:一次只在一台改避免衝突
+- [🔴桌面Excel存檔用原地覆寫法](feedback_desktop_excel_inplace_save.md) — 存桌面計價本絕不用裸SaveAs覆原檔(會害圖示跳位,已犯多次);一律SaveAs暫存→WriteAllBytes覆原檔同物件→還原時間戳→刪暫存;附程式碼直接複製;備份驗OK即刪
 - [🔴不要敷衍](feedback_no_perfunctory_work.md) — 交出來要完整到位可直接用,不准半吊子(留舊值/空欄就說完成);手工檔不是不能改=有更好做法+徵得同意就能改,地雷是做得敷衍;回報完成前逐欄逐列自驗(如殘留舊值筆數=0)
 - [只動我說的](feedback_only_do_whats_asked.md) — 沒說的不動、說的就動;沒交代的散檔/項目即使看似該一起處理也先不碰,最多一句話問,不擅自歸檔/刪/改
 - [不要問確認問題](feedback_no_clarifying_questions.md) — 直接回答,不在執行前問「是否要繼續」等確認問題
