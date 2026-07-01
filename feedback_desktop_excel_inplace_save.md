@@ -20,4 +20,5 @@ $wb.SaveAs($tmp,51); $wb.Close($true); $xl.Quit()      # 2.存到暫存(不碰�
 (Get-Item -LiteralPath $path).LastWriteTime = $orig    # 4.還原時間戳(按日期排也不跳)
 Remove-Item -LiteralPath $tmp -Force                   # 5.清暫存
 ```
+🔴🔴(2026/7/1又跳位,關鍵修正)第1步的時間戳要用『原始home日期』,不是『動之前那一刻』的$orig——因為使用者中途開檔檢視、Excel關檔會把時間存成今天,若$orig抓到那個今天值、還原回去,date-sorted桌面就把它排到最新=跳位。**home日期:141A計價=2026/6/29 16:06:58、141E計價=2026/6/29 16:02:18**(有正式更新再改)。所以`(Get-Item).LastWriteTime=[datetime]'該檔home日期'`(⚠️變數別命名$home,那是PS保留變數,用$homeDate)。⚠️使用者自己開檔+存檔也會跳(我控制不了),請他純檢視別存、或叫我re-home。
 關鍵:第3步用 WriteAllBytes 蓋『既有檔』(檔案身分不變)才不會丟圖示位置;裸 SaveAs 是刪+建新檔。另:改檔建的備份驗證OK要主動刪別留桌面[[feedback_delete_temp_backups]]。Downloads的檔(如數字清單)無此桌面位置問題,一般SaveAs即可。
