@@ -1,8 +1,14 @@
 # Memory Index
 
 - [自我稽核不靠小抄](feedback_self_audit_no_crutch.md) — 打請款單/修改單前先自我稽核一輪(算術/單價/加班倍率/扣款/計價區間/期序/署名日期/核決層級/附件);🔴動手前先讀141A兩本「打法說明」分頁對齊規則,改打法說明=記憶一起改。細節在檔
+- [0629整批請款被連續糾正](feedback_billing_corrections_0629.md) — 🔴計價月用當月(連夾名/月份子夾)、內扣代辦不列待定直接打全額+扣款攤開(弘隆/成駿/承洋/移工薪資同套)、memo照打法說明別把口頭解釋逐字打、機具補單價行新廠商複製範本(6)+補總表超連結、列控表是基本附件別漏、確認金額直接改別反問、🔴桌面圖示跳位已解=原地覆寫法(SaveAs暫存→WriteAllBytes覆原檔同物件+還原時間戳)、別硬關使用者Excel、🔴收尾要同步各本打法說明
 - [現階段重心是錢](user_money_first_focus.md) — 使用者只在意錢→回答一律從「對他的錢/ROI划不划算」切入給數字;要把我培育成賺錢機器=最正確資料+絕不掰附出處,沒人保證穩賺不報明牌;成本敏感會嫌股貴
 - [分析個股=分析師五模板深拆](feedback_stock_analyst_deep_dive.md) — 講「分析[個股]」=資深分析師五模板(全方位/財報三表/估值/產業競爭/風險情境)+接真實資料(TWSE+WebSearch)+附出處時間戳+從錢切入加集中度+絕不掰不報明牌;有別於「選股」全市場海選
+- [存30萬計畫+銀行vs0050](project_savings_plan_30w.md) — 薪水62293-花費28190-分期(逐月遞減34640→0@2028);這月可存−537(房貸由媽繳不算);年終21W+男友5W→2027-01破30萬(~7個月);建議兩桶(緊急金15萬放高利活存+超過才丟0050 DCA);0050重台積電與既有AI部位不算分散
+- [🔴7/2待辦-防溢座修改單](project_change_order_fangyizuo_0701.md) — 141A-145(業變)防溢座數量追加(金鈺昌)修改單;資料夾開好、數字算好(成本174,000/業主226,200/利差52,200/追加300M)、memo草擬好,待使用者7/2確認memo→打進02.修改審查說明-141A;核決工程專案主管
+- [🔴7/2待辦-6月抽查總表](project_june_audit_summary_0701.md) — 06月計價抽查總表(羅慶人)數字撈好:141A PO10張94,536,900(含翔博#3暫緩70.1M)、141E PO5張16,943,178;待定3點(翔博#3算不算/問題件數/結餘定義)再建Excel
+- [141A外牆翔博#3+人力支援0701](project_billing_walls_xiangbo_0701.md) — (7/1打未歸檔)翔博外牆#3淨額71,163,332(代扣2,442,839)+閎順#1 1,005,035/安達#1 931,000(超列控)/銲昇#1更新1,522,095;人力支援代扣翔博分攤機制;使用者要「給#打#別追問、只看結果」
+- [信用卡回饋優化2026](project_credit_card_optimization_2026.md) — PPT-2022決策系統要更新到2026/7;✅Excel(數字清單.xlsx)已改完(信用卡分頁效期+主攻+來源、新增2026情境最佳卡分頁);🔴PPT待做;🔴資料以官網為準參考當備援;關鍵:花旗死→永豐DAWHO Plus無腦全通路5%新王
 - [個人記帳Excel系統](project_budget_spreadsheet.md) — 原版`Downloads\數字清單.xlsx`(多卡負債/分期/里程,非流水帳)使用者繼續用;我做增強版`桌面\數字清單_增強版.xlsx`原檔不動;⚠️月份欄是日期序號;COM雷:Value2用[double]/ps1要UTF8-BOM
 - [存30萬目標時間試算](project_savings_goal_300k.md) — (6/28)月薪65,000−學貸4,628−基本花費25,000−信用卡分期(滾動式下降,單月範例33,765)→下限1,607/月(187個月)~上限35,372/月(8.5個月);100W信貸未撥款不算進去;精算待使用者提供115分期項目未來逐月數字
 - [早期Gucci包估價留出](project_vintage_bag_valuation.md) — 幾咖早期Gucci包評估留/出(錢角度+長輩情感另算);非保值之王、漆皮龜裂殺價、報價要WebSearch拉成交comps;第一咖New Bamboo黑漆皮已龜裂→判非資產約5,000建議留紀念
@@ -55,6 +61,8 @@
 - [選股框架重整待放行](project_stock_framework_refactor.md) — 使用者問選股有沒有出錯=部分認同;真毛病3(重複計分高估勝率/沒宣告時框/固定PE殺成長股);提議三角色分離(名單→淘汰閘門→分數只排序)+時框標籤+模糊詞寫死;🔴未動手,使用者說「出/做」才產決策樹更新[[feedback_stock_selection_system]],之前照現行九區塊
 - [Mac裝置更新與VM待辦](project_mac_device_update.md) — 家用M1 Pro Mac更新Tahoe(無備份);PD+Windows盜版暫緩;清理硬碟待辦
 - [跨裝置記憶同步設定](project_memory_sync_setup.md) — ✅雙向自動同步:記憶=私人GitHub repo(e55663/claude-stock-memory);Windows這台user-level hook自動pull+push;手機/雲端靠repo內.claude/settings.json hook(CLAUDE_CODE_REMOTE=true);紀律:一次只在一台改避免衝突
+- [🔴桌面Excel存檔用原地覆寫法](feedback_desktop_excel_inplace_save.md) — 存桌面計價本絕不用裸SaveAs覆原檔(會害圖示跳位,已犯多次);一律SaveAs暫存→WriteAllBytes覆原檔同物件→還原時間戳→刪暫存;附程式碼直接複製;備份驗OK即刪
+- [🔴不要敷衍](feedback_no_perfunctory_work.md) — 交出來要完整到位可直接用,不准半吊子(留舊值/空欄就說完成);手工檔不是不能改=有更好做法+徵得同意就能改,地雷是做得敷衍;回報完成前逐欄逐列自驗(如殘留舊值筆數=0)
 - [只動我說的](feedback_only_do_whats_asked.md) — 沒說的不動、說的就動;沒交代的散檔/項目即使看似該一起處理也先不碰,最多一句話問,不擅自歸檔/刪/改
 - [不要問確認問題](feedback_no_clarifying_questions.md) — 直接回答,不在執行前問「是否要繼續」等確認問題
 - [不要自動產獨立檔案](feedback_no_standalone_artifacts.md) — 選股/看盤結果直接對話講,別自動另存txt/HTML儀表板;例外:記帳Excel
@@ -85,3 +93,4 @@
 - [人際關係](user_relationships.md) — 男友(醫生)、母親、寵物(狗與貓)
 - [重要事件與計畫](project_events.md) — 東京行、新工作、漏水問題、定期定額投資
 - [互動偏好](feedback_preferences.md) — 無糖預設、海外勸阻購物、平面表格、AI決策習慣 ⚠️「平面表格」與工作那套[[feedback_copy_friendly_plaintext]]「純文字不要表格」可能衝突,視情境而定
+- [精品手環購買計畫](project_luxury_bracelet_purchase_plan.md) — VCA虎眼石老花日常疊戴搭LOVE Unlimited最百搭;30萬預算三選一(Cartier LOVE Unlimited/Bulgari Serpenti Viper/Cartier Clash de Cartier)依漲價動能排序:①LOVE Unlimited(正處漲價周期+預算剛好卡上)②Serpenti Viper(經典保值無急迫性)③Clash de Cartier(2025未調漲不急)

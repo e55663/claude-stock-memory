@@ -70,4 +70,12 @@ metadata:
 - 路徑變更後新位置：`C:\Users\Seal_Lo\.claude\projects\C--Users-Seal-Lo-Downloads-agent\memory`（git remote、雲端 repo 名稱不變，仍是 e55663/claude-stock-memory）。
 - **使用者啟動方式＝終端機打 `cc`**。`cc` 有兩條定義都已統一切到 Downloads\agent：①PowerShell profile 函式 `CC`（`Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`）原本就 `Set-Location Downloads\agent; claude` ②`C:\Users\Seal_Lo\.local\bin\CC.cmd` 2026/06/18 改成 `cd /d Downloads\agent` 後再 `claude %*`（原本只 `claude %*` 會在當下資料夾開→曾誤開家目錄載到錯記憶）。所以使用者習慣不用改、照打 `cc` 就一定開到 Downloads\agent。
 
+## 🟠 Mac 本機自動同步待設定（2026/06/29）
+- 使用者要三台（手機/Windows/Mac）都自動同步；明確說**手機止血不算解決、要的是 Mac 也能用**，且問「回家打開 Mac 要按啥」。
+- 🔴 **核心觀念已跟使用者講通且他接受**：三台不是互連，都跟 GitHub 雲端 repo 對接，**不需要兩台同時開機**（公司 Windows / 家裡 Mac 各自跟雲端同步即可）。唯一紀律＝來源那台要成功 push，下一台才拿得到。
+- **Mac 現況推斷**：6/17 使用者曾在 Mac regenerate PAT＝Mac 至少有 git＋對 repo 的認證，repo 可能已 clone。**但缺本機自動 hook**：repo 內 `.claude/settings.json` 的 `.sh` hook 第一行 gate `CLAUDE_CODE_REMOTE=true`（只在雲端/手機跑），**Mac 本機 CLI 不是 remote → 會 exit 0 跳過 → 不會自動 pull/push**。所以 Mac 本機要比照 Windows 另設一套 user-level hook（`~/.claude/settings.json` SessionStart pull + Stop push，呼叫 mac 版 .sh，不 gate remote）。
+- 🔴 **要在 Mac 現場做、不能從 Windows 這台代設**（碰不到 Mac 檔案）。前提：先確認 Mac 有裝 Claude Code CLI。
+- **下一步**：使用者回家打開 Mac 的 Claude Code → 說「設定 Mac 記憶同步」→ 現場接 hook＋git＋路徑。設好後＝跟 Windows 一樣，開來用就自動同步、零按鈕。
+- 若 Mac 是用 claude.ai/code 網頁版（非本機 CLI）＝走 remote 路徑、跟手機同套 .sh，那要解的是 git 認證而非 hook。
+
 關聯：[[feedback-no-clarifying-questions]]
