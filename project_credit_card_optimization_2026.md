@@ -15,7 +15,7 @@ metadata:
 
 **✅Excel已完成(2026/7/1)**:改 `Downloads\數字清單.xlsx`(Windows版,非Mac)。①「信用卡」分頁:更新效期(col5)+新增主攻優惠(col6)+資料來源(col11官網/參考)+更新日(col12)+結帳/繳款日(col13/14,來自2022PPT標參考);row2-37依列索引更新(不用中文比對)。②新增「2026情境最佳卡」分頁=17情境矩陣。
 
-**✅PPT已完成(2026/7/1)**:`Downloads\信用卡PPT-2022.pptx`21頁全改。P1-3情境矩陣重建成乾淨表格(情境|最佳卡|回饋|上限|次選,P3加海外);P4-16,20-21各卡明細重建(卡名+2026回饋重點+效期/來源);P17卡別/P18帳單日(2022參考)/P19年費 重建表格。做法:刪各頁有文字的形狀(保留背景圖)+AddTable/AddTextbox重建,COM用$pp.Presentations.Open($path,$false,$false,$false)。⚠️結構換卡:花旗PLUS(P4)→星展eco;國泰Costco(P12)→富邦Costco;台新GO/FlyGo(P10)→Richart。🟠使用者尚未肉眼確認版面(我無法render),確認後才刪備份。
+**✅PPT已完成(2026/7/1)**:`Downloads\信用卡PPT-2022.pptx`21頁全改。🔴教訓:第一版我把P1-3重建成表格→使用者不滿意「為啥不能跟原本一樣」=要保留他原本手工版面。已從備份還原+改用**只換文字不動版面**(Set-Txt靠shape.Name設TextFrame.TextRange.Text,不刪不加形狀,格子/顏色/位置全保留)。P1-3矩陣格子換卡名/%/上限;P4-16,20-21各卡明細換標題+回饋Rectangle+效期+未更新→已更新;P17卡別/P19年費換死卡名。⚠️結構換卡:花旗PLUS(P4)→星展eco;國泰Costco(P12)→富邦Costco;台新GO/FlyGo(P10,P17,P19)→Richart。COM:$pp.Presentations.Open($path,$false,$false,$false)+$pres.Save()。🟠使用者尚未肉眼確認版面(我無法render),確認後才刪備份。
 
 **2026關鍵發現**:🔴花旗PLUS無腦神卡沒了→新無腦全通路王=**永豐DAWHO大戶Plus**(國內5%/國外6%,上限1000/月;達Plus=財富100萬或綁DAWHO為永豐證券交割戶做1筆台股,使用者有玩台股可解鎖);歐洲(9月法國行)主刷星展eco永續卡5%;影音訂閱遊戲王=玉山UBear數位訂閱10%(上限100)。
 
