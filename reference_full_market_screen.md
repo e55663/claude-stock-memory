@@ -9,6 +9,13 @@ metadata:
 
 **(2026/06/17使用者定，鐵則)** 每次「幫我選股」必做兩件，缺一不可：
 
+## 🔴🔴 零、兩種模式(2026/07/03使用者定，先試兩種；桌面`選股說明.txt`「零」段同步)
+投資工作拆成產線四段(情報蒐集→選股海選→個股深析→持有追蹤/汰換)，用關鍵字觸發：
+- **「幫我選股」＝廣度模式**：自動連跑「情報蒐集＋選股海選」兩段→**到「短名單」為止就停**，結尾**主動點名最值得深挖的1-2檔＋問要不要接著深挖**。🔴不自動把海選每檔都深挖(省額度、不浪費在會被淘汰的股)。產出＝短名單＋下面全套(大盤/十區塊/兩桶/集中度/5題清單)。
+- **「幫我分析 X」＝深度模式**：對單一檔跑五模板深析全套(見[[feedback_stock_analyst_deep_dive]])，範圍收斂一檔才一鍵全跑。
+- 資源地圖(工具/外掛越囤越多往對應段放，非二分法、關鍵資源兩段共用)：情報段=macro themes/catalyst/sector/Market Researcher；海選段=本記憶十區塊(主,台股)+/screen(美股備援)；深析段=五模板+/earnings-analysis+/earnings-preview+Financial Analysis(DCF)+/thesis；追蹤段=/thesis-tracker+/catalysts+持倉對帳+停損。共用=籌碼/大盤折扣/催化劑/集中度/絕不掰。
+- 🔴汰弱換強兩層:①換股(停損/法人連賣/論點走鐘) ②換工具(新外掛先跟現有PK,贏升主力輸降備援,如台股/screen輸十區塊當美股備援、/thesis-tracker補洞升主力)。
+
 ## 一、全市場海選（不是只看漲幅榜/觀察名單！）
 用 **TWSE OpenAPI 一次撈全上市股**，PowerShell 本機篩。🔴**用 `New-Object System.Net.WebClient` + `.Encoding=UTF8` + `DownloadString` + `ConvertFrom-Json`**（直接 `Invoke-RestMethod` 中文會變亂碼！`[Console]::OutputEncoding=UTF8`）。端點：
 - 本益比/殖利率/PB：`https://openapi.twse.com.tw/v1/exchangeReport/BWIBBU_ALL`（欄 Code/PEratio/DividendYield/PBratio，約1078檔）
