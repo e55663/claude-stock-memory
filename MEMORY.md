@@ -60,7 +60,7 @@
 - [核決權限表讀法](reference_approval_authority_table.md) — 修改單+請款單核決層級怎麼判(類別×金額級距→送誰◎決);🔴追加減看淨額非加帳、新增門檻20萬、請款PO/SC/§2.3專案付款各級距,全在檔
 - [請款對帳抓錯脈絡](reference_invoice_audit_context.md) — 幫根基營造審吊卡/機具租金請款抓錯(台積AP7嘉義/成駿/OA015010000)每月一批;計價總表彙整(27分頁,PO左SC右,項目欄超連結);🔴判重唯一鍵=單號;🔴>20萬先送採購議價議完才審核;🔴扣款=內扣(出全額正常但要攤開算給他核);對帳=簽單→彙總→請款單三層算術+加班時段逐筆;COM SaveAs($path,51)。細節在檔
 - [AI agent自動化建置](project_ai_agent_automation.md) — ✅(6/26)每日盤前routine已用enabled:false停用(API刪不掉但停用=不再扣額度);✅(6/26)新建3個雲端routine錨定5hr額度視窗(6:00/11:00/16:00,目的非回報是把視窗起點拉到6:00讓3個set全落上班8-18內,Haiku+只回OK極省;🔴待使用者實測雲端觸發是否跟互動同桶能否錨定);雲端白名單把Yahoo股市/Finance JSON/TWSE OpenAPI三源403擋死(結構性);雲端routine限制:碰不到本機/cron最小1hr
-- [模擬倉追蹤](project_paper_trading.md) — Claude自選自判模擬倉100萬/每檔20萬/-5%停損;🔴說「幫我選股」先對帳再出新選股;第一期5檔6/22入(長榮194.5/力成365/旺宏177/廣達378.5/南茂108);追蹤各模式勝率
+- [模擬倉追蹤](project_paper_trading.md) — 🔴已結束/停用(7/2暫停、7/7再確認);第一期5檔6/26認賠收尾(0/5);🔴「幫我選股」不再對帳模擬倉、不拉那5檔=直接出選股
 - [選股框架重整待放行](project_stock_framework_refactor.md) — 使用者問選股有沒有出錯=部分認同;真毛病3(重複計分高估勝率/沒宣告時框/固定PE殺成長股);提議三角色分離(名單→淘汰閘門→分數只排序)+時框標籤+模糊詞寫死;🔴未動手,使用者說「出/做」才產決策樹更新[[feedback_stock_selection_system]],之前照現行九區塊
 - [Mac裝置更新與VM待辦](project_mac_device_update.md) — 家用M1 Pro Mac更新Tahoe(無備份);PD+Windows盜版暫緩;清理硬碟待辦
 - [跨裝置記憶同步設定](project_memory_sync_setup.md) — ✅雙向自動同步:記憶=私人GitHub repo(e55663/claude-stock-memory);Windows這台user-level hook自動pull+push;手機/雲端靠repo內.claude/settings.json hook(CLAUDE_CODE_REMOTE=true);紀律:一次只在一台改避免衝突
