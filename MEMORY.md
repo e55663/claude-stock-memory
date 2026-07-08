@@ -25,6 +25,7 @@
 - [檔案必須讀完整](feedback_read_files_completely.md) — 讀記憶/資料檔不加limit截斷,寧慢不漏;分段讀要主動告知
 - [搬檔進新夾先驗證夾存在](feedback_move_into_dir_verify_exists.md) — 🔴(踩雷掉檔)建夾用`-Path`非`-LiteralPath`(PS5.1)+`Test-Path`驗證再搬;絕不對不確定路徑連續`Move-Item -Force`(會覆蓋永久遺失);搬完驗整理夾有/根目錄無
 - [備份用完即刪](feedback_delete_temp_backups.md) — 我改檔前自建的備份/暫存驗證OK就主動刪;只刪自己建的、原有檔絕不亂刪
+- [選股完整性閘門(防偷懶)](feedback_stock_completeness_gate.md) — 🔴選股跟請款同病根會偷懶漏查(尤其第4關籌碼);已裝每輪hook `stock-gate.ps1`(選股完整性閘門)註冊進settings.json,逼談股票說「可進/高信心」前先攤大盤+四硬閘門+5題+資料日期清單有❌不准說可進;⚠️改hook需下session生效;跟請款completeness-gate同規格
 - [平安點租工#14已審核+扣款下期扣](project_billing_pingan_0708.md) — 141A-SC009052點租工(平安)#14(7/8)已三方閉合審核全過(5,676,052=點工1,412,408+技術4,263,644;代扣1,411,211=列控代辦=18張本金加總差0;台積電組2,100/3,200對行通表)+計價本B5打乾淨呈核memo已解退件;🔴自身扣款43,050擔#15下期扣要記得(已記M5+追蹤報表);資料夾未歸檔等指令
 - [銘亮加班倍率觀察](project_mingliang_overtime_watch.md) — 銘亮加班前2hr用×1.34(行通表×1.33)小超領;#9放過,#10(6/25)再犯已提報→使用者退件(超領788/應631,746);🔴確認跨全期系統性,計價本#10已清。同次抓到計價本舊重複(R5把3+4月綁一起、3月與R4#8重複)已刪,重整#8/#9帶計價日期範圍,驗重複靠列控總表母表累計
 - [全市場選股流程](reference_full_market_screen.md) — 🔴每次選股=TWSE OpenAPI全市場海選(WebClient+UTF8避亂碼;BWIBBU_ALL本益比/STOCK_DAY_ALL價量/月營收/T86法人傍晚才有;排金融ETF)+完整列所有模式(五區塊+大盤+5題清單+兩桶+集中度)純文字
