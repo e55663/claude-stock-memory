@@ -7,7 +7,9 @@ metadata:
   originSessionId: cef8a918-5b4a-47e9-a2aa-a1edbc91b818
 ---
 
-使用者要的月追蹤報表:每次丟請款單/修改單、我打完就順手更新「當月」報表,讓他追蹤哪些完成/待歸檔/退件。7月起逐月一檔。母腳本 scratchpad\build_report2.ps1(改月份路徑重跑)。檔案本身第一分頁「打法說明」是同一份權威說明。
+使用者要的月追蹤報表:每次丟請款單/修改單、我打完就順手更新「當月」報表,讓他追蹤哪些完成/待歸檔/退件。7月起逐月一檔。🔴🔴**母腳本現在存永久位置`C:\Users\Seal_Lo\Downloads\agent\build_report_july.ps1`(2026/7/7從6月版build_report2.ps1改7月路徑而來,別再去舊session的temp scratchpad找、會被清)**。檔案本身第一分頁「打法說明」是同一份權威說明。
+
+🔴(2026/7/7 母腳本3個parsing陷阱已修,7月版含這3修)：①**合約欄要設文字格式@再寫**,否則「141E-5」這種修改單流水號會被Excel當成科學記號變「1.41E-03」(BuildTab加`$ws.Columns.Item(2).NumberFormat="@"`)。②**退件件夾名尾綴「— 🔴退件(工地)」會害ParseFolder把「(工地)」誤抓成廠商、金額變空**→ParseFolder開頭先剝status尾綴`$n = $n -replace '\s*—.*$',''`(em-dash後全砍)。③**管理費/押金類夾名是「-請款」非「-請款單」**,舊分類regex只認「請款單」會把它誤判成修改單→改成`elseif($n -match "請款|保證函")`。跑完看DIAGNOSTICS:剩的⚠多半是正確狀態(採購議價中未入本/退件列已清),不是每個⚠都要修。
 
 - **檔名/位置**:桌面 `M月計價修改追蹤報表.xlsx`(如「6月計價修改追蹤報表.xlsx」)。🔴不要移動、圖示不可跳位→存檔一律**原地覆寫法**(SaveAs暫存→WriteAllBytes蓋回原檔同身分→還原CreationTime),跟計價本/修改單本同規矩[[feedback_desktop_excel_inplace_save]]。
 - **分頁**:打法說明 + 每案每類型各一(141A請款單/141A修改單/141E請款單/141E修改單)。🔴請款與修改**不同分頁**。
