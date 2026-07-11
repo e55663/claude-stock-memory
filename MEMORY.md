@@ -23,6 +23,7 @@
 - [一批檔跑完寫進docs/todo.md](feedback_batch_todo_workflow.md) — 省額度流程:一次丟一堆檔→我自辨類型+核對+直接打→問題集中寫`docs/todo.md`(問題/影響/建議/優先級)不在對話長列;🔴缺料要確認也寫todo標🔴不自填;歸檔留他按(打好不搬,講歸檔才搬)
 - [歸檔前先放下載整理夾](feedback_stage_in_downloads_before_archive.md) — 請款跑完先在Downloads開整理夾(夾名=請款命名)+打計價Excel→停下等確認→OK才搬工地;歸檔=最後關卡需明確指令
 - [問題案=夾名加🔴標註+夾內txt;歸檔=清標註再搬](feedback_problem_case_folder_with_note.md) — (6/25)有問題的請款→整理進夾、夾名後綴「— 🔴問題標註」、缺漏txt放夾內;🔴歸檔指令=這件已沒問題→拿掉夾名標註+刪txt再按邏輯歸檔工地;唯硬矛盾(檔案內容錯置/三來源打架)才先提一句
+- [兩台電腦要求一樣](feedback_cross_device_consistency.md) — Mac/Windows 規則標準完全相同；環境限制做不到就說做不到，不降低標準
 - [檔案必須讀完整](feedback_read_files_completely.md) — 讀記憶/資料檔不加limit截斷,寧慢不漏;分段讀要主動告知
 - [搬檔進新夾先驗證夾存在](feedback_move_into_dir_verify_exists.md) — 🔴(踩雷掉檔)建夾用`-Path`非`-LiteralPath`(PS5.1)+`Test-Path`驗證再搬;絕不對不確定路徑連續`Move-Item -Force`(會覆蓋永久遺失);搬完驗整理夾有/根目錄無
 - [備份用完即刪](feedback_delete_temp_backups.md) — 我改檔前自建的備份/暫存驗證OK就主動刪;只刪自己建的、原有檔絕不亂刪
