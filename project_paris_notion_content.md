@@ -1,22 +1,28 @@
 ---
 name: project-paris-notion-content
-description: "巴黎行程 Notion 頁面待貼內容（Day1-9完整文字）；頁面URL: notion.so/p/seal1018/2026-09-17-ffb2ffc47ce98367ab3201edc329bd26"
+description: "巴黎行程 Notion 頁面已完成 Day1-9 全部填入（2026/07/13）；頁面URL: notion.so/p/seal1018/2026-09-17-ffb2ffc47ce98367ab3201edc329bd26；含 Notion 自動化編輯可靠技巧(剪貼簿貼上法)"
 metadata: 
   node_type: memory
   type: project
   originSessionId: 0cccef61-2e07-491f-a7c7-a80f5071c3ab
 ---
 
-## Notion 頁面狀態（2026/07/11）
+## Notion 頁面狀態（2026/07/13 已完成 ✅）
 - 頁面名稱：法國🇫🇷巴黎 2026.09.17
 - URL：notion.so/p/seal1018/2026-09-17-ffb2ffc47ce98367ab3201edc329bd26
-- Day2-9 日期已改完 ✅
-- Day1 內容還是東京舊文字 🔴 → 要換成下方內容
-- Day10 有孤立子內容（早上/下午/晚上 含東京行程）🔴 → 全部刪除
-- Day11-13 還是東京舊內容 🔴 → 全部刪除
+- ✅ Day1-9 全部改成巴黎內容（含標題+內文），逐一用 innerText 全文比對驗證過，無殘留東京字
+- ✅ 每天原本的東京專屬子toggle（訂位/交通細節，通常3-4個）已全部刪除，內容整併進單一 quote block
+- ✅ Day10孤立內容其實是Day9自己的子內容（不是獨立段落）、Day11-13 標題連同子內容已整段刪除
+- 想去的/想吃的/暫存/地區 等其他分頁區塊保留不動
 
-⚠️ Notion 自動化編輯不可靠（.fill()/pressSequentially() 常看似成功但沒存進去）
-→ 建議手動貼，每貼一天截圖確認
+🔴 Notion 自動化編輯技巧（這次驗證出來的可靠做法，下次直接用）：
+1. **打字/取代文字**：.fill() 和 pressSequentially()（slowly:true）都不可靠，常常看似輸入了但沒存進去或被 React 復原。唯一可靠做法＝**剪貼簿貼上**：`navigator.clipboard.writeText(文字)` (用 browser_evaluate) → 點回該 block 的 contenteditable → `Control+v`。多行用 `\n` 直接寫在字串裡，貼上後會正確變成同一 block 內的換行（quote block 的 CSS 是 white-space:break-spaces）。
+2. **清空 block**：點進 contenteditable → `Control+a`（只選該 block 內文字，不會選到整頁）→ `Delete`。
+3. **選取後貼上**：Ctrl+A 選取後如果中間插入 `navigator.clipboard.writeText`（async），選取狀態常會掉，貼上會變成「附加在後面」而非取代。保險做法＝先 Ctrl+A+Delete 清空 → 寫剪貼簿 → 重新點回該 block → Ctrl+V。
+4. **刪除整個 block**：不要用 Backspace（Notion 的空 toggle 按 Backspace 是「取消縮排」把子內容攤平出來，不是刪除！）。正確做法＝滑鼠 hover 該 block → 找 `[aria-label="Drag to move, click to open menu"]` 按鈕 → click 開選單 → click `text="Delete"`（要用 exact 版本，因為畫面上常有殘留的 "N block deleted" 提示文字會撞到模糊比對）。
+5. **hover 找不到 handle**：這個 aria-label 按鈕只在真的滑鼠 hover 到那一行時才會出現在 DOM，且常常第一次 hover 抓不到（React render 時機），要重新 hover 一次再 click。
+6. **同一個 data-block-id 常常對到兩個 DOM node**：一個是真實可見的，另一個是 Notion 內部的隱藏測量副本（在畫面外，y 座標可能是負值或超大值）。用 `document.querySelectorAll` 配 `getBoundingClientRect()` 檢查哪個在畫面內，或直接找 `innerText` 不是空字串的那個。
+7. **長頁面有 virtualization**：捲到很遠的地方時，畫面外的 block 會從 DOM 卸載，這時用 data-block-id 選取器會找不到元素（或抓到上述隱藏副本）。要先把該區域捲進視窗內（PageDown/PageUp），確認 `getBoundingClientRect` 的 y 值在合理範圍，再操作。
 
 ---
 
