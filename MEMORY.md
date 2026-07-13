@@ -18,8 +18,8 @@
 - [信用卡回饋優化2026](project_credit_card_optimization_2026.md) — PPT-2022決策系統要更新到2026/7;✅Excel(數字清單.xlsx)已改完(信用卡分頁效期+主攻+來源、新增2026情境最佳卡分頁);🔴PPT待做;🔴資料以官網為準參考當備援;關鍵:花旗死→永豐DAWHO Plus無腦全通路5%新王
 - [個人記帳Excel系統](project_budget_spreadsheet.md) — 🔴(7/2改單一主檔)`Downloads\數字清單.xlsx`唯一(增強版已丟回收桶);已做進主檔:總覽儀表板(前頁,B2月份下拉=日期值+INDEX/MATCH)/到期提醒分頁(保費逾期跳紅)/各卡待填checklist/表頭上色綠手填灰公式;每月只維護115計算式+每個月卡費整理2張;⚠️月份欄是日期序號(MATCH要用日期非文字);COM雷Value2用[double]/ps1要UTF8-BOM
 - [早期Gucci包估價留出](project_vintage_bag_valuation.md) — 幾咖早期Gucci包評估留/出(錢角度+長輩情感另算);非保值之王、漆皮龜裂殺價、報價要WebSearch拉成交comps;第一咖New Bamboo黑漆皮已龜裂→判非資產約5,000建議留紀念
-- [法國巴黎旅遊規劃](project_france_trip.md) — 9/17-9/27首訪巴黎情侶遊、能省則省但巴黎貴;✅機票已訂(長榮,在地8整天);✅住宿:Britannique Hotel 1區Châtelet旁;下一步:羅浮宮訂時段/聖母院鐘樓/Céline Dion票
-- [巴黎Notion頁面已完成](project_paris_notion_content.md) — ✅(7/13)Day1-9全部填完巴黎內容、Day10-13東京舊內容已清、逐字驗證無殘留;頁面URL已記;附Notion自動化編輯可靠技巧(剪貼簿貼上法取代fill/pressSequentially、刪block用hover選單別用Backspace);9/17-9/27首訪巴黎情侶遊;✅機票+住宿已訂(Britannique Hotel);Céline Dion 9/25演唱會選項+Amex Platinum餐廳清單
+- [法國巴黎旅遊規劃](project_france_trip.md) — 9/17-9/27首訪巴黎情侶遊、能省則省但巴黎貴;✅機票已訂(長榮,在地8整天);✅住宿:Britannique Hotel 1區Châtelet旁;✅(7/13)男友資料全文補齊(景點/百貨/必去/美食,含Google Maps連結,已核對);下一步:羅浮宮訂時段/聖母院鐘樓/Céline Dion票
+- [巴黎Notion頁面已完成](project_paris_notion_content.md) — ✅(7/13)Day1-9全部填完巴黎內容、Day10-13東京舊內容已清;✅(7/13第二輪)待辦事項/想去的/想吃的/暫存/地區四象限底下的東京地名(西瓜卡/十三天esim/新宿澀谷原宿/燒肉lawson/一整串日文店家/新宿澀谷淺草築地銀座等)全部清掉,逐字驗證無殘留;頁面URL已記;附Notion自動化編輯可靠技巧(剪貼簿貼上法取代fill/pressSequentially、刪block用hover選單別用Backspace、Shift+ArrowDown可一次多選整串block刪除);Céline Dion 9/25演唱會選項+Amex Platinum餐廳清單
 - [工作關鍵字觸發](reference_work_keywords.md) — 講關鍵字直接進狀況:請款/計價→核對抓錯+打Excel+歸檔;修改單→memo+核決+查預算;歸檔→搬工地;選股→五區塊+盤面。貫穿:抓錯/絕不掰/附出處/只動說的
 - [入預算作業流程](reference_budget_entry_workflow.md) — 141E軟橋段入預算:主檔分頁「入預算明細表」顏色標狀態(黃=進行中→抽成`專案YYYYMMDD.xlsx`)+主檔複製加MMDD前綴放當日夾;🔴空白列不掰。欄位對應在檔
 - [修改單公式化範本](reference_change_order_template.md) — 修改單呈核memo公式版:填7格→A7自動組裝;141E/141A同套、署名羅慶人、日期問當天、🔴絕不掰;非業變打簡/業變打詳細、同資訊只講一次、總表超連結對真實分頁名;🆕(7/3)經理新打法=業變一二三照經理restructure(一開頭工地成本未稅/二原因帶(1)(2)子項攤業主額利差/三本單承商summary含利管費算式),🔴四五署名保留舊版(職羅慶人採購句當否句)、條號統一中文;🔴🔴利潤率兩條分母不同(1)新增議價÷成本(2)既有÷業主減帳、點三不放%只到含利管費;業變優先此版。檔:桌面02.修改審查說明…。細節在檔
