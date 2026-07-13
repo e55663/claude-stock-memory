@@ -1,5 +1,7 @@
 # Memory Index
 
+- [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 🔴🔴使用者給的memo文字一律逐字進Excel,不准自己重排成「標準結構」/改寫用詞;疑慮一律開資料夾txt別動memo本文;竣葦#8踩雷被重話糾正
+- [缺件說明放txt不放memo](feedback_missing_items_note_location.md) — 缺件/暫緩原因只寫M4欄+缺件說明.txt,不寫進B4 memo正式內文;memo維持乾淨標準結構
 - [141A三件請款0713批次現況](project_billing_batch_state_0713.md) — 天九暫緩待補材料試驗報告/綠建材標章;竣葦乾淨已打但待歸檔指令;長安快打部隊卡住等使用者澄清期數+正確請款單
 
 - [每月計價修改追蹤報表](reference_monthly_tracking_report.md) — 桌面「M月計價修改追蹤報表.xlsx」逐月一檔;打法說明+每案每類型各一分頁(請款/修改分開);8欄(項次/合約/計價項目/期數/廠商/金額/日期/備註);🔴資料夾為真相(一件=一夾,已完成看工地歸檔夾/待歸檔看Downloads整理夾+待bucket);金額合約日期去四源檔比對;日期優先計價本/修改單本、空白才用資料夾建立日、不留空;備註只「已入計價本，已完成」或「待歸檔」;原地覆寫不移動。母腳本build_report2.ps1
