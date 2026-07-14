@@ -52,6 +52,14 @@ metadata:
 4. 逐日行程表 ✅已依實際機票時間修正+6/24依男友意見調整(見下)
 5. 🆕Céline Dion巴黎演唱會(9/25晚20:00場次與行程重疊)票已搶完,要不要查二手/官方退票要快(見下方新增段)
 
+## ✅(2026/07/13 全文補齊，含Google Maps連結)男友資料完整版
+7/2版只有摘要、無連結；使用者7/13貼了完整原文，已整理成五清單(景點/百貨/必去/美食/全部)給使用者核對，格式問題見[[project_paris_notion_content]]。完整清單重點：
+- 景點新增出處連結(羅浮宮/奧賽/大皇宮/小皇宮+Café 1902/協和廣場/瘋馬秀/艾菲爾鐵塔/凱旋門/歌劇院/塞納河遊船3方案)，聖母院細節同7/2版(4種票)
+- 百貨：Galeries Lafayette Le Gourmet，B1超市買奶油結帳後憑收據到旁邊櫃檯免費真空包裝，IG連結佐證
+- 必去(品宏推薦)：Relais Louis XIII(推Le Menu Signature)、Brigat'
+- 美式運通折扣義式餐廳5間：Zeffirino Paris、DAROCO Trattoria(旁邊Danico Cocktail Bar世界百大酒吧)、Il Ristorante(喬治五世酒店)、Langosteria、Carboni's(男友常去這間)
+- 全部連結都是Google Maps分享連結，逐條核對用，使用者當下核對過內容正確
+
 ## 🆕 景點票價與注意事項（2026/07/02 男友整理）
 
 **巴黎聖母院 Notre-Dame de Paris**
