@@ -18,3 +18,5 @@ metadata:
 - 雲端 routine「晚間待辦提醒 20:30」已建立,id `trig_014NDWaJJdrTgBCgZftAwzVi`,cron `30 12 * * *`(UTC,對應台北20:30),每天讀 `reference_personal_todo_list.md`,有待辦才推播、空清單不推播不噪音,用 haiku 省成本
 
 **How to apply:** 之後使用者說「幫我記一下 XX」就寫進 reference_personal_todo_list.md 的「目前待辦」區塊;完成的項目要主動刪掉/標記,不要一直堆積;使用者要改推播時間就用 RemoteTrigger action update 改 cron_expression。
+
+✅(2026-07-14)實測全通:第一次配對失敗是因為 `/remote-control` 在桌面開了瀏覽器網頁版而非印QR碼給手機掃,使用者改用手機 Claude app→「Code」分頁→從session列表直接點選連上,才算真配對成功;配對成功後 RemoteTrigger action=run 手動觸發過一次,手機確實收到推播(含測試項目),已驗證整條「repo待辦→雲端routine→PushNotification→手機推播」管線可用。測試項目已從清單清除、repo已push。
