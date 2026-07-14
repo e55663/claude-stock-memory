@@ -39,10 +39,15 @@ metadata:
 **目的不是回報內容,是卡住額度視窗起點。** 使用者上班 8:00–18:00,自然首用會把 5hr 視窗錨在 8:00→8-13/13-18/18-23,第三個 set 落在下班後(18+)被浪費,一天只用到 2 個 set。解法=用 6:00 觸發在他到公司前先把視窗錨在 6:00→6-11/11-16/16-21,三個 set 全落在上班時間內可用。
 - 機制(我確定):訂閱額度=5小時滾動視窗,從該視窗第一次使用起算、滿5hr才重置,上面還有每週總上限;**不能提早重置**。6/11/16 兩兩剛好相隔5hr=三視窗無縫接力鋪滿6:00–21:00。
 - 🔴**不確定、要使用者實測**:雲端 routine 觸發是否跟「互動使用」吃同一個視窗、能否錨定。建議第一天跑完去額度頁看重置時間有沒有變成16:00/21:00;有變=有效,沒變=雲端與互動不同桶=白扣要收掉。
-- 三個 routine(每天觸發含週末,Haiku,prompt 只回OK不准用工具→單次成本極低;但 API 把 allowed_tools 空清單吃掉自動帶回預設工具,靠 prompt 壓成本):
+- 五個 routine(2026/07/14 從三個加碼到五個,延續每5hr一個的節奏,涵蓋到深夜/晚間也在用電腦的情境;每天觸發含週末,Haiku,prompt 只回OK不准用工具→單次成本極低;但 API 把 allowed_tools 空清單吃掉自動帶回預設工具,靠 prompt 壓成本):
   - 額度視窗錨定 06:00 = `trig_01N6vgMEk1HayQUB5eTo3T7W` cron `0 22 * * *`
   - 額度視窗錨定 11:00 = `trig_01GKzSNYyQyapCtdeWa1nPJ5` cron `0 3 * * *`
   - 額度視窗錨定 16:00 = `trig_013muPWXX98pNxogjV54Lkev` cron `0 8 * * *`
+  - 額度視窗錨定 21:00 = `trig_01E8ZFChRQkTL5MHWRbPXUFX` cron `0 13 * * *`(🆕2026/07/14)
+  - 額度視窗錨定 02:00 = `trig_01HkjR4sQfTsQ7AUP7z6CzZw` cron `0 18 * * *`(🆕2026/07/14)
+
+## ✅ 個人待辦推播系統(2026/07/14 建,見[[project_personal_todo_push_setup_0714]])
+使用者反映下班意志力耗盡容易忘事,建了「repo待辦清單→晚間8:30雲端routine→PushNotification→手機推播」全鏈,已實測手機真的收得到。routine id `trig_014NDWaJJdrTgBCgZftAwzVi`,跟上面五個額度錨定routine是不同用途、獨立運作,別搞混。手機Remote Control配對用「Claude app→Code分頁→session列表點選」比QR code穩(QR code在桌面已登入瀏覽器情境下常常不會跳出來,要按空白鍵才顯示)。
 
 ## ✅ Claude Code 工具擴充（2026/07/09）
 使用者說「要繼續開發claude的功能」,查+動手做了以下：
