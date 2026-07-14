@@ -44,7 +44,7 @@ metadata:
   - 額度視窗錨定 11:00 = `trig_01GKzSNYyQyapCtdeWa1nPJ5` cron `0 3 * * *`
   - 額度視窗錨定 16:00 = `trig_013muPWXX98pNxogjV54Lkev` cron `0 8 * * *`
   - 額度視窗錨定 21:00 = `trig_01E8ZFChRQkTL5MHWRbPXUFX` cron `0 13 * * *`(🆕2026/07/14)
-  - 額度視窗錨定 02:00 = `trig_01HkjR4sQfTsQ7AUP7z6CzZw` cron `0 18 * * *`(🆕2026/07/14)
+  - ❌額度視窗錨定 02:00 = `trig_01HkjR4sQfTsQ7AUP7z6CzZw` cron `0 18 * * *` 建完當天就被使用者抓到問題已停用(`enabled:false`):02:00觸發會開02:00-07:00視窗,蓋過06:00那個錨定點(6:00<7:00還在02:00視窗內不會重新起算),反而讓整條鏈延後到07:00才起算,弄巧成拙。教訓=加錨定點要檢查會不會跟既有點的5hr視窗重疊、不是越多越好。
 
 ## ✅ 個人待辦推播系統(2026/07/14 建,見[[project_personal_todo_push_setup_0714]])
 使用者反映下班意志力耗盡容易忘事,建了「repo待辦清單→晚間8:30雲端routine→PushNotification→手機推播」全鏈,已實測手機真的收得到。routine id `trig_014NDWaJJdrTgBCgZftAwzVi`,跟上面五個額度錨定routine是不同用途、獨立運作,別搞混。手機Remote Control配對用「Claude app→Code分頁→session列表點選」比QR code穩(QR code在桌面已登入瀏覽器情境下常常不會跳出來,要按空白鍵才顯示)。
