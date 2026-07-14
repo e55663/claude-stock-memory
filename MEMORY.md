@@ -115,5 +115,6 @@
 - [重要事件與計畫](project_events.md) — 東京行、新工作、漏水問題、定期定額投資
 - [互動偏好](feedback_preferences.md) — 無糖預設、海外勸阻購物、平面表格、AI決策習慣 ⚠️「平面表格」與工作那套[[feedback_copy_friendly_plaintext]]「純文字不要表格」可能衝突,視情境而定
 - [個人待辦清單](reference_personal_todo_list.md) — 🔴手機/桌面共用的生活待辦,想到就說「幫我記一下」寫進去,問「我有什麼要做的」就讀出來;檔案存記憶repo自動同步兩端
+- [Gmail登入通知清理0714](project_gmail_login_notification_cleanup_0714.md) — 🔴進行中:8家銀行登入通知灌爆信箱害漏看豐存股圈存失敗;已建標籤Label_4/Label_5+歸檔~50封;剩~70封5-6月舊信(IDs在檔)+2封只差移出INBOX+Gmail篩選器待設;🔴雲端Session授權視窗要點「永遠允許」、本機bypass管不到雲端;Bonny&Read購物金7/16到期
 - [待辦推播系統設定0714](project_personal_todo_push_setup_0714.md) — ✅手機Remote Control已配對+雲端routine「晚間待辦提醒20:30」已建(trig_014NDWaJJdrTgBCgZftAwzVi),每天讀待辦清單有內容才推播;改時間用RemoteTrigger update
 - [精品手環購買計畫](project_luxury_bracelet_purchase_plan.md) — VCA虎眼石老花日常疊戴搭LOVE Unlimited最百搭;30萬預算三選一(Cartier LOVE Unlimited/Bulgari Serpenti Viper/Cartier Clash de Cartier)依漲價動能排序:①LOVE Unlimited(正處漲價周期+預算剛好卡上)②Serpenti Viper(經典保值無急迫性)③Clash de Cartier(2025未調漲不急)
