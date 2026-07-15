@@ -24,3 +24,5 @@ Remove-Item -LiteralPath $tmp -Force                   # 5.清暫存
 關鍵:第3步用 WriteAllBytes 蓋『既有檔』(檔案身分不變)才不會丟圖示位置;裸 SaveAs 是刪+建新檔。另:改檔建的備份驗證OK要主動刪別留桌面[[feedback_delete_temp_backups]]。Downloads的檔(如數字清單)無此桌面位置問題,一般SaveAs即可。
 
 🔴🔴(2026/7/15又跳,新情境)**檔案被使用者開著鎖住時,原地覆寫法會失效**——第3步WriteAllBytes需要獨占寫入原始檔案路徑,檔案開著寫不進去(拋"being used by another process")。我當時改用`[Runtime.InteropServices.Marshal]::GetActiveObject("Excel.Application")`抓已開啟的活頁簿、直接對它呼叫`$wb.Save()`改完存檔——結果一樣跳位,因為Excel的Save()跟SaveAs一樣是整檔重建,不是bytes層級patch。**教訓**:檔案被開著時沒有安全存法,兩條路都會跳位。正確處理=**先明講「檔案開著,這次存了會跳位,要不要先關檔讓我用安全流程(SaveAs暫存+WriteAllBytes)」**,不要悶著頭直接對開著的活頁簿存檔。存完事後可用`(Get-Item).LastWriteTime=[datetime]'home日期'`嘗試挽救排序位置(未必100%復原,取決於Explorer實際排序依據)。
+
+🔴(2026/7/15使用者確認的工作流程)**檔案開著時,先講一聲,等使用者關掉我再更新——不要悶著頭對開著的活頁簿存檔。** 技術上驗證過:即使檔案還開著,對它`(Get-Item).LastWriteTime=`還是能改成功(沒拋lock錯誤),代表跳位的根因是「存檔動作改了時間戳、桌面依時間排序就重排」,不是檔案身分被重建;所以理論上開著也能靠「編輯+存檔+馬上還原時間戳」保住位置。**但使用者仍選擇「關掉比較乾淨」**,原因不只圖示:檔案開著時我呼叫存檔可能打斷使用者當下未存的編輯內容(搶寫衝突),關掉就沒這層風險。**結論=以後遇到要改的桌面Excel正被開著,先告知+等關檔,不要自作主張走開著存檔那條路(即使技術上可行)。**
