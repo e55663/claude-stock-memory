@@ -3,7 +3,8 @@
 - [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 🔴🔴使用者給的memo文字一律逐字進Excel,不准自己重排/改寫用詞;疑慮開資料夾txt別動memo本文;竣葦#8踩雷被重話糾正
 - [缺件說明放txt不放memo](feedback_missing_items_note_location.md) — 缺件/暫緩原因只寫M4欄+缺件說明.txt,不寫進B4 memo正式內文
 - [141A三件請款0713批次現況](project_billing_batch_state_0713.md) — 天九暫緩待補件;🔴竣葦#7曾整列漏在計價本外(教訓=要抽查歸檔夾期數跟計價本列數一致);長安快打部隊卡住待澄清
-- [🔴141A全吊成駿#10列控表7處錯誤](project_billing_chengjun_crane10_0714.md) — 核決升級總經理(首次破300萬);列控表逐列查抓到7處錯誤(70T誤植80T×3/內容抄錯×1/單價欄≠總價欄×3,均不影響總額);已打計價本+7月報表未歸檔;方法論教訓見[[feedback_self_audit_no_crutch]]
+- [🔴141A全吊成駿#10列控表7處錯誤](project_billing_chengjun_crane10_0714.md) — 核決升級總經理(首次破300萬);列控表逐列查抓到7處錯誤(70T誤植80T×3/內容抄錯×1/單價欄≠總價欄×3,均不影響總額);已打計價本+7月報表未歸檔;7/15memo未稅/未簽認已修正;方法論教訓見[[feedback_self_audit_no_crutch]]
+- [141A/141E 0715批次現況](project_billing_batch_state_0715.md) — 泳鑫#1/SGS材料試驗費#12/台泥#2三案已入計價本,分別待送呈或歸檔;成駿#10 memo已修正;新學到混凝土材料必查抽磅
 - [141A-136齊昇鋼構噴漆送採購議價0714](project_change_order_141A136_0624.md) — 原退件案補件後改狀態送採購議價中(承辦陳松輝);五處同步完成;核決仍二擇一待議價結果;另有模板換包簽呈.pdf不相關檔案未處理
 
 - [每月計價修改追蹤報表](reference_monthly_tracking_report.md) — 桌面「M月計價修改追蹤報表.xlsx」逐月一檔;打法說明+每案每類型各一分頁;🔴資料夾為真相(一件=一夾);金額合約日期去四源檔比對;原地覆寫不移動。母腳本build_report2.ps1
