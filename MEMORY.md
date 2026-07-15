@@ -32,7 +32,7 @@
 - [選股完整性閘門(防偷懶)](feedback_stock_completeness_gate.md) — 🔴選股跟請款同病根會偷懶漏查(尤其第4關籌碼);hook `stock-gate.ps1`逼談股票說「可進」前先過四硬閘門+5題,有❌不准說可進
 - [狀態串聯同步五處](feedback_status_sync_five_places.md) — 🔴一件請款/修改狀態一改要一次同步五處:①分頁tab+M4②總表備註③追蹤報表備註④整理夾夾名後綴⑤夾內txt;改完自唸都同步了嗎
 - [🔴官方附件一覽表(附件查檢權威)](reference_official_attachment_list.md) — 桌面`附件參考.pdf`=每件附件查檢對照它逐項查別憑印象;第8類租工點工機具🔴要COMS匯出表+日報簽認;第15項扣款單要雙方簽名;細節在檔
-- [自辦vs代扣對合約的意義](feedback_self_vs_deduct_contract.md) — 🔴只有「自辦」吃本SC合約/預算,「代扣」不吃;核累計vs合約一律用『累計自辦』別拿全額比;代扣加款真扣廠商時×1.155
+- [自辦vs代扣對合約的意義+扣款vs加扣](feedback_self_vs_deduct_contract.md) — 🔴只有「自辦」吃本SC合約/預算,「代扣」不吃;核累計用『累計自辦』別拿全額比;🔴扣自己的錢=扣款,扣別家廠商的錢=加扣(=代扣),套自辦/代扣固定格式別自創詞(泳鑫/翔博案教訓)
 - [平安點租工#14已審核+扣款下期扣](project_billing_pingan_0708.md) — 141A-SC009052點租工#14三方閉合審核全過5,676,052;🔴自身扣款43,050擔#15下期扣;資料夾未歸檔等指令
 - [全市場選股流程](reference_full_market_screen.md) — 🔴每次選股=TWSE OpenAPI全市場海選+完整列所有模式(五區塊+大盤+5題清單+兩桶+集中度)純文字
 - [推薦一律附股價+時間戳](feedback_always_show_price_with_timestamp.md) — 每檔提到的股票附股價+時間基準,報錯價=資料過期會被抓
