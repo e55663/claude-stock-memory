@@ -88,3 +88,4 @@
 - [個人待辦清單](reference_personal_todo_list.md) — 🔴手機/桌面共用生活待辦,想到就說「幫我記一下」寫進去,問「我有什麼要做的」就讀出來
 - [待辦推播系統設定0714](project_personal_todo_push_setup_0714.md) — ✅手機Remote Control已配對+雲端routine「晚間待辦提醒20:30」已建,每天讀待辦清單有內容才推播
 - [精品手環購買計畫](project_luxury_bracelet_purchase_plan.md) — VCA虎眼石老花搭LOVE Unlimited最百搭;30萬預算三選一依漲價動能排序:①LOVE Unlimited②Serpenti Viper③Clash de Cartier
+- [混凝土材料類請款必查抽磅](reference_concrete_material_billing_format.md) — 🔴列控表xls的「抽磅效益」分頁容易漏查(每100m3抽1車覆磅,±50kg/m3公差);該表是全案累計非分期,新期接續上期排序號;141E-台泥#2案曾整段漏查被使用者貼出#1期舊memo才發現
