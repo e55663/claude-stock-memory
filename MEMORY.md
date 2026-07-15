@@ -12,7 +12,7 @@
 - [0629整批請款被連續糾正](feedback_billing_corrections_0629.md) — 🔴計價月用當月、內扣代辦不列待定直接打全額+扣款攤開、memo照打法說明別逐字打口頭解釋、機具補單價行、桌面圖示跳位=原地覆寫法、別硬關使用者Excel、收尾要同步各本打法說明
 - [現階段重心是錢](user_money_first_focus.md) — 使用者只在意錢→回答從「對他的錢/ROI划不划算」切入給數字;要培育成賺錢機器=最正確資料+絕不掰附出處,不報明牌;成本敏感
 - [分析個股=分析師五模板深拆](feedback_stock_analyst_deep_dive.md) — 講「分析[個股]」=資深分析師五模板+接真實資料+附出處時間戳+從錢切入加集中度;有別於「選股」全市場海選
-- [🔴80萬真金投資計畫0706](project_invest_80w_plan_0706.md) — ~80萬搏1-2年翻倍但只忍-25%;定案兩桶(緩衝20萬+穩桶42萬VT/VOO+飆桶18萬接受-50%);不加槓桿;🔴待決:美股vs台股岔路+飆桶候選未撈
+- [🔴80萬真金投資計畫0706](project_invest_80w_plan_0706.md) — ~80萬搏1-2年翻倍但只忍-25%;兩桶(緩衝20萬+穩桶42萬+飆桶18萬);🆕7/14大跌已先進13萬(桶別未確認,下次補問);🔴待決:美股vs台股岔路+飆桶候選未撈
 - [存30萬計畫+銀行vs0050](project_savings_plan_30w.md) — 年終21W+男友5W→2027-01破30萬;建議兩桶(緊急金15萬活存+超過丟0050 DCA)
 - [信用卡回饋優化2026](project_credit_card_optimization_2026.md) — ✅Excel(數字清單.xlsx)已改完(信用卡分頁效期+主攻+來源、2026情境最佳卡分頁);🔴PPT待做;關鍵:花旗死→永豐DAWHO Plus無腦全通路5%新王
 - [個人記帳Excel系統](project_budget_spreadsheet.md) — 🔴`Downloads\數字清單.xlsx`唯一主檔;總覽儀表板/到期提醒/各卡checklist都在裡面;⚠️月份欄是日期序號、COM雷Value2用[double]/ps1要UTF8-BOM
@@ -55,7 +55,7 @@
 - [請款對帳抓錯脈絡](reference_invoice_audit_context.md) — 幫根基營造審吊卡/機具租金請款抓錯(台積AP7嘉義/成駿/OA015010000)每月一批;🔴判重唯一鍵=單號;🔴>20萬首期先送採購議價;細節在檔
 - [AI agent自動化建置](project_ai_agent_automation.md) — ✅每日盤前routine已停用(不扣額度);✅3個雲端routine錨定5hr額度視窗;雲端白名單擋死股市API三源403(結構性)
 - [模擬倉追蹤](project_paper_trading.md) — 🔴已結束/停用;第一期認賠收尾(0/5);選股不再對帳
-- [選股對帳紀錄制度(7/8起強制)](project_stock_track_record.md) — 🔴每次「幫我選股」第一步=對帳桌面『選股對帳紀錄.txt』逐筆判對錯→本次建議含空手寫回檔;累積10筆統計真實勝率
+- [選股對帳紀錄制度(7/8起強制)](project_stock_track_record.md) — 🔴每次「幫我選股」第一步=對帳桌面『選股對帳紀錄.txt』逐筆判對錯→本次建議含空手寫回檔;🆕7/15一輪被打斷未寫回,下次要重新對帳
 - [選股框架實證審核完結](project_stock_framework_refactor.md) — 🔴七項全回測完,結果進選股說明「十四、實證審核總表」;鐵則=新招先驗證才寫進框架,沒驗標未驗證
 - [Mac裝置更新與VM待辦](project_mac_device_update.md) — 家用M1 Pro Mac更新Tahoe(無備份);PD+Windows盜版暫緩;清理硬碟待辦
 - [跨裝置記憶同步設定](project_memory_sync_setup.md) — ✅記憶=私人GitHub repo雙向自動同步;紀律:一次只在一台改避免衝突
@@ -69,7 +69,7 @@
 - [信貸100W投資計畫](loan_investment_plan.md) — 討論中未實際借款;🔴房貸在使用者名下=銀行算他負債;主貸719萬+增貸431萬寬限期月繳20,652;✅2027/08寬限期到期跳45,600=懸崖確定;100W暫緩或大砍。細節在檔
 - [信貸提問清單+富人槓桿知識](reference_loan_question_checklist.md) — 打銀行問信貸16題;銀行:主攻台新、LINE Bank第二報價;年所得~80萬22倍≈143萬capacity;另見[[reference_wealthy_leverage_principles]]好債vs壞債/富人紀律
 - [選股與操作邏輯](stock_selection_logic.md) — 課程筆記完整選股邏輯:大環境判斷、抗跌領頭羊、五檔口訣、操作紀律
-- [持倉與觀察名單](portfolio_watchlist.md) — 🆕台股:台積電2330+00981A+3037欣興;美股:QQQM+NVDA;美7台3、AI/科技曝險≈84%;策略=AI主線長線定投+逢跌加碼
+- [持倉與觀察名單](portfolio_watchlist.md) — 🆕7/15 3037已出清(價格待補問),台股回到2330+00981A;美股:QQQM+NVDA;策略=AI主線長線定投+逢跌加碼
 - [混合無腦掛單制](feedback_brainless_order_system.md) — ✅定案:兩車道(A全掛單純價格/B 1:20瞄量)+6邏輯衝突已拍板;五區塊掃描品質保留,只改進場執行/風控/出場
 - [選股評分系統](feedback_stock_selection_system.md) — 十區塊輸出+兩桶(穩70%/飆30%);🆕模式C動能確認已驗證寫進hook;細節在檔
 - [課程教材來源+大方向趨勢+飆股洞察+勝利工程式+書籍框架](reference_trading_course_source.md) — 股票課8堂精華在記憶;各主線循環位置飆股藏復甦初期🟢;🔴籌碼是潛伏層放行關卡非追價理由;20大策略+CAN SLIM等書籍框架見[[winning_strategies]][[book_frameworks]][[macro_themes]][[feedback_flystock_lessons]]
