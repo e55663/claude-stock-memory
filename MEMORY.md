@@ -1,9 +1,12 @@
 # Memory Index
 
-- [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 🔴🔴使用者給的memo文字一律逐字進Excel,不准自己重排成「標準結構」/改寫用詞;疑慮一律開資料夾txt別動memo本文;竣葦#8踩雷被重話糾正
-- [缺件說明放txt不放memo](feedback_missing_items_note_location.md) — 缺件/暫緩原因只寫M4欄+缺件說明.txt,不寫進B4 memo正式內文;memo維持乾淨標準結構
-- [141A三件請款0713批次現況](project_billing_batch_state_0713.md) — 天九暫緩待補材料試驗報告/綠建材標章;🔴竣葦#7曾整列漏在計價本外(使用者發現#6#8間沒#7,查發票+歸檔夾證實真的漏了,已補回,教訓=要抽查歸檔夾期數跟計價本列數一致);長安快打部隊卡住等使用者澄清期數+正確請款單
+- [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 🔴🔴使用者給的memo文字一律逐字進Excel,不准自己重排/改寫用詞;疑慮開資料夾txt別動memo本文;竣葦#8踩雷被重話糾正
+- [缺件說明放txt不放memo](feedback_missing_items_note_location.md) — 缺件/暫緩原因只寫M4欄+缺件說明.txt,不寫進B4 memo正式內文
+- [141A三件請款0713批次現況](project_billing_batch_state_0713.md) — 天九暫緩待補件;🔴竣葦#7曾整列漏在計價本外(教訓=要抽查歸檔夾期數跟計價本列數一致);長安快打部隊卡住待澄清
+- [🔴141A全吊成駿#10列控表7處錯誤](project_billing_chengjun_crane10_0714.md) — 核決升級總經理(首次破300萬);列控表逐列查抓到7處錯誤(70T誤植80T×3/內容抄錯×1/單價欄≠總價欄×3,均不影響總額);已打計價本+7月報表未歸檔;方法論教訓見[[feedback_self_audit_no_crutch]]
+- [141A-136齊昇鋼構噴漆送採購議價0714](project_change_order_141A136_0624.md) — 原退件案補件後改狀態送採購議價中(承辦陳松輝);五處同步完成;核決仍二擇一待議價結果;另有模板換包簽呈.pdf不相關檔案未處理
 
+<<<<<<< HEAD
 - [每月計價修改追蹤報表](reference_monthly_tracking_report.md) — 桌面「M月計價修改追蹤報表.xlsx」逐月一檔;打法說明+每案每類型各一分頁(請款/修改分開);8欄(項次/合約/計價項目/期數/廠商/金額/日期/備註);🔴資料夾為真相(一件=一夾,已完成看工地歸檔夾/待歸檔看Downloads整理夾+待bucket);金額合約日期去四源檔比對;日期優先計價本/修改單本、空白才用資料夾建立日、不留空;備註只「已入計價本，已完成」或「待歸檔」;原地覆寫不移動。母腳本build_report2.ps1
 - [自我稽核不靠小抄](feedback_self_audit_no_crutch.md) — 打請款單/修改單前先自我稽核一輪(算術/單價/加班倍率/扣款/計價區間/期序/署名日期/核決層級/附件);🔴動手前先讀141A兩本「打法說明」分頁對齊規則,改打法說明=記憶一起改。細節在檔
 - [0629整批請款被連續糾正](feedback_billing_corrections_0629.md) — 🔴計價月用當月(連夾名/月份子夾)、內扣代辦不列待定直接打全額+扣款攤開(弘隆/成駿/承洋/移工薪資同套)、memo照打法說明別把口頭解釋逐字打、機具補單價行新廠商複製範本(6)+補總表超連結、列控表是基本附件別漏、確認金額直接改別反問、🔴桌面圖示跳位已解=原地覆寫法(SaveAs暫存→WriteAllBytes覆原檔同物件+還原時間戳)、別硬關使用者Excel、🔴收尾要同步各本打法說明
@@ -78,31 +81,84 @@
 - [模擬倉追蹤](project_paper_trading.md) — 🔴已結束/停用(7/2暫停、7/7再確認);第一期5檔6/26認賠收尾(0/5);🔴「幫我選股」不再對帳模擬倉、不拉那5檔=直接出選股
 - [選股對帳紀錄制度(7/8起強制)](project_stock_track_record.md) — 🔴每次「幫我選股」第一步=對帳桌面『選股對帳紀錄.txt』所有待對帳項(當日真實價逐筆判對錯,空手/不接刀也是call要驗)→本次建議含空手寫回檔;沒對帳段=流程沒跑完;累積10筆按來源規則統計真實勝率=補實盤證明的唯一路;hook開頭已加強制句(下session生效);第一批7/8已入檔(祥碩條件單/台積續抱/奇鋐富世達京元電不接刀/研華不追/大盤空手)
 - [選股框架實證審核完結](project_stock_framework_refactor.md) — 🔴(7/8)整套七項全回測完,結果進選股說明「十四、實證審核總表」+hook已改實證對齊版:✅動能(+2~2.4%/月)✅錯殺三題(20日+視野,fwd20中位5.58%vs陷阱1.90%)✅法人連3買小加分/❌ETF公告後買(中位-0.6%,公告前大漲者公告日=賣點)❌逆勢強度只留🟢選漲(跟跌組反彈更大,🟢=風控標籤)❌連賣自動紅燈(連賣組≈基準,降為揭露警示)/🟡等止穩打平/⚠️防追高=機會成本(倖存偏誤只取方向)/實盤=模擬倉0/5;🔴鐵則=新招先驗證才寫進框架、沒驗標未驗證;富時季審3/6/9/12第一週五公告第三週五生效;FinMind限流掉樣本要查loaded、0050在2025-06-18一拆四;🆕(7/13)利空過度反應(型②,單日跌≥5%+5日內止穩進場)驗證通過fwd20中位+6.49%/勝67%(補3037那種真利空但殺過頭的破口)✅寫進說明;簡單KD(9,3,3)固定20/80門檻驗證失敗(超買K>80完全不能當賣訊號,動能盤會鈍化)❌不採用
+=======
+- [每月計價修改追蹤報表](reference_monthly_tracking_report.md) — 桌面「M月計價修改追蹤報表.xlsx」逐月一檔;打法說明+每案每類型各一分頁;🔴資料夾為真相(一件=一夾);金額合約日期去四源檔比對;原地覆寫不移動。母腳本build_report2.ps1
+- [自我稽核不靠小抄](feedback_self_audit_no_crutch.md) — 打請款單/修改單前先自我稽核(算術/單價/加班倍率/扣款/核決層級/附件);🔴動手前先讀141A/141E打法說明分頁,改打法說明=記憶一起改;🔴列控表案子要逐列比對單價欄vs總價欄+噸位欄vs彙總表,不能只信總額。細節在檔
+- [0629整批請款被連續糾正](feedback_billing_corrections_0629.md) — 🔴計價月用當月、內扣代辦不列待定直接打全額+扣款攤開、memo照打法說明別逐字打口頭解釋、機具補單價行、桌面圖示跳位=原地覆寫法、別硬關使用者Excel、收尾要同步各本打法說明
+- [現階段重心是錢](user_money_first_focus.md) — 使用者只在意錢→回答從「對他的錢/ROI划不划算」切入給數字;要培育成賺錢機器=最正確資料+絕不掰附出處,不報明牌;成本敏感
+- [分析個股=分析師五模板深拆](feedback_stock_analyst_deep_dive.md) — 講「分析[個股]」=資深分析師五模板+接真實資料+附出處時間戳+從錢切入加集中度;有別於「選股」全市場海選
+- [🔴80萬真金投資計畫0706](project_invest_80w_plan_0706.md) — ~80萬搏1-2年翻倍但只忍-25%;定案兩桶(緩衝20萬+穩桶42萬VT/VOO+飆桶18萬接受-50%);不加槓桿;🔴待決:美股vs台股岔路+飆桶候選未撈
+- [存30萬計畫+銀行vs0050](project_savings_plan_30w.md) — 年終21W+男友5W→2027-01破30萬;建議兩桶(緊急金15萬活存+超過丟0050 DCA)
+- [信用卡回饋優化2026](project_credit_card_optimization_2026.md) — ✅Excel(數字清單.xlsx)已改完(信用卡分頁效期+主攻+來源、2026情境最佳卡分頁);🔴PPT待做;關鍵:花旗死→永豐DAWHO Plus無腦全通路5%新王
+- [個人記帳Excel系統](project_budget_spreadsheet.md) — 🔴`Downloads\數字清單.xlsx`唯一主檔;總覽儀表板/到期提醒/各卡checklist都在裡面;⚠️月份欄是日期序號、COM雷Value2用[double]/ps1要UTF8-BOM
+- [早期Gucci包估價留出](project_vintage_bag_valuation.md) — 幾咖早期Gucci包評估留/出;非保值之王、漆皮龜裂殺價;第一咖判非資產約5,000建議留紀念
+- [法國巴黎旅遊規劃+Notion頁面](project_france_trip.md) — 9/17-9/27首訪巴黎情侶遊;✅機票/住宿已訂、Notion頁Day1-9已填完;下一步:羅浮宮訂時段/聖母院鐘樓/Céline Dion票;Notion編輯技巧見[[project_paris_notion_content]]
+- [工作關鍵字觸發](reference_work_keywords.md) — 講關鍵字直接進狀況:請款/計價→核對抓錯+打Excel+歸檔;修改單→memo+核決+查預算;歸檔→搬工地;選股→五區塊+盤面
+- [入預算作業流程](reference_budget_entry_workflow.md) — 141E軟橋段入預算:主檔分頁顏色標狀態(黃=進行中→抽成專案YYYYMMDD.xlsx)+主檔複製加MMDD前綴放當日夾;🔴空白列不掰
+- [修改單公式化範本](reference_change_order_template.md) — 修改單呈核memo公式版:填7格→A7自動組裝;署名羅慶人、日期問當天、🔴絕不掰;非業變打簡/業變打詳細;業變優先經理新打法(利潤率兩條分母不同);細節在檔
+- [請款單列控表打法](reference_billing_control_sheet_format.md) — 列控表＋簽單明細標準打法(工數×單價、稅5%、加班費逐日核);細節在檔
+- [做事要快別來回](feedback_work_faster_batch_operations.md) — Excel操作一支腳本一次做完別拆多支來回、給了最終文字就直接做別再問;中文COM=Write寫.ps1→補UTF8BOM→run
+- [一批檔跑完寫進docs/todo.md](feedback_batch_todo_workflow.md) — 一次丟一堆檔→我自辨類型+核對+直接打→問題集中寫todo.md;🔴缺料要確認也寫todo標🔴不自填;歸檔留他按
+- [歸檔前先放下載整理夾](feedback_stage_in_downloads_before_archive.md) — 請款跑完先Downloads開整理夾+打計價Excel→停下等確認→OK才搬工地;歸檔=最後關卡需明確指令
+- [問題案=夾名加🔴標註+夾內txt;歸檔=清標註再搬](feedback_problem_case_folder_with_note.md) — 有問題的請款整理進夾、夾名後綴標註、缺漏txt放夾內;🔴歸檔指令=已沒問題→拿掉標註+刪txt再搬
+- [兩台電腦要求一樣](feedback_cross_device_consistency.md) — Mac/Windows規則標準相同;環境限制做不到就說做不到,不降低標準
+- [檔案必須讀完整](feedback_read_files_completely.md) — 讀記憶/資料檔不加limit截斷,寧慢不漏
+- [搬檔進新夾先驗證夾存在](feedback_move_into_dir_verify_exists.md) — 🔴建夾用`-Path`+`Test-Path`驗證再搬;絕不對不確定路徑連續`Move-Item -Force`;搬完驗整理夾有/根目錄無
+- [備份用完即刪](feedback_delete_temp_backups.md) — 我改檔前自建的備份/暫存驗證OK就主動刪;只刪自己建的
+- [選股完整性閘門(防偷懶)](feedback_stock_completeness_gate.md) — 🔴選股跟請款同病根會偷懶漏查(尤其第4關籌碼);hook `stock-gate.ps1`逼談股票說「可進」前先過四硬閘門+5題,有❌不准說可進
+- [狀態串聯同步五處](feedback_status_sync_five_places.md) — 🔴一件請款/修改狀態一改要一次同步五處:①分頁tab+M4②總表備註③追蹤報表備註④整理夾夾名後綴⑤夾內txt;改完自唸都同步了嗎
+- [🔴官方附件一覽表(附件查檢權威)](reference_official_attachment_list.md) — 桌面`附件參考.pdf`=每件附件查檢對照它逐項查別憑印象;第8類租工點工機具🔴要COMS匯出表+日報簽認;第15項扣款單要雙方簽名;細節在檔
+- [自辦vs代扣對合約的意義](feedback_self_vs_deduct_contract.md) — 🔴只有「自辦」吃本SC合約/預算,「代扣」不吃;核累計vs合約一律用『累計自辦』別拿全額比;代扣加款真扣廠商時×1.155
+- [平安點租工#14已審核+扣款下期扣](project_billing_pingan_0708.md) — 141A-SC009052點租工#14三方閉合審核全過5,676,052;🔴自身扣款43,050擔#15下期扣;資料夾未歸檔等指令
+- [全市場選股流程](reference_full_market_screen.md) — 🔴每次選股=TWSE OpenAPI全市場海選+完整列所有模式(五區塊+大盤+5題清單+兩桶+集中度)純文字
+- [推薦一律附股價+時間戳](feedback_always_show_price_with_timestamp.md) — 每檔提到的股票附股價+時間基準,報錯價=資料過期會被抓
+- [集中度是標註不是淘汰](feedback_concentration_flag_not_filter.md) — 同主題好票照推不剔除,只旁標「會加重集中度」;集中度=揭露標籤非過濾關卡
+- [進場前檢查清單](reference_stock_entry_checklist.md) — 每檔逐題打勾5項:①集中度②防追高③復甦初期④🔴籌碼先看⑤紀律;第4關最常被跳
+- [複製友善純文字](feedback_copy_friendly_plaintext.md) — 給使用者複製的內容用純文字條列、不要表格框、少用粗體
+- [報問題要附出處](feedback_flag_problems_with_source.md) — 抓錯每項附出處(檔名+分頁+列格/PDF段)+對照基準;格式=問題→出處→基準→差異金額
+- [來源檔別改要列錯誤+廠商看發票](feedback_flag_source_errors_vendor_by_invoice.md) — 🔴工地來源檔不改只讀,但要列錯誤清單;🔴廠商判定權威=發票開立方;計價本填正確值、可疑號留空
+- [請款太晚要提醒](feedback_late_billing_alert.md) — 🔴計價月=長官核定當月,月初分界5號;呈核日=處理當天;施作距計價>3個月主動打延遲固定句
+- [工地歸檔規則](reference_site_archive_convention.md) — 歸檔→`Downloads\工地\<編號.案場>\`;請款單進`2.請款單\<月份>\`、修改單進`4.修改單\`;141A→2.嘉科、141E→1.軟橋段
+- [請款附件查檢一覽表](reference_billing_attachment_checklist.md) — 🔴每次請款主動列完整【附件查檢】(應附/已給/❌缺);五件組+點租工COMS/機具COMS/鋼絲網物性試驗/焊接焊道檢測
+- [141A全吊成駿系列狀態](project_billing_chengjun_crane_0623.md) — #7已歸檔結案(1,937,200未稅/內扣1,403,411/執行副總◎決);#5吊卡202604已打計價本未歸檔;最新進度見[[project_billing_chengjun_crane10_0714]]
+- [PS中文字面值編碼不穩](feedback_ps_chinese_literal_encoding.md) — 🔴指令裡手打中文偶發編碼壞→搬檔別用手打中文當比對鍵,用Length/時間窗/物件.FullName+Get-ChildItem複驗
+- [🔴計價本格式鐵則](reference_billing_book_format_rules.md) — 動計價本前必讀:①memo逐字一樣②B4/A4/H4必設公式③期數最舊在最上④分頁最新放範本(6)旁⑤COM雷別整段換⑥期數認請款單+查F欄跳號⑦問題/退件件保留分頁+tab標色,絕不刪
+- [批次memo歸位規則](reference_batch_memo_filing.md) — 一次貼一大批memo:「本期…計價金額」→計價本B4、「非業主/業主變更」開頭→修改單A7;沒對應本就複製既有本另開
+- [計價請款單建法](reference_billing_statement_template.md) — 計價請款單建進既有`桌面\01.計價-141A…xlsx`(非另開新檔);複製範本(6)→改名項目(廠商)→填第4列;細節在檔
+- [行通表檔案位置](reference_hangtong_files_location.md) — 🔴行通表8個季度檔固定在桌面`行通表`資料夾,核單價依季別+機具/租工別自取別再跟使用者要
+- [核決權限表讀法](reference_approval_authority_table.md) — 修改單+請款單核決層級怎麼判(類別×金額級距→送誰◎決);🔴追加減看淨額非加帳、新增門檻20萬;細節在檔
+- [請款對帳抓錯脈絡](reference_invoice_audit_context.md) — 幫根基營造審吊卡/機具租金請款抓錯(台積AP7嘉義/成駿/OA015010000)每月一批;🔴判重唯一鍵=單號;🔴>20萬首期先送採購議價;細節在檔
+- [AI agent自動化建置](project_ai_agent_automation.md) — ✅每日盤前routine已停用(不扣額度);✅3個雲端routine錨定5hr額度視窗;雲端白名單擋死股市API三源403(結構性)
+- [模擬倉追蹤](project_paper_trading.md) — 🔴已結束/停用;第一期認賠收尾(0/5);選股不再對帳
+- [選股對帳紀錄制度(7/8起強制)](project_stock_track_record.md) — 🔴每次「幫我選股」第一步=對帳桌面『選股對帳紀錄.txt』逐筆判對錯→本次建議含空手寫回檔;累積10筆統計真實勝率
+- [選股框架實證審核完結](project_stock_framework_refactor.md) — 🔴七項全回測完,結果進選股說明「十四、實證審核總表」;鐵則=新招先驗證才寫進框架,沒驗標未驗證
+>>>>>>> origin/main
 - [Mac裝置更新與VM待辦](project_mac_device_update.md) — 家用M1 Pro Mac更新Tahoe(無備份);PD+Windows盜版暫緩;清理硬碟待辦
-- [跨裝置記憶同步設定](project_memory_sync_setup.md) — ✅雙向自動同步:記憶=私人GitHub repo(e55663/claude-stock-memory);Windows這台user-level hook自動pull+push;手機/雲端靠repo內.claude/settings.json hook(CLAUDE_CODE_REMOTE=true);紀律:一次只在一台改避免衝突
-- [🔴桌面Excel存檔用原地覆寫法](feedback_desktop_excel_inplace_save.md) — 存桌面計價本絕不用裸SaveAs覆原檔(會害圖示跳位,已犯多次);一律SaveAs暫存→WriteAllBytes覆原檔同物件→還原時間戳→刪暫存;附程式碼直接複製;備份驗OK即刪
-- [🔴不要敷衍](feedback_no_perfunctory_work.md) — 交出來要完整到位可直接用,不准半吊子(留舊值/空欄就說完成);手工檔不是不能改=有更好做法+徵得同意就能改,地雷是做得敷衍;回報完成前逐欄逐列自驗(如殘留舊值筆數=0)
-- [只動我說的](feedback_only_do_whats_asked.md) — 沒說的不動、說的就動;沒交代的散檔/項目即使看似該一起處理也先不碰,最多一句話問,不擅自歸檔/刪/改
+- [跨裝置記憶同步設定](project_memory_sync_setup.md) — ✅記憶=私人GitHub repo雙向自動同步;紀律:一次只在一台改避免衝突
+- [🔴桌面Excel存檔用原地覆寫法](feedback_desktop_excel_inplace_save.md) — 存桌面計價本絕不用裸SaveAs覆原檔(會害圖示跳位);一律SaveAs暫存→WriteAllBytes覆原檔同物件→還原時間戳→刪暫存
+- [🔴不要敷衍](feedback_no_perfunctory_work.md) — 交出來要完整到位可直接用,不准半吊子;手工檔徵得同意就能改,地雷是做得敷衍;回報完成前逐欄逐列自驗
+- [只動我說的](feedback_only_do_whats_asked.md) — 沒說的不動、說的就動;沒交代的散檔即使看似該一起處理也先不碰,最多一句話問
 - [不要問確認問題](feedback_no_clarifying_questions.md) — 直接回答,不在執行前問「是否要繼續」等確認問題
 - [不要自動產獨立檔案](feedback_no_standalone_artifacts.md) — 選股/看盤結果直接對話講,別自動另存txt/HTML儀表板;例外:記帳Excel
+<<<<<<< HEAD
 - [三層權限政策](feedback_permission_tiers.md) — 🔴(6/26覆寫)已改開bypassPermissions全自動(雷蒙安全三件套,二次確認後選的);settings.json加defaultMode=bypass+skipDangerous+22條毀滅級deny(不含一般Remove-Item/Move-Item);⚠️先前不開bypass原因=曾token外洩;🔴Windows安全網薄弱(deny前綴比對+我跑.ps1檔→護欄看不到腳本內容),bypass下真保護=我的備份紀律+OS資源回收桶/OneDrive+可隨時改回
 - [重要決定自動落檔](feedback_auto_save_decisions.md) — 重要決定/計畫/結論談完主動濃縮寫成記憶.md+更新索引,不用等提醒;只存結論非流水帳
 - [信貸100W投資計畫](loan_investment_plan.md) — ✅(7/3立約確認)台新信貸100W/120期/機動利率=定儲指數+2.14%目前3.88%/APR4.01%/手續費6,000/綁約24月;🔴機動非固定=指數漲0.5%→月付+460/10年多付5.5萬;🔴2027/08房貸寬限期到期月繳跳45,600懸崖;借款已核准待撥款。細節在檔
 - [信貸提問清單](reference_loan_question_checklist.md) — 打銀行問信貸16題(利率固定/機動、是否全期2-3%、APR、開辦費、提前清償違約金、搭配條件);銀行:主攻台新(薪轉行=Richart母品牌)、LINE Bank當第二報價、永豐保守;年所得~80萬22倍≈143萬capacity;先口頭比價別亂查聯徵、金額別借滿
 - [富人槓桿金融知識](reference_wealthy_leverage_principles.md) — 有錢人用貸款:好債vs壞債、ROE放大雙面刃、4用法、富人紀律(低LTV/緩衝/非追索);使用者信貸偏最危險端要手動補安全邊際
+=======
+- [三層權限政策](feedback_permission_tiers.md) — 🔴已改開bypassPermissions全自動+settings.json加22條毀滅級deny;⚠️Windows安全網薄弱,真保護=我的備份紀律+OS資源回收桶
+- [重要決定自動落檔](feedback_auto_save_decisions.md) — 重要決定/結論談完主動濃縮寫成記憶+更新索引,不用等提醒;只存結論非流水帳
+- [信貸100W投資計畫](loan_investment_plan.md) — 討論中未實際借款;🔴房貸在使用者名下=銀行算他負債;主貸719萬+增貸431萬寬限期月繳20,652;✅2027/08寬限期到期跳45,600=懸崖確定;100W暫緩或大砍。細節在檔
+- [信貸提問清單+富人槓桿知識](reference_loan_question_checklist.md) — 打銀行問信貸16題;銀行:主攻台新、LINE Bank第二報價;年所得~80萬22倍≈143萬capacity;另見[[reference_wealthy_leverage_principles]]好債vs壞債/富人紀律
+>>>>>>> origin/main
 - [選股與操作邏輯](stock_selection_logic.md) — 課程筆記完整選股邏輯:大環境判斷、抗跌領頭羊、五檔口訣、操作紀律
-- [持倉與觀察名單](portfolio_watchlist.md) — 🆕(7/14)台股:台積電2330+00981A+3037欣興(新增小倉,使用者自主買進非我建議,買在大盤未止穩+估值偏貴);美股:QQQM+NVDA;整體美7台3、AI/科技曝險≈84%持續加重;策略=AI主線長線定投+逢跌加碼;新機會=功率元件轉單(漢磊3707/嘉晶3016)、ETF納入;模擬倉6/22入長榮/力成/旺宏/廣達/南茂
-- [混合無腦掛單制](feedback_brainless_order_system.md) — ✅定案:兩車道(A全掛單純價格/B 1:20瞄量)+6邏輯衝突已拍板;五區塊掃描品質保留,只改進場執行/風控/出場;逼問衝突的hook已移除
-- [選股評分系統](feedback_stock_selection_system.md) — 🆕輸出十區塊(事件短打/潛伏層/主升段補漲/確認層/趨勢跟蹤/多因子海選/資金輪動龍頭比價/型態學三面共振/世界趨勢美股/接力賽接棒);潛伏層不套×0.3折扣;先找催化劑再找股票;兩桶(穩70%/飆30%);術語旁加白話;🔴資料源會落後~5天先看實際日期、美股用Yahoo JSON、型態學真抓圖;🆕(7/9)模式C動能確認進場(連3買+當日漲幅≥3.5%,不等復甦初期判定)解決「跑很多次選不到」問題,100檔×2年回測✅四組比較全贏純連3買與基準(p<0.001,樣本非獨立需打折),已寫進選股說明+stock-gate.ps1 hook
-- [課程教材來源](reference_trading_course_source.md) — 股票課8堂在`Downloads\agent\extracted\`、已全讀完精華在記憶;第4堂季線乖離11階段=大盤折扣係數源、第8堂型態學=第八區塊源;HEIC要WPF BitmapDecoder轉jpg
-- [大方向趨勢題材](macro_themes.md) — 各主線循環位置;飆股藏復甦初期🟢;每次選股必先看;現況CPO/機器人復甦初期、AI伺服器成熟期
-- [飆股選法洞察](feedback_flystock_lessons.md) — 飆股三條件;先找催化劑再找股票;資金兩桶;技術面必查;🔴籌碼是潛伏層放行關卡非追價理由;評分高≠賺得多;量>季均=已被發現非潛伏
-- [勝利工程式](winning_strategies.md) — 20大策略:ETF納入、庫藏股、法人連買、融券軋空、合約利多、供應鏈輪動、財報超預期、月營收、集保戶數、回測均線、話題趨勢掃描
-- [書籍框架](book_frameworks.md) — 笑傲股市CAN SLIM、超級績效相對強度、投信鐵板警示、合理價存股、AI回歸基本面、產業循環、指標鈍化、總經雷達
-- [額度真正花在哪+記憶瘦身](feedback_session_cost_and_memory_slimming.md) — 每檔clear不省反而虧(每次/clear=重開=重付開場稅+重讀檔);改成「一批案件告一段落才收尾+clear」別每檔清;額度=載入索引大小+當下讀檔非硬碟檔數→封存vs刪差≈0(封存不刪留保險);🔴規則層進索引記紮實會收斂=唯一要顧、案件流水(project_*)不灌索引;否決日結/輕量收尾(嫌複雜)收尾維持原樣;✅已刪重複專案層CLAUDE.md+索引已瘦成鉤子;🟠settings白名單路徑對不上待修
-- [視窗分工習慣](reference_session_workflow_habit.md) — 額度共用一桶水、多開視窗≠更多額度;三間房分工(工地/投資/生活)一次一件事;省額度=對話別拖長;🔴每檔clear有開場稅別每檔清→段落式收尾[[feedback_session_cost_and_memory_slimming]];/收尾→/clear關房;使用者初階丟新名詞先白話
-
-- [Status line改用PowerShell](reference_statusline_powershell_fix.md) — 🔴根因=Git Bash每次啟動8~10秒,Claude Code逾時放棄顯示不報錯;已改`statusline-command.ps1`(1.3~1.7秒)+settings.json同步;順手抓到4支hook檔缺UTF8 BOM(stock-gate.ps1當時就是這樣壞的)已補BOM
+- [持倉與觀察名單](portfolio_watchlist.md) — 🆕台股:台積電2330+00981A+3037欣興;美股:QQQM+NVDA;美7台3、AI/科技曝險≈84%;策略=AI主線長線定投+逢跌加碼
+- [混合無腦掛單制](feedback_brainless_order_system.md) — ✅定案:兩車道(A全掛單純價格/B 1:20瞄量)+6邏輯衝突已拍板;五區塊掃描品質保留,只改進場執行/風控/出場
+- [選股評分系統](feedback_stock_selection_system.md) — 十區塊輸出+兩桶(穩70%/飆30%);🆕模式C動能確認已驗證寫進hook;細節在檔
+- [課程教材來源+大方向趨勢+飆股洞察+勝利工程式+書籍框架](reference_trading_course_source.md) — 股票課8堂精華在記憶;各主線循環位置飆股藏復甦初期🟢;🔴籌碼是潛伏層放行關卡非追價理由;20大策略+CAN SLIM等書籍框架見[[winning_strategies]][[book_frameworks]][[macro_themes]][[feedback_flystock_lessons]]
+- [額度真正花在哪+視窗分工習慣](feedback_session_cost_and_memory_slimming.md) — 每檔clear不省反而虧,改成一批案件告一段落才收尾+clear;規則層進索引記紮實才是要顧的;三間房分工(工地/投資/生活)一次一件事見[[reference_session_workflow_habit]]
+- [Status line改用PowerShell](reference_statusline_powershell_fix.md) — 🔴Git Bash啟動慢逾時放棄顯示;已改`statusline-command.ps1`;順手補4支hook檔UTF8 BOM
 
 ## 個人生活記憶（2026/06/18 由 Downloads\agent 那套合併進來）
 - [選股輸出圓圈格式](feedback_display_format_circles.md) — 🔴警示/🟢進場/🟡觀察/⚫結論,每區塊必出一行結論,推理壓短只留結論
@@ -113,8 +169,15 @@
 - [花費追蹤規則](user_tracking.md) — 每日預算400元、四類花費分類、表格格式偏好
 - [人際關係](user_relationships.md) — 男友(醫生)、母親、寵物(狗與貓)
 - [重要事件與計畫](project_events.md) — 東京行、新工作、漏水問題、定期定額投資
+<<<<<<< HEAD
 - [互動偏好](feedback_preferences.md) — 無糖預設、海外勸阻購物、平面表格、AI決策習慣 ⚠️「平面表格」與工作那套[[feedback_copy_friendly_plaintext]]「純文字不要表格」可能衝突,視情境而定
 - [個人待辦清單](reference_personal_todo_list.md) — 🔴手機/桌面共用的生活待辦,想到就說「幫我記一下」寫進去,問「我有什麼要做的」就讀出來;檔案存記憶repo自動同步兩端
 - [Gmail登入通知清理0714](project_gmail_login_notification_cleanup_0714.md) — 🔴進行中:8家銀行登入通知灌爆信箱害漏看豐存股圈存失敗;已建標籤Label_4/Label_5+歸檔~50封;剩~70封5-6月舊信(IDs在檔)+2封只差移出INBOX+Gmail篩選器待設+🆕蝦皮待整理(廣告/登入封存、訂單留收件匣);🔴雲端Session授權視窗要點「永遠允許」、本機bypass管不到雲端;Bonny&Read購物金7/16到期
 - [待辦推播系統設定0714](project_personal_todo_push_setup_0714.md) — ✅手機Remote Control已配對+雲端routine「晚間待辦提醒20:30」已建(trig_014NDWaJJdrTgBCgZftAwzVi),每天讀待辦清單有內容才推播;改時間用RemoteTrigger update
 - [精品手環購買計畫](project_luxury_bracelet_purchase_plan.md) — VCA虎眼石老花日常疊戴搭LOVE Unlimited最百搭;30萬預算三選一(Cartier LOVE Unlimited/Bulgari Serpenti Viper/Cartier Clash de Cartier)依漲價動能排序:①LOVE Unlimited(正處漲價周期+預算剛好卡上)②Serpenti Viper(經典保值無急迫性)③Clash de Cartier(2025未調漲不急)
+=======
+- [互動偏好](feedback_preferences.md) — 無糖預設、海外勸阻購物、平面表格、AI決策習慣 ⚠️與工作那套[[feedback_copy_friendly_plaintext]]可能衝突,視情境而定
+- [個人待辦清單](reference_personal_todo_list.md) — 🔴手機/桌面共用生活待辦,想到就說「幫我記一下」寫進去,問「我有什麼要做的」就讀出來
+- [待辦推播系統設定0714](project_personal_todo_push_setup_0714.md) — ✅手機Remote Control已配對+雲端routine「晚間待辦提醒20:30」已建,每天讀待辦清單有內容才推播
+- [精品手環購買計畫](project_luxury_bracelet_purchase_plan.md) — VCA虎眼石老花搭LOVE Unlimited最百搭;30萬預算三選一依漲價動能排序:①LOVE Unlimited②Serpenti Viper③Clash de Cartier
+>>>>>>> origin/main
