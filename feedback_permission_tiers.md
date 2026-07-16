@@ -18,6 +18,8 @@ metadata:
 🔴**Windows安全網薄弱真相(老實講)**：deny規則是「前綴比對」(`Bash(git *)`式),抓不到包裝過/順序變化的指令;而且我幾乎都用 `& powershell.exe -File x.ps1` 跑腳本→deny/hook只看得到那行命令字串、看不到.ps1檔內容→腳本內的危險指令繞過所有自動護欄。所以bypass下真正的保護=①我自己的紀律(改檔前先備份/驗證/只刪自建備份/搬檔前驗路徑)②OS層(資源回收桶/OneDrive/File History要開著才救得回)③隨時可改回模式。垃圾桶層(trash/brew/zsh)是macOS的,Windows裝不起來(我跑-NoProfile)。
 **舊版(已不適用,留參考):** 不開 `bypassPermissions`（全自動）——等於拆掉安全網，使用者剛出過 token 外洩，更不該。正解是「白名單放行安全的、危險的繼續攔」。
 
+**🟢(2026/07/16 Mac也對齊了)** 這台 Mac 原本是「ask+逐條allow白名單」害使用者一直被問，已改成跟 Windows 一樣：`~/.claude/settings.json` 加 `permissions.defaultMode=bypassPermissions` + `skipDangerousModePermissionPrompt=true` + 24條毀滅級 deny 黑名單(macOS版:`rm -rf /|~|.`、`sudo rm`、`diskutil erase/reformat/partitionDisk`、`mkfs`、`dd of=/dev`、`git push --force/-f`、`git reset --hard`、`git clean -fd`、`chmod/chown -R`、`shutdown/reboot/halt`、`killall`、`find / -delete`)。既有 hooks/theme/model 保留未動。⚠️defaultMode 要下次啟動才生效。deny 前綴比對抓不到 `cd x && rm -rf y` 串接=一樣靠備份紀律+垃圾桶。符合[[feedback_cross_device_consistency]]兩台一致。
+
 **技術備註：** 記憶路徑 glob 在 Windows 下加了雙寫法（反斜線 `\\**` ＋ gitignore 式 `//C:/.../**`）防呆，哪個有效待實測；改設定後可能要開一次 `/hooks` 或重啟才重載。白名單在 `~/.claude/settings.local.json`。
 
 關聯：[[feedback-no-clarifying-questions]]、[[feedback-auto-save-decisions]]、[[project-memory-sync-setup]]
