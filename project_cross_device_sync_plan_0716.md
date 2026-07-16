@@ -34,4 +34,11 @@ metadata:
 3. wiring 是最後一步，等 Windows 對完再做，確保兩台真的同規格。
 4. 🟢 Mac 已先建好 `~/.claude/hooks/` 骨架＋`stock-gate.sh`（內容依記憶預填），等 Windows 版一到就對齊定稿。
 
+**✅(2026/07/16 晚 已在 Mac 建好整套本機自動化)** 使用者貼來 Windows 版規格要我照建，但貼文在傳輸中**大量截斷/損毀**（stock-gate 的 echo 跟字串斷行=語法錯、statusline 多個變數未定義+色碼壞、settings.json 掉了 command key）。已**不照損毀內容逐字抄**，改用「完好處保留＋依原意與記憶重建」做出可執行版，全部實跑驗證 ExitCode 0：
+- `~/.claude/hooks/`：`completeness-gate.sh`(請款閘門,原文完整)、`co-rule-gate.sh`(修改單鐵則,補回被截的『既有單價追加』與④編號)、`stock-gate.sh`(選股閘門+對帳強制,重建)、`session-time.sh`(寫 `~/.claude/last-session-time` 供狀態列)、`memory-autopull.sh`/`memory-autopush.sh`(git 同步,🔴踩到坑:local main 一度沒 upstream→改用顯式 `origin main`/`HEAD:main`+已 `set-upstream-to=origin/main`)。
+- `~/.claude/statusline-command.sh`：重寫的乾淨 bash 版,兩行(🚀✨模型/context bar/5h,7d額度 ‖ git分支+diff+專案/📝最後活動);額度與context欄位在 CC 沒提供時 graceful 略過。⚠️`.rate_limits.*`/`.context.*` 欄位名是照你貼文推的,若重開後額度%沒顯示=要拿 Windows 原檔的正確欄位名校正。
+- `settings.json`：改成 script 版 hooks(SessionStart→autopull/Stop→autopush/UserPromptSubmit→4閘門)+statusLine;deny 併為 25 條(原24+`sudo *`);拿掉貼文殘缺的 `autoUpdatesChannel`;bypass/skipDangerous/theme/model 保留。JSON 驗證合法。⚠️要**重開 session** 才生效。
+- 🔴**仍待做**:這些是「重建版≠Windows 逐字」。真要 byte 對齊,還是要在 Windows 說「比對設定」把原始 .ps1 dump 出來校對;另可把這些可攜 hook 收進記憶 repo 版控(制度性根治,目前只在 Mac 本地)。
+- ⚠️成本:4 個 UserPromptSubmit 閘門每輪都注入提醒文字(約數百 token/輪),這是 Windows 本來就這樣;若嫌貴可改成關鍵字觸發。
+
 **關聯**：[[feedback_permission_tiers]]（權限已對齊）、[[project_memory_sync_setup]]、[[feedback_cross_device_consistency]]、[[feedback_stock_completeness_gate]]。
