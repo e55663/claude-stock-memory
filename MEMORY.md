@@ -65,6 +65,7 @@
 - [選股框架實證審核完結](project_stock_framework_refactor.md) — 🔴七項全回測完,結果進選股說明「十四、實證審核總表」;鐵則=新招先驗證才寫進框架,沒驗標未驗證
 - [Mac裝置更新與VM待辦](project_mac_device_update.md) — 家用M1 Pro Mac更新Tahoe(無備份);PD+Windows盜版暫緩;清理硬碟待辦
 - [跨裝置記憶同步設定](project_memory_sync_setup.md) — ✅記憶=私人GitHub repo雙向自動同步;紀律:一次只在一台改避免衝突
+- [Win/Mac使用回饋一致同步計畫0716](project_cross_device_sync_plan_0716.md) — 🟢腦袋層(記憶127檔)已雙向同步;🟡碎的是本機hook/statusline層;Mac缺stock-gate/請款gate/statusline待從Windows .ps1翻.sh補;下一步=Windows開「比對設定」dump實檔逐項diff;Mac已建hooks/骨架
 - [🔴桌面Excel存檔用原地覆寫法](feedback_desktop_excel_inplace_save.md) — 絕不裸SaveAs覆原檔(跳圖示);SaveAs暫存→WriteAllBytes→還原時間戳;🔴檔案開著先講一聲等關檔再改,別悶著頭存
 - [🔴不要敷衍](feedback_no_perfunctory_work.md) — 交出來要完整到位可直接用,不准半吊子;手工檔徵得同意就能改,地雷是做得敷衍;回報完成前逐欄逐列自驗
 - [只動我說的](feedback_only_do_whats_asked.md) — 沒說的不動、說的就動;沒交代的散檔即使看似該一起處理也先不碰,最多一句話問
