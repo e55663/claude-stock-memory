@@ -1,5 +1,6 @@
 # Memory Index
 
+- [🔴🔴任何判斷都要有根據](feedback_evidence_required_no_assumptions.md) — 最高位階規則:不能靠經驗/邏輯講,該跑的資料要當場跑;115.07.16逼出復甦初期35檔回測(10-20日有效/60日邊際消失)
 - [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 🔴🔴使用者給的memo文字一律逐字進Excel,不准自己重排/改寫用詞;疑慮開資料夾txt別動memo本文;竣葦#8踩雷被重話糾正
 - [缺件說明放txt不放memo](feedback_missing_items_note_location.md) — 缺件/暫緩原因只寫M4欄+缺件說明.txt,不寫進B4 memo正式內文
 - [141A三件請款0713批次現況](project_billing_batch_state_0713.md) — 天九暫緩待補件;🔴竣葦#7曾整列漏在計價本外(教訓=要抽查歸檔夾期數跟計價本列數一致);長安快打部隊卡住待澄清
