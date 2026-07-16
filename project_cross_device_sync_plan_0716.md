@@ -41,4 +41,12 @@ metadata:
 - 🔴**仍待做**:這些是「重建版≠Windows 逐字」。真要 byte 對齊,還是要在 Windows 說「比對設定」把原始 .ps1 dump 出來校對;另可把這些可攜 hook 收進記憶 repo 版控(制度性根治,目前只在 Mac 本地)。
 - ⚠️成本:4 個 UserPromptSubmit 閘門每輪都注入提醒文字(約數百 token/輪),這是 Windows 本來就這樣;若嫌貴可改成關鍵字觸發。
 
+**✅(2026/07/16 更晚 設定也收進 repo 版控自動同步了)** 使用者要「設定也像記憶一樣自動同步」。已建 `config/` 於記憶 repo:
+- 結構:`config/mac/{settings.json, statusline-command.sh, hooks/*.sh}`;`config/windows/` 待 Windows 那台建(.ps1)。詳 `config/README.md`。
+- 機制:**hooks + statusline 用 symlink**——真檔移進 `config/mac/`,`~/.claude/hooks/*.sh`+`~/.claude/statusline-command.sh` 改成指過去的 symlink。改檔=改 repo→關機 autopush 自動 commit+push、開機 autopull 自動更新=**即時雙向同步**(跟記憶同管線)。
+- **settings.json 只做版控備份不自動回套**:autopush 開頭 `cp ~/.claude/settings.json → config/mac/`(避免跨 OS 誤套,Mac 指 .sh/Win 指 .ps1 不能共用同一份)。要還原手動 copy 回。
+- 已驗:git 記錄 100755 可執行、7 symlink 無斷鏈、autopush 全程實跑 push 成功、本地=遠端。
+- 🔴 Windows 那台之後要:把 Win 的 settings.json+hooks/*.ps1+statusline.ps1 放 `config/windows/`、autopush.ps1 加備份 settings 步驟;改閘門邏輯要兩邊資料夾一起改。
+- 註:早先的 `_snapshot_mac_config_0716.md` 已被 `config/mac/settings.json`(live)取代,留著無妨。
+
 **關聯**：[[feedback_permission_tiers]]（權限已對齊）、[[project_memory_sync_setup]]、[[feedback_cross_device_consistency]]、[[feedback_stock_completeness_gate]]。
