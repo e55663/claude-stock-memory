@@ -41,7 +41,7 @@
 - [自辦vs代扣對合約的意義+扣款vs加扣](feedback_self_vs_deduct_contract.md) — 🔴只有「自辦」吃本SC合約/預算,「代扣」不吃;核累計用『累計自辦』別拿全額比;🔴扣自己的錢=扣款,扣別家廠商的錢=加扣(=代扣),套自辦/代扣固定格式別自創詞(泳鑫/翔博案教訓)
 - [平安點租工#14已審核+扣款下期扣](project_billing_pingan_0708.md) — 141A-SC009052點租工#14三方閉合審核全過5,676,052;🔴自身扣款43,050擔#15下期扣;資料夾未歸檔等指令
 - [全市場選股流程](reference_full_market_screen.md) — 🔴每次選股=TWSE OpenAPI全市場海選+完整列所有模式(五區塊+大盤+5題清單+兩桶+集中度)純文字
-- [Mac vs Windows 選股方式不同](feedback_mac_vs_windows_stock_selection.md) — Mac=主題驅動+WebFetch(T86不完整/對帳txt不可存取); Windows=全市場海選+PowerShell+hook強制; 兩種都可用但要說清楚差異+閘門打折
+- [🔴Mac已能全市場海選(等價Windows)](feedback_mac_vs_windows_stock_selection.md) — 7/16突破:Mac用python3腳本`full_market_scan.py`跑TWSE全市場;🔴關鍵坑=STOCK_DAY_ALL回CSV非JSON+T86要`selectType=ALL`才回全市場(不帶只7筆);FinMind兩年價量/法人皆免token;腳本已push GitHub兩邊共用;不再打折
 - [推薦一律附股價+時間戳](feedback_always_show_price_with_timestamp.md) — 每檔提到的股票附股價+時間基準,報錯價=資料過期會被抓
 - [集中度是標註不是淘汰](feedback_concentration_flag_not_filter.md) — 同主題好票照推不剔除,只旁標「會加重集中度」;集中度=揭露標籤非過濾關卡
 - [進場前檢查清單](reference_stock_entry_checklist.md) — 每檔逐題打勾5項:①集中度②防追高③復甦初期④🔴籌碼先看⑤紀律;第4關最常被跳
