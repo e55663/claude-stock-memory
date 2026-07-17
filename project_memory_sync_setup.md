@@ -70,7 +70,11 @@ metadata:
 - 路徑變更後新位置：`C:\Users\Seal_Lo\.claude\projects\C--Users-Seal-Lo-Downloads-agent\memory`（git remote、雲端 repo 名稱不變，仍是 e55663/claude-stock-memory）。
 - **使用者啟動方式＝終端機打 `cc`**。`cc` 有兩條定義都已統一切到 Downloads\agent：①PowerShell profile 函式 `CC`（`Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`）原本就 `Set-Location Downloads\agent; claude` ②`C:\Users\Seal_Lo\.local\bin\CC.cmd` 2026/06/18 改成 `cd /d Downloads\agent` 後再 `claude %*`（原本只 `claude %*` 會在當下資料夾開→曾誤開家目錄載到錯記憶）。所以使用者習慣不用改、照打 `cc` 就一定開到 Downloads\agent。
 
-## 🟠 Mac 本機自動同步待設定（2026/06/29）
+## 🟠 Mac 本機自動同步待設定（2026/07/16 進度更新，原2026/06/29項目）
+🔴(115.07.16)使用者兩台電腦同時開著(Windows+Mac)想一次搞定,已把 Windows 這台四支 UserPromptSubmit 提醒 hook(completeness-gate/co-rule-gate/stock-gate/session-time)+SessionStart/Stop 的 memory-autopull/autopush+狀態列(statusline-command.sh,本來就是bash版,Windows才是後來被迫另外寫PowerShell版)+settings.json 全部翻譯成 bash 版本,整包貼給使用者當「複製貼到 Mac 的 Claude Code」的指令包。
+🔴機制限制確認:這個 session 只能碰這台 Windows 的檔案系統,完全摸不到 Mac,沒有內建的跨機工具;唯一搆得到 Mac 的方法是叫使用者去 Mac 開「遠端登入(SSH)」讓我連進去操作,但這要使用者自己去 Mac 設定分享+可能要給登入密碼,使用者沒選這條路,改用「使用者當人肉橋樑,把整包指令複製貼給 Mac 自己的 Claude Code 執行」這個更安全的路徑。
+⚠️過程中使用者一度誤會「兩台各自打『比對設定』這個關鍵字」本身就會同步內容——澄清了:那只是觸發詞,沒有帶資料,真正要搬的是實際的腳本/設定內容整包貼過去。
+🔴狀態:指令包已完整給使用者(含 stock-gate.sh 完整文字＋statusline-command.sh 完整內容＋settings.json),但**這次對話結束時使用者還沒回報 Mac 那邊實際執行完成**,不確定 hook/statusline 有沒有真的裝上去、repo 路徑有沒有找對——下次談到 Mac 同步時要先問使用者「Mac那邊弄完了嗎」,別假設已完成。
 - 使用者要三台（手機/Windows/Mac）都自動同步；明確說**手機止血不算解決、要的是 Mac 也能用**，且問「回家打開 Mac 要按啥」。
 - 🔴 **核心觀念已跟使用者講通且他接受**：三台不是互連，都跟 GitHub 雲端 repo 對接，**不需要兩台同時開機**（公司 Windows / 家裡 Mac 各自跟雲端同步即可）。唯一紀律＝來源那台要成功 push，下一台才拿得到。
 - **Mac 現況推斷**：6/17 使用者曾在 Mac regenerate PAT＝Mac 至少有 git＋對 repo 的認證，repo 可能已 clone。**但缺本機自動 hook**：repo 內 `.claude/settings.json` 的 `.sh` hook 第一行 gate `CLAUDE_CODE_REMOTE=true`（只在雲端/手機跑），**Mac 本機 CLI 不是 remote → 會 exit 0 跳過 → 不會自動 pull/push**。所以 Mac 本機要比照 Windows 另設一套 user-level hook（`~/.claude/settings.json` SessionStart pull + Stop push，呼叫 mac 版 .sh，不 gate remote）。
