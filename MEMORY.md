@@ -2,13 +2,14 @@
 
 - [🔴🔴任何判斷都要有根據](feedback_evidence_required_no_assumptions.md) — 最高位階規則:不能靠經驗/邏輯講,該跑的資料要當場跑;驗證結果不能跨股票池借用(錯殺A組/動能標籤套錯池被抓包"給垃圾")
 - [AI七層供應鏈訊號快照0716](project_ai_chain_signal_snapshot_0716.md) — 🔴會過期;35檔中僅亞力/聯詠/訊芯-KY符合🟢復甦初期;晶片/記憶體/伺服器/網通PCB多在🔴成熟頂峰;散熱電源+電力(士電/華城)動能轉負警訊
-- [141E台泥#2抽磅待辦](project_taini_2_pending_recheck.md) — 24份試驗報告已補齊歸位,但抽磅覆磅核對還沒做,使用者說晚點處理,別當已完成
+- [141E台泥#2抽磅待辦✅已解](project_taini_2_pending_recheck.md) — 🔴7/17更正:抽磅其實07/15就核對過了,舊筆記是誤判;案子沒問題可送呈,教訓=判斷有無查過要找查核記錄當第一手證據
 - [WebFetch股價符號偶爾標反](reference_webfetch_price_sign_flip.md) — 查即時股價用現價減昨收自己驗方向,別直接信頁面漲跌%正負號;這輪光環/華城/中興電/聯詠都中招
-- [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 🔴🔴使用者給的memo文字/案子標題一律逐字用,不准自己重排/改寫/重新下標題;竣葦#8+141A-143切包案標題兩度踩雷;另記Hyperlinks.Delete()誤刪全表雷
+- [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 🔴🔴使用者給的memo文字/案子標題/檢附清單一律只用使用者這輪實際給的,不准自己重排/改寫/加碼;竣葦#8+141A-143標題+安達#1檢附三度踩雷;另記Hyperlinks.Delete()誤刪全表雷
 - [缺件說明放txt不放memo](feedback_missing_items_note_location.md) — 缺件/暫緩原因只寫M4欄+缺件說明.txt,不寫進B4 memo正式內文
-- [141A三件請款0713批次現況](project_billing_batch_state_0713.md) — 天九暫緩待補件;🔴竣葦#7曾整列漏在計價本外(教訓=要抽查歸檔夾期數跟計價本列數一致);長安快打部隊卡住待澄清
-- [🔴141A全吊成駿#10列控表7處錯誤](project_billing_chengjun_crane10_0714.md) — 核決升級總經理(首次破300萬);列控表逐列查抓到7處錯誤(70T誤植80T×3/內容抄錯×1/單價欄≠總價欄×3,均不影響總額);已打計價本+7月報表未歸檔;7/15memo未稅/未簽認已修正;方法論教訓見[[feedback_self_audit_no_crutch]]
-- [141A/141E 0715批次現況](project_billing_batch_state_0715.md) — 泳鑫#1/SGS材料試驗費#12/台泥#2三案已入計價本,分別待送呈或歸檔;成駿#10 memo已修正;新學到混凝土材料必查抽磅
+- [141A三件請款0713批次現況](project_billing_batch_state_0713.md) — 天九暫緩待補件;🔴竣葦#7曾整列漏在計價本外(教訓=要抽查歸檔夾期數跟計價本列數一致);長安最新狀態見[[project_billing_0717_batch]]
+- [🔴141A全吊成駿#10列控表7處錯誤✅已歸檔](project_billing_chengjun_crane10_0714.md) — 核決總經理;列控表逐列抓到7處錯誤已修正;7/17已歸檔結案;方法論教訓見[[feedback_self_audit_no_crutch]]
+- [141A/141E 0715批次現況](project_billing_batch_state_0715.md) — 泳鑫#1/SGS材料試驗費#12/台泥#2三案已入計價本;泳鑫/成駿10最新狀態(已歸檔)見[[project_billing_0717_batch]];新學到混凝土材料必查抽磅
+- [0717大批次現況](project_billing_0717_batch.md) — 🔴141A-143修改單(董事長核決)+長安SC011333預算超支483,000未解;弘隆#12/銘亮#10入計價本;外牆人力支援4案+成駿10+平安14已全數歸檔;天九#1仍缺件卡住
 - [141A-136齊昇鋼構噴漆送採購議價0714](project_change_order_141A136_0624.md) — 原退件案補件後改狀態送採購議價中(承辦陳松輝);五處同步完成;核決仍二擇一待議價結果;另有模板換包簽呈.pdf不相關檔案未處理
 
 - [每月計價修改追蹤報表](reference_monthly_tracking_report.md) — 桌面「M月計價修改追蹤報表.xlsx」逐月一檔;打法說明+每案每類型各一分頁;🔴資料夾為真相(一件=一夾);金額合約日期去四源檔比對;原地覆寫不移動。母腳本build_report2.ps1
@@ -31,6 +32,7 @@
 - [一批檔跑完寫進docs/todo.md](feedback_batch_todo_workflow.md) — 一次丟一堆檔→我自辨類型+核對+直接打→問題集中寫todo.md;🔴缺料要確認也寫todo標🔴不自填;歸檔留他按
 - [歸檔前先放下載整理夾](feedback_stage_in_downloads_before_archive.md) — 請款跑完先Downloads開整理夾+打計價Excel→停下等確認→OK才搬工地;歸檔=最後關卡需明確指令
 - [問題案=夾名加🔴標註+夾內txt;歸檔=清標註再搬](feedback_problem_case_folder_with_note.md) — 有問題的請款整理進夾、夾名後綴標註、缺漏txt放夾內;🔴歸檔指令=已沒問題→拿掉標註+刪txt再搬
+- [歸檔指令別重翻舊txt再三確認](feedback_archive_command_no_reverify.md) — 🔴計價本已顯示完成狀態時,收到歸檔指令直接搬,別再去翻退件說明等舊文件確認;平安#14案使用者明講「叫你歸檔就歸檔不要吵」;矛盾時才要回報
 - [兩台電腦要求一樣](feedback_cross_device_consistency.md) — Mac/Windows規則標準相同;環境限制做不到就說做不到,不降低標準
 - [檔案必須讀完整](feedback_read_files_completely.md) — 讀記憶/資料檔不加limit截斷,寧慢不漏
 - [搬檔進新夾先驗證夾存在](feedback_move_into_dir_verify_exists.md) — 🔴建夾用`-Path`+`Test-Path`驗證再搬;絕不對不確定路徑連續`Move-Item -Force`;搬完驗整理夾有/根目錄無
@@ -39,7 +41,7 @@
 - [狀態串聯同步五處](feedback_status_sync_five_places.md) — 🔴一件請款/修改狀態一改要一次同步五處:①分頁tab+M4②總表備註③追蹤報表備註④整理夾夾名後綴⑤夾內txt;改完自唸都同步了嗎
 - [🔴官方附件一覽表(附件查檢權威)](reference_official_attachment_list.md) — 桌面`附件參考.pdf`=每件附件查檢對照它逐項查別憑印象;第8類租工點工機具🔴要COMS匯出表+日報簽認;第15項扣款單要雙方簽名;細節在檔
 - [自辦vs代扣對合約的意義+扣款vs加扣](feedback_self_vs_deduct_contract.md) — 🔴只有「自辦」吃本SC合約/預算,「代扣」不吃;核累計用『累計自辦』別拿全額比;🔴扣自己的錢=扣款,扣別家廠商的錢=加扣(=代扣),套自辦/代扣固定格式別自創詞(泳鑫/翔博案教訓)
-- [平安點租工#14已審核+扣款下期扣](project_billing_pingan_0708.md) — 141A-SC009052點租工#14三方閉合審核全過5,676,052;🔴自身扣款43,050擔#15下期扣;資料夾未歸檔等指令
+- [平安點租工#14已審核+扣款下期扣✅已歸檔](project_billing_pingan_0708.md) — 141A-SC009052點租工#14三方閉合審核全過5,676,052;🔴自身扣款43,050擔#15下期扣;7/17已歸檔
 - [全市場選股流程](reference_full_market_screen.md) — 🔴每次選股=TWSE OpenAPI全市場海選+完整列所有模式(五區塊+大盤+5題清單+兩桶+集中度)純文字
 - [🔴Mac已能全市場海選(等價Windows)](feedback_mac_vs_windows_stock_selection.md) — 7/16突破:Mac用python3腳本`full_market_scan.py`跑TWSE全市場;🔴關鍵坑=STOCK_DAY_ALL回CSV非JSON+T86要`selectType=ALL`才回全市場(不帶只7筆);FinMind兩年價量/法人皆免token;腳本已push GitHub兩邊共用;不再打折
 - [推薦一律附股價+時間戳](feedback_always_show_price_with_timestamp.md) — 每檔提到的股票附股價+時間基準,報錯價=資料過期會被抓
