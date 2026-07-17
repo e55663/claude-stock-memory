@@ -4,7 +4,7 @@
 - [AI七層供應鏈訊號快照0716](project_ai_chain_signal_snapshot_0716.md) — 🔴會過期;35檔中僅亞力/聯詠/訊芯-KY符合🟢復甦初期;晶片/記憶體/伺服器/網通PCB多在🔴成熟頂峰;散熱電源+電力(士電/華城)動能轉負警訊
 - [141E台泥#2抽磅待辦](project_taini_2_pending_recheck.md) — 24份試驗報告已補齊歸位,但抽磅覆磅核對還沒做,使用者說晚點處理,別當已完成
 - [WebFetch股價符號偶爾標反](reference_webfetch_price_sign_flip.md) — 查即時股價用現價減昨收自己驗方向,別直接信頁面漲跌%正負號;這輪光環/華城/中興電/聯詠都中招
-- [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 🔴🔴使用者給的memo文字一律逐字進Excel,不准自己重排/改寫用詞;疑慮開資料夾txt別動memo本文;竣葦#8踩雷被重話糾正
+- [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 🔴🔴使用者給的memo文字/案子標題一律逐字用,不准自己重排/改寫/重新下標題;竣葦#8+141A-143切包案標題兩度踩雷;另記Hyperlinks.Delete()誤刪全表雷
 - [缺件說明放txt不放memo](feedback_missing_items_note_location.md) — 缺件/暫緩原因只寫M4欄+缺件說明.txt,不寫進B4 memo正式內文
 - [141A三件請款0713批次現況](project_billing_batch_state_0713.md) — 天九暫緩待補件;🔴竣葦#7曾整列漏在計價本外(教訓=要抽查歸檔夾期數跟計價本列數一致);長安快打部隊卡住待澄清
 - [🔴141A全吊成駿#10列控表7處錯誤](project_billing_chengjun_crane10_0714.md) — 核決升級總經理(首次破300萬);列控表逐列查抓到7處錯誤(70T誤植80T×3/內容抄錯×1/單價欄≠總價欄×3,均不影響總額);已打計價本+7月報表未歸檔;7/15memo未稅/未簽認已修正;方法論教訓見[[feedback_self_audit_no_crutch]]
