@@ -24,6 +24,7 @@ metadata:
 - upstream 已設：`main` 追蹤 `origin/main`。
 - 眉角：`git credential approve` 用 PowerShell 多行 stdin 一直報 missing field，但其實 push 當下 GCM 已自動存好認證，不必硬塞。git 不在 PATH，要用完整路徑 `C:\Users\Seal_Lo\AppData\Local\Programs\Git\cmd\git.exe`。
 - token 可隨時在 https://github.com/settings/tokens?type=beta Revoke。
+- 🆕(2026/07/17)使用者 Regenerate 了這顆 `claude-memory` PAT，**新到期日 2026/12/17**（到期前一週 GitHub 寄信提醒）。舊 token 字串已作廢；Windows 走 GCM OAuth、雲端走 App 授權都不受影響，唯 Mac 若用舊字串推會失敗→彈 OAuth 視窗按 Authorize 即可。
 
 ## ✅ 自動同步（2026/06/09 加裝＋強化）
 - **Stop hook**（自動 push）：每次回完話跑 `~/.claude/hooks/memory-autopush.ps1` → `git add -A`＋commit＋push，沒變更安靜跳過。**已強化**：push 被拒（別台先推）時自動 `pull --rebase --autostash` 後重推一次，避免衝突卡死。
