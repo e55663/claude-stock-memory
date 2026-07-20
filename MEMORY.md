@@ -1,5 +1,7 @@
 # Memory Index
 
+- [🔴🔴717台股史上最大跌點+跌破季線熊市0720](project_market_crash_0717_bear_state.md) — 🔴會過期;7/17崩2953.71點(-6.47%)、7/20收42449.70已破季線43601;飆桶關空手等,止穩四條件(站回季線/家數比>1/外資轉買/SOX止穩)過兩項才出手;唯一觀察1590亞德客(7/28法說會)
+- [🔴停損紀律三條規則升級0720](feedback_stoploss_discipline_lessons_0720.md) — 同組兩檔觸停損就整組出清(南亞多賠8pp)、橫盤+法人轉負=汰弱非續抱(緯穎)、停損統一採盤中觸線口徑(佳必琪多賠6pp);型②未經熊市驗證=已知盲區不准套;儀表板極端讀數要升級成倉位動作
 - [0720大批次現況](project_billing_batch_state_0720.md) — Opus補建8件進計價本+全書標楷體+Downloads重整去重;和浚#1定稿可送呈、金鈺昌#4退件未解;上展歷史扣款110,566+和浚羅朝文身分待裁示;晉暘已送簽別動;弘隆/SGS狀態待確認
 - [🔴工作用Opus雜事用Sonnet](reference_model_choice_work_vs_chore.md) — 請款核對/計價這種高風險抓錯用Opus(漏一個=送錯呈核);7/20實測Sonnet漏一堆被連環抓,重做回合反而更燒額度
 - [🔴Downloads重複資料夾清理邏輯](project_download_staging_dedup_workflow.md) — 使用者收到補件會重新整理成新夾但不刪舊夾,造成重複;歸檔指令本身要包含「查重複+刪舊留新」這一步,使用者潔癖要Downloads保持乾淨
