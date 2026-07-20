@@ -1,5 +1,6 @@
 # Memory Index
 
+- [🔴批次操作做完要回頭驗證](feedback_verify_after_batch_ops.md) — 改檔名/寫Excel/搬檔完成後一律回頭重讀結果確認落地,不能只回報「麻煩你確認」就轉頭做別的事;弘隆#12改名失敗案例
 - [🔴總經理新規定:行通表存在性門檻](feedback_hangtong_existence_gate.md) — 點租工/機具類廠商+工種沒登記在當季行通表就不可計價;首例長安#1「點工」4,200/工查無此項,已停打提醒
 - [🔴🔴任何判斷都要有根據](feedback_evidence_required_no_assumptions.md) — 最高位階規則:不能靠經驗/邏輯講,該跑的資料要當場跑;驗證結果不能跨股票池借用(錯殺A組/動能標籤套錯池被抓包"給垃圾")
 - [AI七層供應鏈訊號快照0716](project_ai_chain_signal_snapshot_0716.md) — 🔴會過期;35檔中僅亞力/聯詠/訊芯-KY符合🟢復甦初期;晶片/記憶體/伺服器/網通PCB多在🔴成熟頂峰;散熱電源+電力(士電/華城)動能轉負警訊
