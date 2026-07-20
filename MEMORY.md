@@ -1,5 +1,6 @@
 # Memory Index
 
+- [🔴Downloads重複資料夾清理邏輯](project_download_staging_dedup_workflow.md) — 使用者收到補件會重新整理成新夾但不刪舊夾,造成重複;歸檔指令本身要包含「查重複+刪舊留新」這一步,使用者潔癖要Downloads保持乾淨
 - [🔴🔴案子收尾前要核對固定動作清單](feedback_checklist_before_case_done.md) — 回測只驗證單一動作有沒有落地,不會自動延伸成「該做的固定動作全做了嗎」;行通表複製/問題txt/五處同步這類規則要每案收尾前主動核對,不能只在被問才補
 - [🔴加款類不強制簽名+已給資料直接打](feedback_add_payment_no_signature_required.md) — 廠商加扣款記錄單是加款轉嫁性質非罰扣,不要求雙方簽名;資料已給到齊+算術過關就直接打計價本,別再等使用者確認才動手;昇峰#3案教訓
 - [🔴🔴查核要逐欄比對非只核總額](feedback_scrutinize_not_just_open.md) — 「開過檔案」≠「查清楚」;長安#2扣款單佶福有扣管理費藝明沒扣沒抓到;昇峰#3全部6筆一致0元=工地確認機具吊掛代扣不加管理費屬正常;管理費有無一律主動報告不自判對錯
