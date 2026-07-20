@@ -1,5 +1,7 @@
 # Memory Index
 
+- [0720大批次現況](project_billing_batch_state_0720.md) — Opus補建8件進計價本+全書標楷體+Downloads重整去重;和浚#1定稿可送呈、金鈺昌#4退件未解;上展歷史扣款110,566+和浚羅朝文身分待裁示;晉暘已送簽別動;弘隆/SGS狀態待確認
+- [🔴工作用Opus雜事用Sonnet](reference_model_choice_work_vs_chore.md) — 請款核對/計價這種高風險抓錯用Opus(漏一個=送錯呈核);7/20實測Sonnet漏一堆被連環抓,重做回合反而更燒額度
 - [🔴Downloads重複資料夾清理邏輯](project_download_staging_dedup_workflow.md) — 使用者收到補件會重新整理成新夾但不刪舊夾,造成重複;歸檔指令本身要包含「查重複+刪舊留新」這一步,使用者潔癖要Downloads保持乾淨
 - [🔴🔴案子收尾前要核對固定動作清單](feedback_checklist_before_case_done.md) — 回測只驗證單一動作有沒有落地,不會自動延伸成「該做的固定動作全做了嗎」;行通表複製/問題txt/五處同步這類規則要每案收尾前主動核對,不能只在被問才補
 - [🔴加款類不強制簽名+已給資料直接打](feedback_add_payment_no_signature_required.md) — 廠商加扣款記錄單是加款轉嫁性質非罰扣,不要求雙方簽名;資料已給到齊+算術過關就直接打計價本,別再等使用者確認才動手;昇峰#3案教訓
