@@ -1,0 +1,65 @@
+{
+  "theme": "dark",
+  "model": "opus",
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "deny": [
+      "Bash(rm -rf /*)",
+      "Bash(rm -rf ~*)",
+      "Bash(rm -rf .*)",
+      "Bash(rm -fr *)",
+      "Bash(sudo rm *)",
+      "Bash(sudo *)",
+      "Bash(dd of=/dev/*)",
+      "Bash(dd if=* of=/dev/*)",
+      "Bash(mkfs*)",
+      "Bash(diskutil erase*)",
+      "Bash(diskutil reformat*)",
+      "Bash(diskutil partitionDisk*)",
+      "Bash(git push --force*)",
+      "Bash(git push -f *)",
+      "Bash(git reset --hard*)",
+      "Bash(git clean -fd*)",
+      "Bash(git clean -df*)",
+      "Bash(chmod -R *)",
+      "Bash(chown -R *)",
+      "Bash(shutdown *)",
+      "Bash(sudo shutdown *)",
+      "Bash(reboot*)",
+      "Bash(halt*)",
+      "Bash(killall *)",
+      "Bash(find / -delete*)"
+    ]
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "bash ~/.claude/hooks/memory-autopull.sh" }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          { "type": "command", "command": "bash ~/.claude/hooks/memory-autopush.sh" }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          { "type": "command", "command": "bash ~/.claude/hooks/completeness-gate.sh" },
+          { "type": "command", "command": "bash ~/.claude/hooks/co-rule-gate.sh" },
+          { "type": "command", "command": "bash ~/.claude/hooks/stock-gate.sh" },
+          { "type": "command", "command": "bash ~/.claude/hooks/session-time.sh" }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  }
+}
