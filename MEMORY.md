@@ -65,6 +65,7 @@
 - [請款附件查檢一覽表](reference_billing_attachment_checklist.md) — 🔴每次請款主動列完整【附件查檢】(應附/已給/❌缺);五件組+點租工COMS/機具COMS/鋼絲網物性試驗/焊接焊道檢測
 - [141A全吊成駿系列狀態](project_billing_chengjun_crane_0623.md) — #7已歸檔結案(1,937,200未稅/內扣1,403,411/執行副總◎決);#5吊卡202604已打計價本未歸檔;最新進度見[[project_billing_chengjun_crane10_0714]]
 - [PS中文字面值編碼不穩](feedback_ps_chinese_literal_encoding.md) — 🔴指令裡手打中文偶發編碼壞→搬檔別用手打中文當比對鍵,用Length/時間窗/物件.FullName+Get-ChildItem複驗
+- [🔴🔴請款memo標準打法範本(115.07.21定版)](reference_billing_memo_standard_template.md) — 上展安卡#1版=標準:第1點帶計價區間(去列控明細抓日期min~max)+有代扣就拆自辦/代辦(G4放全額,列控只填淨額要還原)+扣款/加款行一律帶「廠商已簽名/尚未簽名」;已同步141A A93/141E A62
 - [🔴計價本格式鐵則](reference_billing_book_format_rules.md) — 動計價本前必讀:①memo逐字一樣②B4/A4/H4必設公式③期數最舊在最上④分頁最新放範本(6)旁⑤COM雷別整段換⑥期數認請款單+查F欄跳號⑦問題/退件件保留分頁+tab標色,絕不刪
 - [批次memo歸位規則](reference_batch_memo_filing.md) — 一次貼一大批memo:「本期…計價金額」→計價本B4、「非業主/業主變更」開頭→修改單A7;沒對應本就複製既有本另開
 - [計價請款單建法](reference_billing_statement_template.md) — 計價請款單建進既有`桌面\01.計價-141A…xlsx`(非另開新檔);複製範本(6)→改名項目(廠商)→填第4列;細節在檔
