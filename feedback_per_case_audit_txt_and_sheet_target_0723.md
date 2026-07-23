@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: df14850a-5e8c-4fef-add1-40aebda82f28
-  modified: 2026-07-23T03:07:36.360Z
+  modified: 2026-07-23T05:49:28.133Z
 ---
 
 115.07.23 兩條規則，已寫進兩本計價本打法說明（141E A130/A132、141A A123/A125）：
@@ -16,4 +16,4 @@ metadata:
 
 **Why:** 第1條是使用者點名要的制度；第2條是真實資料毀損事故，代價已發生。
 
-**How to apply:** 開新案第一動建查核記錄.txt；狀態五處同步時txt一起改。寫Excel目標驗證三件套：A4期數驗證→改前備份→寫後回讀驗證。
+**How to apply:** 開新案第一動建查核記錄.txt；狀態五處同步時txt一起改。寫Excel目標驗證**四件套**：A4期數驗證→改前備份→寫後回讀驗證→**格式與參照列比對**（字型/字號/框線四邊/對齊/列高，跟上一期或範本列逐項同；台泥B5案：7/15建列時就是12號無框線，我只改字回報「打好了」被使用者抓「框線格式為啥不一樣」——說「打好了」之前格式也要過）。修法＝參照列整列 Copy→PasteSpecial(xlPasteFormats)+RowHeight 同步，值不動。
