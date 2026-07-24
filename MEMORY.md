@@ -110,7 +110,7 @@
 - [信貸100W投資計畫](loan_investment_plan.md) — 討論中未實際借款;🔴房貸在使用者名下=銀行算他負債;主貸719萬+增貸431萬寬限期月繳20,652;✅2027/08寬限期到期跳45,600=懸崖確定;100W暫緩或大砍。細節在檔
 - [信貸提問清單+富人槓桿知識](reference_loan_question_checklist.md) — 打銀行問信貸16題;銀行:主攻台新、LINE Bank第二報價;年所得~80萬22倍≈143萬capacity;另見[[reference_wealthy_leverage_principles]]好債vs壞債/富人紀律
 - [選股與操作邏輯](stock_selection_logic.md) — 課程筆記完整選股邏輯:大環境判斷、抗跌領頭羊、五檔口訣、操作紀律
-- [持倉與觀察名單](portfolio_watchlist.md) — 🆕7/16台積電法說EPS創新高續抱;記憶體主線系統性重挫避開;7/15 3037已出清,台股2330+00981A;美股QQQM+NVDA
+- [持倉與觀察名單](portfolio_watchlist.md) — 🆕7/24新增3189景碩(飆桶,分批810/768/718×100股均價765.33,22.96萬🔴超飆桶額度18萬),PE221題3不過+外資連3賣+頂峰=不加碼設停損待決;7/16台積電法說EPS創高續抱;台股2330+00981A+景碩,美股QQQM+NVDA
 - [混合無腦掛單制](feedback_brainless_order_system.md) — ✅定案:兩車道(A全掛單純價格/B 1:20瞄量)+6邏輯衝突已拍板;五區塊掃描品質保留,只改進場執行/風控/出場
 - [選股評分系統](feedback_stock_selection_system.md) — 十區塊輸出+兩桶(穩70%/飆30%);🆕模式C動能確認已驗證寫進hook;細節在檔
 - [課程教材來源+大方向趨勢+飆股洞察+勝利工程式+書籍框架](reference_trading_course_source.md) — 股票課8堂精華在記憶;各主線循環位置飆股藏復甦初期🟢;🔴籌碼是潛伏層放行關卡非追價理由;20大策略+CAN SLIM等書籍框架見[[winning_strategies]][[book_frameworks]][[macro_themes]][[feedback_flystock_lessons]]
