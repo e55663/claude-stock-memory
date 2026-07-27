@@ -120,6 +120,7 @@
 - [Status line改用PowerShell](reference_statusline_powershell_fix.md) — 🔴Git Bash啟動慢逾時放棄顯示;已改`statusline-command.ps1`;順手補4支hook檔UTF8 BOM
 
 - [🔴🔴資料遺失事故:別混用Bash+PowerShell搬檔](feedback_never_mix_bash_powershell_file_ops.md) — 115.07.27我用Bash建中文夾+PowerShell搬檔,編碼(NFC/NFD)不一致→Move-Item誤判成改名+-Force連環覆蓋,建鑫土方#4五檔(含列控表)永久遺失無副本(後由使用者重傳救回);鐵則=檔案操作純PowerShell、建夾後Test-Path -PathType Container、逐檔搬完驗落夾內+根目錄已無、目的地永遠給資料夾
+- [0727大批次:10案歸夾+第一輪Excel已審](project_billing_batch_state_0727.md) — 115.07.27一次10案全安全歸夾、第一輪(算術/單價/期數/超約)審完,計價本全未動;✅算術乾淨=建鑫#4(14,193,346)/呂發#7(5,753,460,扣款37張需彙總)/聖志#7(3,278,419,檔名-8實為#7)/金鈺昌#10(1,131,600);🔴卡關=大象柴舉行通表查無品項、竟元缺列控表、成駿全吊式計價411筆代扣重、適燁無Excel;⚠️竣葦夾混101I勝鈞疑誤附;正楊翻案+141A-154碳費已完結;待掃描round+裁示
 - [🔴高CP請款流程:數字走Excel掃描件只當佐證](feedback_billing_cp_workflow_excel_first.md) — 115.07.27使用者定:貴又不一定對幾乎只在掃描件(呂發#7 37張扣款無彙總被迫逐張眼加);高CP=金額/數量/單價/扣款總額一律從列控表/計算式/彙總xlsx取(快準省),掃描件只在Excel沒有的(簽名/發票/報價單特徵)才看;分階段=先前置全部安全歸夾→再一案一案獨立審核出查核清單給使用者逐案問→確認後才動計價本
 
 ## 個人生活記憶（2026/06/18 由 Downloads\agent 那套合併進來）
