@@ -119,6 +119,9 @@
 - [額度真正花在哪+視窗分工習慣](feedback_session_cost_and_memory_slimming.md) — 每檔clear不省反而虧,改成一批案件告一段落才收尾+clear;規則層進索引記紮實才是要顧的;三間房分工(工地/投資/生活)一次一件事見[[reference_session_workflow_habit]]
 - [Status line改用PowerShell](reference_statusline_powershell_fix.md) — 🔴Git Bash啟動慢逾時放棄顯示;已改`statusline-command.ps1`;順手補4支hook檔UTF8 BOM
 
+- [🔴🔴資料遺失事故:別混用Bash+PowerShell搬檔](feedback_never_mix_bash_powershell_file_ops.md) — 115.07.27我用Bash建中文夾+PowerShell搬檔,編碼(NFC/NFD)不一致→Move-Item誤判成改名+-Force連環覆蓋,建鑫土方#4五檔(含列控表)永久遺失無副本(後由使用者重傳救回);鐵則=檔案操作純PowerShell、建夾後Test-Path -PathType Container、逐檔搬完驗落夾內+根目錄已無、目的地永遠給資料夾
+- [🔴高CP請款流程:數字走Excel掃描件只當佐證](feedback_billing_cp_workflow_excel_first.md) — 115.07.27使用者定:貴又不一定對幾乎只在掃描件(呂發#7 37張扣款無彙總被迫逐張眼加);高CP=金額/數量/單價/扣款總額一律從列控表/計算式/彙總xlsx取(快準省),掃描件只在Excel沒有的(簽名/發票/報價單特徵)才看;分階段=先前置全部安全歸夾→再一案一案獨立審核出查核清單給使用者逐案問→確認後才動計價本
+
 ## 個人生活記憶（2026/06/18 由 Downloads\agent 那套合併進來）
 - [選股輸出圓圈格式](feedback_display_format_circles.md) — 🔴警示/🟢進場/🟡觀察/⚫結論,每區塊必出一行結論,推理壓短只留結論
 - [語言偏好](feedback_language.md) — 所有回覆使用繁體中文
