@@ -20,7 +20,7 @@
 - [git位置+已加進PATH](reference_git_path_windows.md) — git.exe在AppData\Local\Programs\Git\cmd,7/21已加User PATH直接打git就能用;找不到就`$env:PATH +=`當場補;🔴教訓=別把「我的工具鏈有問題」當既成事實丟回去,先去找
 - [🔴🔴完整性閘門也要用在自己打的memo](feedback_gate_applies_to_my_own_output.md) — 7/21曹聖#1+金鈺昌#1連兩件漏第1點計價區間;我查工地資料100分查自己產出0分;查核清單固定加最後一項「memo已逐條對過A25/A93七點」
 - [0720大批次現況](project_billing_batch_state_0720.md) — Opus補建8件進計價本+全書標楷體+Downloads重整去重;和浚#1定稿可送呈、金鈺昌#4退件未解;上展歷史扣款110,566+和浚羅朝文身分待裁示;晉暘已送簽別動;弘隆/SGS狀態待確認
-- [🔴工作用最強模型雜事用便宜的](reference_model_choice_work_vs_chore.md) — 請款核對/計價/選股這種高風險抓錯用Fable 5(漏一個=送錯呈核/賠錢);7/20實測Sonnet漏一堆被連環抓,重做回合反而更燒額度;🆕(7/27)Claude 5名單:Fable 5>Opus 5>Sonnet 5(搬檔跑腳本)>Haiku 4.5(機械動作/雲端routine);選股已從「雜事」改列高風險級
+- [🔴工作用最強模型雜事用便宜的](reference_model_choice_work_vs_chore.md) — 請款核對/計價/選股這種高風險抓錯用Fable 5(漏一個=送錯呈核/賠錢);7/20實測Sonnet漏一堆被連環抓,重做回合反而更燒額度;🆕(7/27)Claude 5名單:Fable 5>Opus 5>Sonnet 5(搬檔跑腳本)>Haiku 4.5(機械動作/雲端routine);選股已從「雜事」改列高風險級;🆕額度:Fable 5無獨立額度吃週額度上限50%、🔴Max上Opus與Sonnet是分開兩桶(切Sonnet=白賺不是省)、週限額+50%加碼7/20已到期(額度變緊主因),細節待 `/usage` 驗證
 - [🔴Downloads重複資料夾清理邏輯](project_download_staging_dedup_workflow.md) — 使用者收到補件會重新整理成新夾但不刪舊夾,造成重複;歸檔指令本身要包含「查重複+刪舊留新」這一步,使用者潔癖要Downloads保持乾淨
 - [🔴🔴案子收尾前要核對固定動作清單](feedback_checklist_before_case_done.md) — 回測只驗證單一動作有沒有落地,不會自動延伸成「該做的固定動作全做了嗎」;行通表複製/問題txt/五處同步這類規則要每案收尾前主動核對,不能只在被問才補
 - [🔴加款類不強制簽名+已給資料直接打](feedback_add_payment_no_signature_required.md) — 加款轉嫁性質非罰扣,沒簽名不擋件;🔴7/21更正:不擋件≠memo不寫簽名句,加款行照樣要「廠商已簽名/尚未簽名」(上展#1踩雷);資料到齊就直接打別等確認
