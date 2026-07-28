@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: cf5cfa3a-4bbd-4b1b-977c-8f5259c59988
-  modified: 2026-07-28T09:34:55.630Z
+  modified: 2026-07-28T10:03:45.174Z
 ---
 
 115.07.27~28 實戰踩到的，會造成「我以為讀完了其實漏一半」的假結論。
@@ -34,6 +34,14 @@ metadata:
 ## 🔴 雷6：Value2 設值要顯式轉型；PowerShell 函式呼叫會吃掉運算子
 - `$ws.Range("B$r").Value2 = $x.no`（值取自 hashtable/pscustomobject 屬性、或 `-f` 產生的字串）會拋 **"Specified cast is not valid."** → 加 `[string]` / `[double]` 顯式轉型即可。
 - `N($a)*N($b)` 這種寫法 PowerShell 會把 `*N($b)` 併進第一個函式的參數，算出垃圾值 → **先落地成變數再運算**。
+
+## 🔴 雷7：28MB 檔連 Workbooks.Open 都會失敗（115.07.28 下午）
+同一本工地端零星列控表（28MB、53分頁），下午再開時直接在 `$xl.Workbooks.Open()` 就拋 **RPC failed 0x800706BE**，逐格 `.Text` 也會中途拋 0x800A01A8（Excel busy）。檔名還寫著「用完要存擋關掉」＝很可能同時被別人開著。
+**繞法順序**：①先 `Stop-Process EXCEL -Force` 清孤兒再試 ②還是不行就**完全不走 COM**，把 xlsx 當 zip 解開直接解析 XML（`sharedStrings.xml` 建索引 → 各 `worksheets/sheetN.xml` 用 regex 抓 `<row>`／`<c t="s"><v>idx</v>`），可完全避開 Excel。⚠️ 但 53 分頁全掃仍可能跑超過 10 分鐘被丟背景，要先用分頁名縮小範圍。
+
+## 🔴 雷8：PowerShell 管線會把「單元素的陣列」攤平成字串
+`$gh = $po | Where-Object { $_[0] -eq "X" }`，若只命中 1 筆，`$gh` 會變成**那個內層陣列本身**（不是陣列的陣列），接著 `foreach($x in $gh)` 就在跑它的 5 個字串，`$x[0]` 變成 **Char** → 丟 "Unable to cast System.Char to System.String"。
+**繞法**：處理「列的集合」一律用 `[pscustomobject]` + `System.Collections.ArrayList`，不要用巢狀 `@(@(...),@(...))` 走管線篩選。
 
 ## PowerShell 刪檔被安全規則擋的繞法
 `Remove-Item` 在這台會被 hook 擋掉的情形：
