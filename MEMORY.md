@@ -6,12 +6,13 @@
 - [🔴🔴🔴所有資料都在Downloads自己找](feedback_find_answers_in_downloads.md) — 五順序(工地歸檔→四母夾→根目錄→計價本/修改單本→桌面工具);檔名也是資料來源;找不到留空白絕不填「待使用者提供」
 - [🔴🔴完整性閘門也要用在自己打的memo](feedback_gate_applies_to_my_own_output.md) — 查工地資料100分查自己產出0分;固定加最後一項「memo已逐條對過A25/A93七點」
 - [🔴🔴寫「已完成」但根本沒做+改A沒串BC](feedback_claimed_done_but_not_done_0728.md) — 0728四連錯:查核記錄寫✅已登錄但沒補、只看資料夾沒查索引就報Q2未到貨、拿夾名縮寫當項目名、改名只改眼前幾處;收尾前跑「每件×五處」體檢表;夾移進1.送出待簽核或拿掉🔴後綴=放行訊號
+- [🔴🔴🔴使用者丟回改好的版本=隱含規則,要逆向抽出](feedback_user_edit_implies_rule_0730.md) — 0730定:比對逐字差異→反推通則→兩本打法說明+記憶同步→回測加測項→回報抽出的規則讓他否決;本次抽兩條(memo #期數後換行不加逗號;檢附名稱看『角色』不看表單抬頭→請款依據那張一律寫『請款單』)
 - [🔴🔴查核要逐欄比對非只核總額](feedback_scrutinize_not_just_open.md) — 「開過檔案」≠「查清楚」;管理費有無一律主動報告不自判對錯
 - [🔴不要敷衍](feedback_no_perfunctory_work.md) / [只動我說的](feedback_only_do_whats_asked.md) / [不要問確認問題](feedback_no_clarifying_questions.md) / [重要決定自動落檔](feedback_auto_save_decisions.md) / [語言=繁中](feedback_language.md)
 
 ## 請款/計價 規則
 - [🔴🔴總經理規定:行通表門檻(四大類)](feedback_hangtong_existence_gate.md) — 機具/點租工/勞安衛/建材沒登記一律不予計價;工具=桌面行通表夾_查行通表.ps1(18本16,262筆,含115Q2機具2185)+_回測.ps1 58項全PASS才可用;🔴查無分兩型:①品項有這家沒登=真卡走三家比價議價簽呈②整本沒這品項=不適用直接給過;🔴判有無查索引CSV別只看資料夾;目前未到貨=115Q3機具/租工
-- [🔴🔴請款memo標準打法範本(115.07.21定版)](reference_billing_memo_standard_template.md) — 第1點帶計價區間+有代扣拆自辦/代辦(G4放全額)+扣款加款行帶「廠商已簽名/尚未簽名」;141A A93/141E A62
+- [🔴🔴請款memo標準打法範本(115.07.21定版,0730補排版)](reference_billing_memo_standard_template.md) — 第1點帶計價區間+#期數後換行不加逗號+有代扣拆自辦/代辦(G4放全額)+扣款加款行帶「廠商已簽名/尚未簽名」+檢附看角色(請款依據=請款單);141A A93/A130、141E A62/A137
 - [🔴計價本格式鐵則](reference_billing_book_format_rules.md) — memo逐字一樣/B4A4H4必設公式/期數最舊在最上/分頁最新放範本(6)旁/期數認請款單/問題退件件保留分頁+tab標色絕不刪
 - [🔴🔴請款項目欄定版寫法](reference_billing_item_column_format.md) — 一項一行行首編號,只放品名規格數量單位單價金額;用途=議價基準對照表
 - [狀態串聯同步五處](feedback_status_sync_five_places.md) — ①分頁tab+M4②總表備註③追蹤報表備註④夾名後綴⑤夾內txt
