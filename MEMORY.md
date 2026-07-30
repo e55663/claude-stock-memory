@@ -70,6 +70,9 @@
 - [🔴80萬真金投資計畫](project_invest_80w_plan_0706.md) / [存30萬計畫](project_savings_plan_30w.md) / [信貸100W計畫(暫緩)](loan_investment_plan.md) / [信貸提問清單](reference_loan_question_checklist.md)
 - [🔴🔴崩盤深跌分批已回測](feedback_crash_batch_dip_buy_validated_0722.md) — ≥-15%恐慌深跌5事件fwd20全勝/fwd60中位+15.71%;三鐵則=夠深≥-15%/抱60天/分批不猜底;季線開關只關飆桶不關模式A
 - [🔴🔴🔴廣池崩盤回測0730(補上25檔藍籌池的缺口)](feedback_crash_widepool_backtest_0730.md) — 250檔×10年×6事件n=1426;跌越深反彈越大五組單調(最深組fwd60+17.32%/勝82.8%);🆕GAP篩=錯殺vs陷阱免財報代理(FRESH+16.96%/86.2% vs STALE+8.66%/73%),但全市場同步崩時會失效;🔴半導體業反彈最弱(+6.82%/勝66.7%);🔴2022-06型(升息未完+通膨未頂+季線下彎)會翻轉結論、跌最深組反而最慘;鐵則=台股歷史報酬回測一律用還原股價
+- [🔴🔴🔴推薦前必須跑對照組0730](feedback_benchmark_comparison_required_0730.md) — 使用者一句「那就買0050就好」推翻我整套金融股推薦;病根三層=順序錯(候選內部排名當成該不該買)/反面證據寫了卻只當免責聲明貼著/框架同天自己寫過卻沒貫徹;往後任何「前N名」出口前固定加對照組段
+- [🔴🔴金融股回測0730:避震器不是加速器](feedback_crash_backtest_financial_vs_0050_0730.md) — 逐年拆解n=315:金融股贏0050的三年(2017/18/21)全是0050漲不動的年份,無例外;崩盤後0050 fwd60+11.67%/最差-3.58% > 金融股+6.27%/p10-2.46%;🔴唯一例外2022-06(0050唯一為負)銀行全正(臺企銀+15.88)壽險證券全負(國泰金-11.02);🔴0050台積電權重59.92%→對使用者是加倉不是分散
+- [金融股資料庫0730](reference_financial_stocks_data_0730.md) — 🔴框架缺口(建檔起就排除金融,已補為常態掃描);2026除權息日程(未除息8/4~8/13共9檔);近10年殖利率;填息率(玉山金3天最快/兆豐金109天第一金156天最慢);PB分位整批在最貴端;TWT49U參數是startDate
 - [🔴法說會業績好不是進場理由](feedback_earnings_call_not_entry_reason.md) — 台積電12次法說實證:後5日中位-0.24%/勝41.7%輸基準17pp=最差窗口;法說屬乙類事件時效型非長抱理由;要等法說後回檔別當天追
 - [🔴停損紀律三條](feedback_stoploss_discipline_lessons_0720.md) — 同組兩檔觸停損整組出清;橫盤+法人轉負=汰弱;停損採盤中觸線
 - [全市場選股流程](reference_full_market_screen.md) / [選股評分系統](feedback_stock_selection_system.md) / [選股完整性閘門](feedback_stock_completeness_gate.md) / [進場前檢查清單](reference_stock_entry_checklist.md) / [選股輸出圓圈格式](feedback_display_format_circles.md) / [集中度是標註不是淘汰](feedback_concentration_flag_not_filter.md) / [混合無腦掛單制](feedback_brainless_order_system.md)
@@ -77,7 +80,7 @@
 - [分析個股=分析師五模板](feedback_stock_analyst_deep_dive.md) / [推薦附股價+時間戳](feedback_always_show_price_with_timestamp.md) / [法說會要主動查日期](feedback_proactive_earnings_calendar.md) / [WebFetch股價符號偶爾標反](reference_webfetch_price_sign_flip.md)
 - [🔴Mac已能全市場海選](feedback_mac_vs_windows_stock_selection.md) — python3 `full_market_scan.py`;T86要`selectType=ALL`
 - [現階段重心是錢](user_money_first_focus.md) — 回答從ROI切入給數字;絕不掰附出處不報明牌
-- ⚠️會過期快照:[🔴0730崩盤現況(最新)](project_market_crash_0730_state.md) — 7/29收40,039距60日高-16.96%崩盤分批首度觸發;利空=中國DRAM/DUV自給(不會消失)+AI資本支出質疑+FOMC三異議主張升息;VIX 20.66破20;情境判定像2022-06非2020-03;候選文曄3036/廣達2382/新代7750 / [717崩盤→722已V轉](project_market_crash_0717_bear_state.md) / [AI七層供應鏈0716](project_ai_chain_signal_snapshot_0716.md)
+- ⚠️會過期快照:[🔴0730崩盤現況(最新,已補7/30收盤)](project_market_crash_0730_state.md) — 🔴7/30收39,933跌破4萬但家數比0.29(224漲/775跌)=金融權值撐盤的分化盤別被指數騙;金融保險+1.49%全場最強、電腦及週邊-3.59%;報酬指數7/16→7/30加權-12.34%/半導體-13.29%/🔴金融保險+0.85%=資金輪動到金融已在台股兌現;7/29距60日高-16.96%崩盤分批觸發;利空=中國DRAM/DUV自給(不會消失)+AI資本支出質疑+FOMC三異議主張升息;VIX 20.66破20;情境像2022-06非2020-03;候選文曄3036/廣達2382/新代7750;🔴待辦=80萬計畫配置比例試算(0050單押vs搭一成金融,兩情境報酬與回撤) / [717崩盤→722已V轉](project_market_crash_0717_bear_state.md) / [AI七層供應鏈0716](project_ai_chain_signal_snapshot_0716.md)
 
 ## 環境/系統
 - [🔴工作用Opus雜事用Sonnet](reference_model_choice_work_vs_chore.md) — 請款核對高風險抓錯用Opus
