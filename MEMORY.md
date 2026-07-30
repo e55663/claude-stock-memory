@@ -9,6 +9,7 @@
 - [🔴🔴🔴打法說明只進不退,舊件不回頭改](feedback_rules_forward_only_no_retro_edit_0730.md) — 0730定:規則往前更新;已送出/已歸檔的memo保持原貌,不合新規則只在M欄/查核記錄留紀錄;例外=純格式統一(日期補零/空格/字體)可整批做。判準=改了會不會讓memo講的事跟送出版本不一樣
 - [🔴🔴🔴使用者丟回改好的版本=隱含規則,要逆向抽出](feedback_user_edit_implies_rule_0730.md) — 0730定:比對逐字差異→反推通則→兩本打法說明+記憶同步→回測加測項→回報抽出的規則讓他否決;本次抽兩條(memo #期數後換行不加逗號;檢附名稱看『角色』不看表單抬頭→請款依據那張一律寫『請款單』)
 - [🔴🔴查核要逐欄比對非只核總額](feedback_scrutinize_not_just_open.md) — 「開過檔案」≠「查清楚」;管理費有無一律主動報告不自判對錯
+- [🔴判「廠商尚未簽名」前要放大整格看](feedback_signature_check_before_claiming_unsigned.md) — 手寫簽名常斜寫/跨線/壓字不在格子正中央;0730聖陸#4我判空白被使用者指正;查核記錄要寫出簽名內容與日期才算看過
 - [🔴不要敷衍](feedback_no_perfunctory_work.md) / [只動我說的](feedback_only_do_whats_asked.md) / [不要問確認問題](feedback_no_clarifying_questions.md) / [重要決定自動落檔](feedback_auto_save_decisions.md) / [語言=繁中](feedback_language.md)
 
 ## 請款/計價 規則
@@ -24,6 +25,7 @@
 - [🔴🔴每夾必附查核記錄.txt+寫分頁前必驗A4](feedback_per_case_audit_txt_and_sheet_target_0723.md) — 分頁名差一個空格就寫錯到舊分頁,B4歷史memo被蓋永久遺失
 - [自辦vs代扣+扣款vs加扣](feedback_self_vs_deduct_contract.md) — 只有自辦吃本合約;核累計用累計自辦;扣自己的錢=扣款,扣別家=加扣(代扣)
 - [🔴PO=合約 vs SC=零星](reference_po_vs_sc_pricing.md) — PO被合約框死超出要追加;SC新項目要議價;115.07.21前給過的一律視為已議價
+- [🔴議價後重送件固定查核五步](reference_post_negotiation_resubmit_checks.md) — 議定總額=各份合計常議成整數/G4仍放全額且代扣跟著降/🔴列控『合約』欄幾乎一定沒跟著改/估價單合計列可能差幾元(逐項四捨五入)以用印總額為準但要揭露/舊報價單改名標作廢;系統請款單『核決層級』欄可印證核決
 - [🔴🔴報價單必須是根基版本](feedback_quotation_must_be_kindom_form.md) — 非K02-3-PU01-01制式表單=不合格要警告,金額照核不擋件
 - [🔴官方附件一覽表](reference_official_attachment_list.md) / [請款附件查檢一覽表](reference_billing_attachment_checklist.md) — 桌面`附件參考.pdf`逐項查;第8類機具要COMS匯出+日報簽認;第15項扣款單要雙方簽名
 - [🔴加款類不強制簽名但memo照寫簽名句](feedback_add_payment_no_signature_required.md) / [缺件說明放txt不放memo](feedback_missing_items_note_location.md) / [🔴缺件裁量權在使用者](feedback_checklist_before_case_done.md)
@@ -55,6 +57,7 @@
 - [報問題要附出處](feedback_flag_problems_with_source.md) / [來源檔別改要列錯誤](feedback_flag_source_errors_vendor_by_invoice.md) / [複製友善純文字](feedback_copy_friendly_plaintext.md) / [做事要快別來回](feedback_work_faster_batch_operations.md) / [一批檔跑完寫todo](feedback_batch_todo_workflow.md)
 
 ## 進行中批次（新→舊）
+- [0730下午:6件(上展議價後/三菱/聖陸/七祥/移工/曹新泰)](project_billing_batch_state_0730pm.md) — 上展2,750,000可送呈(列控合約欄未更新+代扣無簽認+保固矛盾)、三菱與聖陸使用者定版修正、七祥#1新建可送呈(每月投放2次)、🟠移工#2暫緩(薪資明細差7,529+開辦費34,000vs17,000)、曹新泰議價完成金額不變但低於前購96.88%省17,802
 - [0730:5案memo定版+打法說明大維護](project_billing_batch_state_0730.md) — 竟元#1(數字全乾淨,剩歸項/無施作日/缺件)、國產#9(改混凝土格式,抽磅19.23%/效益-0.07%)、金鈺昌#1、潤泰#1(季別改115Q2+行通表進夾)、翔盛#7(代辦改60,580);🔴🔴和浚1,900要在翔盛#8補扣;順手補登適燁SC011941進總表、修10條過時條文、K欄日期全本補零
 - [0728下午收尾:6案+總表已重排](project_billing_batch_state_0728pm.md) — 呂發#7退件(扣款精算1,551,151/對#6零重複)、大象#1適燁#1竣葦#9已送出待歸檔、成駿#11竟元#1暫緩;🔴放行≠問題消失(呂發化糞池歸項252,576/翔博架96,037、竣葦全額超約15,000+包價收兩次7,500、大象36M45M兩季都查無、成駿預算差641萬);總表PO22筆SC56筆按單號排序、SGS補登、廣暉移SC區、竟元改PO區
 - [0728第二批:7件已key進計價本](project_billing_batch_state_0728b.md) — 國產混凝土#9/樓梯金鈺昌#1/潤泰泥作#1/翔盛五金#7+141E三菱電梯#1/聖陸#4/承洋#4;數字零差異,七件待裁示
