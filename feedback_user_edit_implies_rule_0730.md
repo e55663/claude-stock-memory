@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: 84c5e82a-0a50-4e1e-8329-d9d98906db97
-  modified: 2026-07-30T01:10:53.153Z
+  modified: 2026-07-30T02:58:42.305Z
 ---
 
 115.07.30 使用者原話：「像我每次丟給你我更改好的 你有沒有看出我打的邏輯 然後更新到打法說明裡面 讓這個邏輯持續下去才會不斷更新」。
@@ -23,4 +23,17 @@ metadata:
 - **memo第1點排版**：「本期(計價區間)單號項目(廠商)#期數」之後直接換行 CHAR(10)，再接「計價金額X元(未稅)。」。#期數後不加逗號、不接任何字，就是換行。🔴這修正 A81 的讀法——A81 禁的是「逗號」，換行本身是他要的排版（適燁#1、竟元#1都是），別再把 A81 讀成「#期數後不能換行」。
 - **檢附名稱看『角色』不看『抬頭』**：廠商送來、作為本期請款依據的那張表單，不管抬頭印「工程報價單」或廠商自己的名目，檢附一律列『請款單』（跟夾名、檔名的稱呼一致）；只有訂約／議價時那份才列『報價單』，契約本體列『合約』。竟元#1 我照抬頭寫「報價單」被他改成「請款單」。判法＝這份文件在流程裡扮演什麼角色，不是它自己印了什麼字。
 
-相關：[[reference_billing_memo_standard_template]]、[[feedback_verbatim_memo_no_self_edit]]、[[feedback_backtest_discipline]]、[[feedback_auto_save_decisions]]
+## 115.07.30 當天新增／更正的條文索引（找規則直接查這幾列）
+
+| 內容 | 141A | 141E |
+|---|---|---|
+| 回饋即規則＋#期數後換行＋檢附看角色不看抬頭 | A130 | A137 |
+| 混凝土類 memo 專屬六段格式＋抽磅數字怎麼取 | A132 | A139 |
+| 第3點寫法(部位＋數量x單價/單位=金額)＋50萬是必打下限 | A134 | A141 |
+| 規則往前更新、舊件不回頭改、純格式統一是例外 | A136 | A143 |
+| 行通表要複製進案夾(擴大到四大類)＋**季別＝出貨/施作月所屬季** | A44 | A78 |
+| 追蹤報表請款項目欄只從當月起適用(6月不補) | A101 | A70 |
+
+回測同步加了 6 個測項，`_規則同步回測.ps1` 現在 **80 項全 PASS**。
+
+相關：[[reference_billing_memo_standard_template]]、[[feedback_rules_forward_only_no_retro_edit_0730]]、[[feedback_verbatim_memo_no_self_edit]]、[[feedback_backtest_discipline]]、[[feedback_auto_save_decisions]]

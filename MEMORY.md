@@ -12,7 +12,7 @@
 - [🔴不要敷衍](feedback_no_perfunctory_work.md) / [只動我說的](feedback_only_do_whats_asked.md) / [不要問確認問題](feedback_no_clarifying_questions.md) / [重要決定自動落檔](feedback_auto_save_decisions.md) / [語言=繁中](feedback_language.md)
 
 ## 請款/計價 規則
-- [🔴🔴總經理規定:行通表門檻(四大類)](feedback_hangtong_existence_gate.md) — 機具/點租工/勞安衛/建材沒登記一律不予計價;工具=桌面行通表夾_查行通表.ps1(18本16,262筆,含115Q2機具2185)+_回測.ps1 58項全PASS才可用;🔴查無分兩型:①品項有這家沒登=真卡走三家比價議價簽呈②整本沒這品項=不適用直接給過;🔴判有無查索引CSV別只看資料夾;目前未到貨=115Q3機具/租工
+- [🔴🔴總經理規定:行通表門檻(四大類)](feedback_hangtong_existence_gate.md) — 機具/點租工/勞安衛/建材沒登記一律不予計價;🔴🔴季別＝該筆出貨/施作月所屬季**不是計價當季**(0730使用者糾正,詳reference_hangtong_files_location);有比過價的件要把該季行通表複製進案夾+檢附列「行通表」(A44,四大類都算);工具=桌面行通表夾_查行通表.ps1(18本16,262筆,含115Q2機具2185)+_回測.ps1 58項全PASS才可用;🔴查無分兩型:①品項有這家沒登=真卡走三家比價議價簽呈②整本沒這品項=不適用直接給過;🔴判有無查索引CSV別只看資料夾;目前未到貨=115Q3機具/租工
 - [🔴🔴請款memo標準打法範本(115.07.21定版,0730補排版)](reference_billing_memo_standard_template.md) — 第1點帶計價區間+#期數後換行不加逗號+有代扣拆自辦/代辦(G4放全額)+扣款加款行帶「廠商已簽名/尚未簽名」+檢附看角色(請款依據=請款單);141A A93/A130、141E A62/A137
 - [🔴計價本格式鐵則](reference_billing_book_format_rules.md) — memo逐字一樣/B4A4H4必設公式/期數最舊在最上/分頁最新放範本(6)旁/期數認請款單/問題退件件保留分頁+tab標色絕不刪
 - [🔴🔴請款項目欄定版寫法](reference_billing_item_column_format.md) — 一項一行行首編號,只放品名規格數量單位單價金額;用途=議價基準對照表
@@ -55,6 +55,7 @@
 - [報問題要附出處](feedback_flag_problems_with_source.md) / [來源檔別改要列錯誤](feedback_flag_source_errors_vendor_by_invoice.md) / [複製友善純文字](feedback_copy_friendly_plaintext.md) / [做事要快別來回](feedback_work_faster_batch_operations.md) / [一批檔跑完寫todo](feedback_batch_todo_workflow.md)
 
 ## 進行中批次（新→舊）
+- [0730:5案memo定版+打法說明大維護](project_billing_batch_state_0730.md) — 竟元#1(數字全乾淨,剩歸項/無施作日/缺件)、國產#9(改混凝土格式,抽磅19.23%/效益-0.07%)、金鈺昌#1、潤泰#1(季別改115Q2+行通表進夾)、翔盛#7(代辦改60,580);🔴🔴和浚1,900要在翔盛#8補扣;順手補登適燁SC011941進總表、修10條過時條文、K欄日期全本補零
 - [0728下午收尾:6案+總表已重排](project_billing_batch_state_0728pm.md) — 呂發#7退件(扣款精算1,551,151/對#6零重複)、大象#1適燁#1竣葦#9已送出待歸檔、成駿#11竟元#1暫緩;🔴放行≠問題消失(呂發化糞池歸項252,576/翔博架96,037、竣葦全額超約15,000+包價收兩次7,500、大象36M45M兩季都查無、成駿預算差641萬);總表PO22筆SC56筆按單號排序、SGS補登、廣暉移SC區、竟元改PO區
 - [0728第二批:7件已key進計價本](project_billing_batch_state_0728b.md) — 國產混凝土#9/樓梯金鈺昌#1/潤泰泥作#1/翔盛五金#7+141E三菱電梯#1/聖陸#4/承洋#4;數字零差異,七件待裁示
 - [0728第一批:11件查核記錄補齊](project_billing_batch_state_0728.md) — 🔴聖志#7退件五處同步待做;建鑫棄土證明佐證不足
