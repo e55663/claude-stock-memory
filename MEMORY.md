@@ -47,7 +47,7 @@
 - [🔴🔴資料遺失事故:別混用Bash+PowerShell搬檔](feedback_never_mix_bash_powershell_file_ops.md) — 編碼NFC/NFD不一致→Move-Item誤判成改名+覆蓋;檔案操作純PowerShell、建夾後Test-Path -PathType Container、逐檔驗落夾內
 - [🔴桌面Excel存檔用原地覆寫法](feedback_desktop_excel_inplace_save.md) — SaveAs暫存→WriteAllBytes→還原時間戳;檔案開著先講一聲
 - [Excel COM八雷+刪檔繞法](reference_excel_com_scan_pitfalls.md) — UsedRange少報/超大表Value2回NULL/欄位沒讀滿/續列/自訂格式/Value2要顯式轉型/28MB連Open都失敗要改解XML/PS管線把單元素陣列攤平成Char
-- [🔴掃描件查核省額度打法](reference_scanned_audit_cost_and_toolchain.md) — 拼圖2×2或3×N+80~90dpi一次看4~9張;poppler用v24
+- [🔴掃描件查核省額度打法](reference_scanned_audit_cost_and_toolchain.md) — 🆕0730實測:Read工具可直接吃PDF(pages參數),掃描件手寫簽名看得清楚,不用再pdftoppm轉圖;poppler這台已找不到別假設還在;量大仍分批
 - [批次操作做完要回頭驗證](feedback_verify_after_batch_ops.md) / [搬檔前驗夾存在](feedback_move_into_dir_verify_exists.md) / [備份用完即刪](feedback_delete_temp_backups.md) / [PS中文字面值編碼不穩](feedback_ps_chinese_literal_encoding.md) / [檔案必須讀完整](feedback_read_files_completely.md) / [git位置](reference_git_path_windows.md)
 
 ## 歸檔/資料夾
@@ -57,7 +57,7 @@
 - [報問題要附出處](feedback_flag_problems_with_source.md) / [來源檔別改要列錯誤](feedback_flag_source_errors_vendor_by_invoice.md) / [複製友善純文字](feedback_copy_friendly_plaintext.md) / [做事要快別來回](feedback_work_faster_batch_operations.md) / [一批檔跑完寫todo](feedback_batch_todo_workflow.md)
 
 ## 進行中批次（新→舊）
-- [0730下午:6件(上展議價後/三菱/聖陸/七祥/移工/曹新泰)](project_billing_batch_state_0730pm.md) — 上展2,750,000可送呈(列控合約欄未更新+代扣無簽認+保固矛盾)、三菱與聖陸使用者定版修正、七祥#1新建可送呈(每月投放2次)、🟠移工#2暫緩(薪資明細差7,529+開辦費34,000vs17,000)、曹新泰議價完成金額不變但低於前購96.88%省17,802
+- [0730下午:7件(上展議價後/三菱/聖陸/七祥/移工/曹新泰/承洋)](project_billing_batch_state_0730pm.md) — 上展2,750,000可送呈、三菱與聖陸使用者定版、七祥#1新建、曹新泰議價金額不變但低前購96.88%省17,802;✅承洋#4使用者定版放行(抽出「會辦新增」規則+加款單補齊三家扣款單);🟠移工#2三項未解(薪資明細差7,529/開辦費34,000vs17,000/🆕代扣40,000vs附件37,500=差正好一天2,500,與期間多寫1150721同病根);🔴🔴移工成控表F9 VLOOKUP抓空值→累計平均成本應49,132非6,544,「有利差41,456/633.5%」失真,實為不利差-1,132,已依宏文範本做出(成控分析)141E軟橋段外勞成本11507.xlsx
 - [0730:5案memo定版+打法說明大維護](project_billing_batch_state_0730.md) — 竟元#1(數字全乾淨,剩歸項/無施作日/缺件)、國產#9(改混凝土格式,抽磅19.23%/效益-0.07%)、金鈺昌#1、潤泰#1(季別改115Q2+行通表進夾)、翔盛#7(代辦改60,580);🔴🔴和浚1,900要在翔盛#8補扣;順手補登適燁SC011941進總表、修10條過時條文、K欄日期全本補零
 - [0728下午收尾:6案+總表已重排](project_billing_batch_state_0728pm.md) — 呂發#7退件(扣款精算1,551,151/對#6零重複)、大象#1適燁#1竣葦#9已送出待歸檔、成駿#11竟元#1暫緩;🔴放行≠問題消失(呂發化糞池歸項252,576/翔博架96,037、竣葦全額超約15,000+包價收兩次7,500、大象36M45M兩季都查無、成駿預算差641萬);總表PO22筆SC56筆按單號排序、SGS補登、廣暉移SC區、竟元改PO區
 - [0728第二批:7件已key進計價本](project_billing_batch_state_0728b.md) — 國產混凝土#9/樓梯金鈺昌#1/潤泰泥作#1/翔盛五金#7+141E三菱電梯#1/聖陸#4/承洋#4;數字零差異,七件待裁示
