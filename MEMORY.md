@@ -87,4 +87,5 @@
 - [使用者基本資料](user_profile.md) — 羅慶人,男,28歲,175/68,營造業副主任,文山區,持品管牌與主任牌
 - [互動偏好](feedback_preferences.md) / [興趣與偏好](user_interests.md) / [健身與飲食](user_fitness.md) / [花費追蹤規則](user_tracking.md) / [人際關係](user_relationships.md) / [重要事件與計畫](project_events.md)
 - [個人待辦清單](reference_personal_todo_list.md) — 說「幫我記一下」寫進去;問「我有什麼要做的」讀出來
+- [🔴巴黎行刷卡順序0730](reference_paris_card_strategy_0730.md) — DAWHO2.5萬→星展eco1.5萬→富邦Costco1.5萬→玉山UnicardUP選(大單放這張);9/1富邦登錄+8月底訂UP選+9月台股一筆保Plus;拒DCC台幣;🔴數字清單已搬到`Downloads\個人\`且最新版是「數字清單 3.xlsx」
 - [待辦推播系統0714](project_personal_todo_push_setup_0714.md) / [個人記帳Excel](project_budget_spreadsheet.md) / [信用卡回饋2026](project_credit_card_optimization_2026.md) / [精品手環購買計畫](project_luxury_bracelet_purchase_plan.md) / [早期Gucci包估價](project_vintage_bag_valuation.md) / [法國巴黎旅遊](project_france_trip.md) / [IG比對誰沒回追](reference_ig_follower_compare.md)
