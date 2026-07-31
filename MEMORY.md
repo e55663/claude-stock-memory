@@ -90,6 +90,7 @@
 - [🔴工作用Opus雜事用Sonnet](reference_model_choice_work_vs_chore.md) — 請款核對高風險抓錯用Opus
 - [三層權限政策](feedback_permission_tiers.md) — bypassPermissions全自動+22條毀滅級deny
 - [跨裝置記憶同步](project_memory_sync_setup.md) / [Win/Mac一致同步計畫](project_cross_device_sync_plan_0716.md) / [兩台電腦要求一樣](feedback_cross_device_consistency.md) / [Status line改PowerShell](reference_statusline_powershell_fix.md) / [AI agent自動化](project_ai_agent_automation.md) / [Mac裝置更新待辦](project_mac_device_update.md)
+- [🔴閘門改成模式偵測0731](project_gate_dispatcher_0731.md) — 三支每輪噴2,271字的提醒合併成gate-dispatcher(偵測+黏著+手動開關`股票模式`/`工作模式`/`閘門全開`/`關股票`+fail-open);回測25項全PASS省62.5%;🔴co-rule-gate仍有「執行副總」過時條文待裁示
 - [額度花在哪+視窗分工](feedback_session_cost_and_memory_slimming.md) — 一批案件告一段落才收尾+clear;三間房分工
 - [不要自動產獨立檔案](feedback_no_standalone_artifacts.md) — 選股結果直接講,別另存txt/HTML
 
