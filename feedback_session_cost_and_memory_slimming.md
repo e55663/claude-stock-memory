@@ -5,6 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: aa6a4d5b-2223-43f9-aeca-85bdf9edbc61
+  modified: 2026-07-31T01:38:47.320Z
 ---
 
 **(2026/06/23 共同釐清額度與記憶管理)** 使用者原以為「每個檔做完就 /clear、重開新對話」最省額度，這是錯的，已導正。
@@ -31,3 +32,12 @@ metadata:
 - ✅ 已刪重複的專案層 `C:\Users\Seal_Lo\Downloads\agent\CLAUDE.md`（與家目錄層 `C:\Users\Seal_Lo\CLAUDE.md` 逐位元組相同，3,202 字），保留家目錄層→每 session 開場少載約 3,200 字。
 - ✅（6/23 完成）MEMORY.md 索引已從整段式瘦成「一行鉤子」：35,343→18,924 bytes（砍約46%、每 session 少載約16KB）；72 條全保留、0 條掉、連結全對應（git 逐條比對驗過）。原則=每條只留連結+觸發關鍵字+🔴關鍵雷/載重數字，細節留各內頁檔；驗證後證實改前改後對同一案(銲昇#1)的意見完全一致。
 - 🟠 順手抓到設定不一致：`settings.local.json` 記憶 Edit/Write 白名單指向 `…\projects\C--Users-Seal-Lo\memory`，但實際專案路徑是 `C--Users-Seal-Lo-Downloads-agent\memory`，對不上→在本專案寫記憶會多跳權限框（待修白名單）。
+
+---
+
+🔴🔴 **(2026/07/31 補一個上面漏掉的大洞)** 上面這份只算「開場稅」與「讀檔」，漏了第三筆、而且它比開場稅還貴：**每輪重複注入的 hook 提醒**。三支 UserPromptSubmit hook 每輪無條件噴 2,271 字，60 輪的 session ＝約 10 萬 token，內容還跟當天在做的事無關（做請款照樣吃 1,724 字的選股閘門）。
+
+- 判斷成本要看三筆，不是兩筆：①開場稅（一次）②讀檔（一次）③**每輪固定注入 × 輪數（會隨對話長度線性長，最容易被忽略）**。
+- 第三筆還有隱形代價：把 context 撐爆 → 提早壓縮 → 被摘掉的正好是前面幾案的查核細節。**花錢買沒用的字，然後那些字把有用的擠掉。**
+- 已修，作法見 [[project_gate_dispatcher_0731]]（回測 25 項全 PASS，該場省 62.5%）。
+- **How to apply:** 之後再被問「怎麼省額度」，先量每輪固定注入量（跑 hook 看輸出字數）再談 /clear 和讀檔習慣；順序＝重複注入 > 掃描件頁數 > 段落式 /clear > 雜事切 Sonnet。
