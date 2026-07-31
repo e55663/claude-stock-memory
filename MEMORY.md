@@ -14,7 +14,7 @@
 - [🔴不要敷衍](feedback_no_perfunctory_work.md) / [只動我說的](feedback_only_do_whats_asked.md) / [不要問確認問題](feedback_no_clarifying_questions.md) / [重要決定自動落檔](feedback_auto_save_decisions.md) / [語言=繁中](feedback_language.md)
 
 ## 請款/計價 規則
-- [🔴🔴總經理規定:行通表門檻(四大類)](feedback_hangtong_existence_gate.md) — 機具/點租工/勞安衛/建材沒登記一律不予計價;🔴🔴季別＝該筆出貨/施作月所屬季**不是計價當季**(0730使用者糾正,詳reference_hangtong_files_location);有比過價的件要把該季行通表複製進案夾+檢附列「行通表」(A44,四大類都算);工具=桌面行通表夾_查行通表.ps1(18本16,262筆,含115Q2機具2185)+_回測.ps1 58項全PASS才可用;🔴查無分兩型:①品項有這家沒登=真卡走三家比價議價簽呈②整本沒這品項=不適用直接給過;🔴判有無查索引CSV別只看資料夾;目前未到貨=115Q3機具/租工
+- [🔴🔴🔴總經理規定:行通表門檻(四大類)|0731加時間界線](feedback_hangtong_existence_gate.md) — 🔴🔴🔴**115.08起①型查無=直接不予請款,不再用三家比價補救**(0731開會宣導;②型不受影響);卡住的在手件=吉發#1 720,650/捷盛#1 6,000/大象#1 1,045,000(已送簽核)/長安#1(已停打);🔴單價等於行通表某家的價≠這家有登記(捷盛套北區宜昌的價);機具/點租工/勞安衛/建材沒登記一律不予計價;🔴🔴季別＝該筆出貨/施作月所屬季**不是計價當季**(0730使用者糾正,詳reference_hangtong_files_location);有比過價的件要把該季行通表複製進案夾+檢附列「行通表」(A44,四大類都算);工具=桌面行通表夾_查行通表.ps1(18本16,262筆,含115Q2機具2185)+_回測.ps1 58項全PASS才可用;🔴查無分兩型:①品項有這家沒登=真卡走三家比價議價簽呈②整本沒這品項=不適用直接給過;🔴判有無查索引CSV別只看資料夾;目前未到貨=115Q3機具/租工
 - [🔴🔴請款memo標準打法範本(115.07.21定版,0730補排版)](reference_billing_memo_standard_template.md) — 第1點帶計價區間+#期數後換行不加逗號+有代扣拆自辦/代辦(G4放全額)+扣款加款行帶「廠商已簽名/尚未簽名」+檢附看角色(請款依據=請款單);141A A93/A130、141E A62/A137
 - [🔴計價本格式鐵則](reference_billing_book_format_rules.md) — memo逐字一樣/B4A4H4必設公式/期數最舊在最上/分頁最新放範本(6)旁/期數認請款單/問題退件件保留分頁+tab標色絕不刪
 - [🔴🔴請款項目欄定版寫法](reference_billing_item_column_format.md) — 一項一行行首編號,只放品名規格數量單位單價金額;用途=議價基準對照表
@@ -30,7 +30,7 @@
 - [🔴🔴報價單必須是根基版本](feedback_quotation_must_be_kindom_form.md) — 非K02-3-PU01-01制式表單=不合格要警告,金額照核不擋件
 - [🔴官方附件一覽表](reference_official_attachment_list.md) / [請款附件查檢一覽表](reference_billing_attachment_checklist.md) — 桌面`附件參考.pdf`逐項查;第8類機具要COMS匯出+日報簽認;第15項扣款單要雙方簽名
 - [🔴加款類不強制簽名但memo照寫簽名句](feedback_add_payment_no_signature_required.md) / [缺件說明放txt不放memo](feedback_missing_items_note_location.md) / [🔴缺件裁量權在使用者](feedback_checklist_before_case_done.md)
-- [🔴請款太晚要提醒](feedback_late_billing_alert.md) — 計價月=核定當月;呈核日=處理當天;施作距計價>3個月打延遲句(以**起始月**判)
+- [🔴🔴請款太晚要「確實稽核」(0731總經理宣導升級)](feedback_late_billing_alert.md) — 計價月=核定當月;呈核日=處理當天;施作距計價>3個月打延遲句(以**起始月**判);🔴0731從「打一句話」升級成主動稽核:每件進來就算月差、查核記錄延遲項不可留空、超過3個月要獨立成段列出;首掃兩本168筆有12件>3個月(最久成駿全吊#9/#10遲11個月);🔴系統性缺口=舊件memo沒寫計價區間就算不出遲延
 - [🔴單據手寫註記要讀完](feedback_handwritten_notes_on_vouchers.md) — 手寫『報支1560』=只認列1,560非發票全額
 - [混凝土材料必查抽磅](reference_concrete_material_billing_format.md) — 列控表「抽磅效益」分頁易漏;全案累計非分期
 - [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 使用者給的memo/案子標題/檢附清單只用他這輪給的,不准重排改寫加碼
