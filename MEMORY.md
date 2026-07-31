@@ -36,6 +36,7 @@
 - [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 使用者給的memo/案子標題/檢附清單只用他這輪給的,不准重排改寫加碼
 - [🔴重審前先查既有落地狀態](feedback_check_landed_state_before_reaudit.md) — 開審前四查=計價本分頁/總表/追蹤報表/舊夾
 - [自我稽核不靠小抄](feedback_self_audit_no_crutch.md) / [列控表打法](reference_billing_control_sheet_format.md) / [計價請款單建法](reference_billing_statement_template.md) / [批次memo歸位](reference_batch_memo_filing.md) / [請款對帳抓錯脈絡](reference_invoice_audit_context.md) / [0629被連續糾正](feedback_billing_corrections_0629.md)
+- [🔴計價審核期限:台積電vs內案兩套](reference_billing_review_deadlines.md) — 台積電SC次月5號前/PO次月15號前;內案SC與PO都次月5號前(唯一差別=台積電合約多給10天);回報未結案要依四個期限群組分開列+剩≤3天示警;🔴資料夾是真相(已進1.送出待簽核母夾=送出待歸檔,0731抓到14件報表備註仍空白害盤點失真)
 - [每月計價修改追蹤報表](reference_monthly_tracking_report.md) / [行通表檔案位置](reference_hangtong_files_location.md) / [工作關鍵字觸發](reference_work_keywords.md)
 - [🔴會議紀錄產製規範(0731新增)](reference_meeting_minutes_workflow.md) — 範本=`Downloads\台積電F22P3-CUP鐵板盤點會議紀錄 1.docx`(單表10列);指示事項按單位分段(成控/營管/採購/工地)別寫成各單位;🔴語音逐字稿不可信要拿簡報簽呈交叉比對(Meet按裝置分人,會議室共麥五人全掛同一名);我不能直接聽音訊
 - [141A O棟外牆人力支援六家全貌(0731)](project_facade_manpower_141A_0731.md) — 翔博PO003482合約668,835,974/已估驗2.47億/剩4.21億;分攤依簽呈3,800·4,500·21元;五家7,801,408=翔博4,338,706+自辦3,462,702;預算額度12,646,499剩9,183,797(在預算內);🔴六家全缺COMS匯出;🔴真正的錢在O棟DCR要不到資料=追加提不出去
