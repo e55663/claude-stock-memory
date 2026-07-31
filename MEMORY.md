@@ -10,6 +10,7 @@
 - [🔴🔴🔴使用者丟回改好的版本=隱含規則,要逆向抽出](feedback_user_edit_implies_rule_0730.md) — 0730定:比對逐字差異→反推通則→兩本打法說明+記憶同步→回測加測項→回報抽出的規則讓他否決;本次抽兩條(memo #期數後換行不加逗號;檢附名稱看『角色』不看表單抬頭→請款依據那張一律寫『請款單』)
 - [🔴🔴查核要逐欄比對非只核總額](feedback_scrutinize_not_just_open.md) — 「開過檔案」≠「查清楚」;管理費有無一律主動報告不自判對錯
 - [🔴判「廠商尚未簽名」前要放大整格看](feedback_signature_check_before_claiming_unsigned.md) — 手寫簽名常斜寫/跨線/壓字不在格子正中央;0730聖陸#4我判空白被使用者指正;查核記錄要寫出簽名內容與日期才算看過
+- [🔴🔴🔴0731事故:重建檔案蓋掉使用者改好的版本](feedback_never_overwrite_user_edited_file.md) — 每次從範本複製重填=全檔置換,使用者在Word改的全沒了且救不回(無.asd/無備份/系統保護關閉);鐵則=寫檔前比對LastWriteTime+SHA256,不一致就停下來問;改既有檔一律原地編輯不重建;交付檔第一次產出就建備份夾
 - [🔴不要敷衍](feedback_no_perfunctory_work.md) / [只動我說的](feedback_only_do_whats_asked.md) / [不要問確認問題](feedback_no_clarifying_questions.md) / [重要決定自動落檔](feedback_auto_save_decisions.md) / [語言=繁中](feedback_language.md)
 
 ## 請款/計價 規則
@@ -36,6 +37,8 @@
 - [🔴重審前先查既有落地狀態](feedback_check_landed_state_before_reaudit.md) — 開審前四查=計價本分頁/總表/追蹤報表/舊夾
 - [自我稽核不靠小抄](feedback_self_audit_no_crutch.md) / [列控表打法](reference_billing_control_sheet_format.md) / [計價請款單建法](reference_billing_statement_template.md) / [批次memo歸位](reference_batch_memo_filing.md) / [請款對帳抓錯脈絡](reference_invoice_audit_context.md) / [0629被連續糾正](feedback_billing_corrections_0629.md)
 - [每月計價修改追蹤報表](reference_monthly_tracking_report.md) / [行通表檔案位置](reference_hangtong_files_location.md) / [工作關鍵字觸發](reference_work_keywords.md)
+- [🔴會議紀錄產製規範(0731新增)](reference_meeting_minutes_workflow.md) — 範本=`Downloads\台積電F22P3-CUP鐵板盤點會議紀錄 1.docx`(單表10列);指示事項按單位分段(成控/營管/採購/工地)別寫成各單位;🔴語音逐字稿不可信要拿簡報簽呈交叉比對(Meet按裝置分人,會議室共麥五人全掛同一名);我不能直接聽音訊
+- [141A O棟外牆人力支援六家全貌(0731)](project_facade_manpower_141A_0731.md) — 翔博PO003482合約668,835,974/已估驗2.47億/剩4.21億;分攤依簽呈3,800·4,500·21元;五家7,801,408=翔博4,338,706+自辦3,462,702;預算額度12,646,499剩9,183,797(在預算內);🔴六家全缺COMS匯出;🔴真正的錢在O棟DCR要不到資料=追加提不出去
 
 ## 修改單/入預算
 - [修改單公式化範本](reference_change_order_template.md) — 填7格→A7自動組裝;署名羅慶人;非業變打簡/業變打詳細
