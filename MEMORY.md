@@ -1,4 +1,4 @@
-# Memory Index
+﻿# Memory Index
 
 ## 🔴 最高位階鐵則
 - [🔴🔴🔴核決層級整排寫錯一級已更正](reference_approval_authority_table.md) — 工地流程**沒有執行副總這關**;PO 500~2000萬與SC 50~300萬◎決都是『處級主管』;判法=回原表看◎決落哪欄別背對照表;兩本打法說明A30/A31已更正
@@ -22,6 +22,7 @@
 - [狀態串聯同步五處](feedback_status_sync_five_places.md) — ①分頁tab+M4②總表備註③追蹤報表備註④夾名後綴⑤夾內txt
 - [🔴🔴加列別蓋掉合計列+備註只能四狀態](feedback_append_row_kills_total_row.md) — 合計列A欄空白會被End(xlUp)跳過;備註只能填送出待歸檔/採購議價/退件/已歸檔或留空白(暫緩/可送呈/已送簽核都FAIL);回測報FAIL先懷疑自己腳本寫錯
 - [🔴🔴回測制度](feedback_backtest_discipline.md) — 三支回測在`桌面\新增資料夾\`(_追蹤報表回測78項/_規則同步回測)+`桌面\行通表\_回測.ps1`;規則一改回測要跟著加測項否則假PASS
+- [廠商別名對照:門禁欄名≠計價廠商時的判法](reference_vendor_alias_gate_pass.md) — 德沃＝安達(0803使用者告知,我重複開槍兩次);名稱不同但同一家=別名放行,名稱不同且別家公司別工地(和浚羅朝文掛中鋼構AP7P2)=身分疑義要釐清
 - [🔴高CP請款流程:數字走Excel掃描件只當佐證](feedback_billing_cp_workflow_excel_first.md) — 金額/數量/單價/扣款總額一律從Excel取,掃描件只看Excel沒有的(簽名/發票/報價單特徵);分階段=先歸夾→一案一案審→確認後才動計價本
 - [🔴🔴實作實算≠超約+首期>20萬提醒議價+查核=逐條走打法說明](feedback_asbuilt_billing_negotiation_reminder_0723.md) — 查核清單=打法說明本身逐條走,不准腦生也不准另建清單檔
 - [🔴🔴每夾必附查核記錄.txt+寫分頁前必驗A4](feedback_per_case_audit_txt_and_sheet_target_0723.md) — 分頁名差一個空格就寫錯到舊分頁,B4歷史memo被蓋永久遺失
