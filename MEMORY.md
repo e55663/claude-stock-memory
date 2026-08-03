@@ -23,6 +23,7 @@
 - [🔴🔴請款項目欄定版寫法](reference_billing_item_column_format.md) — 一項一行行首編號,只放品名規格數量單位單價金額;用途=議價基準對照表
 - [狀態串聯同步五處](feedback_status_sync_five_places.md) — ①分頁tab+M4②總表備註③追蹤報表備註④夾名後綴⑤夾內txt
 - [🔴🔴加列別蓋掉合計列+備註只能四狀態](feedback_append_row_kills_total_row.md) — 合計列A欄空白會被End(xlUp)跳過;備註只能填送出待歸檔/採購議價/退件/已歸檔或留空白(暫緩/可送呈/已送簽核都FAIL);回測報FAIL先懷疑自己腳本寫錯
+- [🔴🔴回測假FAIL:逐格COM讀大檔會靜默回空字串(0803)](feedback_com_bulk_read_fake_fail_0803.md) — _規則同步回測報FAIL82全是假的(141E 133條被讀成96條);已改整欄一次抓Range().Value2+加健全性自檢(字數<10000直接中止並印COM讀取失敗非內容缺漏);🔴回測噴假FAIL跟寫太鬆一樣糟
 - [🔴🔴回測制度](feedback_backtest_discipline.md) — 三支回測在`桌面\新增資料夾\`(_追蹤報表回測78項/_規則同步回測)+`桌面\行通表\_回測.ps1`;規則一改回測要跟著加測項否則假PASS
 - [廠商別名對照:門禁欄名≠計價廠商時的判法](reference_vendor_alias_gate_pass.md) — 德沃＝安達(0803使用者告知,我重複開槍兩次);名稱不同但同一家=別名放行,名稱不同且別家公司別工地(和浚羅朝文掛中鋼構AP7P2)=身分疑義要釐清
 - [🔴高CP請款流程:數字走Excel掃描件只當佐證](feedback_billing_cp_workflow_excel_first.md) — 金額/數量/單價/扣款總額一律從Excel取,掃描件只看Excel沒有的(簽名/發票/報價單特徵);分階段=先歸夾→一案一案審→確認後才動計價本
@@ -55,6 +56,7 @@
 - [🔴🔴資料遺失事故:別混用Bash+PowerShell搬檔](feedback_never_mix_bash_powershell_file_ops.md) — 編碼NFC/NFD不一致→Move-Item誤判成改名+覆蓋;檔案操作純PowerShell、建夾後Test-Path -PathType Container、逐檔驗落夾內
 - [🔴桌面Excel存檔用原地覆寫法](feedback_desktop_excel_inplace_save.md) — SaveAs暫存→WriteAllBytes→還原時間戳;檔案開著先講一聲
 - [Excel COM八雷+刪檔繞法](reference_excel_com_scan_pitfalls.md) — UsedRange少報/超大表Value2回NULL/欄位沒讀滿/續列/自訂格式/Value2要顯式轉型/28MB連Open都失敗要改解XML/PS管線把單元素陣列攤平成Char
+- [🔴🔴同一頁PDF可能排多張表單(0803)](feedback_multi_form_per_pdf_page_0803.md) — 翔博#4扣款單12頁實際16張(3頁雙張1頁三張),我漏掉第7頁第三張安達583,737,扣墊款打成11,415,634應為11,999,371;🔴多張獨立單據總額一律逐張相加(11,999,370.50),不要用未稅小計乘1.05(11,999,367.98,差2.53是各張四捨五入累積)
 - [🔴掃描件查核省額度打法](reference_scanned_audit_cost_and_toolchain.md) — 🆕0730實測:Read工具可直接吃PDF(pages參數),掃描件手寫簽名看得清楚,不用再pdftoppm轉圖;poppler這台已找不到別假設還在;量大仍分批
 - [🔴PowerShell變數名不分大小寫($D=$d)](reference_powershell_variable_case_trap.md) — 0730靜默覆寫日期陣列→整批數字全錯還不報錯(索引沿用上一圈舊值);規則=用長變數名/迴圈索引每圈重設/數字先做量級常識檢查;🔴請款Excel掃描腳本一樣會中;另附回測三雷=視窗偏誤(把下次崩盤當這次的底)/手動列事件會漏(n從4變6)/前視偏誤(要知道底才算得出的指標不能當預測因子)
 - [批次操作做完要回頭驗證](feedback_verify_after_batch_ops.md) / [搬檔前驗夾存在](feedback_move_into_dir_verify_exists.md) / [備份用完即刪](feedback_delete_temp_backups.md) / [PS中文字面值編碼不穩](feedback_ps_chinese_literal_encoding.md) / [檔案必須讀完整](feedback_read_files_completely.md) / [git位置](reference_git_path_windows.md)
@@ -66,6 +68,7 @@
 - [報問題要附出處](feedback_flag_problems_with_source.md) / [來源檔別改要列錯誤](feedback_flag_source_errors_vendor_by_invoice.md) / [複製友善純文字](feedback_copy_friendly_plaintext.md) / [做事要快別來回](feedback_work_faster_batch_operations.md) / [一批檔跑完寫todo](feedback_batch_todo_workflow.md)
 
 ## 進行中批次（新→舊）
+- [🔴0803:8件全審完待裁示+總表改版+38題規則沉澱清單](project_billing_batch_state_0803.md) — 翔博#4(4,030萬到料款無佐證)/安達#1(出工乾淨)/閎順#1(3處)/成駿吊卡#6/欣生#2/雋凱#2/翔盛#8/和浚#1進場時數;錢的總帳淨+215,272少付;🔴38題待裁示在計價本「問題清單」分頁(規則14/個案24)與桌面待裁示清單115.08.03.txt,下次接手先讀別重問
 - [0731:9件全審完待覆核+7月全局盤點](project_billing_batch_state_0731.md) — 141A八件(吉萊#1/揚弘#1/聖志#7/吉發#1/翔博夜加餐費#1/祥竹#11/勝鈞#2/昇峰#4)+141E捷盛#1,全部歸夾→查核記錄→計價本→總表→追蹤報表→回測全PASS,都停在等你放行;🔴7月67件盤點(已結案49/未結案18)依四期限群組分類,抓到14件已進1.送出待簽核母夾但報表備註空白;🔴祥竹主動發現預算缺口742,050要提前追加;🔴聖志#7原件重送(SHA256相同)未補正;吉發#1與捷盛#1卡行通表①型真卡
 - [0731:揚弘#1 memo已定版但案子仍暫緩](project_billing_yanghong_0731.md) — 141A-SC011827,B4/I4依使用者版定版;🔴仍暫緩=首期623,564未送採購議價+刷卡主承商全掛AP7P2,夾名🔴後綴還在;🔴查核記錄.txt三處過時待裁示(行通表已進夾卻標❌/仍寫請款明細表/寫「尚未打memo」);原五項待裁示也都還沒答;期限115.08.05(台積電-零星)
 - [0730下午:7件(上展議價後/三菱/聖陸/七祥/移工/曹新泰/承洋)](project_billing_batch_state_0730pm.md) — 上展2,750,000可送呈、三菱與聖陸使用者定版、七祥#1新建、曹新泰議價金額不變但低前購96.88%省17,802;✅承洋#4使用者定版放行(抽出「會辦新增」規則+加款單補齊三家扣款單);🟠移工#2三項未解(薪資明細差7,529/開辦費34,000vs17,000/🆕代扣40,000vs附件37,500=差正好一天2,500,與期間多寫1150721同病根);🔴🔴移工成控表F9 VLOOKUP抓空值→累計平均成本應49,132非6,544,「有利差41,456/633.5%」失真,實為不利差-1,132,已依宏文範本做出(成控分析)141E軟橋段外勞成本11507.xlsx
