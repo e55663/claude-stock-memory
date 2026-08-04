@@ -108,7 +108,7 @@
 - ⚠️會過期快照:[🔴0730崩盤現況(最新,含17:00第二輪選股)](project_market_crash_0730_state.md) — 🔴7/30收39,933跌破4萬,盤中曾衝高+1,222點到41,155全數回吐=反彈失敗日非止穩日;家數比0.29(224漲/775跌,25跌停)=金融權值撐盤的分化盤別被指數騙;金融保險+1.49%全場最強、電腦及週邊-3.59%最弱;距60日高-17.18%;🔴🔴廣達2382停損出場-9.9%且題1翻盤(22億美元GDS募資稀釋=個股利空);長榮航2618降評為防禦部位(PE 7.92卻落自己一年P75之上+DD60僅-8.54%不夠深);🆕4583台灣精銳PE第0百分位但籌碼量太小=列觀察不下單;型②觸發89檔=滿地無鑑別度;決定=不動第二批;報酬指數7/16→7/30加權-12.34%/半導體-13.29%/🔴金融保險+0.85%=資金輪動已兌現;利空=中國DRAM/DUV自給(不會消失)+AI資本支出質疑+FOMC三異議主張升息;情境像2022-06非2020-03;🔴待辦=80萬計畫配置比例試算(0050單押vs搭一成金融,兩情境報酬與回撤) / [717崩盤→722已V轉](project_market_crash_0717_bear_state.md) / [AI七層供應鏈0716](project_ai_chain_signal_snapshot_0716.md)
 
 ## 環境/系統
-- [🔴工作用Opus雜事用Sonnet](reference_model_choice_work_vs_chore.md) — 請款核對高風險抓錯用Opus
+- [🔴工作用Opus雜事用Sonnet|0804補「誰能切模型」四層](reference_model_choice_work_vs_chore.md) — 請款核對高風險抓錯用Opus;🔴切模型四層權限=①執行中視窗只有使用者能切(/model)②預設模型settings.json我能改但不得擅自降級③子代理模型我能指定(主線Opus判斷+雜事丟Sonnet子代理,沒他開口不主動叫)④Codex模型config.toml我能改(現跑預設gpt-5.6-sol);🔴同視窗中途切模型會讓cache失效反而更貴,開新視窗時就決定;🔴7/20的Sonnet結論不可套用到Sonnet 5(舊版測的),要換先拿已審完的案子跑對照組+45測項比對
 - [三層權限政策](feedback_permission_tiers.md) — bypassPermissions全自動+22條毀滅級deny
 - [跨裝置記憶同步](project_memory_sync_setup.md) / [Win/Mac一致同步計畫](project_cross_device_sync_plan_0716.md) / [兩台電腦要求一樣](feedback_cross_device_consistency.md) / [Status line改PowerShell](reference_statusline_powershell_fix.md) / [AI agent自動化](project_ai_agent_automation.md) / [Mac裝置更新待辦](project_mac_device_update.md)
 - [🔴閘門改成模式偵測0731](project_gate_dispatcher_0731.md) — 三支每輪噴2,271字的提醒合併成gate-dispatcher(偵測+黏著+手動開關`股票模式`/`工作模式`/`閘門全開`/`關股票`+fail-open);回測25項全PASS省62.5%;🔴co-rule-gate仍有「執行副總」過時條文待裁示
