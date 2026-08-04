@@ -2,7 +2,7 @@
 
 **做了什麼**
 - 依使用者要求，將 `C:\Users\Seal_Lo\.codex\cx-launcher.ps1` 與 PowerShell profile 內的 `CX` 函式都改為固定附加 `--dangerously-bypass-approvals-and-sandbox`。
-- 已讀回兩個入口、通過 PowerShell 語法解析，並以 `codex.exe --dangerously-bypass-approvals-and-sandbox --version` 驗證參數可用（codex-cli 0.146.0）。
+- 已讀回兩個入口、通過 PowerShell 語法解析；另由實際 `cx.cmd` 端到端執行 `cx --version`，完成記憶 pull、Codex 啟動與記憶 push，回傳 `codex-cli 0.146.0`、退出碼 0。
 
 **停在哪／下一步／待裁示**
 - 後續在 PowerShell 單獨輸入 `cx`，即會以取消沙箱與逐項核准的完整權限模式啟動，並保留原有記憶庫自動 pull／push。無待裁示。
