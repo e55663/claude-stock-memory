@@ -2,8 +2,8 @@
 
 ## 🔴 最高位階鐵則
 - [🔴🔴公司工作區與私人資料警告規則](feedback_company_workspace_privacy_warning.md) — 0804使用者決定：任務首次碰到個人投資/財務/身分/健康/人際/私人旅程/私人檔案或公司可稽核內容，Claude與Codex要在處理前主動警告；工作區未確認時先視為可能受公司管理；公司資料只放最少必要內容；密碼/Token/私鑰/驗證碼不得貼入、上傳或保存
-- [🔴🔴🔴Claude Code 與 Codex 共用工作流＋測到正確才算完成](feedback_claude_codex_shared_workflow.md) — 🆕0804下午補齊四層共用:規則正本單一化(共用=本庫AGENTS.md/業務=C:\Users\Seal_Lo\CLAUDE.md,另兩份AGENTS.md改指標檔)、能力對等(codex writable_roots補Desktop+Downloads,原本寫不進計價本與工地夾)、禁用工具內建memory只走本repo、交接走`HANDOFF.md`;cx 開場pull/離開push;端到端回測全PASS;🔴Codex沒有gate-dispatcher閘門靠明文代替
-- [🔴換手交接紀錄(每次收工要寫)](HANDOFF.md) — 最上面新增一段:日期/哪一邊/做了什麼/停在哪/下一步/待裁示;接手方開場先讀最新一段別重問
+- [🔴🔴🔴Claude 與 Codex 共用工作流＋測到正確才算完成](feedback_claude_codex_shared_workflow.md) — 0804補齊四層共用(規則正本單一化/能力對等/禁用內建memory/交接走HANDOFF.md);規則正本=本庫AGENTS.md＋`C:\Users\Seal_Lo\CLAUDE.md`;🔴Codex無gate-dispatcher閘門
+- [🔴換手交接紀錄(收工必寫)](HANDOFF.md) — 最上面加一段:日期/哪一邊/做了什麼/停在哪/待裁示;接手方先讀最新一段別重問
 - [🔴🔴🔴核決層級整排寫錯一級已更正](reference_approval_authority_table.md) — 工地流程**沒有執行副總這關**;PO 500~2000萬與SC 50~300萬◎決都是『處級主管』;判法=回原表看◎決落哪欄別背對照表;兩本打法說明A30/A31已更正
 - [🔴🔴任何判斷都要有根據](feedback_evidence_required_no_assumptions.md) — 不能靠經驗/邏輯講,該跑的資料當場跑;驗證結果不能跨股票池借用
 - [🔴🔴🔴所有資料都在Downloads自己找](feedback_find_answers_in_downloads.md) — 五順序(工地歸檔→四母夾→根目錄→計價本/修改單本→桌面工具);檔名也是資料來源;找不到留空白絕不填「待使用者提供」
@@ -76,6 +76,7 @@
 - [報問題要附出處](feedback_flag_problems_with_source.md) / [來源檔別改要列錯誤](feedback_flag_source_errors_vendor_by_invoice.md) / [複製友善純文字](feedback_copy_friendly_plaintext.md) / [做事要快別來回](feedback_work_faster_batch_operations.md) / [一批檔跑完寫todo](feedback_batch_todo_workflow.md)
 
 ## 進行中批次（新→舊）
+- [🔴0804:平安#15暫緩，專案付款金額誤植＋重複派工待確認](project_billing_pingan15_0804.md) — 141A-SC009052，115.07計價；未稅6,257,449/自辦4,496,561/代辦1,760,888。專案付款申請把代辦誤寫1,128,116，少632,772；派工明細r1358/r1363完全重複各698；請款區間誤寫06/31；自身扣墊款63,604已簽但memo漏列；115.07行通表缺級距應走三家比價→議價→簽呈，不是115.08直接不予請款；缺發票、COMS/6月30門禁佐證，總經理核決。Codex本輪無原案夾/桌面寫權，未覆蓋其他程序剛更新的檔案
 - [🔴0803:8件全審完待裁示+總表改版+38題規則沉澱清單](project_billing_batch_state_0803.md) — 翔博#4(4,030萬到料款無佐證)/安達#1(出工乾淨)/閎順#1(3處)/成駿吊卡#6/欣生#2/雋凱#2/翔盛#8/和浚#1進場時數;錢的總帳淨+215,272少付;🔴38題待裁示在計價本「問題清單」分頁(規則14/個案24)與桌面待裁示清單115.08.03.txt,下次接手先讀別重問
 - [0731:9件全審完待覆核+7月全局盤點](project_billing_batch_state_0731.md) — 141A八件(吉萊#1/揚弘#1/聖志#7/吉發#1/翔博夜加餐費#1/祥竹#11/勝鈞#2/昇峰#4)+141E捷盛#1,全部歸夾→查核記錄→計價本→總表→追蹤報表→回測全PASS,都停在等你放行;🔴7月67件盤點(已結案49/未結案18)依四期限群組分類,抓到14件已進1.送出待簽核母夾但報表備註空白;🔴祥竹主動發現預算缺口742,050要提前追加;🔴聖志#7原件重送(SHA256相同)未補正;吉發#1與捷盛#1卡行通表①型真卡
 - [0731:揚弘#1 memo已定版但案子仍暫緩](project_billing_yanghong_0731.md) — 141A-SC011827,B4/I4依使用者版定版;🔴仍暫緩=首期623,564未送採購議價+刷卡主承商全掛AP7P2,夾名🔴後綴還在;🔴查核記錄.txt三處過時待裁示(行通表已進夾卻標❌/仍寫請款明細表/寫「尚未打memo」);原五項待裁示也都還沒答;期限115.08.05(台積電-零星)
@@ -108,7 +109,8 @@
 - ⚠️會過期快照:[🔴0730崩盤現況(最新,含17:00第二輪選股)](project_market_crash_0730_state.md) — 🔴7/30收39,933跌破4萬,盤中曾衝高+1,222點到41,155全數回吐=反彈失敗日非止穩日;家數比0.29(224漲/775跌,25跌停)=金融權值撐盤的分化盤別被指數騙;金融保險+1.49%全場最強、電腦及週邊-3.59%最弱;距60日高-17.18%;🔴🔴廣達2382停損出場-9.9%且題1翻盤(22億美元GDS募資稀釋=個股利空);長榮航2618降評為防禦部位(PE 7.92卻落自己一年P75之上+DD60僅-8.54%不夠深);🆕4583台灣精銳PE第0百分位但籌碼量太小=列觀察不下單;型②觸發89檔=滿地無鑑別度;決定=不動第二批;報酬指數7/16→7/30加權-12.34%/半導體-13.29%/🔴金融保險+0.85%=資金輪動已兌現;利空=中國DRAM/DUV自給(不會消失)+AI資本支出質疑+FOMC三異議主張升息;情境像2022-06非2020-03;🔴待辦=80萬計畫配置比例試算(0050單押vs搭一成金融,兩情境報酬與回撤) / [717崩盤→722已V轉](project_market_crash_0717_bear_state.md) / [AI七層供應鏈0716](project_ai_chain_signal_snapshot_0716.md)
 
 ## 環境/系統
-- [🔴工作用Opus雜事用Sonnet|0804補「誰能切模型」四層](reference_model_choice_work_vs_chore.md) — 請款核對高風險抓錯用Opus;🔴切模型四層權限=①執行中視窗只有使用者能切(/model)②預設模型settings.json我能改但不得擅自降級③子代理模型我能指定(主線Opus判斷+雜事丟Sonnet子代理,沒他開口不主動叫)④Codex模型config.toml我能改(現跑預設gpt-5.6-sol);🔴同視窗中途切模型會讓cache失效反而更貴,開新視窗時就決定;🔴7/20的Sonnet結論不可套用到Sonnet 5(舊版測的),要換先拿已審完的案子跑對照組+45測項比對
+- [🔴工作用Opus雜事用Sonnet|0804補切模型四層權限](reference_model_choice_work_vs_chore.md) — 高風險抓錯用Opus;誰能切什麼(視窗只有你/預設與Codex我能改/子代理我能指定);🔴同視窗中途切會讓cache失效更貴;🔴7/20舊Sonnet結論不可套Sonnet 5
+- [🔴🔴子代理分流模式(0804選定)](feedback_subagent_dispatch_rules_0804.md) — 主線Opus判斷+雜事丟Sonnet子代理;派工三條件、划算形狀、禁止「先試不行再接手」、🔴子代理禁動計價本/修改單本/交付檔
 - [三層權限政策](feedback_permission_tiers.md) — bypassPermissions全自動+22條毀滅級deny
 - [跨裝置記憶同步](project_memory_sync_setup.md) / [Win/Mac一致同步計畫](project_cross_device_sync_plan_0716.md) / [兩台電腦要求一樣](feedback_cross_device_consistency.md) / [Status line改PowerShell](reference_statusline_powershell_fix.md) / [AI agent自動化](project_ai_agent_automation.md) / [Mac裝置更新待辦](project_mac_device_update.md)
 - [🔴閘門改成模式偵測0731](project_gate_dispatcher_0731.md) — 三支每輪噴2,271字的提醒合併成gate-dispatcher(偵測+黏著+手動開關`股票模式`/`工作模式`/`閘門全開`/`關股票`+fail-open);回測25項全PASS省62.5%;🔴co-rule-gate仍有「執行副總」過時條文待裁示
