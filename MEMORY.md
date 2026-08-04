@@ -1,7 +1,8 @@
 ﻿# Memory Index
 
 ## 🔴 最高位階鐵則
-- [🔴🔴🔴Claude Code 與 Codex 共用工作流＋測到正確才算完成](feedback_claude_codex_shared_workflow.md) — 兩邊共用工作資料夾與同一記憶庫；cx 開場pull/離開push；任何修改或分析都要讀回結果、測試/回測，失敗就修正重跑到通過；股票驗證不得跨股票池或時間窗借用
+- [🔴🔴🔴Claude Code 與 Codex 共用工作流＋測到正確才算完成](feedback_claude_codex_shared_workflow.md) — 🆕0804下午補齊四層共用:規則正本單一化(共用=本庫AGENTS.md/業務=C:\Users\Seal_Lo\CLAUDE.md,另兩份AGENTS.md改指標檔)、能力對等(codex writable_roots補Desktop+Downloads,原本寫不進計價本與工地夾)、禁用工具內建memory只走本repo、交接走`HANDOFF.md`;cx 開場pull/離開push;端到端回測全PASS;🔴Codex沒有gate-dispatcher閘門靠明文代替
+- [🔴換手交接紀錄(每次收工要寫)](HANDOFF.md) — 最上面新增一段:日期/哪一邊/做了什麼/停在哪/下一步/待裁示;接手方開場先讀最新一段別重問
 - [🔴🔴🔴核決層級整排寫錯一級已更正](reference_approval_authority_table.md) — 工地流程**沒有執行副總這關**;PO 500~2000萬與SC 50~300萬◎決都是『處級主管』;判法=回原表看◎決落哪欄別背對照表;兩本打法說明A30/A31已更正
 - [🔴🔴任何判斷都要有根據](feedback_evidence_required_no_assumptions.md) — 不能靠經驗/邏輯講,該跑的資料當場跑;驗證結果不能跨股票池借用
 - [🔴🔴🔴所有資料都在Downloads自己找](feedback_find_answers_in_downloads.md) — 五順序(工地歸檔→四母夾→根目錄→計價本/修改單本→桌面工具);檔名也是資料來源;找不到留空白絕不填「待使用者提供」
