@@ -1,6 +1,12 @@
-# Claude 與 Codex 共用記憶庫
+# Claude 與 Codex 共用規則（正本）
 
-這個 repository 是 Seal 的共用記憶來源。Claude Code 與 Codex 都必須先讀 `MEMORY.md`，再依任務完整讀取相關檔案；不要一次載入全部檔案。
+這份是 Claude Code 與 Codex 的共用規則**唯一正本**。其他位置的 `AGENTS.md`（`~/.codex\AGENTS.md`、`Downloads\agent\AGENTS.md`）只放指標，不重複條文；規則要改，改這一份。
+
+## 開工必讀順序
+
+1. `C:\Users\Seal_Lo\CLAUDE.md` — 工地行政（計價請款／修改單／入預算）、選股、命名規範、關鍵字觸發的商業規則總表。**這是業務規則正本，Codex 接手請款或選股任務前一定要完整讀。**
+2. 本庫 `MEMORY.md` — 記憶索引。
+3. 依任務挑相關 `memory/*.md` 完整讀，不要一次載入全部。
 
 ## 共用規則
 
@@ -11,5 +17,20 @@
 - 股票回測只對當次相同股票池、時間窗與市場情境有效，不得把其他樣本的結果直接套用。
 - 重要且可長期沿用的結論才落檔；一個主題一個 `.md`，並同步更新 `MEMORY.md`。
 - 不保存密碼、Token、私鑰或其他祕密。
-- Claude 與 Codex 不得同時修改同一檔案；交接前先完成寫檔與 Git 同步。
 
+## 記憶只走這個 repo
+
+- **不得使用工具自帶的內建記憶功能**（例如 Codex 的內建 memory 資料庫）。存在那裡的東西另一邊讀不到，會造成兩邊認知分岔。
+- 任何要跨 session、跨工具保存的結論，一律寫成本庫的 `.md` 並更新 `MEMORY.md`。
+
+## 換手交接
+
+- 每次收工前，在本庫 `HANDOFF.md` 最上面補一段：日期時間、哪一邊（Claude／Codex）、做了什麼、停在哪、下一步、有沒有待裁示。
+- 接手的一邊開場先讀 `HANDOFF.md` 最新一段，不要重問已經決定過的事。
+- Claude 與 Codex 不得同時修改同一檔案；交接前先完成寫檔與 Git 同步（`cx` 離開時自動 push，Claude 每輪 Stop 自動 push）。
+
+## 兩邊的能力邊界（2026-08-04 起一致）
+
+- 共用工作資料夾：`C:\Users\Seal_Lo\Downloads\agent`
+- 兩邊都可讀寫：`Desktop`（計價本、修改單本、行通表夾、追蹤報表）、`Downloads`（工地歸檔、個人、公司）、本記憶庫。
+- Codex 不得覆蓋、搬動或改寫 `Downloads\agent\.claude\` 與 `C:\Users\Seal_Lo\.claude\`（記憶庫除外），除非使用者明確要求處理 Claude 設定。
