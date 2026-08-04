@@ -1,6 +1,7 @@
 ﻿# Memory Index
 
 ## 🔴 最高位階鐵則
+- [🔴🔴公司工作區與私人資料警告規則](feedback_company_workspace_privacy_warning.md) — 0804使用者決定：任務首次碰到個人投資/財務/身分/健康/人際/私人旅程/私人檔案或公司可稽核內容，Claude與Codex要在處理前主動警告；工作區未確認時先視為可能受公司管理；公司資料只放最少必要內容；密碼/Token/私鑰/驗證碼不得貼入、上傳或保存
 - [🔴🔴🔴Claude Code 與 Codex 共用工作流＋測到正確才算完成](feedback_claude_codex_shared_workflow.md) — 🆕0804下午補齊四層共用:規則正本單一化(共用=本庫AGENTS.md/業務=C:\Users\Seal_Lo\CLAUDE.md,另兩份AGENTS.md改指標檔)、能力對等(codex writable_roots補Desktop+Downloads,原本寫不進計價本與工地夾)、禁用工具內建memory只走本repo、交接走`HANDOFF.md`;cx 開場pull/離開push;端到端回測全PASS;🔴Codex沒有gate-dispatcher閘門靠明文代替
 - [🔴換手交接紀錄(每次收工要寫)](HANDOFF.md) — 最上面新增一段:日期/哪一邊/做了什麼/停在哪/下一步/待裁示;接手方開場先讀最新一段別重問
 - [🔴🔴🔴核決層級整排寫錯一級已更正](reference_approval_authority_table.md) — 工地流程**沒有執行副總這關**;PO 500~2000萬與SC 50~300萬◎決都是『處級主管』;判法=回原表看◎決落哪欄別背對照表;兩本打法說明A30/A31已更正

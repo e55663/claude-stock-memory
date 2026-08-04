@@ -5,6 +5,34 @@
 
 ---
 
+## 2026-08-04 14:31 ｜ Codex
+
+**做了什麼**
+- 依使用者決定建立公司工作區／私人資料界線：共用 `AGENTS.md` 新增強制警告規則，建立 `feedback_company_workspace_privacy_warning.md`，並更新 `MEMORY.md` 最高位階索引。
+- 規則定為每個任務首次碰到私人或公司可稽核內容時，在處理前警告一次；工作區身分未知時先視為可能受公司管理；公司資料採最少必要內容；密碼、Token、私鑰、驗證碼與完整憑證禁止貼入、上傳或保存。
+
+**停在哪／下一步／待裁示**
+- 規則已落檔，後續 Claude Code 與 Codex 依同一正本執行。無待裁示。
+
+## 2026-08-04 14:28 ｜ Codex
+
+**做了什麼**
+- 依 OpenAI 官方 ChatGPT Work 管理員 FAQ 與 Compliance API 說明，釐清公司帳號隱私：Enterprise／Edu 工作區的合規管理員可取得 Chat、Work、Codex 的使用者訊息與助理回覆；一般用量分析與合規內容存取是不同權限，不代表每位主管都能任意查看。
+- Compliance Logs 本身不追蹤本機檔案、工具動作或工具呼叫；但檔案若上傳、貼入對話，或其內容出現在訊息／回覆中，應視為可能進入工作區合規紀錄。
+
+**停在哪／下一步／待裁示**
+- 隱私界線已確認。個人投資、記帳、旅遊與私人記憶不應放在公司管理的工作區；需先確認目前對話位於個人工作區或公司工作區。無其他待裁示。
+
+## 2026-08-04 14:24 ｜ Codex
+
+**做了什麼**
+- 查核「公司 ChatGPT 帳號是否造成 Codex 權限被限制」：官方文件確認企業管理員可以用雲端 managed requirements 限制本機 Codex 的 permission profile、sandbox、檔案／網路、MCP 與 Apps。
+- 檢查本機：`C:\ProgramData\OpenAI\Codex\requirements.toml` 不存在；`C:\Users\Seal_Lo\.codex\config.toml` 已設定 `workspace-write`，且 `writable_roots` 明列共用記憶庫、Desktop、Downloads。
+- 因此目前沒有直接證據是公司帳號限制；真正問題是本次工作階段的有效 permission profile 只開放 `Downloads\agent` 與記憶庫，和本機 `config.toml` 不一致，可能是工作階段／宿主層或雲端受管要求覆蓋，尚不能單靠現有資料判定是哪一層。
+
+**停在哪／下一步／待裁示**
+- 診斷完成，未改動權限設定。若要確認公司帳號因素，需在 Codex 的 managed configuration／權限介面確認是否標示由組織管理，或用個人工作區開新工作階段比對有效 writable roots。
+
 ## 2026-08-04 14:01 ｜ Codex
 
 **做了什麼**
