@@ -30,5 +30,17 @@ metadata:
 - 不得製造假 PASS：測試腳本本身也要先做合理性與資料完整性檢查。
 - 股票與策略驗證必須使用當次相同股票池、時間窗、條件與市場情境；其他樣本的結果只能當參考，不能直接宣稱本次有效。
 
-相關：[[feedback-evidence-required-no-assumptions]]、[[feedback-backtest-discipline]]、[[feedback-read-files-completely]]、[[feedback-no-perfunctory-work]]
+## 2026-08-04 Codex 啟動設定驗證事故
 
+第一次設定 `cx` 後，只檢查 PowerShell 函式內容、Codex 版本與 Git 同步，就直接回報「可以使用」；使用者實際測試失敗後指出沒有真正回測。這不符合本檔的驗證規則。
+
+往後啟動器、hook、同步或環境設定的完成標準不是「設定檔看起來正確」，而是至少：
+
+1. 從全新的終端程序載入設定。
+2. 經由真正的入口指令執行版本檢查。
+3. 經由同一入口執行最小端到端任務，確認工作目錄、模型連線、sandbox、approval、網路與額外寫入路徑均為預期。
+4. 實際回讀輸出與退出碼；全部正確才可回報完成。
+
+本次修正後實測：`cx --version` 成功回傳 `codex-cli 0.146.0`；`cx exec --skip-git-repo-check '只輸出 CX_E2E_OK'` 成功在 `C:\Users\Seal_Lo\Downloads\agent` 執行並回傳 `CX_E2E_OK`。
+
+相關：[[feedback-evidence-required-no-assumptions]]、[[feedback-backtest-discipline]]、[[feedback-read-files-completely]]、[[feedback-no-perfunctory-work]]
