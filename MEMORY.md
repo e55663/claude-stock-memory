@@ -21,6 +21,7 @@
 - [🔴🔴🔴0803問題清單分頁制度+總表已改版無備註欄](feedback_issue_list_sheet_workflow_0803.md) — 使用者用意=**規則邏輯釐清完我要寫進打法說明+記憶**(不是只列缺件);A區規則(附出處/實例/影響/我的建議/他的決定)→定完當天落地成條文+回測測項,B區逐案缺件不進規則;🔴總表已重建成「待核計價/核定計價」兩區、**沒有特別說明欄**,我0803寫的總表備註全沒了,五處同步第②處失效待改指向問題清單;🔴找總表列要掃全欄別寫死欄號(單號在C1與C5)
 - [🔴🔴🔴0803改成正確模式+計價本回測上線](feedback_billing_book_correct_mode_0803.md) — memo不放說明性敘述段(移工#2第3點刪);第1點拆自辦代辦就必須有扣款行+簽名句(我整行漏掉被抓);🔴期數排序只能在同一合約號內比(潤泰兩合約我排錯);搬列一律Excel原生整列Cut→Insert(逐格搬值會讓A/B公式參照留在原列);`_計價本回測.ps1`12測項+349筆舊件豁免基準,動完計價本必跑;🔴回測腳本自己要先驗(`$f計價金額`被當變數名→全本假FAIL);COM逐格讀大檔會半死並靜默回空字串,全FAIL先重跑確認
 - [🔴🔴memo第3點PO與SC分流(0803定)](reference_memo_item3_po_vs_sc.md) — PO合約案只寫品名+數量(單價已被合約明細表框死);SC零星案才寫數量x單價=金額(議價基準);A134①限縮為只適用SC;證據=同日聖志#7(PO)拿掉、雜支#1(SC)保留+全庫掃描PO 6/6與SC 6/6一致
+- [🔴🔴搬進核定計價看「單號層級」+合計列必重算(0804定)](reference_archive_move_zone_rule_0804.md) — 核定=這個單號沒有任何一件在跑;翔盛#6未歸檔/成駿全吊#12散檔在Downloads根目錄→兩個單號都留待核;核定區單號再進新期要搬回待核;搬區前後總數必須相等(87筆恆定);🔴追蹤報表合計列會默默過時(原寫送出待歸檔15實際18),動完備註一律程式逐列重算;141E總表尚未改版待裁示;🔴141A-143(鑫鎂)修改單漏登追蹤報表待補
 - [🔴🔴計價本總表改版:待核/核定兩區(0803定)](reference_billing_book_summary_layout_0803.md) — 待核計價(A-G)+核定計價(I-O),各分合約/零星;🔴特別說明欄取消(狀態改由夾名承載);歸檔才從待核搬到核定;判準=Downloads還有案夾在跑就留待核;同本另有「問題清單」分頁是規則沉澱管線(類型欄分規則/個案,規則型釐清完寫進兩本打法說明+記憶)
 - [🔴計價本格式鐵則](reference_billing_book_format_rules.md) — memo逐字一樣/B4A4H4必設公式/期數最舊在最上/分頁最新放範本(6)旁/期數認請款單/問題退件件保留分頁+tab標色絕不刪
 - [🔴🔴請款項目欄定版寫法](reference_billing_item_column_format.md) — 一項一行行首編號,只放品名規格數量單位單價金額;用途=議價基準對照表
@@ -62,6 +63,7 @@
 - [🔴🔴同一頁PDF可能排多張表單(0803)](feedback_multi_form_per_pdf_page_0803.md) — 翔博#4扣款單12頁實際16張(3頁雙張1頁三張),我漏掉第7頁第三張安達583,737,扣墊款打成11,415,634應為11,999,371;🔴多張獨立單據總額一律逐張相加(11,999,370.50),不要用未稅小計乘1.05(11,999,367.98,差2.53是各張四捨五入累積)
 - [🔴掃描件查核省額度打法](reference_scanned_audit_cost_and_toolchain.md) — 🆕0730實測:Read工具可直接吃PDF(pages參數),掃描件手寫簽名看得清楚,不用再pdftoppm轉圖;poppler這台已找不到別假設還在;量大仍分批
 - [🔴PowerShell變數名不分大小寫($D=$d)](reference_powershell_variable_case_trap.md) — 0730靜默覆寫日期陣列→整批數字全錯還不報錯(索引沿用上一圈舊值);規則=用長變數名/迴圈索引每圈重設/數字先做量級常識檢查;🔴請款Excel掃描腳本一樣會中;另附回測三雷=視窗偏誤(把下次崩盤當這次的底)/手動列事件會漏(n從4變6)/前視偏誤(要知道底才算得出的指標不能當預測因子)
+- [🔴🔴中文字串兩個隱蔽踩雷(0804)](feedback_chinese_string_powershell_traps_0804.md) — ①絕不手算\uXXXX escape(我把鈺打成鑫、竣葦兩字也錯→Worksheets.Item()丟DISP_E_BADINDEX,28個分頁25中3不中看訊息猜不到是打錯字);中文一律用原字寫UTF-8資料檔+ReadAllText(UTF8)讀②PS5.1讀無BOM的.ps1當ANSI→ParserError「missing the terminator」不是語法錯,執行前一律補UTF8 BOM;🔴批次動Excel前先跑「名稱存在性預檢」全命中才寫;🔴腳本中斷善後三步=清無視窗殘留→SHA256比對備份→才重跑
 - [批次操作做完要回頭驗證](feedback_verify_after_batch_ops.md) / [搬檔前驗夾存在](feedback_move_into_dir_verify_exists.md) / [備份用完即刪](feedback_delete_temp_backups.md) / [PS中文字面值編碼不穩](feedback_ps_chinese_literal_encoding.md) / [檔案必須讀完整](feedback_read_files_completely.md) / [git位置](reference_git_path_windows.md)
 
 ## 歸檔/資料夾

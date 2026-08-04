@@ -5,6 +5,23 @@
 
 ---
 
+## 2026-08-04 14:01 ｜ Codex
+
+**做了什麼**
+- 依使用者指定順序，完整讀取共用規則正本 `AGENTS.md`、業務規則正本 `C:\Users\Seal_Lo\CLAUDE.md`、索引 `MEMORY.md` 與本交接檔，完成 Codex 自我確認。
+- 核對目前實際權限：本次 Codex writable roots 只有 `C:\Users\Seal_Lo\Downloads\agent` 與本記憶庫，不能寫 Desktop，也不能寫 `Downloads` 中工作資料夾以外的位置；這與 `AGENTS.md`「兩邊的能力邊界」及上一段 13:45 交接所載的測試結果不一致。
+- 發現業務規則衝突：`C:\Users\Seal_Lo\CLAUDE.md`「商業規則（工地行政）」仍寫核決層級包含執行副總；`MEMORY.md`「最高位階鐵則」則明載工地流程沒有執行副總，兩者不一致。
+
+**停在哪**
+- 自我確認與交叉比對完成；未修改共用規則或業務規則正本。
+
+**下一步**
+- 後續任務依本庫索引選讀相關記憶檔，不使用工具內建記憶。
+
+**待裁示**
+- 需處理 Codex 實際 writable roots 與共用規則記載不一致；目前權限設定無法直接處理 Desktop／Downloads 工作檔。
+- 需統一 `CLAUDE.md` 與 `MEMORY.md` 的核決層級文字；依 `MEMORY.md` 最新修正，目前應視「沒有執行副總」為較新的規則，但正本尚未同步。
+
 ## 2026-08-04 13:45 ｜ Codex
 
 **做了什麼**
