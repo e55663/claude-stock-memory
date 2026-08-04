@@ -1,3 +1,73 @@
+## 2026-08-04 18:10 ｜ Codex
+
+**做了什麼**
+- 依使用者要求，將 `C:\Users\Seal_Lo\.codex\cx-launcher.ps1` 與 PowerShell profile 內的 `CX` 函式都改為固定附加 `--dangerously-bypass-approvals-and-sandbox`。
+- 已讀回兩個入口、通過 PowerShell 語法解析，並以 `codex.exe --dangerously-bypass-approvals-and-sandbox --version` 驗證參數可用（codex-cli 0.146.0）。
+
+**停在哪／下一步／待裁示**
+- 後續在 PowerShell 單獨輸入 `cx`，即會以取消沙箱與逐項核准的完整權限模式啟動，並保留原有記憶庫自動 pull／push。無待裁示。
+
+## 2026-08-04 18:04 ｜ Codex
+
+**做了什麼**
+- 重新診斷「是否因公司帳號導致Codex被限制」：`C:\ProgramData\OpenAI\Codex\requirements.toml` 不存在，未發現本機公司受管規則。
+- `C:\Users\Seal_Lo\.codex\config.toml` 本身設定為 `workspace-write`、`approval_policy="never"`、Windows沙箱為`unelevated`，並只把共用記憶庫、Desktop、Downloads列為可寫；目前有效權限與此相符。
+
+**結論／下一步**
+- 依現有證據，沒有證據顯示公司帳號造成限制；目前是使用者自己的Codex沙箱設定／本工作階段模式。要完全不受沙箱限制，另開CLI時使用`codex --dangerously-bypass-approvals-and-sandbox`；日常處理Desktop與Downloads不需重開。
+
+## 2026-08-04 18:02 ｜ Codex
+
+**做了什麼**
+- 依開場規定，以 UTF-8 完整補讀共用 `AGENTS.md`、`CLAUDE.md`、`MEMORY.md` 與本交接檔；未修改案件或 Excel。
+- 核對本對話目前實際 permission profile：可寫 `Downloads\agent`、共用記憶庫、`Desktop` 與整個 `Downloads`，已不同於 17:59 交接所稱只開放前兩處。
+
+**停在哪／下一步／待裁示**
+- 既有對話仍不能自行切換成 `--dangerously-bypass-approvals-and-sandbox`；只有確實需要超出上述 writable roots 時，才需由使用者另開 PowerShell 執行新 Codex CLI 工作階段。
+- 使用者尚未交代下一個實作事項；目前無案件檔變更。
+
+## 2026-08-04 17:59 ｜ Codex
+
+**做了什麼**
+- 銘亮#11依使用者更正完成可複製memo：計價513,446元、自辦125,350元、代辦388,096元；檢附補「扣款明細」，並依案夾未見本期簽認單寫「廠商尚未簽名」。已讀回 `project_billing_mingliang11_0804.md`，正式memo內容同步正確。
+- 向使用者說明目前受外層managed permission profile限制；本機 `config.toml` 原已列Desktop與Downloads。完整權限須由新Codex CLI工作階段以 `codex --dangerously-bypass-approvals-and-sandbox` 啟動，目前對話不能自行提權。
+
+**停在哪／下一步／待裁示**
+- 使用者指示先收尾。下一次若用完整權限工作階段接手，先確認可寫Desktop與兩個案件資料夾，再將已定稿文字落入計價本並讀回驗證。
+- 銘亮#11仍待收到／核對388,096元扣款明細的逐筆組成及簽認單；如實際已有完整簽認，memo第5點再改為「廠商已簽名」。平安#15仍有原交接所列財務風險，未解除。
+
+## 2026-08-04 17:54 ｜ Codex
+
+**做了什麼**
+- 使用者指出銘亮#11有家扣款388,096元；依memo公式更正為計價513,446元、自辦125,350元、代辦388,096元。原查核記錄「本期無扣款」結論作廢，已同步更正共用專案記憶與索引。
+- 查明本機 `.codex/config.toml` 本來已允許Desktop及Downloads；目前不能寫是本工作階段外層的managed permission profile覆蓋，不是路徑漏設。
+
+**停在哪／下一步／待裁示**
+- 使用者現階段優先要求取消受限權限。Codex無法在受限工作階段內自行提權；須由使用者在輸入框下方權限控制改選完整存取／`:danger-full-access`，或以新工作階段重新啟動。若選項不存在，代表組織管理政策未允許，需切個人workspace或請管理員開放。
+- 銘亮388,096元的逐筆組成與簽認狀態尚未回原件核完；恢復工作後先核這兩項，再補正式扣款行。
+
+## 2026-08-04 17:41 ｜ Codex
+
+**做了什麼**
+- Claude額度用完後由Codex接手，讀回並核對平安#15與銘亮#11目前實際落地內容。
+- 銘亮#11：覆核未稅513,446元及三項算式均相符；115Q2行通單價3,000／499／623相符；人臉267筆、103人日，逐日均足以支持請款102工及370HR加班；簽單37頁逐頁讀回，全部有雙方簽章。
+- 新增 `project_billing_mingliang11_0804.md` 並更新 `MEMORY.md` 索引。
+- 平安#15：正式memo及行通表敘述已落地，但再確認仍有專案付款申請代辦金額差632,772元、四張扣款單63,604元是否列入、疑似重複列698元等財務風險，不能宣稱已審核完成。
+
+**停在哪／下一步／待裁示**
+- 銘亮#11文字可定稿，但送核前仍須補簽單流水號002316、002319缺號說明及發票；技術工預算僅餘85,390.20元，需提早入預算。
+- 平安#15須先由工地／承辦釐清專案付款申請差額632,772元、扣款63,604元的本期歸屬／重複性，以及兩筆謝珠珠6/25加班各698元是否重複；釐清前現行memo不是最終可送版本。
+
+## 2026-08-04 17:22 ｜ Codex
+
+**做了什麼**
+- 讀回平安#15現況並向使用者確認：該版本不是Codex修改；Codex沒有改案件資料夾或桌面計價本。
+- 使用者指出目前案夾沒有行通表、memo沒有行通表比價／推算句；讀回確認計價本I6、B6確實如此，而查核記錄後段已把436／664由真卡降為倍率推算揭露，現行落地前後未同步。
+- 使用者隨即指示先不要處理，改交由Claude Code（CC）；Codex已停止，未修改來源檔。
+
+**停在哪／下一步／待裁示**
+- 平安#15後續全部交由CC處理。CC接手時先依使用者最新裁示決定是否補115Q2行通表、I6檢附與B6比價／推算句，並清理M6前後矛盾；Codex不再動此案。
+
 ## 115.08.04（Claude Code / Opus）收工
 
 **做了什麼**
