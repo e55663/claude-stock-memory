@@ -114,7 +114,7 @@
 ## 環境/系統
 - [🔴工作用Opus雜事用Sonnet+切模型權限](reference_model_choice_work_vs_chore.md) — 高風險用Opus;🔴同視窗中途切會讓cache失效更貴
 - [🔴🔴子代理分流](feedback_subagent_dispatch_rules_0804.md) — 主線Opus+雜事Sonnet;🔴子代理禁動計價本/修改單本/交付檔
-- [三層權限政策](feedback_permission_tiers.md) — bypassPermissions+22條毀滅級deny
+- [🔴盲測會被system-reminder污染(0804)](feedback_blindtest_system_reminder_contamination_0804.md) — 做A/B盲測時提醒文會洩題,結果不可信`r`n- [三層權限政策](feedback_permission_tiers.md) — bypassPermissions+22條毀滅級deny
 - [跨裝置](project_memory_sync_setup.md) / [Win/Mac](project_cross_device_sync_plan_0716.md) / [兩台一樣](feedback_cross_device_consistency.md) / [Statusline](reference_statusline_powershell_fix.md) / [agent自動](project_ai_agent_automation.md) / [Mac待辦](project_mac_device_update.md)
 - [🔴閘門改模式偵測](project_gate_dispatcher_0731.md) — 合併成gate-dispatcher+手動開關+fail-open;省62.5%
 - [額度+視窗分工](feedback_session_cost_and_memory_slimming.md) — 一批告一段落才clear;🔴MEMORY.md要壓17KB內否則開場被截斷
