@@ -78,6 +78,7 @@
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 
 ## 進行中批次（新→舊）
+- [🔴🔴0805:打法說明壓縮成手冊](project_taofa_compression_0805.md) — 141A已完成(57KB→8.5KB,111條,回測69/69);141E尚未開始
 - [🔴🔴0805:問題總表(左問右答)](project_issue_master_sheet_0805.md) — 🔴兩工地集中141A第3分頁74題(T通病+C個案,C40~C52=141E)
 - [🔴🔴0805:成駿#12定稿+8件歸檔+標色廢止+工具搬家](project_billing_batch_state_0805.md) — 🔴兩件沒解:平安#15行通表句涉1,260,106、7月報表差132,530
 - [🔴0804:銘亮#11查核](project_billing_mingliang11_0804.md) — 代辦388,096/自辦125,350;待核組成、簽單缺號、發票
