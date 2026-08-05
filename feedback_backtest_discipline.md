@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: d01b7fb3-8186-4c01-978a-f186d615da81
-  modified: 2026-08-05T08:02:00.925Z
+  modified: 2026-08-05T08:33:00.473Z
 ---
 
 🔴🔴 **(115.07.21 使用者要求)** 「我要建立回測哦，如果沒做好就要持續做到好的那種，直到做好。」
@@ -38,5 +38,14 @@ metadata:
 1. 腳本裡**常數與計數器絕不可只差大小寫**，常數用 `$標準待補`、計數器用 `$cntTodo` 這種明確區隔的名字
 2. 批次寫完 Excel 後，**一定要抽查實際儲存格的 Value2 型別**（不是只看有沒有值），數字型別出現在文字欄＝被覆蓋了
 3. 呼應 [[feedback_verify_after_batch_ops]]：指令沒報錯 ≠ 寫對了
+
+## 🔴🔴(115.08.05建置) 新增兩支「操作型」腳本，不是回測，是防手滑的執行工具
+
+使用者原話：「我當然希望我每天花的時間是有回報的，然後可以越跑越順」——今天翔博案總表插錯欄位(手算colBase打成1，應該是9)就是「每次手刻COM腳本」的代價，同一批東西每次都重新手寫，越複雜越容易錯。
+
+- `Insert-SortedRow`／`Remove-TotalRow`／`Move-PendingToApproved`／`Test-SortIntegrity`（`Downloads\agent\計價回測工具\_總表操作函式庫.ps1`）：總表待核↔核定搬移的欄位改成查表(`$Global:TotalSheetColMap`)，不再手算數字；`Move-PendingToApproved`一次做完「移除+插入」；`Test-SortIntegrity`驗四區塊排序無重複，這就是今天實際抓出翔博卡在錯欄位的方法。
+- `_批次歸檔.ps1`（同資料夾）：填一份`$cases`清單，一次做完「搬資料夾→總表搬區→安全存檔→跑既有三支回測」，整批只開一次Excel實例(減少今天多次撞到的RPC斷線)，帶`-DryRun`可以先預演不動真檔案。
+- 🔴🔴這兩支腳本第一版把函式/變數名取成中文，存檔沒BOM，PowerShell 5.1當ANSI讀導致整支語法解析失敗(30+條錯誤)——跟[[feedback_chinese_string_powershell_traps_0804]]同一個雷又踩一次。已改用純英文命名+顯式補BOM+`Parser::ParseFile`靜態檢查後修好，往後任何新.ps1函式/變數名一律純英文，這條要記牢不是記BOM本身。
+- ⚠️尚未在真實批次跑過(只做過語法檢查+函式載入測試，沒有對真實Excel執行過完整流程)，下次真的有案子要歸檔時是第一次實戰考驗，跑完要回報有沒有問題再繼續信任這支腳本。
 
 相關：[[feedback_hangtong_existence_gate]]、[[reference_monthly_tracking_report]]、[[feedback_no_perfunctory_work]]
