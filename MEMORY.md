@@ -79,7 +79,7 @@
 ## 進行中批次（新→舊）
 - [🔴0804:銘亮#11查核](project_billing_mingliang11_0804.md) — 使用者更正代辦388,096、自辦125,350；原「無扣款」結論作廢；待核扣款組成／簽認、簽單缺號說明與發票
 - [🔴0804:30件歸檔+4件新案+呂發#7重送](project_billing_batch_state_0804.md) — 五處同步完成、四支回測全綠;🔴平安#15少632,772+63,604漏列;待裁示7項見檔內
-- [🔴0804:安達#1 Codex/Opus/Sonnet三方獨立驗證一致](project_billing_anda1_codex_compare_0804.md) — 133人次僅132命中(5/1請款郭志祥門禁卻是陳明得)+24人次只刷出;三方分別重查結論一致,可信度高;金額931,000不受影響,姓名待工地確認;查核記錄.txt已同步,已送待簽核結論降級待裁示
+- [🔴0804安達#1三方驗證一致+0805再抓三項](project_billing_anda1_codex_compare_0804.md) — 5/1請款郭志祥門禁卻是陳明得+24人次只刷出;金額931,000不受影響;🔴0805新:議價原因PDF其實是鉦昇的放錯夾/整案缺發票/行通表②型待裁示
 - [🔴0804:平安#15暫緩](project_billing_pingan15_0804.md) — 代辦誤寫少632,772;派工疑重複698;扣墊款63,604未列;🔴核決我判董事長Codex記總經理
 - [🔴0803:8件全審完+38題規則清單](project_billing_batch_state_0803.md) — 淨+215,272少付;38題在問題清單分頁,接手先讀別重問
 - [0731:9件+7月盤點](project_billing_batch_state_0731.md) — 14件報表備註空白;祥竹缺口742,050;吉發#1/捷盛#1卡①型
@@ -87,8 +87,7 @@
 - [0730下午:7件](project_billing_batch_state_0730pm.md) — 承洋#4放行;移工#2三項未解+成控表VLOOKUP已修
 - [0730:5案定版](project_billing_batch_state_0730.md) — 竟元/國產/金鈺昌/潤泰/翔盛;🔴和浚1,900要在翔盛#8補扣
 - [0728下午:6案](project_billing_batch_state_0728pm.md) — 呂發#7退件;🔴放行≠問題消失(化糞池252,576/翔博架96,037/成駿預算差641萬)
-- [0728第二批](project_billing_batch_state_0728b.md) / [0728第一批](project_billing_batch_state_0728.md) — 聖志#7五處同步;建鑫棄土證明不足
-- [歷史批次0713~0727](project_billing_batch_state_0727.md) — 更早的批次檔命名為 project_billing_batch_state_日期.md,直接照日期找
+- [歷史批次0713~0728](project_billing_batch_state_0727.md) — 0728兩批(聖志#7/建鑫棄土)見_0728與_0728b;更早的照 project_billing_batch_state_日期.md 找
 - [出差報帳](reference_travel_reimbursement.md) — 在`Downloads\公司\出差報帳\`;本期4趟8,915待送單
 
 ## 投資
@@ -109,12 +108,13 @@
 - [分析師模板](feedback_stock_analyst_deep_dive.md) / [附股價時戳](feedback_always_show_price_with_timestamp.md) / [查法說日期](feedback_proactive_earnings_calendar.md) / [符號標反](reference_webfetch_price_sign_flip.md)
 - [🔴Mac可全市場海選](feedback_mac_vs_windows_stock_selection.md) — `full_market_scan.py`;T86要`selectType=ALL`
 - [重心是錢](user_money_first_focus.md) — 從ROI切入給數字;絕不掰不報明牌
-- ⚠️會過期:[🔴0730崩盤現況](project_market_crash_0730_state.md) — 7/30破4萬;金融最強;廣達停損;待辦80萬配置試算 / [717→722已V轉](project_market_crash_0717_bear_state.md) / [AI七層供應鏈](project_ai_chain_signal_snapshot_0716.md)
+- ⚠️已過期需重查:[0730崩盤](project_market_crash_0730_state.md)(破4萬/金融最強/廣達停損/待辦80萬試算) / [0717](project_market_crash_0717_bear_state.md) / [AI七層](project_ai_chain_signal_snapshot_0716.md)
 
 ## 環境/系統
-- [🔴工作用Opus雜事用Sonnet+切模型權限](reference_model_choice_work_vs_chore.md) — 高風險用Opus;🔴同視窗中途切會讓cache失效更貴
+- [🔴工作用Opus雜事用Sonnet+切模型權限](reference_model_choice_work_vs_chore.md) — 🔴對照試已中止無分數,別當已驗證;高風險用Opus;中途切模型cache失效更貴
 - [🔴🔴子代理分流](feedback_subagent_dispatch_rules_0804.md) — 主線Opus+雜事Sonnet;🔴子代理禁動計價本/修改單本/交付檔
-- [🔴盲測會被system-reminder污染(0804)](feedback_blindtest_system_reminder_contamination_0804.md) — 做A/B盲測時提醒文會洩題,結果不可信`r`n- [三層權限政策](feedback_permission_tiers.md) — bypassPermissions+22條毀滅級deny
+- [🔴🔴盲測污染:寫進索引=案子永久燒掉](feedback_blindtest_system_reminder_contamination_0804.md) — MEMORY.md開場強制載入,擋不掉;想留作測試的案子索引行只寫狀態別寫發現
+- [三層權限政策](feedback_permission_tiers.md) — bypassPermissions+22條毀滅級deny
 - [跨裝置](project_memory_sync_setup.md) / [Win/Mac](project_cross_device_sync_plan_0716.md) / [兩台一樣](feedback_cross_device_consistency.md) / [Statusline](reference_statusline_powershell_fix.md) / [agent自動](project_ai_agent_automation.md) / [Mac待辦](project_mac_device_update.md)
 - [🔴閘門改模式偵測](project_gate_dispatcher_0731.md) — 合併成gate-dispatcher+手動開關+fail-open;省62.5%
 - [額度+視窗分工](feedback_session_cost_and_memory_slimming.md) — 一批告一段落才clear;🔴MEMORY.md要壓17KB內否則開場被截斷
