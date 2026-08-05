@@ -45,14 +45,14 @@
 - [🔴加款免簽名但memo照寫](feedback_add_payment_no_signature_required.md) / [缺件放txt](feedback_missing_items_note_location.md) / [🔴缺件裁量在使用者](feedback_checklist_before_case_done.md)
 - [🔴🔴請款太晚要確實稽核](feedback_late_billing_alert.md) — 計價月=核定當月;>3個月打延遲句(以起始月判)+獨立成段
 - [🔴手寫註記要讀完](feedback_handwritten_notes_on_vouchers.md) — 『報支1560』=只認列1,560
-- [混凝土必查抽磅](reference_concrete_material_billing_format.md) — 「抽磅效益」分頁易漏,全案累計
+- [混凝土必查抽磅](reference_concrete_material_billing_format.md) — 抽磅效益分頁易漏,全案累計
 - [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 只用他這輪給的
 - [🔴重審前先查落地狀態](feedback_check_landed_state_before_reaudit.md) — 四查=分頁/總表/追蹤報表/舊夾
 - [自我稽核](feedback_self_audit_no_crutch.md) / [列控表](reference_billing_control_sheet_format.md) / [請款單建法](reference_billing_statement_template.md) / [memo歸位](reference_batch_memo_filing.md) / [對帳脈絡](reference_invoice_audit_context.md) / [0629](feedback_billing_corrections_0629.md)
-- [🔴審核期限兩套](reference_billing_review_deadlines.md) — 台積電SC次月5號/PO15號;內案都5號;🔴資料夾是真相
+- [🔴審核期限兩套](reference_billing_review_deadlines.md) — 台積電SC次月5號/PO15號;內案5號;🔴資料夾是真相
 - [月追蹤報表](reference_monthly_tracking_report.md) / [行通表位置](reference_hangtong_files_location.md) / [關鍵字觸發](reference_work_keywords.md)
-- [🔴會議紀錄規範](reference_meeting_minutes_workflow.md) — 指示事項按單位分段;逐字稿不可信要交叉比對;我不能聽音訊
-- [141A外牆人力六家](project_facade_manpower_141A_0731.md) — 翔博合約6.69億剩4.21億;🔴六家全缺COMS;O棟DCR要不到
+- [🔴會議紀錄規範](reference_meeting_minutes_workflow.md) — 指示事項按單位分段;逐字稿要交叉比對;我不能聽音訊
+- [141A外牆人力六家](project_facade_manpower_141A_0731.md) — 翔博合約6.69億剩4.21億;六家全缺COMS;O棟DCR要不到
 
 ## 修改單/入預算
 - [修改單範本](reference_change_order_template.md) — 填7格→A7自動組裝,署名羅慶人
@@ -78,13 +78,14 @@
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 
 ## 進行中批次（新→舊）
-- [🔴🔴0805:問題總表(左問右答)](project_issue_master_sheet_0805.md) — 🔴兩工地全集中141A第3分頁74題(T1~T22通病+C1~C52個案,C40~C52=141E);141E不另開表
-- [🔴0804:銘亮#11查核](project_billing_mingliang11_0804.md) — 代辦388,096/自辦125,350(原「無扣款」作廢);待核組成、簽單缺號、發票
-- [🔴0804:30件歸檔+4件新案+呂發#7重送](project_billing_batch_state_0804.md) — 五處同步+回測全綠;平安#15少632,772+63,604;待裁示7項見檔內
-- [🔴0804安達#1三方驗證一致+0805再抓三項](project_billing_anda1_codex_compare_0804.md) — 郭志祥門禁實為陳明得+24人次只刷出;931,000不受影響;0805新3項見檔內
-- [🔴0804:平安#15暫緩](project_billing_pingan15_0804.md) — 代辦少632,772;派工疑重複698;扣墊款63,604未列;核決我判董事長
+- [🔴🔴0805:問題總表(左問右答)](project_issue_master_sheet_0805.md) — 🔴兩工地集中141A第3分頁74題(T通病+C個案,C40~C52=141E)
+- [🔴🔴0805:成駿#12定稿+8件歸檔+標色廢止+工具搬家](project_billing_batch_state_0805.md) — 🔴兩件沒解:平安#15行通表句涉1,260,106、7月報表差132,530
+- [🔴0804:銘亮#11查核](project_billing_mingliang11_0804.md) — 代辦388,096/自辦125,350;待核組成、簽單缺號、發票
+- [🔴0804:30件歸檔+4件新案+呂發#7重送](project_billing_batch_state_0804.md) — 五處同步+回測全綠;待裁示7項見檔內
+- [🔴0804安達#1三方驗證一致+0805再抓三項](project_billing_anda1_codex_compare_0804.md) — 郭志祥門禁實為陳明得;931,000不受影響;0805新3項見檔內
+- [🔴0804:平安#15暫緩](project_billing_pingan15_0804.md) — 代辦少632,772;派工疑重複698;扣墊款63,604;核決判董事長
 - [🔴0803:8件全審完+38題規則清單](project_billing_batch_state_0803.md) — 淨+215,272少付;38題已併入0805問題總表
-- [0713~0731歷史批次](project_billing_batch_state_0731.md) — 檔名照日期找(_0730pm/_0728pm/_0728b/_0727/_yanghong_0731);🔴未結的錢明細見檔內
+- [0713~0731歷史批次](project_billing_batch_state_0731.md) — 檔名照日期找;未結的錢見檔內
 - [出差報帳](reference_travel_reimbursement.md) — `Downloads\公司\出差報帳\`;本期4趟8,915待送
 
 ## 投資
