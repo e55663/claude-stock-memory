@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 463d84a6-acb5-481d-aa63-63fa2839ecf5
-  modified: 2026-08-04T07:15:46.751Z
+  modified: 2026-08-05T03:59:42.377Z
 ---
 
 115.08.04 建 4 件新請款進計價本＋建 8 月追蹤報表時，同一支腳本連踩三次。三個都不是邏輯錯，是型別／語系問題，而且**錯誤訊息全指向錯的方向**。已寫進兩本打法說明 A199／A201。
@@ -20,6 +20,14 @@ metadata:
 
 **③ 合計列金額改用 `.Formula` 寫**
 即使先把 NumberFormat 設成 `'#,##0'`，`.Value2 = $double` 仍丟 InvalidCastException；改 `.Formula = ([string]$sum)` 就過，寫進去仍是**數值不是文字**，回測 T7「金額欄無數字存成文字」照樣 PASS。
+
+**④（115.08.05 新增）搬列 `Rows.Cut()` + `Rows.Insert()` 之後，不要碰 `$xl.CutCopyMode`**
+`$xl.CutCopyMode=0` 與 `=$false` 兩種寫法在這台都丟 `Cannot convert value to Microsoft.Office.Interop.Excel.XlCutCopyMode`（這台繫結到具型別的 interop 組件，不吃 0／$false，只吃 `xlCopy`／`xlCut` 列舉）。**直接不要寫那一行**——`Insert` 完成後剪貼模式自己就結束了，整列搬移結果正確。
+🔴 這行丟例外的殺傷力在於：它排在 `SaveAs` 之前，於是「搬列已經在記憶體裡做完、但整支腳本沒存檔就中斷」，還留下一個看不見的 headless EXCEL 程序。清法：`Get-Process EXCEL | Where-Object { $_.MainWindowTitle -eq '' } | Stop-Process -Force`（只殺沒有視窗標題的＝自動化殘留，有標題的是使用者自己開的不能殺）。
+
+**⑤（115.08.05）搬列後「合計列位置」與「A欄項次起始列」都要重新確認**
+`Rows.Item(61).Cut()` 之後 `Rows.Item(64).Insert()`，Excel 是「先刪原列（後面整體上移 1）再插入」，所以合計列位置**不變**（原 64 → 仍 64），不是往下推。硬寫 `$totRow=64` 恰好對，但要驗過再用。
+另：追蹤報表資料**從 r5 起算**（r4 是「項次／合約單號…」標頭列）。迴圈寫成 `for($r=4;...)` 會把標頭列當第 1 筆、A4 標頭被覆寫成數字 1，而且件數多算 1 件（59 變 60）——件數對不上就是這個病徵。
 
 **Why:** 這三個都會讓人往合併儲存格、工作表保護、範圍越界的方向查，實際病根在語系與型別繫結。
 
