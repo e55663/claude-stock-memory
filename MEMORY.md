@@ -28,7 +28,7 @@
 - [🔴打法說明壓縮計畫(未執行)](project_playbook_compression_plan_0805.md) — 141A 52,044字/108條;可砍30~35%;風險在交叉引用不在刪字;要開新視窗當主線跑
 - [🔴計價本格式鐵則](reference_billing_book_format_rules.md) — ABH必設公式/期數最舊在上/新分頁放範本(6)旁/問題件分頁不刪
 - [🔴🔴請款項目欄寫法](reference_billing_item_column_format.md) — 一項一行,只放品名規格數量單位單價金額=議價基準
-- [狀態同步五處](feedback_status_sync_five_places.md) — tab+M欄/總表/追蹤報表/夾名/夾內txt
+- [🔴狀態同步四處(0805起)](feedback_status_sync_five_places.md) — M欄/總表/追蹤報表/夾名+txt;🔴tab標色制度已廢止不再標
 - [🔴🔴加列別蓋掉合計列+備註只能四狀態](feedback_append_row_kills_total_row.md) — 只能送出待歸檔/採購議價/退件/已歸檔或空白
 - [🔴🔴回測假FAIL:COM讀大檔靜默回空](feedback_com_bulk_read_fake_fail_0803.md) — 改整欄抓Value2+字數自檢;假FAIL跟寫太鬆一樣糟
 - [🔴🔴🔴每批要另寫「本輪專用回測」](feedback_own_work_backtest_caught_errors_0804.md) — 既有三支只驗通則;測項要能指出「該改哪一格」
