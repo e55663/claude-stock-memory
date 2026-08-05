@@ -24,7 +24,7 @@ metadata:
 
 **How to apply:**
 - 批次動 Excel 前先跑**名稱存在性預檢**：要用到的分頁名/單號全部先對一遍，全命中才開始寫，任一不中就中止。這是把 A191「超連結目標分頁存在性檢查」擴大到所有批次作業；本次就是靠預檢在寫入前抓到那 3 個錯字，沒寫壞任何資料。
-- **腳本中途 throw 的善後三步**：①用 `桌面\新增資料夾\_清Excel殘留.ps1` 只關無視窗程序（絕不無差別 Stop-Process，見 [[reference_excel_com_scan_pitfalls]]）②原檔 SHA256 跟動手前的備份比對，確認沒被寫壞③確認後才重跑。本次中斷點在 SaveAs 之前，兩本計價本 SHA256 與備份相同＝未受損。
+- **腳本中途 throw 的善後三步**：①用 `Downloads\agent\計價回測工具\_清Excel殘留.ps1` 只關無視窗程序（絕不無差別 Stop-Process，見 [[reference_excel_com_scan_pitfalls]]）②原檔 SHA256 跟動手前的備份比對，確認沒被寫壞③確認後才重跑。本次中斷點在 SaveAs 之前，兩本計價本 SHA256 與備份相同＝未受損。
 - 另踩到的小雷：`$xl.CutCopyMode = 0` 在 typed interop 會丟列舉轉型錯；改用 `Range.Copy($destination)` 形式，不會留下 CutCopyMode 狀態。
 
 相關：[[feedback_never_mix_bash_powershell_file_ops]]、[[reference_powershell_variable_case_trap]]
