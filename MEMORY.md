@@ -78,7 +78,7 @@
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 
 ## 進行中批次（新→舊）
-- [🔴🔴0805:問題總表(左問右答)](project_issue_master_sheet_0805.md) — 141A計價本第3分頁69題待答;根因=慣例類每件重寫佔一半篇幅;提案查核紀錄分A/B/C三級
+- [🔴🔴0805:問題總表(左問右答)](project_issue_master_sheet_0805.md) — 🔴兩工地全集中在141A第3分頁74題(T1~T22通病+C1~C52個案,C40~C52是141E);141E不另開表;根因=慣例類每件重寫佔一半篇幅
 - [🔴0804:銘亮#11查核](project_billing_mingliang11_0804.md) — 使用者更正代辦388,096、自辦125,350；原「無扣款」結論作廢；待核扣款組成／簽認、簽單缺號說明與發票
 - [🔴0804:30件歸檔+4件新案+呂發#7重送](project_billing_batch_state_0804.md) — 五處同步完成、四支回測全綠;🔴平安#15少632,772+63,604漏列;待裁示7項見檔內
 - [🔴0804安達#1三方驗證一致+0805再抓三項](project_billing_anda1_codex_compare_0804.md) — 5/1請款郭志祥門禁卻是陳明得+24人次只刷出;金額931,000不受影響;🔴0805新:議價原因PDF其實是鉦昇的放錯夾/整案缺發票/行通表②型待裁示
