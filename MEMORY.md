@@ -25,6 +25,7 @@
 - [🔴🔴memo第3點PO/SC分流](reference_memo_item3_po_vs_sc.md) — PO只寫品名+數量;SC寫數量x單價=金額
 - [🔴🔴搬核定看單號層級+合計列必重算](reference_archive_move_zone_rule_0804.md) — 核定=這單號沒件在跑;搬區前後總數必等;合計列會過時
 - [🔴🔴總表待核/核定兩區](reference_billing_book_summary_layout_0803.md) — 特別說明欄取消改由夾名承載;141A/141E都已上線
+- [🔴打法說明壓縮計畫(未執行)](project_playbook_compression_plan_0805.md) — 141A 52,044字/108條;可砍30~35%;風險在交叉引用不在刪字;要開新視窗當主線跑
 - [🔴計價本格式鐵則](reference_billing_book_format_rules.md) — ABH必設公式/期數最舊在上/新分頁放範本(6)旁/問題件分頁不刪
 - [🔴🔴請款項目欄寫法](reference_billing_item_column_format.md) — 一項一行,只放品名規格數量單位單價金額=議價基準
 - [狀態同步五處](feedback_status_sync_five_places.md) — tab+M欄/總表/追蹤報表/夾名/夾內txt
@@ -82,12 +83,7 @@
 - [🔴0804安達#1三方驗證一致+0805再抓三項](project_billing_anda1_codex_compare_0804.md) — 5/1請款郭志祥門禁卻是陳明得+24人次只刷出;金額931,000不受影響;🔴0805新:議價原因PDF其實是鉦昇的放錯夾/整案缺發票/行通表②型待裁示
 - [🔴0804:平安#15暫緩](project_billing_pingan15_0804.md) — 代辦誤寫少632,772;派工疑重複698;扣墊款63,604未列;🔴核決我判董事長Codex記總經理
 - [🔴0803:8件全審完+38題規則清單](project_billing_batch_state_0803.md) — 淨+215,272少付;38題在問題清單分頁,接手先讀別重問
-- [0731:9件+7月盤點](project_billing_batch_state_0731.md) — 14件報表備註空白;祥竹缺口742,050;吉發#1/捷盛#1卡①型
-- [0731:揚弘#1仍暫緩](project_billing_yanghong_0731.md) — 首期623,564未議價+刷卡掛AP7P2
-- [0730下午:7件](project_billing_batch_state_0730pm.md) — 承洋#4放行;移工#2三項未解+成控表VLOOKUP已修
-- [0730:5案定版](project_billing_batch_state_0730.md) — 竟元/國產/金鈺昌/潤泰/翔盛;🔴和浚1,900要在翔盛#8補扣
-- [0728下午:6案](project_billing_batch_state_0728pm.md) — 呂發#7退件;🔴放行≠問題消失(化糞池252,576/翔博架96,037/成駿預算差641萬)
-- [歷史批次0713~0728](project_billing_batch_state_0727.md) — 0728兩批(聖志#7/建鑫棄土)見_0728與_0728b;更早的照 project_billing_batch_state_日期.md 找
+- [0713~0731歷史批次](project_billing_batch_state_0731.md) — 檔名 project_billing_batch_state_日期.md 照日期找(另有_0730pm/_0728pm/_0728b/_0727/_yanghong_0731);🔴仍未結的錢:和浚1,900要在翔盛#8補扣、祥竹缺口742,050、揚弘#1首期623,564未議價、吉發#1/捷盛#1卡①型、化糞池252,576/翔博架96,037/成駿預算差641萬
 - [出差報帳](reference_travel_reimbursement.md) — 在`Downloads\公司\出差報帳\`;本期4趟8,915待送單
 
 ## 投資
