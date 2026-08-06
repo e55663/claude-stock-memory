@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: 365bbf1a-11d3-4cf1-8927-79cb45fcc87f
-  modified: 2026-08-05T08:57:19.815Z
+  modified: 2026-08-06T00:36:55.086Z
 ---
 
 # 記憶／打法說明＝手冊，不是日誌
@@ -26,4 +26,6 @@ metadata:
 - T3 檔內有無日期流水帳、過期快照、「我被罵」的過程？（有＝FAIL）
 - T4 壓縮後規則條數是否 ≥ 壓縮前的有效規則數？（掉規則＝FAIL，只准掉字不准掉規則）
 
-相關：[[feedback_backtest_discipline]]、[[project_playbook_compression_plan_0805]]、[[feedback_session_cost_and_memory_slimming]]、[[feedback_user_edit_implies_rule_0730]]
+相關：[[feedback_backtest_discipline]]、[[project_taofa_compression_0805]]（打法說明四份已壓完）、[[feedback_session_cost_and_memory_slimming]]、[[feedback_user_edit_implies_rule_0730]]
+
+工具：`Downloads\agent\計價回測工具\_記憶壓縮回測.ps1`（從 git 取壓縮前版本比對硬 token，分規則層／案例層；已判定可刪的寫進同目錄 `_記憶壓縮回測_已判定.txt` 附理由，回測才收斂得到綠）。

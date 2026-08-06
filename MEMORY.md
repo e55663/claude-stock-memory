@@ -26,7 +26,6 @@
 - [🔴🔴memo第3點PO/SC分流](reference_memo_item3_po_vs_sc.md) — PO只寫品名+數量;SC寫數量x單價=金額
 - [🔴🔴搬核定看單號層級+合計列必重算](reference_archive_move_zone_rule_0804.md) — 核定=這單號沒件在跑;搬區前後總數必等;合計列會過時
 - [🔴🔴總表待核/核定兩區](reference_billing_book_summary_layout_0803.md) — 特別說明欄取消改由夾名承載;141A/141E都已上線
-- [🔴打法說明壓縮](project_playbook_compression_plan_0805.md) — 0805另視窗執行中;砍30~35%;風險在交叉引用不在刪字;條號當錨點不重編
 - [🔴計價本格式鐵則](reference_billing_book_format_rules.md) — ABH必設公式/期數最舊在上/新分頁放範本(6)旁/問題件分頁不刪
 - [🔴🔴請款項目欄寫法](reference_billing_item_column_format.md) — 一項一行,只放品名規格數量單位單價金額=議價基準
 - [🔴狀態同步四處(0805起)](feedback_status_sync_five_places.md) — M欄/總表/追蹤報表/夾名+txt;🔴tab標色制度已廢止不再標
@@ -59,7 +58,6 @@
 - [修改單範本](reference_change_order_template.md) — 填7格→A7自動組裝,署名羅慶人
 - [碳費基金範式](reference_carbon_fee_change_order.md) — 非業變/淨0/工程專案主管◎決
 - [入預算流程](reference_budget_entry_workflow.md) — 141E主檔分頁顏色標狀態;複製加MMDD前綴
-- [141A-136齊昇送議價](project_change_order_141A136_0624.md)
 
 ## 檔案操作/工具鏈
 - [🔴🔴別混用Bash+PS搬檔](feedback_never_mix_bash_powershell_file_ops.md) — NFC/NFD不一致→誤判覆蓋;純PS+逐檔驗落夾
