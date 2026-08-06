@@ -16,6 +16,7 @@
 - [🔴🔴查核要逐欄比對](feedback_scrutinize_not_just_open.md) — 「開過檔案」≠「查清楚」;管理費主動報告
 - [🔴判「尚未簽名」前放大看](feedback_signature_check_before_claiming_unsigned.md) — 手寫常斜寫跨線;要寫出簽名內容與日期
 - [🔴🔴🔴重建檔案蓋掉他改好的版本](feedback_never_overwrite_user_edited_file.md) — 寫檔前比對SHA256;改既有檔原地編輯不重建
+- [🔴🔴工作習慣與輸出](feedback_work_habits_and_output_0806.md) — 每件都建不擱著/給的全做完/圓圈標記/別每檔clear
 - [🔴不要敷衍](feedback_no_perfunctory_work.md) / [只動我說的](feedback_only_do_whats_asked.md) / [不問確認問題](feedback_no_clarifying_questions.md) / [決定自動落檔](feedback_auto_save_decisions.md) / [繁中](feedback_language.md)
 
 ## 請款/計價 規則
@@ -73,7 +74,7 @@
 ## 歸檔/資料夾
 - [工地歸檔規則](reference_site_archive_convention.md) — `Downloads\工地\<編號.案場>\2.請款單\<月份>`、修改單進4.修改單
 - [🔴Downloads桶名+查重](project_download_staging_dedup_workflow.md) — 0.5議價/1.送出待簽核/2.退件/3.明天整理/4.核准
-- [🔴🔴已歸檔=結案不留批次檔](feedback_archived_means_closed_0806.md) — 0806起;歸檔當下刪該案記憶檔+索引行;只留還沒歸檔的
+- [🔴🔴已歸檔=結案不留批次檔](feedback_archived_means_closed_0806.md) — 歸檔當下刪該案記憶+索引行;只留沒歸檔的
 - [問題夾加🔴](feedback_problem_case_folder_with_note.md) / [先整理夾](feedback_stage_in_downloads_before_archive.md) / [別翻舊txt](feedback_archive_command_no_reverify.md) / [🔴改memo同步整列](feedback_row_sync_and_folder_truth_0724.md)
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 
