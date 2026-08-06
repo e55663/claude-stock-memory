@@ -49,6 +49,11 @@
 - [🔴會議紀錄規範](reference_meeting_minutes_workflow.md) — 指示事項按單位分段;逐字稿要交叉比對;我不能聽音訊
 - [141A外牆人力六家](project_facade_manpower_141A_0731.md) — 翔博合約6.69億剩4.21億;六家全缺COMS;O棟DCR要不到
 
+## 執行預算（1150806新增領域）
+- [🔴🔴執行預算簽呈手冊](reference_execution_budget_signoff_0806.md) — 核決=董事長不論金額;會辦四單位(成本管理部/營運規劃處/業務採購處/會計處);執行預算=直接成本+工地管理費不含利潤;必附五件;成本xls哪些分頁不能印
+- [🔴成控會辦意見四段骨架](reference_cost_control_opinion_template.md) — (1)(2)(3)(4)條列三段金額;結尾「奉核後依此利潤率列控」;主管必寫「經與工地核對並開立檢討會議後」
+- [🔴141E執行預算進行中](project_141E_execution_budget_0806.md) — 執行預算730,447,811;七個疑義;缺附件一大包合約+戶數
+
 ## 修改單/入預算
 - [修改單範本](reference_change_order_template.md) — 填7格→A7自動組裝,署名羅慶人
 - [碳費基金範式](reference_carbon_fee_change_order.md) — 非業變/淨0/工程專案主管◎決
@@ -63,6 +68,7 @@
 - [🔴🔴歸檔流程手冊](reference_archive_workflow_0806.md) — 先staging開夾(時間窗全掃)/夾名兩空格點格式/請款有月份夾修改單沒有/問題夾🔴/建夾當下查重刪舊留新/「歸檔」=已確認別再翻舊txt/歸檔後刪該案記憶
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 ## 進行中批次（新→舊）
+- [🔴0806:141E執行預算送簽](project_141E_execution_budget_0806.md) — 空白簽呈格式+會議紀錄草稿已產出;七疑義未解;缺大包合約與戶數
 - [🔴0806:銓億#1 memo已打進計價本](project_billing_quanyi1_0806.md) — 裁示「打進去」已完成;行通表①型(報7,000/工vs登記3,000~3,500)+無施作日期仍未解,已揭露在memo/M欄
 - 🔴0805: [打法說明壓縮完成](project_taofa_compression_0805.md)四份全壓/原文封存同活頁簿/hook擋裸.Save() · [問題總表74題](project_issue_master_sheet_0805.md)141A第3分頁待答 · [批次](project_billing_batch_state_0805.md)兩件沒解:平安#15涉1,260,106、7月報表差132,530
 - 🔴0804批次(未結): [銘亮#11](project_billing_mingliang11_0804.md)代辦388,096待核組成/簽單缺號/發票 · [30件歸檔+呂發#7](project_billing_batch_state_0804.md)待裁示7項 · [安達#1](project_billing_anda1_codex_compare_0804.md)931,000不受影響/0805新3項 · [平安#15暫緩](project_billing_pingan15_0804.md)代辦少632,772/重複698/扣墊63,604/核決判董事長
