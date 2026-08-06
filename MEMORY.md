@@ -80,10 +80,7 @@
 - [🔴🔴0805:打法說明壓縮成手冊完成](project_taofa_compression_0805.md) — 四份全壓完(原文封存同活頁簿);四支回測全綠;PreToolUse hook擋裸.Save()
 - [🔴🔴0805:問題總表(左問右答)](project_issue_master_sheet_0805.md) — 🔴兩工地集中141A第3分頁74題(T通病+C個案,C40~C52=141E)
 - [🔴🔴0805批次](project_billing_batch_state_0805.md) — 成駿#12定稿+8件歸檔+標色廢止+工具搬家;🔴兩件沒解:平安#15涉1,260,106、7月報表差132,530
-- [🔴0804:銘亮#11查核](project_billing_mingliang11_0804.md) — 代辦388,096/自辦125,350;待核組成、簽單缺號、發票
-- [🔴0804:30件歸檔+4件新案+呂發#7重送](project_billing_batch_state_0804.md) — 五處同步+回測全綠;待裁示7項見檔內
-- [🔴0804安達#1三方驗證一致+0805再抓三項](project_billing_anda1_codex_compare_0804.md) — 郭志祥門禁實為陳明得;931,000不受影響;0805新3項見檔內
-- [🔴0804:平安#15暫緩](project_billing_pingan15_0804.md) — 代辦少632,772;派工疑重複698;扣墊款63,604;核決判董事長
+- 🔴0804批次(未結): [銘亮#11](project_billing_mingliang11_0804.md)代辦388,096待核組成/簽單缺號/發票 · [30件歸檔+呂發#7](project_billing_batch_state_0804.md)待裁示7項 · [安達#1](project_billing_anda1_codex_compare_0804.md)931,000不受影響/0805新3項 · [平安#15暫緩](project_billing_pingan15_0804.md)代辦少632,772/重複698/扣墊63,604/核決判董事長
 - 更早批次:同夾 `project_billing_batch_state_*` 照日期找;未結的錢見檔內
 - [出差報帳](reference_travel_reimbursement.md) — `Downloads\公司\出差報帳\`;本期4趟8,915待送
 
