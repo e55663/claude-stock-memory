@@ -20,17 +20,15 @@
 - [🔴不要敷衍](feedback_no_perfunctory_work.md) / [只動我說的](feedback_only_do_whats_asked.md) / [不問確認問題](feedback_no_clarifying_questions.md) / [決定自動落檔](feedback_auto_save_decisions.md) / [繁中](feedback_language.md)
 
 ## 請款/計價 規則
+- [🔴🔴狀態同步與合計列](feedback_status_sync_and_totals_0806.md) — 一件改要同步四處(M欄/總表/追蹤報表/夾名txt,標色已廢);開審前先查落地狀態四查;改memo同步整列;搬核定看單號層級;加列別蓋合計列;備註只能四狀態;資料夾是真相
 - [🔴🔴🔴行通表門檻四大類](feedback_hangtong_existence_gate.md) — 四大類沒登記不予計價;115.08起①型直接不予;季別＝施作月所屬季
 - [🔴🔴memo標準打法範本](reference_billing_memo_standard_template.md) — 區間+#期數換行+拆自辦代辦(G4全額)+扣款行簽名句+檢附看角色
 - [🔴🔴🔴問題清單分頁制度](feedback_issue_list_sheet_workflow_0803.md) — 規則釐清完寫進打法說明+記憶;找總表列掃全欄
 - [🔴🔴🔴0803正確模式+計價本回測](feedback_billing_book_correct_mode_0803.md) — memo不放敘述段;期數只能同合約號內比;搬列用整列Cut→Insert
 - [🔴🔴memo第3點PO/SC分流](reference_memo_item3_po_vs_sc.md) — PO只寫品名+數量;SC寫數量x單價=金額
-- [🔴🔴搬核定看單號層級+合計列必重算](reference_archive_move_zone_rule_0804.md) — 核定=這單號沒件在跑;搬區前後總數必等;合計列會過時
 - [🔴🔴總表待核/核定兩區](reference_billing_book_summary_layout_0803.md) — 特別說明欄取消改由夾名承載;141A/141E都已上線
 - [🔴計價本格式鐵則](reference_billing_book_format_rules.md) — ABH必設公式/期數最舊在上/新分頁放範本(6)旁/問題件分頁不刪
 - [🔴🔴請款項目欄寫法](reference_billing_item_column_format.md) — 一項一行,只放品名規格數量單位單價金額=議價基準
-- [🔴狀態同步四處(0805起)](feedback_status_sync_five_places.md) — M欄/總表/追蹤報表/夾名+txt;🔴tab標色制度已廢止不再標
-- [🔴🔴加列別蓋掉合計列+備註只能四狀態](feedback_append_row_kills_total_row.md) — 只能送出待歸檔/採購議價/退件/已歸檔或空白
 - [🔴🔴回測假FAIL:COM讀大檔靜默回空](feedback_com_bulk_read_fake_fail_0803.md) — 改整欄抓Value2+字數自檢;假FAIL跟寫太鬆一樣糟
 - [🔴🔴🔴每批要另寫「本輪專用回測」](feedback_own_work_backtest_caught_errors_0804.md) — 既有三支只驗通則;測項要能指出「該改哪一格」
 - [🔴🔴🔴回測分兩層A文件/B執行](feedback_backtest_discipline.md) — 新`_案件執行回測.ps1`驗Downloads案夾有沒有查核記錄.txt,首跑抓到7個真缺件
@@ -48,7 +46,6 @@
 - [🔴手寫註記要讀完](feedback_handwritten_notes_on_vouchers.md) — 『報支1560』=只認列1,560
 - [混凝土必查抽磅](reference_concrete_material_billing_format.md) — 抽磅效益分頁易漏,全案累計
 - [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 只用他這輪給的
-- [🔴重審前先查落地狀態](feedback_check_landed_state_before_reaudit.md) — 四查=分頁/總表/追蹤報表/舊夾
 - [自我稽核](feedback_self_audit_no_crutch.md) / [列控表](reference_billing_control_sheet_format.md) / [請款單建法](reference_billing_statement_template.md) / [memo歸位](reference_batch_memo_filing.md) / [對帳脈絡](reference_invoice_audit_context.md) / [0629](feedback_billing_corrections_0629.md)
 - [🔴審核期限兩套](reference_billing_review_deadlines.md) — 台積電SC次月5號/PO15號;內案5號;🔴資料夾是真相
 - [月追蹤報表](reference_monthly_tracking_report.md) / [行通表位置](reference_hangtong_files_location.md) / [關鍵字觸發](reference_work_keywords.md)
@@ -66,12 +63,8 @@
 - [🔴掃描件查核打法](reference_scanned_audit_cost_and_toolchain.md) — Read可直接吃PDF(pages);poppler已無;量大分批
 - [備份即刪](feedback_delete_temp_backups.md) / [讀完整](feedback_read_files_completely.md) / [git位置](reference_git_path_windows.md)
 ## 歸檔/資料夾
-- [工地歸檔規則](reference_site_archive_convention.md) — `Downloads\工地\<編號.案場>\2.請款單\<月份>`、修改單進4.修改單
-- [🔴Downloads桶名+查重](project_download_staging_dedup_workflow.md) — 0.5議價/1.送出待簽核/2.退件/3.明天整理/4.核准
-- [🔴🔴已歸檔=結案不留批次檔](feedback_archived_means_closed_0806.md) — 歸檔當下刪該案記憶+索引行;只留沒歸檔的
-- [問題夾加🔴](feedback_problem_case_folder_with_note.md) / [先整理夾](feedback_stage_in_downloads_before_archive.md) / [別翻舊txt](feedback_archive_command_no_reverify.md) / [🔴改memo同步整列](feedback_row_sync_and_folder_truth_0724.md)
+- [🔴🔴歸檔流程手冊](reference_archive_workflow_0806.md) — 先staging開夾(時間窗全掃)/夾名兩空格點格式/請款有月份夾修改單沒有/問題夾🔴/建夾當下查重刪舊留新/「歸檔」=已確認別再翻舊txt/歸檔後刪該案記憶
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
-
 ## 進行中批次（新→舊）
 - [🔴0806:銓億#1 memo已打進計價本](project_billing_quanyi1_0806.md) — 裁示「打進去」已完成;行通表①型(報7,000/工vs登記3,000~3,500)+無施作日期仍未解,已揭露在memo/M欄
 - 🔴0805: [打法說明壓縮完成](project_taofa_compression_0805.md)四份全壓/原文封存同活頁簿/hook擋裸.Save() · [問題總表74題](project_issue_master_sheet_0805.md)141A第3分頁待答 · [批次](project_billing_batch_state_0805.md)兩件沒解:平安#15涉1,260,106、7月報表差132,530
