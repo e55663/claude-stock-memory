@@ -77,6 +77,7 @@
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 
 ## 進行中批次（新→舊）
+- [🔴0806:銓億#1卡行通表①型](project_billing_quanyi1_0806.md) — 200,000元;技術工登記3,000~3,500/工但報7,000/工;無施作日期;memo未打,等裁示
 - [🔴🔴0805:打法說明壓縮成手冊完成](project_taofa_compression_0805.md) — 四份全壓完(原文封存同活頁簿);四支回測全綠;PreToolUse hook擋裸.Save()
 - [🔴🔴0805:問題總表(左問右答)](project_issue_master_sheet_0805.md) — 🔴兩工地集中141A第3分頁74題(T通病+C個案,C40~C52=141E)
 - [🔴🔴0805批次](project_billing_batch_state_0805.md) — 成駿#12定稿+8件歸檔+標色廢止+工具搬家;🔴兩件沒解:平安#15涉1,260,106、7月報表差132,530
