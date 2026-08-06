@@ -12,7 +12,7 @@
 - [🔴🔴🔴只進不退,舊件不回頭改](feedback_rules_forward_only_no_retro_edit_0730.md) — 判準=還會不會再送出?會→活件重打;不會→不動
 - [🔴🔴🔴他丟回改好的版本=隱含規則](feedback_user_edit_implies_rule_0730.md) — 逐字比對→反推通則→兩本+記憶同步→回測加測項→回報
 - [🔴🔴🔴記憶=手冊不是日誌](feedback_memory_manual_format_0805.md) — 規則一行式在最上+回測測項在最下;敘事快照一律砍;有回測驗
-- [🔴🔴🔴簽單抽點規則+「❌未查」不是放行理由](reference_signature_slip_sampling_rule_0804.md) — ≤20張全核;>20張抽MAX(20,N÷20);🔴有❌的件不得進4.核准
+- [🔴🔴🔴簽單抽點+❌未查不是放行理由](reference_signature_slip_sampling_rule_0804.md) — ≤20張全核;>20張抽MAX(20,N÷20);有❌不得進4.核准
 - [🔴🔴查核要逐欄比對](feedback_scrutinize_not_just_open.md) — 「開過檔案」≠「查清楚」;管理費主動報告
 - [🔴判「尚未簽名」前放大看](feedback_signature_check_before_claiming_unsigned.md) — 手寫常斜寫跨線;要寫出簽名內容與日期
 - [🔴🔴🔴重建檔案蓋掉他改好的版本](feedback_never_overwrite_user_edited_file.md) — 寫檔前比對SHA256;改既有檔原地編輯不重建
@@ -84,7 +84,7 @@
 - [🔴0804:30件歸檔+4件新案+呂發#7重送](project_billing_batch_state_0804.md) — 五處同步+回測全綠;待裁示7項見檔內
 - [🔴0804安達#1三方驗證一致+0805再抓三項](project_billing_anda1_codex_compare_0804.md) — 郭志祥門禁實為陳明得;931,000不受影響;0805新3項見檔內
 - [🔴0804:平安#15暫緩](project_billing_pingan15_0804.md) — 代辦少632,772;派工疑重複698;扣墊款63,604;核決判董事長
-- [0713~0731歷史批次](project_billing_batch_state_0731.md) — 檔名照日期找;未結的錢見檔內
+- 更早批次:同夾 `project_billing_batch_state_*` 照日期找;未結的錢見檔內
 - [出差報帳](reference_travel_reimbursement.md) — `Downloads\公司\出差報帳\`;本期4趟8,915待送
 
 ## 投資
@@ -100,12 +100,12 @@
 - [🔴法說好不是進場理由](feedback_earnings_call_not_entry_reason.md) — 後5日中位-0.24%輸基準17pp;等回檔
 - [🔴停損紀律](feedback_stoploss_discipline_lessons_0720.md) — 同組兩檔觸停損整組出清
 - [🔴TWSE抓法](reference_twse_api_same_day_data.md) — 當日別用STOCK_DAY_ALL;改RWD MI_INDEX;BWIBBU的PE在第3欄
-- [全市場](reference_full_market_screen.md) / [評分](feedback_stock_selection_system.md) / [選股閘門](feedback_stock_completeness_gate.md) / [進場](reference_stock_entry_checklist.md) / [圓圈](feedback_display_format_circles.md) / [集中度標註](feedback_concentration_flag_not_filter.md) / [無腦掛單](feedback_brainless_order_system.md)
+- [🔴主線題材表(選股必看)](macro_themes.md) — 循環位置/已動未動/催化劑;飆股藏在復甦初期
+- [全市場](reference_full_market_screen.md) / [評分](feedback_stock_selection_system.md) / [選股閘門](feedback_stock_completeness_gate.md) / [進場](reference_stock_entry_checklist.md) / [飆股洞察](feedback_flystock_lessons.md) / [集中度標註](feedback_concentration_flag_not_filter.md) / [無腦掛單](feedback_brainless_order_system.md)
 - [🔴策略庫(查表)](reference_stock_strategy_library.md) — 20大策略+書籍雷達+課程要點+風險等級表;正本=選股說明.txt優先
 - [框架完結](project_stock_framework_refactor.md) / [對帳制度](project_stock_track_record.md) / [模擬倉(停用)](project_paper_trading.md) / [課程教材](reference_trading_course_source.md)
 - [分析師模板](feedback_stock_analyst_deep_dive.md) / [附股價時戳](feedback_always_show_price_with_timestamp.md) / [查法說日期](feedback_proactive_earnings_calendar.md) / [符號標反](reference_webfetch_price_sign_flip.md)
-- [🔴Mac可全市場海選](feedback_mac_vs_windows_stock_selection.md) — `full_market_scan.py`;T86要`selectType=ALL`
-- [重心是錢](user_money_first_focus.md) — 從ROI切入給數字;絕不掰不報明牌
+- [Mac海選](feedback_mac_vs_windows_stock_selection.md) `full_market_scan.py`+T86 selectType=ALL / [重心是錢](user_money_first_focus.md) 從ROI給數字絕不掰
 - [0730崩盤留下的規則](project_market_crash_0730_state.md) — 2022-06型三項判定+分批至少過兩項+反彈日不等於止穩+待跑80萬試算(0717/AI七層兩快照已汰除)
 
 ## 環境/系統
