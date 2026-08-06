@@ -61,16 +61,10 @@
 - [入預算流程](reference_budget_entry_workflow.md) — 141E主檔分頁顏色標狀態;複製加MMDD前綴
 
 ## 檔案操作/工具鏈
-- [🔴🔴別混用Bash+PS搬檔](feedback_never_mix_bash_powershell_file_ops.md) — NFC/NFD不一致→誤判覆蓋;純PS+逐檔驗落夾
-- [🔴桌面Excel存檔法](feedback_desktop_excel_inplace_save.md) — SaveAs暫存→WriteAllBytes→還原時間戳
-- [Excel COM八雷](reference_excel_com_scan_pitfalls.md) — UsedRange少報/大表回NULL/28MB要解XML
+- [🔴🔴Excel+PS踩雷手冊](reference_excel_ps_traps_0806.md) — 桌面存檔安全流程(hook已擋裸Save)/COM讀取八雷/中文locale三雷/BOM與純ASCII命名/搬檔鐵則/批次做完必驗
 - [🔴🔴同頁PDF可能多張表單](feedback_multi_form_per_pdf_page_0803.md) — 12頁實際16張;總額逐張相加別用小計×1.05
 - [🔴掃描件查核打法](reference_scanned_audit_cost_and_toolchain.md) — Read可直接吃PDF(pages);poppler已無;量大分批
-- [🔴PS變數名不分大小寫](reference_powershell_variable_case_trap.md) — 靜默覆寫不報錯;用長變數名+量級檢查
-- [🔴🔴Excel COM中文locale三雷](reference_excel_com_locale_cast_traps_0804.md) — 'General'要寫'G/通用格式';@欄先[string];合計用.Formula
-- [🔴🔴中文字串兩隱蔽雷](feedback_chinese_string_powershell_traps_0804.md) — 絕不手算\uXXXX;無BOM的.ps1被當ANSI;動Excel前跑預檢
-- [批次驗證](feedback_verify_after_batch_ops.md) / [驗夾](feedback_move_into_dir_verify_exists.md) / [備份即刪](feedback_delete_temp_backups.md) / [PS中文編碼](feedback_ps_chinese_literal_encoding.md) / [讀完整](feedback_read_files_completely.md) / [git位置](reference_git_path_windows.md)
-
+- [備份即刪](feedback_delete_temp_backups.md) / [讀完整](feedback_read_files_completely.md) / [git位置](reference_git_path_windows.md)
 ## 歸檔/資料夾
 - [工地歸檔規則](reference_site_archive_convention.md) — `Downloads\工地\<編號.案場>\2.請款單\<月份>`、修改單進4.修改單
 - [🔴Downloads桶名+查重](project_download_staging_dedup_workflow.md) — 0.5議價/1.送出待簽核/2.退件/3.明天整理/4.核准
@@ -79,7 +73,7 @@
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 
 ## 進行中批次（新→舊）
-- [🔴0806:銓億#1卡行通表①型](project_billing_quanyi1_0806.md) — 200,000元;技術工登記3,000~3,500/工但報7,000/工;無施作日期;memo未打,等裁示
+- [🔴0806:銓億#1 memo已打進計價本](project_billing_quanyi1_0806.md) — 裁示「打進去」已完成;行通表①型(報7,000/工vs登記3,000~3,500)+無施作日期仍未解,已揭露在memo/M欄
 - 🔴0805: [打法說明壓縮完成](project_taofa_compression_0805.md)四份全壓/原文封存同活頁簿/hook擋裸.Save() · [問題總表74題](project_issue_master_sheet_0805.md)141A第3分頁待答 · [批次](project_billing_batch_state_0805.md)兩件沒解:平安#15涉1,260,106、7月報表差132,530
 - 🔴0804批次(未結): [銘亮#11](project_billing_mingliang11_0804.md)代辦388,096待核組成/簽單缺號/發票 · [30件歸檔+呂發#7](project_billing_batch_state_0804.md)待裁示7項 · [安達#1](project_billing_anda1_codex_compare_0804.md)931,000不受影響/0805新3項 · [平安#15暫緩](project_billing_pingan15_0804.md)代辦少632,772/重複698/扣墊63,604/核決判董事長
 - [出差報帳](reference_travel_reimbursement.md) — `Downloads\公司\出差報帳\`;本期4趟8,915待送
