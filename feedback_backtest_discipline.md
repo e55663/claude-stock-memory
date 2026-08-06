@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: d01b7fb3-8186-4c01-978a-f186d615da81
-  modified: 2026-08-06T03:01:37.091Z
+  modified: 2026-08-06T05:49:59.770Z
 ---
 
 # 回測制度
@@ -46,6 +46,12 @@ metadata:
 - 🔴 全 FAIL 或整批 0 筆**先懷疑讀取失敗**，不要直接認定內容缺漏。COM 掛掉徵兆：`0x800706BE`／`0x800AC472`／`0x800A03EC`／「有 0 條」→ 殺掉無視窗 Excel、等 6~10 秒、重試。
 - 🔴 **回測報 FAIL 時，先懷疑是不是檢查腳本自己寫錯**，別急著去改本來正確的資料。
 - 測項要能指出**該改哪一格**；只說「有問題」不算合格（D2 原寫「memo 不得出現『行通表,符合』」會同時命中單價行與檢附行，拆成 D2a/D2b 才指得到位）。
+
+## 🔴 腳本自己的雷（0806 `_記憶壓縮回測.ps1` 連踩三個，都會造成假 PASS）
+- **git 中文檔名八進位轉義**：`git diff --name-only` 預設把中文輸出成 `\351\230\262`，`Test-Path` 收到丟 "Illegal characters in path" → 腳本**中途死掉但前面已印 PASS**＝假 PASS。修法：所有 git 呼叫加 `-c core.quotepath=false`。
+- **原生 exe 的 stderr 在 `$ErrorActionPreference='Stop'` 下會變終止錯誤**，`2>$null` 擋不住（PS 5.1 把 stderr 包成 ErrorRecord）。修法：那段暫時 `$ErrorActionPreference='Continue'` 再包 try/catch。
+- **檔案被刪除時直接 `continue` 跳過**＝合併／汰除完全沒被驗到。修法：已刪除的檔也要拿舊 token 跟**全庫現況**比對（規則搬到別檔是合法的，只有全庫都找不到才算掉）。
+- 🔴 共同教訓：**「腳本跑完印了 PASS」不等於「它真的驗完了」**——要確認它處理的檔數跟預期一致。
 
 ## 🔴 腳本自己的雷
 - 常數與計數器**絕不可只差大小寫**（`$TODO` 與 `$todo` 是同一個，曾把待補文字覆蓋成數字，兩份報表 57 列寫錯值）。常數用 `$標準待補`、計數器用 `$cntTodo`。

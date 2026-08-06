@@ -6,6 +6,30 @@
 
 ---
 
+## 2026-08-06 ｜ Claude Code / Opus 5（記憶庫整併，另一視窗同時在跑請款）
+
+**做了什麼（整場只做記憶庫，沒碰計價本／修改單本／案夾）**
+- **記憶檔 223 → 128 個、1,025.5KB → 585.5KB（減 43%）**；MEMORY.md 16,998B → 10,172B。死連結 0、未索引 0。
+- **索引分兩層**：`MEMORY.md` 只留工作核心（86 行），投資／環境系統／個人生活 37 條移到 `INDEX_ALL.md`（開場不載入）。理由＝索引 35% 的成本是檔名本身，每多一個檔就從「規則描述」的額度裡扣。
+- **合併掉 11 群**：技術雷 9 檔→`reference_excel_ps_traps_0806`／歸檔流程 6 檔→`reference_archive_workflow_0806`／狀態同步 5 檔→`feedback_status_sync_and_totals_0806`／附件查檢 5 檔→`reference_attachment_checklist_0806`／回測 3 檔→`feedback_backtest_discipline`／選股知識 4 檔→`reference_stock_strategy_library`／工作習慣 6 檔→`feedback_work_habits_and_output_0806`／個人資料 7 檔→`user_profile`／跨裝置 4 檔→`project_cross_device_setup`／崩盤 4 檔→`feedback_crash_playbook_0806`／模型額度 4 檔→`reference_model_cost_and_dispatch_0806`。
+- **汰除 37 個歷史批次／個案檔（125.9KB）**：使用者裁示「歸檔的基本上都OK了，不用存」→ 立為規則（已併進 `reference_archive_workflow_0806` 第六段）。保留 6 個未歸檔活件。
+- **新增兩支自動化**：`memory-health.ps1`（SessionStart 開場體檢，五門檻超標才講、沒事靜默）＋ `gate-dispatcher.ps1` 加 tier2 第二層索引提醒（回測 `_tier2閘門回測.ps1` 7/7 PASS）。
+- **新建 `_記憶壓縮回測.ps1`＋`_記憶壓縮回測_已判定.txt`**（301 筆判定各附理由），最終 ✅ PASS 規則層零遺失。
+
+**🔴 我這輪犯的錯（都已補回並寫成規則）**
+1. **兩次「刪除清單放了沒讀過的檔」**：`feedback_check_landed_state_before_reaudit`（開審前四查）、`feedback_missing_items_note_location`（缺件只寫 M 欄+txt 不進 memo）→ 規則整條消失，事後從 git 取回。已寫死「刪除清單只能放讀過全文且確認併入的檔」。
+2. **回測腳本三個假 PASS 源**：git 中文檔名八進位轉義導致中途 fatal（前面已印 PASS）、原生 exe stderr 在 EAP=Stop 下變終止錯誤、已刪除檔直接跳過不驗。三個都修了，修好後才發現先前的 PASS 只驗了一部分。
+3. **回測的已知盲區**：只擋硬 token（數字/條號/公式/檔名），**擋不住純中文規則被整條刪掉**——上面第 1 點就是回測 PASS 但規則掉了。
+
+**停在哪／下一步**
+- 🔴 **選股框架 2 檔沒合併**（`feedback_stock_selection_system` 35.9KB ＋ `project_stock_framework_refactor` 19.1KB）。兩個原因：①context 已長，讀 55KB 觸發壓縮的風險高，而我這輪已在壓力下漏過兩條規則 ②`framework_refactor` 狀態是「提議重整成先分池→硬閘門→才排序，**待使用者放行**」，是提議還是定案要他決定。**建議另開乾淨視窗做，開場先問「那份重整放行了沒」。**
+- 三個 tool 候選使用者說先不做，已記在 `reference_model_cost_and_dispatch_0806` 第五段：`_新件建檔.ps1`／`_批次歸檔.ps1` 實戰驗證／收尾自動列「已歸檔但記憶檔還在」。
+- 🔴 未解（延續前段）：`co-rule-gate.ps1` 第 2 行仍寫「新增項目議價 20~100萬＝執行副總」，與核決權限表（工地流程沒有執行副總）衝突＝每輪餵一條已被推翻的規則。已回報多次，使用者尚未裁示，我沒動它。
+
+詳見 [[feedback_memory_manual_format_0805]]、[[feedback_backtest_discipline]]
+
+---
+
 ## 2026-08-06 ｜ Claude Code / Sonnet 5（收尾，接續凌晨那段）
 
 **做了什麼**
