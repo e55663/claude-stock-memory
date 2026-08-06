@@ -11,7 +11,7 @@
 - [🔴🔴寫「已完成」但沒做](feedback_claimed_done_but_not_done_0728.md) — 收尾跑「每件×五處」;移進1.送出待簽核或拿掉🔴=放行
 - [🔴🔴🔴只進不退,舊件不回頭改](feedback_rules_forward_only_no_retro_edit_0730.md) — 判準=還會不會再送出?會→活件重打;不會→不動
 - [🔴🔴🔴他丟回改好的版本=隱含規則](feedback_user_edit_implies_rule_0730.md) — 逐字比對→反推通則→兩本+記憶同步→回測加測項→回報
-- [🔴🔴🔴記憶=手冊不是日誌](feedback_memory_manual_format_0805.md) — 規則一行式在最上+回測測項在最下;敘事快照一律砍;`_記憶壓縮回測.ps1`驗
+- [🔴🔴🔴記憶=手冊不是日誌](feedback_memory_manual_format_0805.md) — 規則一行式在最上+回測測項在最下;敘事快照一律砍;有回測驗
 - [🔴🔴🔴簽單抽點規則+「❌未查」不是放行理由](reference_signature_slip_sampling_rule_0804.md) — ≤20張全核;>20張抽MAX(20,N÷20);🔴有❌的件不得進4.核准
 - [🔴🔴查核要逐欄比對](feedback_scrutinize_not_just_open.md) — 「開過檔案」≠「查清楚」;管理費主動報告
 - [🔴判「尚未簽名」前放大看](feedback_signature_check_before_claiming_unsigned.md) — 手寫常斜寫跨線;要寫出簽名內容與日期
@@ -77,7 +77,7 @@
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 
 ## 進行中批次（新→舊）
-- [🔴🔴0805:打法說明壓縮成手冊已完成](project_taofa_compression_0805.md) — 141A/141E請款單+修改單四份全壓縮完成;四支回測全綠;新增PreToolUse hook擋裸.Save()
+- [🔴🔴0805:打法說明壓縮成手冊完成](project_taofa_compression_0805.md) — 四份全壓完(原文封存同活頁簿);四支回測全綠;PreToolUse hook擋裸.Save()
 - [🔴🔴0805:問題總表(左問右答)](project_issue_master_sheet_0805.md) — 🔴兩工地集中141A第3分頁74題(T通病+C個案,C40~C52=141E)
 - [🔴🔴0805批次](project_billing_batch_state_0805.md) — 成駿#12定稿+8件歸檔+標色廢止+工具搬家;🔴兩件沒解:平安#15涉1,260,106、7月報表差132,530
 - [🔴0804:銘亮#11查核](project_billing_mingliang11_0804.md) — 代辦388,096/自辦125,350;待核組成、簽單缺號、發票
@@ -89,7 +89,7 @@
 
 ## 投資
 - [持倉與觀察](portfolio_watchlist.md) — 2330+00981A(3189已賣),美股QQQM/NVDA
-- [🔴80萬計畫](project_invest_80w_plan_0706.md) / [存30萬](project_savings_plan_30w.md) / [信貸100W(暫緩)](loan_investment_plan.md) / [信貸提問](reference_loan_question_checklist.md)
+- [🔴80萬計畫](project_invest_80w_plan_0706.md) / [存30萬](project_savings_plan_30w.md) / [信貸100W](loan_investment_plan.md) / [信貸提問](reference_loan_question_checklist.md)
 - [🔴🔴崩盤深跌分批已回測](feedback_crash_batch_dip_buy_validated_0722.md) — ≥-15%五事件fwd20全勝;夠深/抱60天/分批不猜底
 - [🔴🔴🔴廣池回測250檔](feedback_crash_widepool_backtest_0730.md) — 跌越深反彈越大;半導體最弱;2022-06型翻轉;用還原股價
 - [🔴🔴🔴推薦前必跑對照組](feedback_benchmark_comparison_required_0730.md) — 「買0050就好」推翻整套;前N名出口前加對照組
@@ -101,16 +101,17 @@
 - [🔴停損紀律](feedback_stoploss_discipline_lessons_0720.md) — 同組兩檔觸停損整組出清
 - [🔴TWSE抓法](reference_twse_api_same_day_data.md) — 當日別用STOCK_DAY_ALL;改RWD MI_INDEX;BWIBBU的PE在第3欄
 - [全市場](reference_full_market_screen.md) / [評分](feedback_stock_selection_system.md) / [選股閘門](feedback_stock_completeness_gate.md) / [進場](reference_stock_entry_checklist.md) / [圓圈](feedback_display_format_circles.md) / [集中度標註](feedback_concentration_flag_not_filter.md) / [無腦掛單](feedback_brainless_order_system.md)
-- [框架完結](project_stock_framework_refactor.md) / [對帳制度](project_stock_track_record.md) / [模擬倉(停用)](project_paper_trading.md) / [操作邏輯](stock_selection_logic.md) / [課程教材](reference_trading_course_source.md)
+- [🔴策略庫(查表)](reference_stock_strategy_library.md) — 20大策略+書籍雷達+課程要點+風險等級表;正本=選股說明.txt優先
+- [框架完結](project_stock_framework_refactor.md) / [對帳制度](project_stock_track_record.md) / [模擬倉(停用)](project_paper_trading.md) / [課程教材](reference_trading_course_source.md)
 - [分析師模板](feedback_stock_analyst_deep_dive.md) / [附股價時戳](feedback_always_show_price_with_timestamp.md) / [查法說日期](feedback_proactive_earnings_calendar.md) / [符號標反](reference_webfetch_price_sign_flip.md)
 - [🔴Mac可全市場海選](feedback_mac_vs_windows_stock_selection.md) — `full_market_scan.py`;T86要`selectType=ALL`
 - [重心是錢](user_money_first_focus.md) — 從ROI切入給數字;絕不掰不報明牌
 - [0730崩盤留下的規則](project_market_crash_0730_state.md) — 2022-06型三項判定+分批至少過兩項+反彈日不等於止穩+待跑80萬試算(0717/AI七層兩快照已汰除)
 
 ## 環境/系統
-- [🔴工作用Opus雜事用Sonnet+切模型權限](reference_model_choice_work_vs_chore.md) — 🔴對照試已中止無分數;高風險用Opus;中途切模型cache失效更貴
+- [🔴工作用Opus雜事用Sonnet](reference_model_choice_work_vs_chore.md) — 對照試已中止無分數;高風險用Opus;中途切模型cache失效更貴
 - [🔴🔴子代理分流](feedback_subagent_dispatch_rules_0804.md) — 主線Opus+雜事Sonnet;🔴子代理禁動計價本/修改單本/交付檔
-- [🔴🔴盲測污染:寫進索引=案子永久燒掉](feedback_blindtest_system_reminder_contamination_0804.md) — MEMORY.md開場強制載入擋不掉;測試案索引行只寫狀態別寫發現
+- [🔴🔴盲測污染:寫進索引=案子永久燒掉](feedback_blindtest_system_reminder_contamination_0804.md) — 開場強制載入擋不掉;測試案索引只寫狀態別寫發現
 - [三層權限政策](feedback_permission_tiers.md) — bypassPermissions+22條毀滅級deny
 - [跨裝置](project_memory_sync_setup.md) / [Win/Mac](project_cross_device_sync_plan_0716.md) / [兩台一樣](feedback_cross_device_consistency.md) / [Statusline](reference_statusline_powershell_fix.md) / [agent自動](project_ai_agent_automation.md) / [Mac待辦](project_mac_device_update.md)
 - [🔴閘門改模式偵測](project_gate_dispatcher_0731.md) — 合併成gate-dispatcher+手動開關+fail-open;省62.5%
