@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: 6afc45a0-b784-4306-959b-f1e228e368c6
-  modified: 2026-08-05T08:58:07.196Z
+  modified: 2026-08-06T00:42:07.105Z
 ---
 
 # 自我稽核手冊
@@ -35,7 +35,8 @@ metadata:
 - 寧可多讀一輪再講，不可先喊紅旗再收回（false alarm 比沒抓還糟）。
 - 加新列先 `Rows(N).Copy()` ＋ `Rows(N+1).PasteSpecial(-4122)` 複製上一列格式再改值；CutCopyMode 不要設（PS COM 設 $false/0 都報錯）。
 - 人臉.xls(考勤機 BIFF5)：Excel 封鎖、OLEDB 讀不了 → big5 raw ＋ 正則抽逐筆。
-- 打法說明同步狀態：141A／141E 同版；其餘 6 本(101I/111D/121E/131J/131L/141C)使用者說先不動。
+- 打法說明同步狀態：141A（`桌面\01.計價-141A 台積電AP7P1-Office.xlsx`）／141E（`桌面\01.計價-141E北士科.xlsx`）同版；其餘 6 本(101I/111D/121E/131J/131L/141C)使用者說先不動。
+- 「仿舊分頁≠合規」這條的落點＝141A 打法說明 **R42**。
 
 ## 四個根因（下筆前自檢一遍）
 - 順序反了：把使用者當第一道品管，而不是自己勾完才給。
