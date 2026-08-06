@@ -11,6 +11,7 @@
 - [🔴🔴寫「已完成」但沒做](feedback_claimed_done_but_not_done_0728.md) — 收尾跑「每件×五處」;移進1.送出待簽核或拿掉🔴=放行
 - [🔴🔴🔴只進不退,舊件不回頭改](feedback_rules_forward_only_no_retro_edit_0730.md) — 判準=還會不會再送出?會→活件重打;不會→不動
 - [🔴🔴🔴他丟回改好的版本=隱含規則](feedback_user_edit_implies_rule_0730.md) — 逐字比對→反推通則→兩本+記憶同步→回測加測項→回報
+- [🔴🔴🔴記憶=手冊不是日誌](feedback_memory_manual_format_0805.md) — 規則一行式在最上+回測測項在最下;敘事快照一律砍;`_記憶壓縮回測.ps1`驗
 - [🔴🔴🔴簽單抽點規則+「❌未查」不是放行理由](reference_signature_slip_sampling_rule_0804.md) — ≤20張全核;>20張抽MAX(20,N÷20);🔴有❌的件不得進4.核准
 - [🔴🔴查核要逐欄比對](feedback_scrutinize_not_just_open.md) — 「開過檔案」≠「查清楚」;管理費主動報告
 - [🔴判「尚未簽名」前放大看](feedback_signature_check_before_claiming_unsigned.md) — 手寫常斜寫跨線;要寫出簽名內容與日期
@@ -25,7 +26,7 @@
 - [🔴🔴memo第3點PO/SC分流](reference_memo_item3_po_vs_sc.md) — PO只寫品名+數量;SC寫數量x單價=金額
 - [🔴🔴搬核定看單號層級+合計列必重算](reference_archive_move_zone_rule_0804.md) — 核定=這單號沒件在跑;搬區前後總數必等;合計列會過時
 - [🔴🔴總表待核/核定兩區](reference_billing_book_summary_layout_0803.md) — 特別說明欄取消改由夾名承載;141A/141E都已上線
-- [🔴打法說明壓縮計畫(未執行)](project_playbook_compression_plan_0805.md) — 141A 52,044字/108條;可砍30~35%;風險在交叉引用;要開新視窗跑
+- [🔴打法說明壓縮](project_playbook_compression_plan_0805.md) — 0805另視窗執行中;砍30~35%;風險在交叉引用不在刪字;條號當錨點不重編
 - [🔴計價本格式鐵則](reference_billing_book_format_rules.md) — ABH必設公式/期數最舊在上/新分頁放範本(6)旁/問題件分頁不刪
 - [🔴🔴請款項目欄寫法](reference_billing_item_column_format.md) — 一項一行,只放品名規格數量單位單價金額=議價基準
 - [🔴狀態同步四處(0805起)](feedback_status_sync_five_places.md) — M欄/總表/追蹤報表/夾名+txt;🔴tab標色制度已廢止不再標
@@ -78,14 +79,13 @@
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 
 ## 進行中批次（新→舊）
-- [🔴🔴0805:打法說明壓縮成手冊](project_taofa_compression_0805.md) — 141A已完成(57KB→8.5KB,111條,回測69/69);141E尚未開始
+- [🔴🔴0805:打法說明壓縮成手冊已完成](project_taofa_compression_0805.md) — 141A/141E請款單+修改單四份全壓縮完成;四支回測全綠;新增PreToolUse hook擋裸.Save()
 - [🔴🔴0805:問題總表(左問右答)](project_issue_master_sheet_0805.md) — 🔴兩工地集中141A第3分頁74題(T通病+C個案,C40~C52=141E)
-- [🔴🔴0805:成駿#12定稿+8件歸檔+標色廢止+工具搬家](project_billing_batch_state_0805.md) — 🔴兩件沒解:平安#15行通表句涉1,260,106、7月報表差132,530
+- [🔴🔴0805批次](project_billing_batch_state_0805.md) — 成駿#12定稿+8件歸檔+標色廢止+工具搬家;🔴兩件沒解:平安#15涉1,260,106、7月報表差132,530
 - [🔴0804:銘亮#11查核](project_billing_mingliang11_0804.md) — 代辦388,096/自辦125,350;待核組成、簽單缺號、發票
 - [🔴0804:30件歸檔+4件新案+呂發#7重送](project_billing_batch_state_0804.md) — 五處同步+回測全綠;待裁示7項見檔內
 - [🔴0804安達#1三方驗證一致+0805再抓三項](project_billing_anda1_codex_compare_0804.md) — 郭志祥門禁實為陳明得;931,000不受影響;0805新3項見檔內
 - [🔴0804:平安#15暫緩](project_billing_pingan15_0804.md) — 代辦少632,772;派工疑重複698;扣墊款63,604;核決判董事長
-- [🔴0803:8件全審完+38題規則清單](project_billing_batch_state_0803.md) — 淨+215,272少付;38題已併入0805問題總表
 - [0713~0731歷史批次](project_billing_batch_state_0731.md) — 檔名照日期找;未結的錢見檔內
 - [出差報帳](reference_travel_reimbursement.md) — `Downloads\公司\出差報帳\`;本期4趟8,915待送
 
@@ -107,7 +107,7 @@
 - [分析師模板](feedback_stock_analyst_deep_dive.md) / [附股價時戳](feedback_always_show_price_with_timestamp.md) / [查法說日期](feedback_proactive_earnings_calendar.md) / [符號標反](reference_webfetch_price_sign_flip.md)
 - [🔴Mac可全市場海選](feedback_mac_vs_windows_stock_selection.md) — `full_market_scan.py`;T86要`selectType=ALL`
 - [重心是錢](user_money_first_focus.md) — 從ROI切入給數字;絕不掰不報明牌
-- ⚠️已過期需重查:[0730崩盤](project_market_crash_0730_state.md)(破4萬/金融最強/廣達停損/待辦80萬試算) / [0717](project_market_crash_0717_bear_state.md) / [AI七層](project_ai_chain_signal_snapshot_0716.md)
+- [0730崩盤留下的規則](project_market_crash_0730_state.md) — 2022-06型三項判定+分批至少過兩項+反彈日不等於止穩+待跑80萬試算(0717/AI七層兩快照已汰除)
 
 ## 環境/系統
 - [🔴工作用Opus雜事用Sonnet+切模型權限](reference_model_choice_work_vs_chore.md) — 🔴對照試已中止無分數;高風險用Opus;中途切模型cache失效更貴
