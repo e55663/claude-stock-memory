@@ -26,6 +26,10 @@
 - 三個 tool 候選使用者說先不做，已記在 `reference_model_cost_and_dispatch_0806` 第五段：`_新件建檔.ps1`／`_批次歸檔.ps1` 實戰驗證／收尾自動列「已歸檔但記憶檔還在」。
 - 🔴 未解（延續前段）：`co-rule-gate.ps1` 第 2 行仍寫「新增項目議價 20~100萬＝執行副總」，與核決權限表（工地流程沒有執行副總）衝突＝每輪餵一條已被推翻的規則。已回報多次，使用者尚未裁示，我沒動它。
 
+**收尾後又談定兩件（已落檔進 `feedback_memory_manual_format_0805`）**
+- **哪些 md 是系統定義、哪些是自訂**：`MEMORY.md`／家目錄 `CLAUDE.md`／`memory\` 位置／frontmatter ＝ 系統定義不能亂改；`HANDOFF.md`／`INDEX_ALL.md`／檔名前綴 ＝ 純自訂約定。🔴 開場自動載入的只有 MEMORY.md 一個，其他都要被叫才會讀。
+- **索引不再往下拆**（他問「請款一個投資一個修改單一個」）：分的維度要用「開場需不需要知道」不是「主題」；現況餘裕 6,828B 夠用，要拆的時機由 `memory-health.ps1` 通知。他更該做的是加**內容型** md（本月待辦／長官特殊要求／常用檔案位置）。
+
 詳見 [[feedback_memory_manual_format_0805]]、[[feedback_backtest_discipline]]
 
 ---
