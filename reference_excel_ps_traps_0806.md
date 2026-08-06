@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 365bbf1a-11d3-4cf1-8927-79cb45fcc87f
-  modified: 2026-08-06T02:18:56.517Z
+  modified: 2026-08-06T02:29:56.085Z
 ---
 
 # Excel COM 與 PowerShell 踩雷手冊
@@ -56,7 +56,7 @@ $t=[IO.File]::ReadAllText($p,[Text.Encoding]::UTF8)
 - 🔴 **.ps1 的函式名／變數名一律純 ASCII**，中文只放註解、字串字面值、雜湊表的值——這樣就算 BOM 又出包，頂多訊息亂碼，不會整支腳本連語法都解析不了。補完 BOM 用 `[System.Management.Automation.Language.Parser]::ParseFile` 靜態檢查，別用眼睛掃。
 - 我在指令裡**手打的中文字串會偶發編碼損壞** → `Test-Path -LiteralPath $中文路徑`、`-like "*中文*"`、`Join-Path` 對明明存在的檔誤判 False。但 `Get-ChildItem` 讀磁碟回來的中文檔名是正確的。比對鍵改用**非中文屬性**（Length／LastWriteTime／副檔名）或直接 pipe `Get-ChildItem` 物件的 `.FullName`。
 - 資料檔的欄位分隔符**絕不用 `~`、`-`、`|`**（噸位區間「90~100T」、金額「3,000~3,500」會把內容從中間切斷，而且 Excel 不報錯）→ 用 `#|#` 複合分隔（`-split [regex]::Escape('#|#')`），換行用 `||` 佔位再 replace，**寫完回讀比長度＋`-ceq`**。
-- PowerShell **變數名不分大小寫**：`$D` 與 `$d` 是同一個，會靜默覆寫且因索引沿用上一圈舊值而跑出一整張看起來正常的錯數字 → 一律用有意義的長名（`$dates`／`$dayPct`），迴圈索引每圈重設，數字出來先做**量級常識檢查**（有沒有超過事件本身總幅度、超過 ±100%）。
+- PowerShell **變數名不分大小寫**：`$D` 與 `$d` 是同一個，會靜默覆寫且因索引沿用上一圈舊值而跑出一整張看起來正常的錯數字 → 一律用有意義的長名（`$dates`／`$dayPct`），迴圈索引每圈重設，數字出來先做**量級常識檢查**（有沒有超過事件本身總幅度、超過 ±100%）——0730 那次就是靠這條抓到的：2024 那次整段才跌 −21.3%，表上卻寫「第 28 天 −75.25%」＝不可能。
 
 ## 🔴 五、檔案操作鐵則（曾永久遺失 5 個檔）
 - **一律純 PowerShell，絕不混用 Bash**：Bash `mkdir` 建的中文夾名與 PowerShell 字串 NFC/NFD 不一致 → `Move-Item` 把「搬檔進夾」降級成「改名成資料夾同名」，再用 `-Force` 連環覆蓋，不進資源回收桶、無法復原。
