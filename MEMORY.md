@@ -82,7 +82,6 @@
 - [🔴🔴0805:問題總表(左問右答)](project_issue_master_sheet_0805.md) — 🔴兩工地集中141A第3分頁74題(T通病+C個案,C40~C52=141E)
 - [🔴🔴0805批次](project_billing_batch_state_0805.md) — 成駿#12定稿+8件歸檔+標色廢止+工具搬家;🔴兩件沒解:平安#15涉1,260,106、7月報表差132,530
 - 🔴0804批次(未結): [銘亮#11](project_billing_mingliang11_0804.md)代辦388,096待核組成/簽單缺號/發票 · [30件歸檔+呂發#7](project_billing_batch_state_0804.md)待裁示7項 · [安達#1](project_billing_anda1_codex_compare_0804.md)931,000不受影響/0805新3項 · [平安#15暫緩](project_billing_pingan15_0804.md)代辦少632,772/重複698/扣墊63,604/核決判董事長
-- 更早批次:同夾 `project_billing_batch_state_*` 照日期找;未結的錢見檔內
 - [出差報帳](reference_travel_reimbursement.md) — `Downloads\公司\出差報帳\`;本期4趟8,915待送
 
 ## 投資
