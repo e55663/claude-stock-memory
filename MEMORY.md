@@ -69,6 +69,7 @@
 - [🔴🔴歸檔流程手冊](reference_archive_workflow_0806.md) — 先staging開夾(時間窗全掃)/夾名兩空格點格式/請款有月份夾修改單沒有/問題夾🔴/建夾當下查重刪舊留新/「歸檔」=已確認別再翻舊txt/歸檔後刪該案記憶
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 ## 進行中批次（新→舊）
+- [🔴0807:吉萊#2+金海#2請款已打進本](project_billing_jilai2_jinhai2_0807.md) — 回測80/0;🔴金海保留款10%疑漏扣262,872+請款單累計欄差648,000+進位多計432;吉萊缺請款單/報價單無數量單價/照片非本期
 - [🔴0807:三件修改單已打進本](project_change_order_three_0807.md) — 141A-138承園草籽880,000(退回重送)/141A-151植筋雜項淨0/141A-158外構6,369,350;未歸檔;158合約超預算91,114
 - [🔴0806:141E執行預算送簽](project_141E_execution_budget_0806.md) — 空白簽呈格式+會議紀錄草稿已產出;七疑義未解;缺大包合約與戶數
 - [🔴0806:銓億#1 memo已打進計價本](project_billing_quanyi1_0806.md) — 裁示「打進去」已完成;行通表①型(報7,000/工vs登記3,000~3,500)+無施作日期仍未解,已揭露在memo/M欄
