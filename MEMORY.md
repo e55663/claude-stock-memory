@@ -37,6 +37,7 @@
 - [🔴🔴每夾必附查核記錄+寫前驗A4](feedback_per_case_audit_txt_and_sheet_target_0723.md) — 分頁名差一空格會蓋掉歷史memo
 - [自辦vs代扣](feedback_self_vs_deduct_contract.md) — 只有自辦吃本合約;扣自己=扣款,扣別家=加扣
 - [🔴PO=合約 vs SC=零星](reference_po_vs_sc_pricing.md) — PO超出要追加;SC新項目要議價
+- [🔴🔴PO合約付款辦法逐期核(0807新增)](reference_po_contract_payment_terms_check_0807.md) — 首期抄合約付款辦法;每期核分段計價比例+保留款%有沒有照扣;分段90%≠保留款90%
 - [🔴議價後重送五步](reference_post_negotiation_resubmit_checks.md) — G4仍放全額;🔴列控合約欄幾乎一定沒改;舊報價單標作廢
 - [🔴🔴報價單必須根基版本](feedback_quotation_must_be_kindom_form.md) — 非K02-3-PU01-01要警告,不擋件
 - [🔴🔴附件查檢手冊](reference_attachment_checklist_0806.md) — 每件都要列查檢段;缺件裁量在使用者;首期才要合約議價;五件組+工種速查;機具必COMS;加款免簽名但memo照寫;缺件只寫M欄+txt不進memo;行通表要複製進夾
