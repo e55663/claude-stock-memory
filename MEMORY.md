@@ -57,6 +57,7 @@
 - [🔴141E執行預算進行中](project_141E_execution_budget_0806.md) — 執行預算730,447,811;七個疑義;缺附件一大包合約+戶數
 
 ## 修改單/入預算
+- [🔴🔴純預算調整memo定版(0807)](reference_pure_budget_memo_format_0807.md) — 括弧寫「預算調整」不是核決分類名;無採購句=四點結構(A7公式J4留空自動判);兩段編號各自從1起算;合計句不寫修改前後總額
 - [🔴🔴🔴修改單邏輯＝請款單邏輯](feedback_change_order_follows_billing_logic_0807.md) — 動手前兩份打法說明都要讀;先進夾再審核;每夾必附查核記錄.txt逐條走
 - [修改單範本](reference_change_order_template.md) — 填7格→A7自動組裝,署名羅慶人
 - [碳費基金範式](reference_carbon_fee_change_order.md) — 非業變/淨0/工程專案主管◎決
@@ -76,7 +77,7 @@
 - [🔴0806:141E執行預算送簽](project_141E_execution_budget_0806.md) — 空白簽呈格式+會議紀錄草稿已產出;七疑義未解;缺大包合約與戶數
 - [🔴0806:銓億#1 memo已打進計價本](project_billing_quanyi1_0806.md) — 裁示「打進去」已完成;行通表①型(報7,000/工vs登記3,000~3,500)+無施作日期仍未解,已揭露在memo/M欄
 - 🔴0805: [打法說明壓縮完成](project_taofa_compression_0805.md)四份全壓/原文封存同活頁簿/hook擋裸.Save() · [問題總表74題](project_issue_master_sheet_0805.md)141A第3分頁待答 · [批次](project_billing_batch_state_0805.md)兩件沒解:平安#15涉1,260,106、7月報表差132,530
-- 🔴0804批次(未結): [銘亮#11](project_billing_mingliang11_0804.md)代辦388,096待核組成/簽單缺號/發票 · [30件歸檔+呂發#7](project_billing_batch_state_0804.md)待裁示7項 · [安達#1](project_billing_anda1_codex_compare_0804.md)931,000不受影響/0805新3項 · [平安#15暫緩](project_billing_pingan15_0804.md)代辦少632,772/重複698/扣墊63,604/核決判董事長
+- 🔴0804批次(未結): [銘亮#11](project_billing_mingliang11_0804.md)代辦388,096待核組成/簽單缺號/發票 · [30件歸檔](project_billing_batch_state_0804.md)待裁示6項(呂發#7已0807歸檔) · [安達#1](project_billing_anda1_codex_compare_0804.md)931,000不受影響/0805新3項 · [平安#15暫緩](project_billing_pingan15_0804.md)代辦少632,772/重複698/扣墊63,604/核決判董事長
 - [出差報帳](reference_travel_reimbursement.md) — `Downloads\公司\出差報帳\`;本期4趟8,915待送
 
 
