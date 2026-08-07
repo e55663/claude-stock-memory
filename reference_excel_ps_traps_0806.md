@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 365bbf1a-11d3-4cf1-8927-79cb45fcc87f
-  modified: 2026-08-06T02:29:56.085Z
+  modified: 2026-08-07T01:57:47.136Z
 ---
 
 # Excel COM 與 PowerShell 踩雷手冊
@@ -13,6 +13,7 @@ metadata:
 ## 🔴 一、桌面 Excel 存檔（有 hook 技術強制，別想繞）
 - **絕不用裸 `$wb.Save()` 或 `$wb.SaveAs($原路徑,51)` 覆蓋桌面原檔**——兩者本質都是「刪掉原檔重建」，桌面圖示位置會跳掉。與 Explorer 有沒有開自動排列無關。
 - 已建 `.claude\hooks\excel-save-guard.ps1`（PreToolUse，matcher=Bash|PowerShell）：命令裡碰 `Workbooks/Excel.Application` 又出現裸 `.Save()`、或 `SaveAs()` 目標不含 tmp/TEMP，直接 deny 擋下整個工具呼叫。實測會擋。
+- 🔴 **115.08.07 補強兩處（原版有洞，我親自踩過）**：①原本只看 `tool_input.command` 字串，`powershell -File "…\x.ps1"` 命令裡沒有 SaveAs 字樣就整個放行 → 腳本內的裸 `SaveAs($path,51)` 照樣蓋掉桌面原檔。現在會把命令引用的 .ps1（`-File` / `&` / `.` 三種寫法）讀進來一起檢查。②改讀檔後，腳本裡的**規則說明文字**（如「絕不裸SaveAs/裸.Save()」）會被 regex 誤判成真呼叫而誤擋合規腳本 → 對 .ps1 改用 **AST**（`InvokeMemberExpressionAst`）只認真正的方法呼叫，註解與字串字面值不算；命令列片段仍用 regex。反例實證 7/7 全對。詳 [[feedback_backtest_blindspots_0807]]。
 - 安全存檔樣板（動桌面 xlsx 前先把這段複製到腳本尾）：
 ```powershell
 $homeDate = (Get-Item -LiteralPath $path).LastWriteTime   # 1.記原始時間戳

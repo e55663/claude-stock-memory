@@ -29,6 +29,7 @@
 - [🔴🔴總表待核/核定兩區](reference_billing_book_summary_layout_0803.md) — 特別說明欄取消改由夾名承載;141A/141E都已上線
 - [🔴計價本格式鐵則](reference_billing_book_format_rules.md) — ABH必設公式/期數最舊在上/新分頁放範本(6)旁/問題件分頁不刪
 - [🔴🔴請款項目欄寫法](reference_billing_item_column_format.md) — 一項一行,只放品名規格數量單位單價金額=議價基準
+- [🔴🔴🔴回測自己的盲區(0807)](feedback_backtest_blindspots_0807.md) — 修改單本沒被A層驗到/案夾pattern認不出新命名/hook可用-File繞過/記憶整併後清單沒更新;全綠≠沒事
 - [🔴🔴🔴回測制度](feedback_backtest_discipline.md) — A層驗規則有寫/B層驗真的執行;每批另寫本輪專用回測(數字回來源檔重算);假PASS(沒涵蓋新規則)與假FAIL(COM靜默回空)一樣糟;七支腳本清單
 - [廠商別名對照](reference_vendor_alias_gate_pass.md) — 德沃＝安達;別家公司別工地=身分疑義
 - [🔴數字走Excel掃描件當佐證](feedback_billing_cp_workflow_excel_first.md) — 先歸夾→一案案審→確認才動計價本
