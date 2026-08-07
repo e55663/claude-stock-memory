@@ -55,6 +55,7 @@
 - [🔴141E執行預算進行中](project_141E_execution_budget_0806.md) — 執行預算730,447,811;七個疑義;缺附件一大包合約+戶數
 
 ## 修改單/入預算
+- [🔴🔴🔴修改單邏輯＝請款單邏輯](feedback_change_order_follows_billing_logic_0807.md) — 動手前兩份打法說明都要讀;先進夾再審核;每夾必附查核記錄.txt逐條走
 - [修改單範本](reference_change_order_template.md) — 填7格→A7自動組裝,署名羅慶人
 - [碳費基金範式](reference_carbon_fee_change_order.md) — 非業變/淨0/工程專案主管◎決
 - [入預算流程](reference_budget_entry_workflow.md) — 141E主檔分頁顏色標狀態;複製加MMDD前綴
@@ -68,6 +69,7 @@
 - [🔴🔴歸檔流程手冊](reference_archive_workflow_0806.md) — 先staging開夾(時間窗全掃)/夾名兩空格點格式/請款有月份夾修改單沒有/問題夾🔴/建夾當下查重刪舊留新/「歸檔」=已確認別再翻舊txt/歸檔後刪該案記憶
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 ## 進行中批次（新→舊）
+- [🔴0807:三件修改單已打進本](project_change_order_three_0807.md) — 141A-138承園草籽880,000(退回重送)/141A-151植筋雜項淨0/141A-158外構6,369,350;未歸檔;158合約超預算91,114
 - [🔴0806:141E執行預算送簽](project_141E_execution_budget_0806.md) — 空白簽呈格式+會議紀錄草稿已產出;七疑義未解;缺大包合約與戶數
 - [🔴0806:銓億#1 memo已打進計價本](project_billing_quanyi1_0806.md) — 裁示「打進去」已完成;行通表①型(報7,000/工vs登記3,000~3,500)+無施作日期仍未解,已揭露在memo/M欄
 - 🔴0805: [打法說明壓縮完成](project_taofa_compression_0805.md)四份全壓/原文封存同活頁簿/hook擋裸.Save() · [問題總表74題](project_issue_master_sheet_0805.md)141A第3分頁待答 · [批次](project_billing_batch_state_0805.md)兩件沒解:平安#15涉1,260,106、7月報表差132,530
