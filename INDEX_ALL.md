@@ -7,7 +7,9 @@
 ## 投資
 - [持倉與觀察](portfolio_watchlist.md) — 2330+00981A(3189已賣),美股QQQM/NVDA
 - [🔴80萬計畫](project_invest_80w_plan_0706.md) / [存30萬](project_savings_plan_30w.md) / [信貸100W](loan_investment_plan.md) / [信貸提問](reference_loan_question_checklist.md)
-- [🔴🔴🔴崩盤接刀手冊](feedback_crash_playbook_0806.md) — 三鐵則(夠深/抱60天/分批不猜底)+先判2022型;跌越深反彈越大;GAP錯殺代理;落底日不可預測改深度刻度;金融股是避震器;崩盤後0050贏但對他=加倉;半導體反彈最弱
+- [🔴🔴🔴判「不接」也要過閘門(0807新增)](feedback_no_permanent_exclusion_0807.md) — 0730整組剔除記憶體/被動元件/ODM,6天內錯失13~39%;判價值陷阱要附出處+攤牌日+複查日,否則只能寫「暫不接待驗證」;有個股事件才可剔,只有產業敘事不可以
+- [🔴0807選股現況(接手先讀)](project_stock_state_0807.md) — 2026/07崩盤事件已結束(DD60-7.36%);持倉五檔停損價與法說日;季線只差-0.12%;三個待辦(macro_themes壞檔/規則未寫進正本/80萬試算)
+- [🔴🔴🔴崩盤接刀手冊](feedback_crash_playbook_0806.md) — 三鐵則(夠深/抱60天/分批不猜底);🔴0807實測=2022型情境判定判反+分批間隔條件作廢改深度刻度;跌越深反彈越大;GAP錯殺代理;落底日不可預測;金融股是避震器;崩盤後0050贏但對他=加倉;半導體反彈最弱
 - [🔴🔴🔴推薦前必跑對照組](feedback_benchmark_comparison_required_0730.md) — 「買0050就好」推翻整套;前N名出口前加對照組
 - [金融股資料庫](reference_financial_stocks_data_0730.md) — 除權息/填息率/PB在最貴端;TWT49U參數startDate
 - [🔴🔴題1要逐檔查個股新聞](feedback_thesis1_needs_stock_specific_news.md) — 廣達GDS稀釋漏查吃-9.9%;跌最深≠能接

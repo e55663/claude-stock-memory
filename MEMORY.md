@@ -47,6 +47,7 @@
 - [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 只用他這輪給的
 - [自我稽核](feedback_self_audit_no_crutch.md) / [列控表](reference_billing_control_sheet_format.md) / [請款單建法](reference_billing_statement_template.md) / [memo歸位](reference_batch_memo_filing.md) / [對帳脈絡](reference_invoice_audit_context.md) / [0629](feedback_billing_corrections_0629.md)
 - [🔴審核期限兩套](reference_billing_review_deadlines.md) — 台積電SC次月5號/PO15號;內案5號;🔴資料夾是真相
+- [🔴🔴月報表分界與格式(0807)](reference_monthly_report_split_0807.md) — 呈核日>=當月5號進當月本;每月5號回頭掃上月本;格式一律比照7月本(新細明體12/#,##0/外框粗內框細),建本別只靠複製
 - [月追蹤報表](reference_monthly_tracking_report.md) / [行通表位置](reference_hangtong_files_location.md) / [關鍵字觸發](reference_work_keywords.md)
 - [🔴會議紀錄規範](reference_meeting_minutes_workflow.md) — 指示事項按單位分段;逐字稿要交叉比對;我不能聽音訊
 - [141A外牆人力六家](project_facade_manpower_141A_0731.md) — 翔博合約6.69億剩4.21億;六家全缺COMS;O棟DCR要不到
@@ -73,7 +74,7 @@
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 ## 進行中批次（新→舊）
 - [🔴0807:吉萊#2+金海#2請款已打進本](project_billing_jilai2_jinhai2_0807.md) — 回測80/0;🔴金海保留款10%疑漏扣262,872+請款單累計欄差648,000+進位多計432;吉萊缺請款單/報價單無數量單價/照片非本期
-- [🔴0807:三件修改單已打進本](project_change_order_three_0807.md) — 141A-138承園草籽880,000(退回重送)/141A-151植筋雜項淨0/141A-158外構6,369,350;未歸檔;158合約超預算91,114
+- [🔴0807:四件修改單+7件歸檔](project_change_order_three_0807.md) — 138承園(再退)/143外牆切包(🔴翔博合約查無夾具結構玻璃涉1,702萬)/151植筋雜項/158外構;158合約超預算91,114;另7件歸檔四處已串聯
 - [🔴0806:141E執行預算送簽](project_141E_execution_budget_0806.md) — 空白簽呈格式+會議紀錄草稿已產出;七疑義未解;缺大包合約與戶數
 - [🔴0806:銓億#1 memo已打進計價本](project_billing_quanyi1_0806.md) — 裁示「打進去」已完成;行通表①型(報7,000/工vs登記3,000~3,500)+無施作日期仍未解,已揭露在memo/M欄
 - 🔴0805: [打法說明壓縮完成](project_taofa_compression_0805.md)四份全壓/原文封存同活頁簿/hook擋裸.Save() · [問題總表74題](project_issue_master_sheet_0805.md)141A第3分頁待答 · [批次](project_billing_batch_state_0805.md)兩件沒解:平安#15涉1,260,106、7月報表差132,530
