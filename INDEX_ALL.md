@@ -22,7 +22,7 @@
 - [框架完結](project_stock_framework_refactor.md) / [對帳制度](project_stock_track_record.md) / [模擬倉(停用)](project_paper_trading.md) / [課程教材](reference_trading_course_source.md)
 - [分析師模板](feedback_stock_analyst_deep_dive.md) / [附股價時戳](feedback_always_show_price_with_timestamp.md) / [查法說日期](feedback_proactive_earnings_calendar.md) / [符號標反](reference_webfetch_price_sign_flip.md)
 - [Mac海選](feedback_mac_vs_windows_stock_selection.md) `full_market_scan.py`+T86 selectType=ALL / [重心是錢](user_money_first_focus.md) 從ROI給數字絕不掰
-- [0730崩盤留下的規則](project_market_crash_0730_state.md) — 2022-06型三項判定+分批至少過兩項+反彈日不等於止穩+待跑80萬試算(0717/AI七層兩快照已汰除)
+- [0730崩盤留下的規則](project_market_crash_0730_state.md) — 🔴分批「至少過兩項」已於0807證偽作廢改深度刻度;2022-06型三項判定首次實測也判反(抓不到企業獲利面);反彈日不等於止穩+待跑80萬試算
 
 ## 環境/系統
 - [🔴🔴模型/額度/派工手冊](reference_model_cost_and_dispatch_0806.md) — 切模型四層權限+中途切cache失效更貴;額度三筆(每輪注入最貴);規則層vs案件層;汰舊換新;派工三條件+🔴子代理禁動計價本/修改單本/交付檔;gate-dispatcher四層設計
