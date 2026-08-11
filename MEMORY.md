@@ -44,6 +44,8 @@
 - [🔴🔴報價單必須根基版本](feedback_quotation_must_be_kindom_form.md) — 非K02-3-PU01-01要警告,不擋件
 - [🔴🔴附件查檢手冊](reference_attachment_checklist_0806.md) — 每件都要列查檢段;缺件裁量在使用者;首期才要合約議價;五件組+工種速查;機具必COMS;加款免簽名但memo照寫;缺件只寫M欄+txt不進memo;行通表要複製進夾
 - [🔴🔴請款太晚要確實稽核](feedback_late_billing_alert.md) — 計價月=核定當月;>3個月打延遲句(以起始月判)+獨立成段
+- [🔴🔴🔴活件跨月要改計價月(0811)](feedback_billing_month_is_actual_month_0811.md) — 上月沒請款好=隔月續處理,計價月改當月;只改根目錄活件(送出/核准/退件/已歸檔不動);同步四處(夾名/A4公式/M欄/追蹤報表);🔴連動:改到115.08後行通表①型從補比價升級成直接不予請款;每月初跑 _跨月活件掃描.ps1
+- [🔴🔴🔴查核記錄版型(0811)](feedback_audit_txt_readable_format_0811.md) — 結論先行30行內看完;出處一字不刪只搬到📎查證明細段;每個❌必附數字;👉下一步寫動作;範本在Downloads\agent\查核記錄_版型範本.txt
 - [🔴手寫註記要讀完](feedback_handwritten_notes_on_vouchers.md) — 『報支1560』=只認列1,560
 - [混凝土必查抽磅](reference_concrete_material_billing_format.md) — 抽磅效益分頁易漏,全案累計
 - [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 只用他這輪給的
