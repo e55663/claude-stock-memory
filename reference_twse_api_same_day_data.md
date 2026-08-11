@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 7bfe59d6-f454-461e-8d55-a884d957dbc4
-  modified: 2026-07-30T09:23:13.437Z
+  modified: 2026-08-11T07:25:19.393Z
 ---
 
 115.07.30 17:00 盤後實測（收盤 13:30 早就過了）。
@@ -27,6 +27,29 @@ https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=YYYYMMDD&type=ALLBUT09
 - **BWIBBU_d（全市場 PE/PB/殖利率）**：`afterTrading/BWIBBU_d?date=...` 7/30 當日**尚未公布**（回「沒有符合條件的資料」）。替代＝直接用 MI_INDEX 第 15 欄的本益比。
 - **BWIBBU（個股 PE 歷史，做題3百分位用）**：`afterTrading/BWIBBU?date=YYYYMM01&stockNo=XXXX&response=json`，一次回該月每日。欄位序 `0日期 1殖利率 2股利年度 3本益比 4股價淨值比`。🔴**我曾取錯欄位**（拿 4 當 PE，結果長榮航跑出「PE 1.30~1.81」這種不可能的數字）——PE 是第 3 欄不是第 4 欄。
 - **月營收 t187ap05_L**：`https://openapi.twse.com.tw/v1/opendata/t187ap05_L`，欄位 `公司代號 / 營業收入-當月營收 / 營業收入-去年同月增減(%) / 累計營業收入-前期比較增減(%)`。
+
+## 🔴🔴 115.08.11 新增：BWIBBU_ALL 會「無聲吃掉」date 參數
+`afterTrading/BWIBBU_ALL?date=YYYYMMDD&response=json` — **date 參數完全無效，不管填哪天都回最新一個交易日**。實測抓 20260615 / 20260701 / 20260810 三個日期，三個檔案 SHA256 **完全相同**，內文 `title` 都是「115/08/10」。
+→ 我 0811 差點拿它做「7/1 vs 8/10 本益比比較」，跑出「每一檔 PE 前後一模一樣」的荒謬結果才發現。**任何歷史 PE/PB 比較一律用 `BWIBBU_d`**，它的 date 是真的有效（回傳 `date` 欄與 `title` 會跟著變）。
+- `BWIBBU_ALL` 欄位序：`0代號 1名稱 2本益比 3殖利率 4股價淨值比`
+- `BWIBBU_d` 欄位序（**不一樣，別套錯**）：`0代號 1名稱 2收盤價 3殖利率 4股利年度 5本益比 6股價淨值比 7財報年/季`
+- 🔴 `7財報年/季` 很有用：能看出 PE 分母是哪一季。**8 月財報季一過，全市場 PE 分母整批從 Q1 換成 Q2，PE 會集體機械性下修**，跟股價跌不跌無關（見 [[reference_pe_compression_not_oversold_0811]]）。
+- ⚠️ 個別日期會出現異常值（2327 在 20251114 回 PE 5.71 / PB 0.74，與前後差一個量級）→ 建歷史區間時要肉眼掃一遍剔除離群值，別直接算統計量。
+
+## 🔴 剛收盤（13:30~15:00）EOD 還沒入庫時怎麼辦
+0811 13:32 實測：`MI_INDEX`（當日）、`T86`、`BFI82U` 全部回空，只有前一交易日有資料。
+- 大盤即時：`https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0&_=<ms>` → `z`現價 `y`昨收 `o`開 `h`高 `l`低 `t`時間。
+- 全市場即時：同一支 API，`ex_ch` 用 `|` 串接，**一次最多約 45 檔**，1,087 檔約 24 批、間隔 250ms 跑得完。`v`＝累積成交量（張），成交金額只能用 `v×1000×z` 近似，要標明是近似值。
+- 🔴 這種日子的漲跌家數是自算的代理值（0811 自抓 1,087 檔得 380漲/607跌=0.63），**必須標明「官方家數未出」**，不能當官方數字報。
+
+## 🔴 股票簡稱後面的「*」＝彈性面額，不是處置股
+國巨*、可寧衛*、愛普* 這種。證交所加註「*」代表**該公司面額不是新臺幣 10 元**（彈性面額制度），跟處置股、分盤交易、全額交割**完全無關**。0811 我誤寫成「處置股分盤交易」被自己查證推翻，已更正紀錄檔。處置股要查證交所「處置有價證券」公告，不能看名稱猜。
+
+## 🔴 PowerShell 5.1 跑這些腳本的三個雷（0811 各踩一次）
+1. **Write 工具寫出的 .ps1 是無 BOM UTF-8，PS 5.1 會用 ANSI 讀 → 中文全毀、引號被吃、報「missing terminator」**。對策：寫完先轉存成帶 BOM 再執行 —
+   `$t=[IO.File]::ReadAllText($p,[Text.Encoding]::UTF8); [IO.File]::WriteAllText($p,$t,(New-Object Text.UTF8Encoding $true))`
+2. **`if` 不能當運算式內嵌**（`-f ... ,(if($x){a}else{b})` 直接報 CommandNotFound）。要先算進變數再用。
+3. **變數名大小寫不分**：`$A=@()` 會蓋掉前面的 `$a` 雜湊表，錯誤訊息是「[Object[]] does not contain ContainsKey」。用了 `$a/$b` 就別再用 `$A/$B`。
 
 ## 🔴 限流行為（實測）
 - **TWSE**：連續打 200+ 次後開始回 **307 Temporary Redirect**，且是靜默的（部分股票回 n=0 看起來像「沒資料」，其實是被擋）。對策＝每次 request 間隔 ≥0.7~1.5 秒、加 retry backoff、**成功月份數要印出來核對**（例如 12/12），不能只看有沒有拿到值。

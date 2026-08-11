@@ -5,10 +5,14 @@
 🔴 MEMORY.md 查無某條規則時，不准直接說「沒有這條規則」，要先讀完本檔。
 
 ## 投資
-- [持倉與觀察](portfolio_watchlist.md) — 2330+00981A(3189已賣),美股QQQM/NVDA
+- [🔴🔴🔴模擬部位≠實際持倉(0811)](feedback_simulated_vs_real_holdings_0811.md) — 第三次犯;沒他親口說過買進不得寫成持倉更不得給加減碼建議
+- [持倉與觀察](portfolio_watchlist.md) — 🔴唯一確認=2327國巨300股@607.19(0811);其餘全部未確認,2330/00981A/QQQM/NVDA只能標「上次確認為準」
+- [🔴國巨2327部位手冊(0811)](project_yageo_2327_position_0811.md) — 保本611/停損575;壓力帶650-700與750-800;型②已超額3.5倍該分批出;佔飆桶額度76%
+- [🔴0811選股現況(接手先讀)](project_stock_state_0811.md) — 季線8/10站回飆桶開;家數比0.63族群輪動;健鼎明日觸發條件;NVDA 5000億表外融資新風險(8/26攤牌)
+- [🔴🔴低PE≠超跌(0811)](reference_pe_compression_not_oversold_0811.md) — PE超高→個位數實際0檔;壓縮主因是8月財報季換分母;現在個位數PE的清一色循環股且這波在漲
 - [🔴80萬計畫](project_invest_80w_plan_0706.md) / [存30萬](project_savings_plan_30w.md) / [信貸100W](loan_investment_plan.md) / [信貸提問](reference_loan_question_checklist.md)
 - [🔴🔴🔴判「不接」也要過閘門(0807新增)](feedback_no_permanent_exclusion_0807.md) — 0730整組剔除記憶體/被動元件/ODM,6天內錯失13~39%;判價值陷阱要附出處+攤牌日+複查日,否則只能寫「暫不接待驗證」;有個股事件才可剔,只有產業敘事不可以
-- [🔴0807選股現況(接手先讀)](project_stock_state_0807.md) — 2026/07崩盤事件已結束(DD60-7.36%);持倉五檔停損價與法說日;季線只差-0.12%;三個待辦(macro_themes壞檔/規則未寫進正本/80萬試算)
+- [0807選股現況(已被0811取代)](project_stock_state_0807.md) — ⚠️裡面「持倉五檔」是模擬部位非實際持倉,勿引用
 - [🔴🔴🔴崩盤接刀手冊](feedback_crash_playbook_0806.md) — 三鐵則(夠深/抱60天/分批不猜底);🔴0807實測=2022型情境判定判反+分批間隔條件作廢改深度刻度;跌越深反彈越大;GAP錯殺代理;落底日不可預測;金融股是避震器;崩盤後0050贏但對他=加倉;半導體反彈最弱
 - [🔴🔴🔴推薦前必跑對照組](feedback_benchmark_comparison_required_0730.md) — 「買0050就好」推翻整套;前N名出口前加對照組
 - [金融股資料庫](reference_financial_stocks_data_0730.md) — 除權息/填息率/PB在最貴端;TWT49U參數startDate
