@@ -46,6 +46,7 @@
 - [🔴🔴請款太晚要確實稽核](feedback_late_billing_alert.md) — 計價月=核定當月;>3個月打延遲句(以起始月判)+獨立成段
 - [🔴🔴🔴活件跨月要改計價月(0811)](feedback_billing_month_is_actual_month_0811.md) — 上月沒請款好=隔月續處理,計價月改當月;只改根目錄活件(送出/核准/退件/已歸檔不動);同步四處(夾名/A4公式/M欄/追蹤報表);🔴連動:改到115.08後行通表①型從補比價升級成直接不予請款;每月初跑 _跨月活件掃描.ps1
 - [🔴🔴🔴查核記錄版型(0811)](feedback_audit_txt_readable_format_0811.md) — 結論先行30行內看完;出處一字不刪只搬到📎查證明細段;每個❌必附數字;👉下一步寫動作;範本在Downloads\agent\查核記錄_版型範本.txt
+- [🔴🔴🔴交件前我方要做完(0811)](feedback_finish_my_own_work_before_showing_0811.md) — ❌分兩類:我方未執行(抽點/連號/總量重算)必須做完不准丟給他看;工地缺件必須保留揭露藏起來=騙他;結論不准寫「我還沒查完」;抽點68張讀14次PDF一輪做得完;自己算錯自己抓+當場更正標明
 - [🔴手寫註記要讀完](feedback_handwritten_notes_on_vouchers.md) — 『報支1560』=只認列1,560
 - [混凝土必查抽磅](reference_concrete_material_billing_format.md) — 抽磅效益分頁易漏,全案累計
 - [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 只用他這輪給的
