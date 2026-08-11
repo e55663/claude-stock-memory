@@ -54,6 +54,7 @@
 - [🔴審核期限兩套](reference_billing_review_deadlines.md) — 台積電SC次月5號/PO15號;內案5號;🔴資料夾是真相
 - [🔴🔴月報表分界與格式(0807)](reference_monthly_report_split_0807.md) — 呈核日>=當月5號進當月本;每月5號回頭掃上月本;格式一律比照7月本(新細明體12/#,##0/外框粗內框細),建本別只靠複製
 - [🔴🔴115Q3行通表變化(0810)](reference_hangtong_115Q3_changes_0810.md) — 🔴品項逐季改寫(26T→26噸)查無是假的,要品項清單對清單;機具78→56家/租工58→48家;昇峰Q3掉出、正揚新登記、大象只剩月租;快打部隊全季0筆=②型;成駿吊掛手加班800→700
+- [🔴🔴追蹤報表「有問題的項目」區塊(0811)](reference_tracking_report_problem_block_0811.md) — 合計列下空一列+標題+五欄表頭(項次/合約/計價項目/期數/原因);只打退件或有問題的件;🔴原因由使用者當場告知不得自編;獨立於主表(不在主表也要列);解除後加「，已補正」不刪列
 - [月追蹤報表](reference_monthly_tracking_report.md) / [行通表位置](reference_hangtong_files_location.md) / [關鍵字觸發](reference_work_keywords.md)
 - [🔴會議紀錄規範](reference_meeting_minutes_workflow.md) — 指示事項按單位分段;逐字稿要交叉比對;我不能聽音訊
 - [141A外牆人力六家](project_facade_manpower_141A_0731.md) — 翔博合約6.69億剩4.21億;六家全缺COMS;O棟DCR要不到
