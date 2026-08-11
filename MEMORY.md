@@ -19,6 +19,7 @@
 - [🔴判「尚未簽名」前放大看](feedback_signature_check_before_claiming_unsigned.md) — 手寫常斜寫跨線;要寫出簽名內容與日期
 - [🔴🔴🔴重建檔案蓋掉他改好的版本](feedback_never_overwrite_user_edited_file.md) — 寫檔前比對SHA256;改既有檔原地編輯不重建
 - [🔴🔴工作習慣與輸出](feedback_work_habits_and_output_0806.md) — 每件都建不擱著/給的全做完/圓圈標記/別每檔clear
+- [🔴🔴輸出要短(0811)](feedback_concise_output_0811.md) — 結論先講/數字只留2-3個/限制一行/裁示放最後;約200字;完整版留紀錄檔
 - [🔴不要敷衍](feedback_no_perfunctory_work.md) / [只動我說的](feedback_only_do_whats_asked.md) / [不問確認問題](feedback_no_clarifying_questions.md) / [決定自動落檔](feedback_auto_save_decisions.md) / [繁中](feedback_language.md)
 
 ## 請款/計價 規則
@@ -54,6 +55,8 @@
 - [🔴審核期限兩套](reference_billing_review_deadlines.md) — 台積電SC次月5號/PO15號;內案5號;🔴資料夾是真相
 - [🔴🔴月報表分界與格式(0807)](reference_monthly_report_split_0807.md) — 呈核日>=當月5號進當月本;每月5號回頭掃上月本;格式一律比照7月本(新細明體12/#,##0/外框粗內框細),建本別只靠複製
 - [🔴🔴115Q3行通表變化(0810)](reference_hangtong_115Q3_changes_0810.md) — 🔴品項逐季改寫(26T→26噸)查無是假的,要品項清單對清單;機具78→56家/租工58→48家;昇峰Q3掉出、正揚新登記、大象只剩月租;快打部隊全季0筆=②型;成駿吊掛手加班800→700
+- [🔴🔴🔴丟問題前先自己查(0811)](feedback_check_myself_before_asking_site_0811.md) — 寫「需工地說明」前自問「這我自己查得到嗎」;跨期扣款/累計/超約/單價一律先翻前期歸檔夾;台泥#3病例:翻#2期扣款單就確認重複扣4,791,我卻丟回去問
+- [🔴🔴🔴你給的資料一律進本(0811)](feedback_always_post_to_book_0811.md) — 不管對錯先打進計價本/修改單本留紀錄再照打法說明處理;打法說明A24早有此條(有問題/退件的件照樣先建進計價本);台泥#3被我自行擱置=病根
 - [🔴🔴🔴退件由我搬夾+串聯(0811)](feedback_rejection_handling_by_me_0811.md) — 他只給「哪件退件+原因」;我做改夾名→搬2.退件→計價本M欄→總表留待核區→追蹤報表主表備註+合計列+問題區→查核記錄;🔴不要自己決定擋件(台泥#3病根);案夾存在就要登追蹤報表無裁量空間
 - [🔴🔴追蹤報表「有問題的項目」區塊(0811)](reference_tracking_report_problem_block_0811.md) — 合計列下空一列+標題+五欄表頭(項次/合約/計價項目/期數/原因);只打退件或有問題的件;🔴原因由使用者當場告知不得自編;獨立於主表(不在主表也要列);解除後加「，已補正」不刪列
 - [月追蹤報表](reference_monthly_tracking_report.md) / [行通表位置](reference_hangtong_files_location.md) / [關鍵字觸發](reference_work_keywords.md)
