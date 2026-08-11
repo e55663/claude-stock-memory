@@ -1,6 +1,8 @@
 # Memory Index
 
 ## 🔴 最高位階鐵則
+- [🔴🔴🔴正式 Excel 禁止直接改內部 XML](feedback_never_edit_xlsx_xml_directly_0811.md) — COM 逾時就停止，不得用 ZIP／OpenXML 繞過；正常存檔後須用 Excel 實際重開回測
+- [🔴🔴🔴模擬部位≠實際持倉](feedback_simulated_vs_real_holdings_0811.md) — 沒他親口說過買進(股數+均價+日期)不得寫成持倉,更不得給加減碼建議;0811第三次犯
 - [🔴🔴私人資料警告](feedback_company_workspace_privacy_warning.md) — 碰個人財務/身分/健康先警告;密碼Token不得貼入
 - [🔴🔴🔴Claude與Codex共用](feedback_claude_codex_shared_workflow.md) — 正本=AGENTS.md＋CLAUDE.md;測到正確才算完成
 - [🔴換手交接(收工必寫)](HANDOFF.md) — 日期/哪邊/做什麼/停在哪/待裁示;接手先讀最新段
