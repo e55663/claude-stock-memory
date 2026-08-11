@@ -10,6 +10,7 @@
 - [🔴國巨2327部位手冊(0811)](project_yageo_2327_position_0811.md) — 保本611/停損575;壓力帶650-700與750-800;型②已超額3.5倍該分批出;佔飆桶額度76%
 - [🔴0811選股現況(接手先讀)](project_stock_state_0811.md) — 季線8/10站回飆桶開;家數比0.63族群輪動;健鼎明日觸發條件;NVDA 5000億表外融資新風險(8/26攤牌)
 - [🔴🔴低PE≠超跌(0811)](reference_pe_compression_not_oversold_0811.md) — PE超高→個位數實際0檔;壓縮主因是8月財報季換分母;現在個位數PE的清一色循環股且這波在漲
+- [🔴🔴🔴廣度背離不是警訊(0811回測)](reference_breadth_divergence_backtest_0811.md) — 1214天跨2022熊市;多頭裡家數比越低fwd20越好且參數穩健;🔴真正該怕的是空頭中的全面普漲日(fwd20 -0.17%/勝48.9%);家數比中位1.01別再說「常態跌多漲少」
 - [🔴80萬計畫](project_invest_80w_plan_0706.md) / [存30萬](project_savings_plan_30w.md) / [信貸100W](loan_investment_plan.md) / [信貸提問](reference_loan_question_checklist.md)
 - [🔴🔴🔴判「不接」也要過閘門(0807新增)](feedback_no_permanent_exclusion_0807.md) — 0730整組剔除記憶體/被動元件/ODM,6天內錯失13~39%;判價值陷阱要附出處+攤牌日+複查日,否則只能寫「暫不接待驗證」;有個股事件才可剔,只有產業敘事不可以
 - [0807選股現況(已被0811取代)](project_stock_state_0807.md) — ⚠️裡面「持倉五檔」是模擬部位非實際持倉,勿引用
