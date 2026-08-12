@@ -85,13 +85,10 @@
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 ## 進行中批次（新→舊）
 - [🔴🔴0810九件批次全打進本](project_batch_0810.md) — 161/銓億#1/勝鈞#2/成駿#7/136齊昇/147呂發/150+158金鈺昌;🔴共同病灶=議價完成但差異表沒改(勝鈞18,155/齊昇86,916/呂發382,244);請款件維持工地送件值+揭露,修改單件直接用議定金額;🔴業變memo大改版(含利管費8.5%/利潤率÷提報業主/既有追加減取消三);🔴成駿#7簽單抽點20次未做不得核准
-- [🔴0810:141A-161點工預算調整已打進本](project_change_order_161_0810.md) — 淨0/加帳5,318萬待成管認定;9項未解疑義(改一式說法與表不符40,975,590仍算工/恐與139重複/平安超計948,688);未歸檔
-- [🔴0807:吉萊#2+金海#2請款已打進本](project_billing_jilai2_jinhai2_0807.md) — 回測80/0;🔴金海保留款10%疑漏扣262,872+請款單累計欄差648,000+進位多計432;吉萊缺請款單/報價單無數量單價/照片非本期
 - [🔴0807:四件修改單+7件歸檔](project_change_order_three_0807.md) — 138承園(再退)/143外牆切包(🔴翔博合約查無夾具結構玻璃涉1,702萬)/151植筋雜項/158外構;158合約超預算91,114;另7件歸檔四處已串聯
 - [🔴0806:141E執行預算送簽](project_141E_execution_budget_0806.md) — 空白簽呈格式+會議紀錄草稿已產出;七疑義未解;缺大包合約與戶數
-- [🔴0806:銓億#1 memo已打進計價本](project_billing_quanyi1_0806.md) — 裁示「打進去」已完成;行通表①型(報7,000/工vs登記3,000~3,500)+無施作日期仍未解,已揭露在memo/M欄
-- 🔴0805: [打法說明壓縮完成](project_taofa_compression_0805.md)四份全壓/原文封存同活頁簿/hook擋裸.Save() · [問題總表74題](project_issue_master_sheet_0805.md)141A第3分頁待答 · [批次](project_billing_batch_state_0805.md)兩件沒解:平安#15涉1,260,106、7月報表差132,530
-- 🔴0804批次(未結): [銘亮#11](project_billing_mingliang11_0804.md)代辦388,096待核組成/簽單缺號/發票 · [30件歸檔](project_billing_batch_state_0804.md)待裁示6項 · [安達#1](project_billing_anda1_codex_compare_0804.md)931,000不受影響/0805新3項 · [平安#15暫緩](project_billing_pingan15_0804.md)代辦少632,772/重複698/扣墊63,604/核決判董事長
+- 🔴0805: [打法說明壓縮完成](project_taofa_compression_0805.md)四份全壓/原文封存同活頁簿/hook擋裸.Save() · [問題總表74題](project_issue_master_sheet_0805.md)141A第3分頁待答 · [批次](project_billing_batch_state_0805.md)7月報表差132,530未解(平安#15已0812歸檔)
+- 🔴0804批次(未結): [30件歸檔](project_billing_batch_state_0804.md)待裁示6項
 - [出差報帳](reference_travel_reimbursement.md) — 1.公司\出差報帳;本期4趟8,915待送
 
 
