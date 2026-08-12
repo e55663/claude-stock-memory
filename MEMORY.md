@@ -69,7 +69,7 @@
 - [🔴141E執行預算進行中](project_141E_execution_budget_0806.md) — 執行預算730,447,811;七個疑義;缺附件一大包合約+戶數
 
 ## 修改單/入預算
-- [🔴🔴純預算調整memo定版(0810更新)](reference_pure_budget_memo_format_0807.md) — 括弧寫「預算調整」不是核決分類名;無採購句=四點結構(A7公式J4留空自動判);🔴E4只寫兩段小計不逐項列;不用「爰將」等文言連接詞;合計句不寫修改前後總額;逐字範本改141A-161
+- [🔴🔴🔴修改單memo三型決策樹(0812定版)](reference_pure_budget_memo_format_0807.md) — 🔴範本只取8月起的件,8月前不參考;甲純預算(括弧只寫預算調整/J4空=四點/C4不帶金額/E4只兩段小計)乙非業變動合約(填分類名/採購句=五點/C4講合約面+預算面)丙業變(三數,範本150不抄158);絕不寫「新增工項」非分類名
 - [🔴🔴🔴修改單邏輯＝請款單邏輯](feedback_change_order_follows_billing_logic_0807.md) — 動手前兩份打法說明都要讀;先進夾再審核;每夾必附查核記錄.txt逐條走
 - [修改單範本](reference_change_order_template.md) — 填7格→A7自動組裝,署名羅慶人
 - [碳費基金範式](reference_carbon_fee_change_order.md) — 非業變/淨0/工程專案主管◎決
