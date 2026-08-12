@@ -45,7 +45,7 @@
 - [🔴🔴報價單必須根基版本](feedback_quotation_must_be_kindom_form.md) — 非K02-3-PU01-01要警告,不擋件
 - [🔴🔴附件查檢手冊](reference_attachment_checklist_0806.md) — 每件都要列查檢段;缺件裁量在使用者;首期才要合約議價;五件組+工種速查;機具必COMS;加款免簽名但memo照寫;缺件只寫M欄+txt不進memo;行通表要複製進夾
 - [🔴🔴請款太晚要確實稽核](feedback_late_billing_alert.md) — 計價月=核定當月;>3個月打延遲句(以起始月判)+獨立成段
-- [🔴🔴🔴活件跨月要改計價月(0811)](feedback_billing_month_is_actual_month_0811.md) — 上月沒請款好=隔月續處理,計價月改當月;只改根目錄活件(送出/核准/退件/已歸檔不動);同步四處(夾名/A4公式/M欄/追蹤報表);🔴連動:改到115.08後行通表①型從補比價升級成直接不予請款;每月初跑 _跨月活件掃描.ps1
+- [🔴🔴🔴活件跨月要改計價月(0811)](feedback_billing_month_is_actual_month_0811.md) — 上月沒請款好=隔月續處理,計價月改當月;只改活件(送出/核准/退件/已歸檔不動);同步四處(夾名/A4公式/M欄/追蹤報表);🔴連動:改到115.08後行通表①型從補比價升級成直接不予請款;每月初跑 _跨月活件掃描.ps1
 - [🔴🔴🔴查核記錄版型(0811)](feedback_audit_txt_readable_format_0811.md) — 結論先行30行內看完;出處一字不刪只搬到📎查證明細段;每個❌必附數字;👉下一步寫動作;範本在Downloads\agent\查核記錄_版型範本.txt
 - [🔴🔴🔴交件前我方要做完(0811)](feedback_finish_my_own_work_before_showing_0811.md) — ❌分兩類:我方未執行(抽點/連號/總量重算)必須做完不准丟給他看;工地缺件必須保留揭露藏起來=騙他;結論不准寫「我還沒查完」;抽點68張讀14次PDF一輪做得完;自己算錯自己抓+當場更正標明
 - [🔴手寫註記要讀完](feedback_handwritten_notes_on_vouchers.md) — 『報支1560』=只認列1,560
@@ -81,20 +81,19 @@
 - [🔴掃描件查核打法](reference_scanned_audit_cost_and_toolchain.md) — Read可直接吃PDF(pages);poppler已無;量大分批
 - [備份即刪](feedback_delete_temp_backups.md) / [讀完整](feedback_read_files_completely.md) / [git位置](reference_git_path_windows.md)
 ## 歸檔/資料夾
-- [🔴🔴歸檔流程手冊](reference_archive_workflow_0806.md) — 先staging開夾(時間窗全掃)/夾名兩空格點格式/請款有月份夾修改單沒有/問題夾🔴/建夾當下查重刪舊留新/「歸檔」=已確認別再翻舊txt/歸檔後刪該案記憶
+- [🔴🔴🔴歸檔流程手冊+路徑地圖](reference_archive_workflow_0806.md) — 🔴0812路徑全改(工地→2.工地/五桶進「3.請款單 修改單」/活件=該夾直屬);先staging(時間窗全掃)/夾名兩空格點格式/請款有月份夾修改單沒有/問題夾🔴/建夾當下查重刪舊留新/「歸檔」=已確認別再翻舊txt/歸檔後刪該案記憶
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 ## 進行中批次（新→舊）
-- [🔴🔴0810九件批次全打進本](project_batch_0810.md) — 161/銓億#1/勝鈞#2/成駿#7/136齊昇/147呂發/150+158金鈺昌;🔴共同病灶=議價完成但差異表沒改(勝鈞18,155/齊昇86,916/呂發382,244);請款件維持工地送件值+揭露,修改單件直接用議定金額;🔴業變memo大改版(含利管費8.5%/利潤率÷提報業主/既有追加減取消三);回測531/0;🔴成駿#7簽單抽點20次未做不得核准
+- [🔴🔴0810九件批次全打進本](project_batch_0810.md) — 161/銓億#1/勝鈞#2/成駿#7/136齊昇/147呂發/150+158金鈺昌;🔴共同病灶=議價完成但差異表沒改(勝鈞18,155/齊昇86,916/呂發382,244);請款件維持工地送件值+揭露,修改單件直接用議定金額;🔴業變memo大改版(含利管費8.5%/利潤率÷提報業主/既有追加減取消三);🔴成駿#7簽單抽點20次未做不得核准
 - [🔴0810:141A-161點工預算調整已打進本](project_change_order_161_0810.md) — 淨0/加帳5,318萬待成管認定;9項未解疑義(改一式說法與表不符40,975,590仍算工/恐與139重複/平安超計948,688);未歸檔
 - [🔴0807:吉萊#2+金海#2請款已打進本](project_billing_jilai2_jinhai2_0807.md) — 回測80/0;🔴金海保留款10%疑漏扣262,872+請款單累計欄差648,000+進位多計432;吉萊缺請款單/報價單無數量單價/照片非本期
 - [🔴0807:四件修改單+7件歸檔](project_change_order_three_0807.md) — 138承園(再退)/143外牆切包(🔴翔博合約查無夾具結構玻璃涉1,702萬)/151植筋雜項/158外構;158合約超預算91,114;另7件歸檔四處已串聯
 - [🔴0806:141E執行預算送簽](project_141E_execution_budget_0806.md) — 空白簽呈格式+會議紀錄草稿已產出;七疑義未解;缺大包合約與戶數
 - [🔴0806:銓億#1 memo已打進計價本](project_billing_quanyi1_0806.md) — 裁示「打進去」已完成;行通表①型(報7,000/工vs登記3,000~3,500)+無施作日期仍未解,已揭露在memo/M欄
 - 🔴0805: [打法說明壓縮完成](project_taofa_compression_0805.md)四份全壓/原文封存同活頁簿/hook擋裸.Save() · [問題總表74題](project_issue_master_sheet_0805.md)141A第3分頁待答 · [批次](project_billing_batch_state_0805.md)兩件沒解:平安#15涉1,260,106、7月報表差132,530
-- 🔴0804批次(未結): [銘亮#11](project_billing_mingliang11_0804.md)代辦388,096待核組成/簽單缺號/發票 · [30件歸檔](project_billing_batch_state_0804.md)待裁示6項(呂發#7已0807歸檔) · [安達#1](project_billing_anda1_codex_compare_0804.md)931,000不受影響/0805新3項 · [平安#15暫緩](project_billing_pingan15_0804.md)代辦少632,772/重複698/扣墊63,604/核決判董事長
-- [出差報帳](reference_travel_reimbursement.md) — `Downloads\公司\出差報帳\`;本期4趟8,915待送
+- 🔴0804批次(未結): [銘亮#11](project_billing_mingliang11_0804.md)代辦388,096待核組成/簽單缺號/發票 · [30件歸檔](project_billing_batch_state_0804.md)待裁示6項 · [安達#1](project_billing_anda1_codex_compare_0804.md)931,000不受影響/0805新3項 · [平安#15暫緩](project_billing_pingan15_0804.md)代辦少632,772/重複698/扣墊63,604/核決判董事長
+- [出差報帳](reference_travel_reimbursement.md) — 1.公司\出差報帳;本期4趟8,915待送
 
 
 ## 🔴 第二層索引（本檔查無就去讀，不准直接說沒有）
 - [INDEX_ALL.md](INDEX_ALL.md) — 投資/環境系統/個人生活 共41條;講到選股·看盤·持倉·信貸·記帳·旅遊·hook·權限·跨裝置·模型選擇 → 先讀它
-  · 0811新增4條:模擬部位≠實際持倉／國巨2327部位手冊／0811選股現況／低PE≠超跌
