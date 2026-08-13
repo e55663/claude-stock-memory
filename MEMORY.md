@@ -86,8 +86,8 @@
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 ## 進行中批次（新→舊）
 - [🔴🔴0813八件批次+括弧規則改版](project_batch_0813.md) — 136/仕韋/152業變/宿舍押金/崇鼎退件/好名/七祥;🔴五項待裁示(152須送採購議價、43工vs56工、好名逐日差580/40/-620、七祥單號三版本、押金差9,000);🔴memo通則B(第3點=品名=金額)待他確認或否決
-- [🔴🔴0810九件批次全打進本](project_batch_0810.md) — 161/銓億#1/勝鈞#2/成駿#7/136齊昇/147呂發/150+158金鈺昌;🔴共同病灶=議價完成但差異表沒改(勝鈞18,155/齊昇86,916/呂發382,244);請款件維持工地送件值+揭露,修改單件直接用議定金額;🔴業變memo大改版(含利管費8.5%/利潤率÷提報業主/既有追加減取消三);🔴成駿#7簽單抽點20次未做不得核准
-- [🔴0807:四件修改單+7件歸檔](project_change_order_three_0807.md) — 138承園(再退)/143外牆切包(🔴翔博合約查無夾具結構玻璃涉1,702萬)/151植筋雜項/158外構;158合約超預算91,114;另7件歸檔四處已串聯
+- [🔴0810批次殘留兩件](project_batch_0810.md) — 只剩136齊昇(待簽核)/147呂發(退件);共同病灶=議價完成但差異表沒改(齊昇86,916/呂發382,244);請款件維持工地送件值+揭露,修改單件直接用議定金額
+- [🔴0807修改單殘留兩件](project_change_order_three_0807.md) — 138承園(再退)/143外牆切包(🔴翔博合約查無夾具結構玻璃涉1,702萬)
 - [🔴0806:141E執行預算送簽](project_141E_execution_budget_0806.md) — 空白簽呈格式+會議紀錄草稿已產出;七疑義未解;缺大包合約與戶數
 - 🔴0805: [打法說明壓縮完成](project_taofa_compression_0805.md)四份全壓/原文封存同活頁簿/hook擋裸.Save() · [問題總表74題](project_issue_master_sheet_0805.md)141A第3分頁待答 · [批次](project_billing_batch_state_0805.md)7月報表差132,530未解(平安#15已0812歸檔)
 - 🔴0804批次(未結): [30件歸檔](project_billing_batch_state_0804.md)待裁示6項
