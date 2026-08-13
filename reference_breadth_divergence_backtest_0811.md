@@ -47,4 +47,4 @@ metadata:
 ## 待辦
 🔴 這條還沒寫進 `Downloads\agent\計價回測工具\選股說明.txt` 十四段實證審核總表與判盤流程 —— **正本要使用者點頭才改**。
 
-相關：[[reference_twse_api_same_day_data]]、[[feedback_evidence_required_no_assumptions]]、[[project_stock_state_0811]]、[[feedback_benchmark_comparison_required_0730]]
+相關：[[reference_twse_api_same_day_data]]、[[feedback_evidence_required_no_assumptions]]、[[project_stock_state_0813]]、[[feedback_benchmark_comparison_required_0730]]

@@ -53,4 +53,4 @@ PE<10 且成交≥1 億共 18 檔，清一色景氣循環股，且多數自 7/1 
 2. PE/PB 對**它自己的歷史區間**，不是對同業 → 用 `BWIBBU_d` 逐月抓真實區間，別憑印象
 3. GAP 篩：同樣跌很深，「這波才跌」fwd60 中位 +16.96%/勝 86.2%；「早就在跌」只有 +8.66%/勝 73.0%（0730 廣池回測）
 
-相關：[[reference_twse_api_same_day_data]]、[[feedback_no_permanent_exclusion_0807]]、[[feedback_crash_playbook_0806]]、[[project_stock_state_0811]]
+相關：[[reference_twse_api_same_day_data]]、[[feedback_no_permanent_exclusion_0807]]、[[feedback_crash_playbook_0806]]、[[project_stock_state_0813]]

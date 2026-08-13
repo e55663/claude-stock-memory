@@ -25,4 +25,4 @@ metadata:
 ## 病根與對稱性
 框架第 46-56 行明訂「未查不准說可進」，有 hook 強制；但**反向的「未驗證就說不會消失 → 永久剔除」完全沒有閘門擋**。查別人 100 分、查自己 0 分的同一個病（見 [[feedback_gate_applies_to_my_own_output]]）。剔除一檔股票和推薦一檔股票，都是判斷，都要有依據。
 
-相關：[[feedback_crash_playbook_0806]]、[[feedback_evidence_required_no_assumptions]]、[[feedback_thesis1_needs_stock_specific_news]]、[[feedback_stock_completeness_gate]]、[[project_stock_state_0807]]
+相關：[[feedback_crash_playbook_0806]]、[[feedback_evidence_required_no_assumptions]]、[[feedback_thesis1_needs_stock_specific_news]]、[[feedback_stock_completeness_gate]]、[[project_stock_state_0813]]
