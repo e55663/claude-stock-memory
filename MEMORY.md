@@ -51,6 +51,7 @@
 - [🔴手寫註記要讀完](feedback_handwritten_notes_on_vouchers.md) — 『報支1560』=只認列1,560
 - [混凝土必查抽磅](reference_concrete_material_billing_format.md) — 抽磅效益分頁易漏,全案累計
 - [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 只用他這輪給的
+- [🔴🔴給的欄位值不准縮寫(0813)](feedback_no_abbreviating_user_given_names_0813.md) — 項目名/廠商/單號一字不改;「太長」不是理由,分頁名上限31字先數再說;五個落點都要全名;打法說明■三十
 - [自我稽核](feedback_self_audit_no_crutch.md) / [列控表](reference_billing_control_sheet_format.md) / [請款單建法](reference_billing_statement_template.md) / [memo歸位](reference_batch_memo_filing.md) / [對帳脈絡](reference_invoice_audit_context.md) / [0629](feedback_billing_corrections_0629.md)
 - [🔴審核期限兩套](reference_billing_review_deadlines.md) — 台積電SC次月5號/PO15號;內案5號;🔴資料夾是真相
 - [🔴🔴月報表分界與格式(0807)](reference_monthly_report_split_0807.md) — 呈核日>=當月5號進當月本;每月5號回頭掃上月本;格式一律比照7月本(新細明體12/#,##0/外框粗內框細),建本別只靠複製
