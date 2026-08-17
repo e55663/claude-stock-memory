@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 8a007757-43c3-4bd8-8838-2d576d43a25a
-  modified: 2026-08-05T09:06:47.281Z
+  modified: 2026-08-17T01:39:36.848Z
 ---
 
 # 計價本格式鐵則
@@ -26,6 +26,8 @@ metadata:
 - 下筆前用 F 欄定位「F＝這期期數」那列才更新；確認是全新期數才往最下新增；🔴絕不在沒確認 F 的情況下改某列 I/J/K。
 - 請款單寫 #X 但分頁只到 #(X−2)、中間真缺一期 → 停下來問；既有列金額/標號錯位是另一條線，不拿來擋本期。
 - 既有分頁加新期：先 `Range('B4:N4').Copy()` → `Range('B5:N5').PasteSpecial(-4104)` 複製整列格式再改 F/G/K/B；⚠️上一列 I 是空的複製下來也空，memo 吃 `&I&` 會變空要補回。
+- 🔴 **資料列 A~K 四邊一定要有框線**（0817 使用者抓到）。沒複製上一列格式就直接填值 → 整列無框線＋字級跑掉＋C/D/E/I/K 沒設 @。**病根也可能在 `範本 (6)` 自己**：141E 的範本 K4 只有左框線，由它複製出去的 42 個列全部遺傳 → 修列之前先驗範本那一列。已加測項 T13（`_計價本回測.ps1`）。
+- ⚠️ 量框線**不可以用整列 Range 的 `Borders(11)`(xlInsideVertical)**：逐格設好的 Left/Right 在整列層級照樣回 `-4142`，會對正常的列報假 FAIL。正解＝上下(8/9)與右(10)用整列量、左邊界與所有內部直線改逐格量 `Borders(7)`（第 c 格 Left ＝ 第 c-1 格 Right，同一條實體邊）。
 - memo 第1點固定：`1. 本期(114/11/01~11/30)…計價金額…元(未稅)`，區間從列控表施作日期 min~max 抓，不掰。
 - memo 第3點標籤寫「**本期項目:**」，不寫「本期施作項目」。
 - 署名固定 `職 羅慶人 敬呈 115.MM.DD`（日期＝問當天）；只有追溯不到的舊期補登可空。
@@ -51,5 +53,6 @@ metadata:
 - T3 新分頁 tab 是否在範本(6) 右邊第一個？總表有無對應列＋超連結？
 - T4 memo 有無「本期項目」「無扣款省略行並遞補編號」「工程項目不放單價行」三條？
 - T5 全分頁字體是否標楷體（含超連結格）？
+- T13 資料列 A~K 四邊框線齊全？`範本 (6)` 第4列本身框線齊全？（量法見上面那條，別用 xlInsideVertical）
 
 相關：[[feedback_self_audit_no_crutch]]、[[reference_billing_memo_standard_template]]、[[feedback_self_vs_deduct_contract]]、[[feedback_status_sync_five_places]]、[[reference_change_order_template]]、[[feedback_memory_manual_format_0805]]
