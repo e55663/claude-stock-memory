@@ -8,7 +8,7 @@
 - [🔴🔴🔴模擬部位≠實際持倉(0811)](feedback_simulated_vs_real_holdings_0811.md) — 第三次犯;沒他親口說過買進不得寫成持倉更不得給加減碼建議
 - [持倉與觀察](portfolio_watchlist.md) — 🔴唯一確認=2327國巨300股@607.19(0811);其餘全部未確認,2330/00981A/QQQM/NVDA只能標「上次確認為準」
 - [🔴國巨2327部位手冊(0813更新)](project_yageo_2327_position_0811.md) — 0813漲停662已進第一壓力帶650-700;型②超額4.9倍、20日到期8/28;保本611/停損575;外資8/11-8/12連兩日賣;佔飆桶額度76%;0811減半建議短期被打臉但理由未推翻
-- [🔴0813選股現況(接手先讀)](project_stock_state_0813.md) — 取代0807/0811兩版;創新高但乖離5.5%折扣降×0.7;🔴Q2財報已進openapi要改用年化PE;低PE榜全是記憶體循環股;晶碩/視陽=唯一乾淨好低點附觸發條件;力積電Q1是賣廠一次性+黃崇仁7/31過世
+- [🔴0818選股現況(接手先讀)](project_stock_state_0813.md) — 檔名仍0813但內容已更新到0818;🔴實算否定價量背離(量第68百分位/家數比1.197,別再拿8/13-14大量日當基準);穩桶續空手(季線上接深跌edge -0.90pp);距60日高-3.95%崩盤分批不觸發;模式C籌碼補正後21檔;🔴我點名「最乾淨」連四輪負貢獻已停用;🔴0050剔除國巨風險實算=零(市值第18名)
 - [🔴🔴🔴型②不套催化劑關(0813)](feedback_type2_no_catalyst_needed_0813.md) — 純價格訊號只套關1關2;我連兩輪用「催化劑講不出」擋掉它,而它是唯一穩定贏0050的招(+5.93% vs 大盤+1.97%);要擋只能逐檔講品質理由
 - [🔴🔴低PE≠超跌(0811)](reference_pe_compression_not_oversold_0811.md) — PE超高→個位數實際0檔;壓縮主因是8月財報季換分母;現在個位數PE的清一色循環股且這波在漲
 - [🔴🔴🔴廣度背離不是警訊(0811回測)](reference_breadth_divergence_backtest_0811.md) — 1214天跨2022熊市;多頭裡家數比越低fwd20越好且參數穩健;🔴真正該怕的是空頭中的全面普漲日(fwd20 -0.17%/勝48.9%);家數比中位1.01別再說「常態跌多漲少」
@@ -25,7 +25,7 @@
 - [🔴主線題材表(選股必看)](macro_themes.md) — 循環位置/已動未動/催化劑;飆股藏在復甦初期
 - [全市場](reference_full_market_screen.md) / [評分](feedback_stock_selection_system.md) / [選股閘門](feedback_stock_completeness_gate.md) / [進場](reference_stock_entry_checklist.md) / [飆股洞察](feedback_flystock_lessons.md) / [集中度標註](feedback_concentration_flag_not_filter.md) / [無腦掛單](feedback_brainless_order_system.md)
 - [🔴策略庫(查表)](reference_stock_strategy_library.md) — 20大策略+書籍雷達+課程要點+風險等級表;正本=選股說明.txt優先
-- [框架完結](project_stock_framework_refactor.md) / [對帳制度](project_stock_track_record.md) / [模擬倉(停用)](project_paper_trading.md) / [課程教材](reference_trading_course_source.md)
+- [框架完結](project_stock_framework_refactor.md) / [🔴🔴對帳制度+0818實績攤帳](project_stock_track_record.md) / [模擬倉(停用)](project_paper_trading.md) / [課程教材](reference_trading_course_source.md)
 - [分析師模板](feedback_stock_analyst_deep_dive.md) / [附股價時戳](feedback_always_show_price_with_timestamp.md) / [查法說日期](feedback_proactive_earnings_calendar.md) / [符號標反](reference_webfetch_price_sign_flip.md)
 - [Mac海選](feedback_mac_vs_windows_stock_selection.md) `full_market_scan.py`+T86 selectType=ALL / [重心是錢](user_money_first_focus.md) 從ROI給數字絕不掰
 - [0730崩盤留下的規則](project_market_crash_0730_state.md) — 🔴分批「至少過兩項」已於0807證偽作廢改深度刻度;2022-06型三項判定首次實測也判反(抓不到企業獲利面);反彈日不等於止穩+待跑80萬試算

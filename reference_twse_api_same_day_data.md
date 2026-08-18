@@ -60,6 +60,24 @@ https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=YYYYMMDD&type=ALLBUT09
 - 🔴 **一次性損益要靠 ap17 抓**：稅後純益率遠高於營業利益率＝業外灌水（0813 抓到偉詮電、研揚、聯電、新興）。力積電 2026Q1 EPS 3.36 幾乎全是賣 P5 廠給美光的處分利益、本業僅約 5 億，就是這型；只看 EPS 會嚴重高估。
 - 產業別欄要去 `t187ap05_L` 拿（ap17/ap06 沒有），排除字串用 `-like '金融*'`、`-like '建材營造*'`。
 
+## 🔴🔴 115.08.18 新增：盤中報價兩個雷 ＋ 台指期抓法
+
+### 🔴🔴 `z` 是 `-` 時**不准 fallback 到 `h`**（會報出完全相反的漲跌）
+`mis.twse.com.tw/.../getStockInfo.jsp` 盤中很多檔當下沒成交，`z` 與 `pz` **都會回 `-`**（不是只有漲停鎖死才這樣）。0818 我為了補值退而取 `h`（當日最高），結果 **台積電實際 2,380（−0.83%）被我報成 2,415（+0.62%）**，整份族群分析方向全反（原寫「AI 逆勢大漲」，真相是「AI 全面翻黑」）。
+- **正解取價順序**：`z` → `pz` → **`(b 第一檔 + a 第一檔)/2`**（`b`/`a` ＝委買/委賣五檔，用 `_` 串接，取 `split('_')[0]`）→ 都沒有才標 NA。
+- 自我檢查：算出來若「大盤跌但成分股幾乎全漲」，八成踩到這個雷，回頭看取價來源。
+
+### 台指期即時（含夜盤）＝期交所 MIS，POST
+```
+POST https://mis.taifex.com.tw/futures/api/getQuoteList
+Header: Content-Type: application/json, Referer: https://mis.taifex.com.tw/futures/
+Body: {"MarketType":"0","SymbolType":"F","KindID":"1","CID":"TXF","ExpireMonth":"","RowSize":"全部","PageNo":"","SortColumn":"","AscDesc":"A"}
+```
+回 `RtData.QuoteList[]`：`SymbolID`（`TXF-S`＝現貨指數、`TXFH6-F`＝近月、`TXFI6-F`＝次月）、`CLastPrice` 現價、`CRefPrice` 昨結、`CDiff`、`CHighPrice`/`CLowPrice`/`COpenPrice`、`CTotalVolume`、`CTime`。
+- **期現價差＝近月 − TXF-S**，負值＝逆價差＝期貨比現貨弱（0818 10:46 實測 −125 點）。
+- 這支**夜盤(15:00~翌日05:00)也回得到**，是「晚上看台指期」那段唯一資料源。台指期結算日＝當月第三個週三。
+- 🔴 抓 `tse_t00.tw` 時 WebClient **一定要設 `Encoding = UTF8`**，否則中文名稱亂碼會讓 `ConvertFrom-Json` 直接拋 parse error（0818 踩過）。
+
 ## 🔴 限流行為（實測）
 - **TWSE**：連續打 200+ 次後開始回 **307 Temporary Redirect**，且是靜默的（部分股票回 n=0 看起來像「沒資料」，其實是被擋）。對策＝每次 request 間隔 ≥0.7~1.5 秒、加 retry backoff、**成功月份數要印出來核對**（例如 12/12），不能只看有沒有拿到值。
 - **Yahoo**：連打會回 **429 Too Many Requests**。對策＝間隔 2 秒 + 3~4 次 retry，或改用 `query2.finance.yahoo.com`。
