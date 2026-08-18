@@ -35,7 +35,7 @@
 - [🔴🔴盲測污染:寫進索引=案子永久燒掉](feedback_blindtest_system_reminder_contamination_0804.md) — 開場強制載入擋不掉;測試案索引只寫狀態別寫發現
 - [三層權限政策](feedback_permission_tiers.md) — bypassPermissions+22條毀滅級deny
 - [🔴跨裝置同步手冊](project_cross_device_setup.md) — repo=e55663/claude-stock-memory;三台對接雲端不需同時開;一律從Downloads\agent開(打cc);設定用symlink版控;Mac那套是重建版;Mac硬碟清理待辦 / [Statusline](reference_statusline_powershell_fix.md) / [agent自動](project_ai_agent_automation.md)
-- [🔴🔴本機檔別產,但雲端看盤台要養(0818改版)](feedback_no_standalone_artifacts.md) — Artifact 看盤台=他要的交付物,四時段(開盤/盤中/盤尾籌碼/夜盤),網址固定重發布同一個;頁面不能自己打TWSE;window.claude 掛載比腳本晚別同步判定就鎖唯讀
+- [🔴🔴本機檔別產,但雲端看盤台要養(0818二版)](feedback_no_standalone_artifacts.md) — Artifact 看盤台=他要的交付物;🔴更新頻率建議每天2次(08:20盤前/16:20盤尾)+盤中隨叫,對齊他既有額度視窗06:00/11:10/16:20/21:30,待裁示;🔴省力關鍵=WebFetch拉回整份HTML只改數字再發布同一file path,不重建;兩件未驗(雲端routine有無Artifact權/重發布會不會蓋掉他寫的第10段);盤前簡報routine自0626已停用;頁面不能自己打TWSE;window.claude掛載比腳本晚別同步判定就鎖唯讀
 
 ## 個人生活
 - [🔴使用者檔案](user_profile.md) — 羅慶人/營造業副主任/品管+主任牌;🔴月生活費週期23號到23號非日曆月;飲料預設無糖;海外要勸阻衝動購買;表格不要橫向捲動
