@@ -20,7 +20,7 @@
 - [🔴🔴🔴重建檔案蓋掉他改好的版本](feedback_never_overwrite_user_edited_file.md) — 寫檔前比對SHA256;改既有檔原地編輯不重建
 - [🔴🔴工作習慣與輸出](feedback_work_habits_and_output_0806.md) — 每件都建不擱著/給的全做完/圓圈標記/別每檔clear
 - [🔴🔴輸出要短(0811)](feedback_concise_output_0811.md) — 結論先講/數字只留2-3個/限制一行/裁示放最後;約200字;完整版留紀錄檔
-- [🔴不要敷衍](feedback_no_perfunctory_work.md) / [只動我說的](feedback_only_do_whats_asked.md) / [不問確認問題](feedback_no_clarifying_questions.md) / [決定自動落檔](feedback_auto_save_decisions.md) / [繁中](feedback_language.md)
+- [🔴不要敷衍](feedback_no_perfunctory_work.md) / [只動我說的](feedback_only_do_whats_asked.md) / [不問確認問題+歸檔殘留自己做掉](feedback_no_clarifying_questions.md) / [決定自動落檔](feedback_auto_save_decisions.md) / [繁中](feedback_language.md)
 
 ## 請款/計價 規則
 - [🔴🔴狀態同步與合計列](feedback_status_sync_and_totals_0806.md) — 一件改要同步四處(M欄/總表/追蹤報表/夾名txt,標色已廢);開審前先查落地狀態四查;改memo同步整列;搬核定看單號層級;加列別蓋合計列;備註只能四狀態;資料夾是真相
