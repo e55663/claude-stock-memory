@@ -84,3 +84,10 @@ metadata:
 - T6 檢附用的是通名（請款單/列控表/合約）還是廠商抬頭？
 
 相關：[[reference_billing_book_format_rules]]、[[feedback_self_vs_deduct_contract]]、[[feedback_verbatim_memo_no_self_edit]]、[[feedback_late_billing_alert]]、[[feedback_user_edit_implies_rule_0730]]
+
+## 🔴 第3點 PO案（115.08.18 成正#6 使用者改版，落點 A29）
+- **PO案一行到底、頓號串接、末項句號**；逐項換行只適用 SC 案。我打成兩行被改回一行。
+- **數量欄是「式」的比例值（0.34式／0.02式）時只寫品名，不寫數量單位**：
+  我打「工區配電源工程 0.34式、各樓層動線照明及灌漿照明 0.02式。」→ 他改成「工區配電源工程、各樓層動線照明及灌漿照明。」。
+  判準＝那個數字是合約總量的完成比例、不是真實數量，寫出來對審核者沒意義；數量是真實量體（904.41M2／193噸／57.53噸）時照舊要寫。
+- 檢附通名新增「**加款單**」，與「扣款單」分流，見 [[reference_attachment_checklist_0806]]。
