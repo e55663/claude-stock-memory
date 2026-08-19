@@ -77,7 +77,7 @@
 - [入預算流程](reference_budget_entry_workflow.md) — 141E主檔分頁顏色標狀態;複製加MMDD前綴
 
 ## 檔案操作/工具鏈
-- [🔴🔴Excel+PS踩雷手冊](reference_excel_ps_traps_0806.md) — 桌面存檔安全流程(hook已擋裸Save)/COM讀取八雷/中文locale三雷/BOM與純ASCII命名/搬檔鐵則/批次做完必驗
+- [🔴🔴Excel+PS踩雷手冊](reference_excel_ps_traps_0806.md) — 🔴0819:計價本搬桌面\計價本、報表搬\追蹤本;hook實測擋不住裸SaveAs要自律;儲存格>8,192字會讓Formula整塊回null/COM讀取八雷/中文locale三雷/搬檔鐵則
 - [🔴🔴同頁PDF可能多張表單](feedback_multi_form_per_pdf_page_0803.md) — 12頁實際16張;總額逐張相加別用小計×1.05
 - [🔴掃描件查核打法](reference_scanned_audit_cost_and_toolchain.md) — Read可直接吃PDF(pages);poppler已無;量大分批
 - [備份即刪](feedback_delete_temp_backups.md) / [讀完整](feedback_read_files_completely.md) / [git位置](reference_git_path_windows.md)
@@ -85,7 +85,7 @@
 - [🔴🔴🔴歸檔流程手冊+路徑地圖](reference_archive_workflow_0806.md) — 🔴0812路徑全改(工地→2.工地/五桶進「3.請款單 修改單」/活件=該夾直屬);先staging(時間窗全掃)/夾名兩空格點格式/請款有月份夾修改單沒有/問題夾🔴/建夾當下查重刪舊留新/「歸檔」=已確認別再翻舊txt/歸檔後刪該案記憶
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 ## 進行中批次（新→舊）
-- [🔴🔴0817八件+0818六件已歸檔](project_batch_0817.md) — 🔴唯一待裁示=潤泰SC012182(列控表三錯+缺5件);🔴翔盛#9/成正#6退件(加款49,900vs59,400、628,400查無);瑞興#8造型陽台=152未議價;成駿/金鈺昌列控公式錯;🔴三件核決升處級主管;0817四項待補已全清(■三十五機具第3點只列品名已定版);🔴「下期再扣沒扣」稽核:和浚2,300跨三期/佑億131,191/金海保留款410,472
+- [🔴🔴0817~0819批次(成正#6/潤泰#1已歸檔)](project_batch_0817.md) — 🔴翔盛#9退件(加款49,900vs59,400)待裁示;瑞興#8造型陽台=152未議價;成駿/金鈺昌列控公式錯;三件核決升處級主管;🔴「下期再扣沒扣」:和浚2,300跨三期/佑億131,191/金海410,472;🔴桌面Excel已搬進計價本/追蹤本夾
 - [🔴0813批次(已消化5件)](project_batch_0813.md) — 剩136齊昇待簽核、崇鼎退件、宿舍押金差9,000;🔴memo通則B(第3點=品名=金額)待確認或否決
 - [🔴0810批次殘留兩件](project_batch_0810.md) — 只剩136齊昇(待簽核)/147呂發(退件);共同病灶=議價完成但差異表沒改(齊昇86,916/呂發382,244);請款件維持工地送件值+揭露,修改單件直接用議定金額
 - [🔴0807修改單殘留兩件](project_change_order_three_0807.md) — 138承園(再退)/143外牆切包(🔴翔博合約查無夾具結構玻璃涉1,702萬)
