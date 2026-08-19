@@ -23,7 +23,7 @@
 - [🔴停損紀律](feedback_stoploss_discipline_lessons_0720.md) — 同組兩檔觸停損整組出清
 - [🔴TWSE抓法](reference_twse_api_same_day_data.md) — 當日別用STOCK_DAY_ALL;改RWD MI_INDEX;BWIBBU的PE在第3欄
 - [🔴主線題材表(選股必看)](macro_themes.md) — 循環位置/已動未動/催化劑;飆股藏在復甦初期
-- [全市場](reference_full_market_screen.md) / [評分](feedback_stock_selection_system.md) / [選股閘門](feedback_stock_completeness_gate.md) / [🔴進場5題+他自己抓買點的方法](reference_stock_entry_checklist.md) 看前高✅實證(模式C骨幹)、看KD🟡20/80已測edge僅+0.12pp不採用但交叉版未測;給進場點要翻成他的語言 / [飆股洞察](feedback_flystock_lessons.md) / [集中度標註](feedback_concentration_flag_not_filter.md) / [無腦掛單](feedback_brainless_order_system.md)
+- [全市場](reference_full_market_screen.md) / [評分](feedback_stock_selection_system.md) / [選股閘門](feedback_stock_completeness_gate.md) / [🔴🔴進場5題+他抓買點的方法+🆕0819術語禁縮寫](reference_stock_entry_checklist.md) 看前高✅實證(模式C骨幹)、看KD🟡20/80已測edge僅+0.12pp不採用但交叉版未測;給進場點要翻成他的語言;🔴0819「你那些縮寫我都看不懂」=PE/PB/EPS/BPS/TTM第一次出現必附中文全名+白話一句,先講白話結論再放數字;規則0818就有我0819照樣違反 / [飆股洞察](feedback_flystock_lessons.md) / [集中度標註](feedback_concentration_flag_not_filter.md) / [無腦掛單](feedback_brainless_order_system.md)
 - [🔴策略庫(查表)](reference_stock_strategy_library.md) — 20大策略+書籍雷達+課程要點+風險等級表;正本=選股說明.txt優先
 - [框架完結](project_stock_framework_refactor.md) / [🔴🔴對帳制度+0818實績攤帳](project_stock_track_record.md) / [模擬倉(停用)](project_paper_trading.md) / [課程教材](reference_trading_course_source.md)
 - [分析師模板](feedback_stock_analyst_deep_dive.md) / [附股價時戳](feedback_always_show_price_with_timestamp.md) / [查法說日期](feedback_proactive_earnings_calendar.md) / [符號標反](reference_webfetch_price_sign_flip.md)
