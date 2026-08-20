@@ -1,0 +1,963 @@
+<title>Seal 的選股作戰台</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap">
+
+<style>
+  :root{
+    --paper:#EAEEF0; --surface:#FFFFFF; --surface-2:#F3F6F7;
+    --line:#D3DBDF; --line-soft:#E3E9EC;
+    --ink:#131A1E; --ink-2:#3E4E56; --muted:#6C7C84;
+    --up:#C62B22; --up-bg:#FBE9E7;
+    --down:#146B45; --down-bg:#E4F1EA;
+    --accent:#9A6E12; --accent-soft:#F4ECDA;
+    --pending:#8A8F94; --pending-bg:#ECEFF1;
+    --shadow:0 1px 2px rgba(19,26,30,.06), 0 8px 24px rgba(19,26,30,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#0E1417; --surface:#161E22; --surface-2:#1C262B;
+      --line:#2A373D; --line-soft:#222E33;
+      --ink:#E7EEF1; --ink-2:#B6C4CB; --muted:#84969E;
+      --up:#FF6257; --up-bg:#2C1A18;
+      --down:#3FCB88; --down-bg:#132A20;
+      --accent:#D8A94A; --accent-soft:#2A2317;
+      --pending:#7E8B92; --pending-bg:#1D262A;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0E1417; --surface:#161E22; --surface-2:#1C262B;
+    --line:#2A373D; --line-soft:#222E33;
+    --ink:#E7EEF1; --ink-2:#B6C4CB; --muted:#84969E;
+    --up:#FF6257; --up-bg:#2C1A18;
+    --down:#3FCB88; --down-bg:#132A20;
+    --accent:#D8A94A; --accent-soft:#2A2317;
+    --pending:#7E8B92; --pending-bg:#1D262A;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px rgba(0,0,0,.35);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+    font-size:15.5px; line-height:1.72; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:32px 20px 90px;display:flex;flex-direction:column;gap:30px;}
+  .num{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-variant-numeric:tabular-nums;}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px;}
+  @media (prefers-reduced-motion:reduce){*{transition:none !important;}}
+  a{color:var(--accent);}
+
+  /* masthead */
+  header{display:flex;flex-direction:column;gap:12px;}
+  .eyebrow{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);
+    font-weight:700;font-family:"IBM Plex Mono",monospace;}
+  h1{font-family:"Noto Serif TC",Georgia,serif;font-weight:900;font-size:clamp(27px,4.6vw,40px);
+     line-height:1.2;margin:0;letter-spacing:-.01em;text-wrap:balance;}
+  .stamp{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--muted);
+     font-family:"IBM Plex Mono",monospace;}
+  .stamp .live{color:var(--up);font-weight:700;}
+  .thesis{border-left:3px solid var(--accent);background:var(--surface);box-shadow:var(--shadow);
+    border-radius:0 10px 10px 0;padding:18px 22px;font-size:clamp(16px,2vw,19px);line-height:1.62;}
+  .thesis b{color:var(--accent);}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:20;background:var(--paper);
+      border-bottom:1px solid var(--line);padding:9px 0;margin:0 -20px;padding-left:20px;padding-right:20px;}
+  .navrow{display:flex;gap:5px;overflow-x:auto;scrollbar-width:thin;}
+  nav a{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;letter-spacing:.04em;
+    padding:5px 10px;border-radius:6px;white-space:nowrap;text-decoration:none;
+    color:var(--ink-2);border:1px solid var(--line-soft);background:var(--surface);}
+  nav a:hover{background:var(--accent-soft);color:var(--accent);}
+
+  /* section */
+  section{display:flex;flex-direction:column;gap:14px;scroll-margin-top:64px;}
+  .sec-head{display:flex;flex-direction:column;gap:2px;padding-bottom:9px;border-bottom:2px solid var(--line);}
+  .sec-head h2{font-family:"Noto Serif TC",Georgia,serif;font-size:clamp(19px,2.6vw,23px);font-weight:700;margin:0;}
+  .sec-head .sub{font-size:12.5px;color:var(--muted);}
+  .note{font-size:13px;color:var(--muted);margin:0;}
+  .note b{color:var(--ink-2);}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:1px;
+    background:var(--line-soft);border:1px solid var(--line-soft);border-radius:10px;overflow:hidden;box-shadow:var(--shadow);}
+  .stat{background:var(--surface);padding:14px 16px;display:flex;flex-direction:column;gap:2px;}
+  .stat .k{font-size:11px;color:var(--muted);font-family:"IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;}
+  .stat .v{font-size:22px;font-weight:600;line-height:1.25;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;}
+  .stat .s{font-size:11.5px;color:var(--ink-2);line-height:1.45;}
+  .up-txt{color:var(--up);} .down-txt{color:var(--down);} .na-txt{color:var(--pending);}
+
+  /* panels + rows */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:780px){.grid2{grid-template-columns:1fr;}}
+  .panel{background:var(--surface);border:1px solid var(--line-soft);border-radius:10px;
+    box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;}
+  .panel-head{padding:14px 16px 12px;border-bottom:1px solid var(--line-soft);display:flex;flex-direction:column;gap:2px;}
+  .panel-head .t{font-size:15.5px;font-weight:700;display:flex;align-items:center;gap:8px;}
+  .panel-head .d{font-size:12px;color:var(--muted);}
+  .tick{width:4px;height:16px;border-radius:2px;display:inline-block;}
+  .tick.up{background:var(--up);} .tick.down{background:var(--down);} .tick.acc{background:var(--accent);}
+  .rows{display:flex;flex-direction:column;}
+  .r{display:grid;grid-template-columns:auto 1fr auto auto;gap:9px;align-items:baseline;
+     padding:7px 16px;border-bottom:1px solid var(--line-soft);font-size:14px;}
+  .r:last-child{border-bottom:none;}
+  .r .code{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);}
+  .r .name{font-weight:500;}
+  .r .name em{font-style:normal;font-size:11px;color:var(--muted);margin-left:6px;}
+  .r .px{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;color:var(--ink-2);font-size:13px;}
+  .chg{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;font-size:12.5px;font-weight:600;
+    padding:2px 6px;border-radius:5px;min-width:60px;text-align:right;}
+  .chg.up{color:var(--up);background:var(--up-bg);}
+  .chg.down{color:var(--down);background:var(--down-bg);}
+  .chg.flat{color:var(--pending);background:var(--pending-bg);}
+  .flowpanel .r{grid-template-columns:auto 1fr auto;}
+
+  /* ledger */
+  .ledger{display:flex;flex-direction:column;gap:1px;background:var(--line-soft);
+    border:1px solid var(--line-soft);border-radius:10px;overflow:hidden;box-shadow:var(--shadow);}
+  .lrow{background:var(--surface);display:grid;grid-template-columns:70px 1fr;gap:13px;padding:12px 15px;align-items:start;}
+  .badge{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:700;letter-spacing:.03em;
+    padding:3px 0;border-radius:4px;text-align:center;white-space:nowrap;}
+  .badge.ok{background:var(--down-bg);color:var(--down);border:1px solid var(--down);}
+  .badge.bad{background:var(--up-bg);color:var(--up);border:1px solid var(--up);}
+  .badge.pend{background:var(--pending-bg);color:var(--pending);border:1px solid var(--line);}
+  .lrow .t{font-weight:700;font-size:14px;line-height:1.5;}
+  .lrow .d{font-size:13px;color:var(--ink-2);line-height:1.62;}
+
+  /* state board */
+  .board{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px;}
+  .st{background:var(--surface);border:1px solid var(--line-soft);border-radius:10px;padding:14px 16px;
+    display:flex;flex-direction:column;gap:6px;box-shadow:var(--shadow);}
+  .st .hd{display:flex;align-items:center;gap:8px;}
+  .st .dot{width:9px;height:9px;border-radius:50%;flex:none;}
+  .st .lab{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;}
+  .st ul{margin:0;padding-left:16px;display:flex;flex-direction:column;gap:4px;}
+  .st li{font-size:13px;color:var(--ink-2);line-height:1.58;}
+  .st li b{color:var(--ink);}
+
+  /* table */
+  .scroll{overflow-x:auto;border:1px solid var(--line-soft);border-radius:10px;background:var(--surface);box-shadow:var(--shadow);}
+  table{border-collapse:collapse;width:100%;min-width:680px;font-size:13px;}
+  th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line-soft);vertical-align:top;}
+  thead th{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;background:var(--surface-2);border-bottom:1px solid var(--line);white-space:nowrap;}
+  tbody tr:last-child td{border-bottom:none;}
+  td.n{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap;}
+  td .co{font-weight:700;}
+  td .flag{display:block;font-size:12px;color:var(--muted);line-height:1.5;}
+  tr.hi td{background:var(--accent-soft);}
+
+  /* rules */
+  .rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px;}
+  .rule{background:var(--surface);border:1px solid var(--line-soft);border-radius:10px;padding:17px 18px;
+    display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow);}
+  .rule.key{border-left:3px solid var(--accent);}
+  .rule h3{margin:0;font-size:15px;font-weight:700;line-height:1.45;}
+  .rule .kicker{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .rule ol,.rule ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;}
+  .rule li{font-size:13.5px;color:var(--ink-2);line-height:1.62;}
+  .rule li b{color:var(--ink);}
+  .rule p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.65;}
+  .ev-tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;
+    padding:1px 5px;border-radius:4px;margin-right:4px;vertical-align:1px;}
+  .ev-tag.y{background:var(--down-bg);color:var(--down);}
+  .ev-tag.m{background:var(--accent-soft);color:var(--accent);}
+  .ev-tag.n{background:var(--pending-bg);color:var(--pending);}
+
+  /* timeline */
+  .tl{display:flex;flex-direction:column;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft);
+    border-radius:10px;overflow:hidden;box-shadow:var(--shadow);}
+  .ev{background:var(--surface);display:grid;grid-template-columns:86px 1fr;gap:13px;padding:11px 15px;}
+  .ev .date{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:700;color:var(--accent);}
+  .ev .what{font-size:13px;color:var(--ink-2);line-height:1.58;}
+  .ev .what b{color:var(--ink);}
+  .ev.key{background:var(--accent-soft);}
+
+  /* book */
+  .book{background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);overflow:hidden;}
+  .book-head{padding:14px 17px;border-bottom:1px solid var(--line-soft);display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+  .book-head .t{font-size:15.5px;font-weight:700;}
+  .book-head .hint{font-size:12px;color:var(--muted);}
+  .book-head .rw{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:700;
+    padding:3px 9px;border-radius:20px;background:var(--down-bg);color:var(--down);}
+  [contenteditable="true"]{border-radius:4px;padding:2px 5px;margin:-2px -5px;min-width:36px;display:inline-block;}
+  [contenteditable="true"]:hover{background:var(--surface-2);}
+  [contenteditable="true"]:focus{background:var(--accent-soft);outline:2px solid var(--accent);}
+  .todos{list-style:none;margin:0;padding:5px 0;display:flex;flex-direction:column;}
+  .todos li{display:flex;gap:10px;align-items:flex-start;padding:7px 17px;border-bottom:1px solid var(--line-soft);}
+  .todos li:last-child{border-bottom:none;}
+  .todos input[type=checkbox]{margin-top:6px;width:16px;height:16px;accent-color:var(--accent);flex:none;}
+  .todos li[data-done="1"] .txt{text-decoration:line-through;color:var(--muted);}
+  .todos .txt{flex:1;font-size:14px;}
+  .memo{padding:13px 17px;min-height:88px;font-size:14px;line-height:1.75;}
+  .memo:empty::before{content:"點這裡打字…想到什麼直接記，會存下來，我下次讀得到。";color:var(--muted);}
+  .btnrow{display:flex;flex-wrap:wrap;gap:8px;padding:12px 17px;border-top:1px solid var(--line-soft);background:var(--surface-2);align-items:center;}
+  button{font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;border-radius:7px;
+    border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:6px 13px;}
+  button:hover{background:var(--accent-soft);}
+  button.mini{padding:2px 8px;font-size:11.5px;font-weight:500;color:var(--muted);}
+  .sect-lbl{padding:12px 17px 3px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;font-family:"IBM Plex Mono",monospace;}
+  [artifact-sync-state="off"]{opacity:.65;}
+
+  .warnbox{background:var(--accent-soft);border:1px solid var(--accent);border-radius:10px;
+    padding:14px 17px;font-size:13px;color:var(--ink-2);line-height:1.68;}
+  .warnbox b{color:var(--ink);}
+
+  footer{border-top:1px solid var(--line);padding-top:16px;font-size:12px;color:var(--muted);
+    line-height:1.75;display:flex;flex-direction:column;gap:5px;}
+  .legend{display:inline-flex;align-items:center;gap:6px;margin-right:14px;}
+  .swatch{width:10px;height:10px;border-radius:2px;display:inline-block;}
+</style>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">幫我選股 · 對帳＋判盤＋兩桶＋規則</div>
+    <h1>季線踩破了，第一筆門檻觸發</h1>
+    <div class="stamp">
+      <span class="live">● 8/19 收盤定案（週三）</span>
+      <span>台指期 8 月結算價 44,612</span>
+      <span>TWSE MI_INDEX／TAIEX／OpenAPI／期交所／Yahoo</span>
+    </div>
+    <div class="thesis">
+      加權收 <b>44,719.35（−1.30%）</b>，季線 44,811.97 → 乖離 <b>−0.207%</b>，<b>收盤確認跌破</b>。
+      這正是我早上寫下的門檻：<b>穩桶模式A 小額分批第一筆成立</b>。
+      但要講清楚 —— 觸發的是<b>「季線下接深跌」的 regime 條件（edge +2.84pp）</b>，<b>不是</b>型③崩盤分批（距 60 日高才 −6.33%，離 −10% 還有 3.92%）。
+      好公司清單今天<b>逆勢抗跌</b>（平均 0.00% vs 大盤 −1.30%），12 檔候選題1題2<b>全過</b>。
+    </div>
+  </header>
+
+  <nav>
+    <div class="navrow">
+      <a href="#dash">01 大盤儀表板</a>
+      <a href="#recon">02 對帳段</a>
+      <a href="#lines">03 主線六狀態</a>
+      <a href="#ai">04 AI 族群兩桶</a>
+      <a href="#buckets">05 兩桶決定</a>
+      <a href="#yageo">06 國巨 2327</a>
+      <a href="#listc">07 分批候選＋名單</a>
+      <a href="#chips">08 盤尾籌碼</a>
+      <a href="#cal">09 催化劑行事曆</a>
+      <a href="#rules">10 選股規則全文</a>
+      <a href="#book">11 我的紀錄本</a>
+    </div>
+  </nav>
+
+  <div class="warnbox">
+    🔴 <b>資料新鮮度分三種：</b>本頁絕大多數是 <b>8/19 收盤定案值</b>（指數、均線、家數比、量能、個股收盤、法人買賣金額）。<b>例外一：T86 個股三大法人買賣超 8/19 約 16:00 才出齊</b>，第 08 段仍是 8/18 資料，已標明。<b>例外二：催化劑行事曆沿用 8/18 版未重驗</b>。<b>沒有拿舊值假裝新值。</b>
+  </div>
+
+  <!-- ========== 01 大盤 ========== -->
+  <section id="dash">
+    <div class="sec-head">
+      <p class="eyebrow">01 — 判盤③ 台股大盤</p>
+      <h2>開盤即最高，全天不回頭</h2>
+      <p class="sub">8/19 收盤定案　·　均線用 TWSE TAIEX 130 個交易日重算，不是 Yahoo 估值</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="k">加權指數</span><span class="v down-txt">44,719.35</span><span class="s down-txt">−1.30%　昨收 45,308.68</span></div>
+      <div class="stat"><span class="k">季線 MA60 乖離</span><span class="v down-txt">−0.207%</span><span class="s">季線 44,811.97<br>🔴 <b>收盤確認跌破 ← 門檻觸發</b></span></div>
+      <div class="stat"><span class="k">距 60 日高</span><span class="v down-txt">−6.33%</span><span class="s">高點 47,741.51 收盤口徑<br>盤中口徑 −7.26%　<b>未達 −10%</b></span></div>
+      <div class="stat"><span class="k">MA20 乖離</span><span class="v">+1.62%</span><span class="s">MA20 44,005.10　月線還站著<br>倉位折扣 ×1.0</span></div>
+      <div class="stat"><span class="k">MA5 乖離</span><span class="v down-txt">−1.81%</span><span class="s">MA5 45,543.56</span></div>
+      <div class="stat"><span class="k">今日區間</span><span class="v">44,309<span style="font-size:15px">–</span>45,071</span><span class="s">🔴 <b>開盤 45,071.34 就是全日最高</b><br>盤中最深 −2.21%</span></div>
+      <div class="stat"><span class="k">漲跌家數比</span><span class="v">0.622</span><span class="s">372 漲（9 漲停）／598 跌（1 跌停）<br>第 <b>32.7</b> 百分位（8/18 是 11.4）</span></div>
+      <div class="stat"><span class="k">成交金額</span><span class="v">8,857 億</span><span class="s">近一年第 <b>67</b> 百分位<br>8/18 是 10,079 億／第 81 → <b>縮量</b></span></div>
+      <div class="stat"><span class="k">三大法人</span><span class="v down-txt">−708.48 億</span><span class="s">外資 −416.39／投信 −120.91<br>自營避險 −131.56</span></div>
+      <div class="stat"><span class="k">台指期結算價</span><span class="v">44,612</span><span class="s">8 月合約最後結算價<br>比現貨收盤低 107 點</span></div>
+    </div>
+    <p class="note"><b>🔴 三大法人 −708 億這個數字要打折看：</b>今天是結算日，外資與自營避險的部位包含結算與轉倉效應，<b>不能直接當方向解讀</b>。真正乾淨的訊號是明天的 T86。<br><b>🔴 廣度今天其實改善了：</b>家數比從 8/18 的 0.274（第 11.4 百分位）回到 0.622（第 32.7 百分位），加上量縮 —— 這是<b>賣壓遞減</b>的樣子，不是恐慌擴大的樣子。<br><b>型③崩盤分批仍不觸發：</b>距 60 日高 −6.33%，深跌 −15%、半山腰 −10% 都沒到。今天觸發的是另一個東西，見第 05 段。</p>
+  </section>
+
+  <section id="recon">
+    <div class="sec-head">
+      <p class="eyebrow">02 — 強制對帳段</p>
+      <h2>今天講過的話，用今天收盤驗</h2>
+      <p class="sub">對照組：加權 −1.30%／0050 104.9→103.1＝−1.72%　·　三對兩錯，含一條當天就被打臉</p>
+    </div>
+    <div class="ledger">
+      <div class="lrow"><span class="badge bad">判錯</span><div>
+        <p class="t">🔴 我早上判「飆桶關，模式C 7 檔只登錄不進場」—— 當天被打臉</p>
+        <p class="d">那 7 檔 8/19 收盤平均 <span class="num up-txt">+0.99%</span> vs 大盤 −1.30%，<b>贏 2.29pp</b>。5608 四維航 <span class="num up-txt">+9.72%</span>、3008 大立光 <span class="num up-txt">+4.91%</span>、7750 新代 +1.00%；只有 7795 長廣 −4.90%、3450 聯鈞 −2.07% 拖後腿。<b>理由沒錯（季線開關＋舊名單衰退），結論錯了。</b>誠實記，不粉飾。</p></div></div>
+      <div class="lrow"><span class="badge ok">判對</span><div>
+        <p class="t">模式C 8/17 舊名單 21 檔三日累計 <span class="num down-txt">−2.06%</span>（中位 −3.29%）</p>
+        <p class="d">8/18 收 −0.67%、8/19 收再 −1.43%。<b>舊名單動能確實失效</b> —— 但要跟上一條合看：<b>衰退的是舊名單，不是模式C 規則</b>。規則每天重跑出來的新名單今天是贏的。</p></div></div>
+      <div class="lrow"><span class="badge bad">全滅</span><div>
+        <p class="t">🔴🔴 型② 8/18 訊號 34 檔：止穩 <span class="num">0</span> 檔、破前低 <span class="num">33</span> 檔</p>
+        <p class="d">判定＝8/19 最低是否守住 8/18 最低。<b>沒有一檔通過</b>，含 2327 國巨（8/18 低 574 → 8/19 低 <b>547</b>，破）。加上 8/17 那批 4 檔最後也全不合格，<b>兩批共 38 檔零通過</b>。→ <b>型② 在指數級殺盤裡完全不 work</b>，這條要進打法說明：破季線期間應直接關閉型② 的止穩判定，別每天空跑。</p></div></div>
+      <div class="lrow"><span class="badge ok">判對</span><div>
+        <p class="t">穩桶「掛單等、今天不進」—— 早上判對，收盤條件才成立</p>
+        <p class="d">好公司清單 8/19 平均 <span class="num">0.00%</span>／中位 −0.31%，大盤 −1.30% → <b>清單逆勢抗跌，贏 1.30pp</b>。早上沒追進去、等收盤確認季線，是對的做法。</p></div></div>
+      <div class="lrow"><span class="badge pend">待補</span><div>
+        <p class="t">🔴 8/18「不建議攤平國巨」→ 已被你的加碼動作取代</p>
+        <p class="d">8/19 收 576 平盤，對已確認成本 607.19 ＝ <span class="num down-txt">−5.14%</span>（300 股帳面 −9,357 元）。<b>你說加碼了但沒給股數／成交價／日期</b>，我不能改持倉、不能重算均價 —— 直接在下面第 11 段填最快。</p></div></div>
+    </div>
+  </section>
+
+  <section id="lines">
+    <div class="sec-head">
+      <p class="eyebrow">03 — 判盤② 主線接棒六狀態</p>
+      <h2>面板與記憶體帶頭殺，被動元件逆勢</h2>
+      <p class="sub">8/19 收盤　·　🔴 類股指數本輪未逐類抓，以下是個股口徑推得的判斷</p>
+    </div>
+    <div class="board">
+      <div class="st"><div class="hd"><span class="dot" style="background:var(--up)"></span><span class="lab up-txt">衝刺中</span></div>
+        <ul>
+          <li><b>被動元件</b> 2492 華新科 <b>+5.67%</b> 收 298（連兩天大漲，8/18 也 +6.91%）。🔴 但 2327 國巨 <b>0.00%</b> 連兩天沒跟上 —— <b>國巨是族群裡最弱的那個</b>，別把族群反彈當成它會漲的理由</li>
+          <li><b>AI PC 與 ODM</b> 2357 華碩 +1.65%、2382 廣達 +1.22%、2356 英業達 +0.46% —— 在殺盤日翻紅，資金從上游往下游躲</li>
+        </ul></div>
+      <div class="st"><div class="hd"><span class="dot" style="background:var(--down)"></span><span class="lab down-txt">快掉棒</span></div>
+        <ul>
+          <li><b>記憶體</b> 2408 南亞科 <b>−6.60%</b>（成交 335.1 億，全場最大）、2344 華邦電 −4.82%、2337 旺宏 −2.46%。上游 MU 8/18 −7.02% 已先殺</li>
+          <li><b>面板</b> 3481 群創 −5.56%、2409 友達（外資 8/18 賣超 32,023 張）—— 外資連兩天倒面板</li>
+          <li><b>CCL 與塑化</b> 2383 台光電 <b>−5.24%</b>（176.3 億）、1303 南亞 −6.25%（138.0 億）、8046 南電 −5.22%（182.0 億）</li>
+          <li><b>ASIC 與晶圓</b> 3443 創意 −4.34%、6770 力積電 −4.45%、3661 世芯 −2.29%</li>
+        </ul></div>
+      <div class="st"><div class="hd"><span class="dot" style="background:var(--accent)"></span><span class="lab" style="color:var(--accent)">過半場</span></div>
+        <ul><li><b>權值</b> 2330 台積電 −1.26% 收 2,350（成交 544.3 億全場最大）、2454 聯發科 −1.03%、3711 日月光 −1.84% —— 跌但沒崩，是撐住指數的那批</li></ul></div>
+      <div class="st"><div class="hd"><span class="dot" style="background:var(--muted)"></span><span class="lab" style="color:var(--muted)">還太早</span></div>
+        <ul><li><b>金融股</b> 投信 8/18 買超前五全是金控，外資同時倒同一批。<b>法人對作＝方向未定，不是訊號</b></li></ul></div>
+      <div class="st"><div class="hd"><span class="dot" style="background:var(--line)"></span><span class="lab" style="color:var(--muted)">未取得</span></div>
+        <ul><li>官方類股指數漲跌幅本輪<b>沒有逐類抓</b>；T86 個股法人買賣超 8/19 版約 16:00 才出齊。誠實標明。</li></ul></div>
+    </div>
+  </section>
+
+  <section id="ai">
+    <div class="sec-head">
+      <p class="eyebrow">04 — AI 族群內部</p>
+      <h2>兩天前「還有資金」的那桶，已經整組換人</h2>
+      <p class="sub">8/19 收盤　·　跟 8/18 早上那份對照著看</p>
+    </div>
+    <div class="grid2">
+      <div class="panel">
+        <div class="panel-head"><div class="t"><span class="tick up"></span>還撐著（逆勢紅／平盤）</div>
+          <div class="d">被動元件 · AI PC/ODM · 散熱 · IP</div></div>
+        <div class="rows">
+          <div class="r"><span class="code num">2492</span><span class="name">華新科<em>MLCC</em></span><span class="px">298</span><span class="chg up">+5.67%</span></div>
+          <div class="r"><span class="code num">2357</span><span class="name">華碩<em>AI PC</em></span><span class="px">925</span><span class="chg up">+1.65%</span></div>
+          <div class="r"><span class="code num">6533</span><span class="name">晶心科<em>RISC-V IP</em></span><span class="px">248.5</span><span class="chg up">+1.43%</span></div>
+          <div class="r"><span class="code num">2382</span><span class="name">廣達<em>ODM</em></span><span class="px">331</span><span class="chg up">+1.22%</span></div>
+          <div class="r"><span class="code num">2356</span><span class="name">英業達<em>AI 伺服器</em></span><span class="px">65.2</span><span class="chg up">+0.46%</span></div>
+          <div class="r"><span class="code num">3017</span><span class="name">奇鋐<em>散熱</em></span><span class="px">3,095</span><span class="chg flat">0.00%</span></div>
+          <div class="r"><span class="code num">2301</span><span class="name">光寶科<em>電源</em></span><span class="px">273.5</span><span class="chg flat">0.00%</span></div>
+          <div class="r"><span class="code num">2327</span><span class="name">國巨*<em>MLCC · 你的持股</em></span><span class="px">576</span><span class="chg flat">0.00%</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div class="t"><span class="tick down"></span>在退（跌幅前段）</div>
+          <div class="d">記憶體 · 面板 · CCL · ASIC · 載板</div></div>
+        <div class="rows">
+          <div class="r"><span class="code num">2408</span><span class="name">南亞科<em>DRAM</em></span><span class="px">481</span><span class="chg down">−6.60%</span></div>
+          <div class="r"><span class="code num">1303</span><span class="name">南亞<em>塑化/CCL</em></span><span class="px">187.5</span><span class="chg down">−6.25%</span></div>
+          <div class="r"><span class="code num">3481</span><span class="name">群創<em>面板</em></span><span class="px">46.75</span><span class="chg down">−5.56%</span></div>
+          <div class="r"><span class="code num">2383</span><span class="name">台光電<em>CCL</em></span><span class="px">5,880</span><span class="chg down">−5.24%</span></div>
+          <div class="r"><span class="code num">8046</span><span class="name">南電<em>載板</em></span><span class="px">1,180</span><span class="chg down">−5.22%</span></div>
+          <div class="r"><span class="code num">2455</span><span class="name">全新<em>砷化鎵</em></span><span class="px">396.5</span><span class="chg down">−5.03%</span></div>
+          <div class="r"><span class="code num">2344</span><span class="name">華邦電<em>記憶體</em></span><span class="px">168</span><span class="chg down">−4.82%</span></div>
+          <div class="r"><span class="code num">6770</span><span class="name">力積電<em>晶圓代工</em></span><span class="px">66.6</span><span class="chg down">−4.45%</span></div>
+          <div class="r"><span class="code num">3443</span><span class="name">創意<em>ASIC</em></span><span class="px">5,295</span><span class="chg down">−4.34%</span></div>
+          <div class="r"><span class="code num">2308</span><span class="name">台達電<em>電源</em></span><span class="px">1,765</span><span class="chg down">−3.02%</span></div>
+          <div class="r"><span class="code num">2337</span><span class="name">旺宏<em>記憶體</em></span><span class="px">119</span><span class="chg down">−2.46%</span></div>
+          <div class="r"><span class="code num">3661</span><span class="name">世芯-KY<em>ASIC</em></span><span class="px">3,630</span><span class="chg down">−2.29%</span></div>
+          <div class="r"><span class="code num">3711</span><span class="name">日月光投控<em>封測</em></span><span class="px">588</span><span class="chg down">−1.84%</span></div>
+          <div class="r"><span class="code num">6451</span><span class="name">訊芯-KY<em>CPO 封裝</em></span><span class="px">414</span><span class="chg down">−1.66%</span></div>
+          <div class="r"><span class="code num">2317</span><span class="name">鴻海<em>ODM</em></span><span class="px">245</span><span class="chg down">−1.61%</span></div>
+          <div class="r"><span class="code num">3037</span><span class="name">欣興<em>ABF 載板</em></span><span class="px">1,130</span><span class="chg down">−1.31%</span></div>
+          <div class="r"><span class="code num">2330</span><span class="name">台積電<em>晶圓代工</em></span><span class="px">2,350</span><span class="chg down">−1.26%</span></div>
+          <div class="r"><span class="code num">2454</span><span class="name">聯發科<em>IC 設計</em></span><span class="px">3,845</span><span class="chg down">−1.03%</span></div>
+          <div class="r"><span class="code num">6669</span><span class="name">緯穎<em>伺服器</em></span><span class="px">6,375</span><span class="chg down">−0.39%</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="note"><b>兩天內這一段翻了兩次，這件事本身就是結論。</b>8/18 早上「還有資金」的是光通訊、矽晶圓、電源；8/19 早上那批全翻黑；今天收盤換成被動元件與 AI PC/ODM 在撐。<b>族群輪動的標籤在殺盤期間撐不過一天</b> —— 這就是飆桶規則上該關的理由（雖然今天新名單反而贏，見第 05 段我的判錯）。<br>🔴 <b>你手上的國巨連兩天都是族群裡最弱的：</b>8/18 華新科 +6.91% 對國巨 −5.26%，8/19 華新科 +5.67% 對國巨 0.00%。</p>
+  </section>
+
+  <section id="buckets">
+    <div class="sec-head">
+      <p class="eyebrow">05 — 兩桶決定</p>
+      <h2>穩桶第一筆成立，飆桶維持關</h2>
+    </div>
+    <div class="grid2">
+      <div class="panel">
+        <div class="panel-head"><div class="t"><span class="tick up"></span>穩桶 70% · 🔴 小額分批第一筆【觸發】</div>
+          <div class="d">模式A　·　從早上的「掛單等」進到「可以下第一筆」</div></div>
+        <div style="padding:14px 16px;"><ul style="margin:0;padding-left:17px;display:flex;flex-direction:column;gap:7px;font-size:13.5px;color:var(--ink-2);line-height:1.6;">
+          <li><b>觸發的是什麼：</b>我早上寫的門檻是「加權<b>收盤</b>跌破 MA60 → 小額分批第一筆」。今天收 44,719.35 &lt; 季線 44,811.97，<b>✅ 成立</b>。依據＝115.07.22 跨 regime 回測：季線<b>上</b>接個股深跌 fwd60 +1.36%／勝 53%（edge −0.90pp），季線<b>下</b>才 +4.90%／勝 57%（edge <b>+2.84pp</b>）</li>
+          <li>🔴 <b>沒觸發的是什麼：</b>型③崩盤分批（距 60 日高 ≤−10%／−15%）<b>還沒到</b>，現在 −6.33%。所以這是<b>小額試單</b>，不是崩盤加碼，兩件事不要混</li>
+          <li><b>題1 系統性非個股利空？</b>✅ 是 —— 費半 −4.98%、外資 8/18 連 0050 都賣 16,101 張、8/19 再賣 416 億＝指數層級調節</li>
+          <li><b>題2 基本面沒變或更好？</b>✅ 12 檔全過（實抓 TWSE OpenAPI 11507 月營收＋115Q2 綜合損益）</li>
+          <li>🔴 <b>深度口徑我自己校正過：</b>原本用「距 60 日高」篩，但回測定義是「距 <b>250</b> 日高 ≤−20%」—— 補算後 <b>12 檔用 250 日口徑也全部達標</b></li>
+          <li><b>怎麼做：</b>小額 × 大盤折扣 ×1.0；停損＝進場價 ×93% 或跌破 MA5 收盤取較近；<b>抱 60 天、分批不猜底</b>。第二筆門檻＝距 60 日高 −10%＝加權 <b>42,967</b>（還要再跌 3.92%）</li>
+        </ul></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div class="t"><span class="tick down"></span>飆桶 30% · 維持關</div>
+          <div class="d">🔴 但我今天判錯了一次，見下</div></div>
+        <div style="padding:14px 16px;"><ul style="margin:0;padding-left:17px;display:flex;flex-direction:column;gap:7px;font-size:13.5px;color:var(--ink-2);line-height:1.6;">
+          <li>框架規則＝<b>破季線關飆桶／動能</b>。今天收盤正式破季線，所以規則上更該關</li>
+          <li>🔴 <b>但誠實記：我早上判「模式C 7 檔只登錄不進場」，當天就被打臉。</b>那 7 檔 8/19 平均 <b class="up-txt">+0.99%</b> vs 大盤 −1.30%，<b>贏 2.29pp</b>。四維航 +9.72%、大立光 +4.91%</li>
+          <li><b>要分清楚兩件事：</b>衰退的是<b>舊名單</b>（8/17 那批 21 檔三日累計 −2.06%），不是模式C 規則本身 —— 規則每天重新命中的<b>新名單</b>今天是贏的</li>
+          <li>單日不構成論點推翻（模式C 設計是 5–10 日持有），但這條要持續追。<b>飆桶開關是否該只看季線，我會再回測</b></li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="yageo">
+    <div class="sec-head">
+      <p class="eyebrow">06 — 你的持股</p>
+      <h2>國巨 2327：多久回到 1000？</h2>
+      <p class="sub">你問的那題。我拿它自己 10 年的日資料算，不憑印象。</p>
+    </div>
+
+    <div class="warnbox">
+      🔴 <b>先更正一個字：不是「回檔」到 1000，是要「漲回」去。</b>
+      7/1 盤中高 <span class="num">1,220</span>（歷史天價）→ 7/30 收 <span class="num">456.5</span>，中間含連兩根跌停，一個月 <span class="num down-txt">−62.6%</span> → 8/19 收 <span class="num">576</span>。從這裡回到 1000 要漲 <b class="num up-txt">+73.6%</b>。
+    </div>
+
+    <div class="stats">
+      <div class="stat"><span class="k">8/19 收盤</span><span class="v">576</span><span class="s">0.00% 平盤　🔴 盤中最低殺到 547</span></div>
+      <div class="stat"><span class="k">對你的成本</span><span class="v down-txt">−5.14%</span><span class="s">607.19 × 300 股（8/11 確認）<br>帳面 −9,357 元</span></div>
+      <div class="stat"><span class="k">今日成交金額</span><span class="v">323.4 億</span><span class="s">全場第二大，僅次台積電 544.3 億</span></div>
+      <div class="stat"><span class="k">回到 1000 要</span><span class="v up-txt">+73.6%</span><span class="s">本益比要從 28 倍回到 50 倍</span></div>
+    </div>
+
+    <p class="note"><b>為什麼崩：估值殺，不是基本面殺。</b>7/29 第二季法說 EPS <span class="num">4.59</span> 元<b>創新高</b>（季增 17.7%、年增 88.4%），法說當天照樣連兩根跌停收 507。法人今年 EPS 預估不到 20 元 —— 1,220 對應本益比逾 <b>60 倍</b>，現在 576 約 <b>28–29 倍</b>。另有大股東質押與 Kyber 延期兩則傳言。大摩維持優於大盤、目標價 1,465。</p>
+
+    <p class="note"><b>多久？「距 250 日高 ≤ −45%」這種狀態，國巨十年來只發生過三次，而且都已經走完：</b></p>
+    <div class="tl">
+      <div class="ev"><span class="date">2018-08</span><span class="what">被動元件缺貨泡沫破，之後產業陷入殺價競爭 → <b class="up-txt">花了 7.1 年</b></span></div>
+      <div class="ev"><span class="date">2020-03</span><span class="what">COVID 系統性暴跌，基本面沒壞，V 型反轉 → <b class="down-txt">花了 0.1 年（33 個交易日）</b></span></div>
+      <div class="ev"><span class="date">2022-06</span><span class="what">全球升息熊市 → <b>花了 1.5 年</b></span></div>
+      <div class="ev key"><span class="date">2026-07 起</span><span class="what">目前這次。距 250 日高 <b>−52.8%</b>，<b>比那三次都深</b>，已經走了 23 個交易日</span></div>
+      <div class="ev"><span class="date">8/19 補充</span><span class="what">🔴 <b>型② 止穩不成立</b>：8/19 最低 547 跌破 8/18 最低 574。同日 2492 華新科 <b>+5.67%</b>，國巨 0.00% —— <b>連兩天是被動元件族群裡最弱的</b>（8/18 華新科 +6.91% 對國巨 −5.26%）</span></div>
+    </div>
+
+    <p class="note">中位數 1.5 年，但 <b>0.1 年到 7.1 年這種離散度，白話就是不可預測</b>。同一份資料的條件機率（處在同樣深跌狀態、未來 N 個交易日內曾漲 +74%）：</p>
+    <div class="stats">
+      <div class="stat"><span class="k">20 個交易日內</span><span class="v na-txt">0.0%</span><span class="s">約 1 個月</span></div>
+      <div class="stat"><span class="k">60 個交易日內</span><span class="v na-txt">1.0%</span><span class="s">約 3 個月</span></div>
+      <div class="stat"><span class="k">120 個交易日內</span><span class="v">19.6%</span><span class="s">約半年</span></div>
+      <div class="stat"><span class="k">250 個交易日內</span><span class="v">34.9%</span><span class="s">約一年</span></div>
+      <div class="stat"><span class="k">500 個交易日內</span><span class="v up-txt">74.7%</span><span class="s">約兩年</span></div>
+    </div>
+    <p class="note">🔴 <b>樣本 n=312 是重疊的日觀測值，不是 312 個獨立事件</b> —— 真正獨立的就上面那三段。別把 74.7% 當成精確數字。</p>
+
+    <p class="note"><b>我的判斷：</b>這次的基本面像 2020（沒壞，EPS 還創高），估值成因像 2018（泡沫破）。所以 0.1 年那個樣本<b>不適用</b>（那是系統性崩跌後的 V 轉），7.1 年那個樣本的<b>殺價競爭條件這次還沒發生</b>。誠實講：<b>我給不出可信的月份，誰給你數字都是掰的。</b></p>
+
+    <div class="warnbox">
+      <b>對你的錢的意思：</b>不要拿「回到 1000」當持有理由 —— 那是錨定在一個<b>你沒買到的價位</b>。要拿「本益比 28 倍＋第二季 EPS 創高＋AI 用 MLCC 供不應求」當理由，然後設停損。這是兩件完全不同的事。<br>
+      🔴 <b>還有一件事卡著：</b>你說你加碼了，但沒給<b>股數、成交價、日期</b>。沒有這三個我不能改你的持倉，也算不出新的均價、保本價與停損 —— 這是硬規則。<b>最快的做法是直接在下面第 11 段的持倉表改。</b>
+    </div>
+  </section>
+  <section id="listc">
+    <div class="sec-head">
+      <p class="eyebrow">07 — 穩桶 模式A 分批候選</p>
+      <h2>12 檔題1題2全過，這是今天真正的產出</h2>
+      <p class="sub">母體＝好公司觀察清單 25 檔　·　深度用「距 250 日高 ≤ −20%」＝115.07.22 回測的定義　·　基本面實抓 TWSE OpenAPI（11507 月營收＋115Q2 綜合損益）</p>
+    </div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>個股</th><th>8/19 收</th><th>今日</th><th>距250日高</th><th>距60日高</th><th>單月YoY</th><th>累計YoY</th><th>毛利率</th><th>營益率</th></tr></thead>
+        <tbody>
+          <tr class="hi"><td><span class="co">2072 世紀風電</span></td><td class="n">149.5</td><td class="n down-txt">−1.32%</td><td class="n down-txt">−53.43%</td><td class="n">−27.78%</td><td class="n up-txt">+105.7%</td><td class="n up-txt">+68.6%</td><td class="n">25.23%</td><td class="n">23.06%</td></tr>
+          <tr class="hi"><td><span class="co">7749 意騰-KY</span></td><td class="n">325.5</td><td class="n down-txt">−0.46%</td><td class="n down-txt">−53.37%</td><td class="n">−40.28%</td><td class="n up-txt">+42.7%</td><td class="n up-txt">+60.2%</td><td class="n na-txt">未取得</td><td class="n na-txt">未取得</td></tr>
+          <tr class="hi"><td><span class="co">9958 世紀鋼</span></td><td class="n">99.5</td><td class="n down-txt">−1.49%</td><td class="n down-txt">−50.99%</td><td class="n">−20.72%</td><td class="n up-txt">+91.2%</td><td class="n up-txt">+36.2%</td><td class="n">25.91%</td><td class="n">21.68%</td></tr>
+          <tr><td><span class="co">3533 嘉澤</span></td><td class="n">1,620</td><td class="n down-txt">−0.31%</td><td class="n down-txt">−45.18%</td><td class="n">−40.88%</td><td class="n up-txt">+18.6%</td><td class="n up-txt">+17.4%</td><td class="n">47.48%</td><td class="n">25.46%</td></tr>
+          <tr><td><span class="co">8210 勤誠</span></td><td class="n">985</td><td class="n down-txt">−3.90%</td><td class="n down-txt">−38.05%</td><td class="n">−37.06%</td><td class="n up-txt">+41.5%</td><td class="n up-txt">+53.4%</td><td class="n">32.73%</td><td class="n">24.82%</td></tr>
+          <tr><td><span class="co">3030 德律</span></td><td class="n">285</td><td class="n down-txt">−1.55%</td><td class="n down-txt">−37.70%</td><td class="n">−34.26%</td><td class="n up-txt">+38.2%</td><td class="n up-txt">+26.7%</td><td class="n">59.41%</td><td class="n">38.59%</td></tr>
+          <tr><td><span class="co">5284 jpp-KY</span></td><td class="n">307.5</td><td class="n up-txt">+2.33%</td><td class="n down-txt">−35.94%</td><td class="n">−35.94%</td><td class="n up-txt">+35.3%</td><td class="n up-txt">+42.4%</td><td class="n na-txt">未取得</td><td class="n na-txt">未取得</td></tr>
+          <tr><td><span class="co">2449 京元電子</span></td><td class="n">235</td><td class="n down-txt">−0.42%</td><td class="n down-txt">−32.86%</td><td class="n">−32.86%</td><td class="n up-txt">+36.7%</td><td class="n up-txt">+36.2%</td><td class="n">39.61%</td><td class="n">26.25%</td></tr>
+          <tr><td><span class="co">6781 AES-KY</span></td><td class="n">1,065</td><td class="n up-txt">+0.47%</td><td class="n down-txt">−31.51%</td><td class="n">−20.22%</td><td class="n up-txt">+28.2%</td><td class="n up-txt">+26.4%</td><td class="n na-txt">未取得</td><td class="n na-txt">未取得</td></tr>
+          <tr><td><span class="co">6197 佳必琪</span></td><td class="n">301</td><td class="n up-txt">+2.38%</td><td class="n down-txt">−25.68%</td><td class="n">−25.68%</td><td class="n up-txt">+15.3%</td><td class="n up-txt">+23.4%</td><td class="n">35.89%</td><td class="n">22.77%</td></tr>
+          <tr><td><span class="co">1773 勝一</span></td><td class="n">153.5</td><td class="n down-txt">−0.97%</td><td class="n down-txt">−24.75%</td><td class="n">−24.75%</td><td class="n up-txt">+33.6%</td><td class="n up-txt">+21.0%</td><td class="n">37.07%</td><td class="n">23.46%</td></tr>
+          <tr><td><span class="co">6805 富世達</span></td><td class="n">1,800</td><td class="n down-txt">−8.16%</td><td class="n down-txt">−20.88%</td><td class="n">−20.35%</td><td class="n up-txt">+17.1%</td><td class="n up-txt">+53.9%</td><td class="n">33.13%</td><td class="n">27.31%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><b>怎麼讀這張表：</b>這<b>不是</b>「這 12 檔會漲」的名單，是「符合分批條件、可以放進候選池」的名單。<b>單月與累計營收 YoY 全部正成長</b>，有損益資料的 9 檔<b>營益率全部 ≥21.68%</b> → 題2（基本面沒變或更好）過。<br>🔴 <b>三檔 KY 公司（意騰、jpp、AES）在 t187ap17_L 查無營益率</b>（外國企業來台上市財報表格不同），它們的題2 <b>只用營收面判定</b>，證據強度比其他 9 檔弱，標明。<br><b>做法：</b>小額 × 折扣 ×1.0；停損 進場價 ×93% 或跌破 MA5 收盤取較近；<b>抱 60 天、分批不猜底</b>。第二筆等加權跌到 <b>42,967</b>。<br>🔴 <b>集中度提醒：</b>2072 世紀風電與 9958 世紀鋼是<b>同集團離岸風電</b>，6197 佳必琪與 5284 jpp 都是<b>連接器</b> —— 要進的話別當成 12 個獨立標的。<br>⚠️ 實證狀態：regime edge <b>✅實證</b>（115.07.22 跨 regime 回測）；「12 檔全過題1題2」是<b>今天實算</b>；但「季線下小額試單」這個特化情境<b>本身沒有單獨回測過</b>，是從 −10%／−15% 那套外推的，<b>標 🟡中性</b>，別當成 5 戰 5 勝那種強度。</p>
+
+    <div class="sec-head" style="margin-top:26px;">
+      <p class="eyebrow">07B — 飆桶 模式C</p>
+      <h2>我判「不進場」，它今天贏 2.29pp</h2>
+      <p class="sub">8/18 命中的 7 檔 → 8/19 收盤</p>
+    </div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>個股</th><th>8/18 收</th><th>8/19 收</th><th>報酬</th><th>成交金額</th><th>備註</th></tr></thead>
+        <tbody>
+          <tr class="hi"><td><span class="co">5608 四維航</span></td><td class="n">15.95</td><td class="n">17.5</td><td class="n up-txt">+9.72%</td><td class="n">2.3 億</td><td><span class="flag">🔴 我打的警語是「金額太低、流動性差」—— 結果它漲最多。警語本身沒錯（真的很小），但不該因此判整組不進</span></td></tr>
+          <tr class="hi"><td><span class="co">3008 大立光</span></td><td class="n">5,290</td><td class="n">5,550</td><td class="n up-txt">+4.91%</td><td class="n">194.4 億</td><td><span class="flag">金額最大、估值最合理的一檔，也是這批最該被留下的</span></td></tr>
+          <tr><td><span class="co">7750 新代</span></td><td class="n">2,490</td><td class="n">2,515</td><td class="n up-txt">+1.00%</td><td class="n">22.1 億</td><td><span class="flag">8/20–8/25 有法說</span></td></tr>
+          <tr><td><span class="co">7711 永擎</span></td><td class="n">492</td><td class="n">490</td><td class="n down-txt">−0.41%</td><td class="n">4.3 億</td><td></td></tr>
+          <tr><td><span class="co">2302 麗正</span></td><td class="n">45.3</td><td class="n">44.7</td><td class="n down-txt">−1.32%</td><td class="n">4.4 億</td><td></td></tr>
+          <tr><td><span class="co">3450 聯鈞</span></td><td class="n">579</td><td class="n">567</td><td class="n down-txt">−2.07%</td><td class="n">130.7 億</td><td><span class="flag">本益比 117 倍，我標過最貴之一</span></td></tr>
+          <tr><td><span class="co">7795 長廣</span></td><td class="n">572</td><td class="n">544</td><td class="n down-txt">−4.90%</td><td class="n">5.1 億</td><td><span class="flag">本益比 253 倍全批最貴，跌最多 —— 這條警語有效</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><b>平均 <span class="up-txt">+0.99%</span> vs 大盤 −1.30%，贏 2.29pp。</b>我早上判「飆桶關，只登錄不進場」，當天就被打臉，照實記。<br><b>但別過度修正：</b>這是第 1 天，模式C 設計是 5–10 日持有；而同一時間 8/17 的<b>舊</b>名單三日累計 −2.06%。真正的問題是<b>「飆桶開關該不該只看季線」</b> —— 我會另外回測，在有結果前規則不改。</p>
+
+    <div class="sec-head" style="margin-top:26px;">
+      <p class="eyebrow">07C — 型② 利空過度反應</p>
+      <h2>兩批 38 檔，零通過</h2>
+      <p class="sub">8/18 訊號 34 檔 → 8/19 止穩 <b>0 檔</b>、破前低 33 檔</p>
+    </div>
+    <div class="warnbox">
+      🔴 <b>型② 在指數級殺盤裡完全不 work，這是今天最該記住的教訓。</b>
+      判定＝隔日最低是否守住訊號日最低。8/17 那批 4 檔最後全不合格，8/18 這批 34 檔<b>止穩 0 檔</b>，含你的 2327 國巨（8/18 低 574 → 8/19 低 <b>547</b>）。
+      → <b>要進打法說明：大盤跌破季線期間，直接關閉型② 的止穩判定，不要每天空跑。</b>
+    </div>
+    <p class="note"><b>8/19 新訊號 19 檔（跌 ≥5%＋金額 ≥5 千萬），依上面這條，只登錄不建議跟：</b>2408 南亞科 −6.60%（335.1 億）｜8046 南電 −5.22%（182.0 億）｜2383 台光電 −5.24%（176.3 億）｜1303 南亞 −6.25%（138.0 億）｜3481 群創 −5.56%（106.2 億）｜2360 致茂 −8.03%（72.6 億）｜2455 全新 −5.03%（61.3 億）｜3167 大量 −10.00% 跌停（59.6 億）｜2359 所羅門 −9.30%（42.2 億）｜2634 漢翔 −6.41%（42.0 億）。</p>
+  </section>
+
+  <section id="chips">
+    <div class="sec-head">
+      <p class="eyebrow">08 — 盤尾 三大法人籌碼</p>
+      <h2>外資倒面板與金融，投信獨力接金控</h2>
+      <p class="sub">🔴 <b>仍是 8/18 收盤 T86</b>　·　8/19 版約 16:00 才出齊，本輪抓不到，沒有拿舊值假裝新值</p>
+    </div>
+    <div class="grid2">
+      <div class="panel flowpanel">
+        <div class="panel-head"><div class="t"><span class="tick up"></span>外資買超（張）</div>
+          <div class="d">8/18</div></div>
+        <div class="rows">
+          <div class="r"><span class="code num">2603</span><span class="name">長榮</span><span class="chg up">+15,067</span></div>
+          <div class="r"><span class="code num">2634</span><span class="name">漢翔</span><span class="chg up">+14,817</span></div>
+          <div class="r"><span class="code num">2609</span><span class="name">陽明</span><span class="chg up">+14,345</span></div>
+          <div class="r"><span class="code num">2867</span><span class="name">三商壽</span><span class="chg up">+13,410</span></div>
+          <div class="r"><span class="code num">2881</span><span class="name">富邦金</span><span class="chg up">+10,803</span></div>
+          <div class="r"><span class="code num">3037</span><span class="name">欣興</span><span class="chg up">+10,677</span></div>
+        </div>
+      </div>
+      <div class="panel flowpanel">
+        <div class="panel-head"><div class="t"><span class="tick down"></span>外資賣超（張）</div>
+          <div class="d">8/18</div></div>
+        <div class="rows">
+          <div class="r"><span class="code num">6770</span><span class="name">力積電</span><span class="chg down">−35,767</span></div>
+          <div class="r"><span class="code num">2409</span><span class="name">友達</span><span class="chg down">−32,023</span></div>
+          <div class="r"><span class="code num">3481</span><span class="name">群創</span><span class="chg down">−29,692</span></div>
+          <div class="r"><span class="code num">2887</span><span class="name">台新新光金</span><span class="chg down">−27,654</span></div>
+          <div class="r"><span class="code num">2883</span><span class="name">凱基金</span><span class="chg down">−27,234</span></div>
+          <div class="r"><span class="code num">0050</span><span class="name">元大台灣50</span><span class="chg down">−16,101</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="note"><b>🔴 最該注意的是法人對作：</b>投信 8/18 買超前五<b>全是金控</b>（台新新光金 +25,106、凱基金 +22,147、玉山金 +18,674、永豐金 +13,974、第一金 +13,663 張），而外資在<b>倒同一批</b>（台新新光金 −27,654、凱基金 −27,234、元大金 −21,673 張）。方向未定，<b>不構成訊號</b>。<br><b>籌碼與價格同方向的部分：</b>外資賣最兇的力積電 8/19 續跌 −3.73%；買最多的長榮、陽明 8/19 逆勢紅（+0.21%／+2.31%）—— 航運是今天唯一籌碼與價格都站同一邊的族群。<br><b>🔴 外資連 0050 都賣 16,101 張</b>，代表這波是<b>指數層級的調節</b>，不是個股問題。</p>
+  </section>
+
+  <section id="cal">
+    <div class="sec-head">
+      <p class="eyebrow">09 — 催化劑行事曆</p>
+      <h2>接下來 30 天的攤牌點</h2>
+      <p class="sub">🔴 <b>本輪未重新查證</b>，沿用 8/18 版（出處：FinLab 法說會行事曆 2026-08-16 更新版）；只有標「已確認」的是我這輪自己驗過的</p>
+    </div>
+    <div class="tl">
+      <div class="ev key"><span class="date">8/19 今天</span><span class="what"><b>台指期 8 月合約結算日</b>（8 月第三個週三）—— <b>已結算完畢</b>。🔴 <b>最後結算價 44,612</b>（出處期交所最後結算價頁），加權現貨收 44,719.35 → <b>結算價比現貨收盤低 107 點</b>。結算價算法＝收盤前 30 分鐘標的指數簡單算術平均，今天尾盤是往下收斂的。<br>8/18 三大法人台指期未平倉：外資淨空 83,078 口、投信淨多 76,112 口、自營淨多 2,566 口，合計淨空 4,400 口 —— <b>已確認</b>（期交所 CSV）。🔴 外資那 8.3 萬口是長期現貨避險部位，<b>不能讀成外資看空要殺盤</b></span></div>
+      <div class="ev"><span class="date">8/20–8/25</span><span class="what">和泰車、新代（模式C 名單內）、視陽（好公司清單內）、貿聯、日友、英業達、精測、富邦金<br><span class="mut" style="color:var(--muted)">未重驗</span></span></div>
+      <div class="ev key"><span class="date">8/26 盤後</span><span class="what"><b>NVDA FY2027 Q2 財報</b>（美東 8/26 盤後＝台灣 8/27 清晨）＝ AI 主線與記憶體的攤牌點。NVDA 8/18 收 219.74（−2.34%），費半同日 −4.98% —— <b>美股端已經先殺一輪</b>，財報前風險偏高<br><span class="mut" style="color:var(--muted)">日期未重驗</span></span></div>
+      <div class="ev"><span class="date">8/27</span><span class="what">力積電除息<span class="mut" style="color:var(--muted)">　未重驗</span></span></div>
+      <div class="ev"><span class="date">8/28</span><span class="what">亞德客法說（好公司清單內）、國泰金<span class="mut" style="color:var(--muted)">　未重驗</span></span></div>
+      <div class="ev"><span class="date">9/4 · 9/18</span><span class="what">台灣 50 指數定期審核（9/4）→ 9/18 收盤生效<span class="mut" style="color:var(--muted)">　未重驗</span></span></div>
+      <div class="ev"><span class="date">9/10 前</span><span class="what">8 月營收公布</span></div>
+    </div>
+    <p class="note">🔴 <b>國巨的下一個攤牌點不在這 30 天內</b>：Q2 法說 7/29 已開過（EPS 4.59 元創新高），Q3 法說要等 10 月底、8 月營收 9/10 前公布。<b>所以短期沒有基本面事件能扭轉估值殺</b> —— 這也是我不給「多久回到 1000」時間表的原因之一。</p>
+  </section>
+
+  <section id="rules">
+    <div class="sec-head">
+      <p class="eyebrow">10 — 選股規則全文</p>
+      <h2>你定的規矩，我照這跑</h2>
+      <p class="sub">正本＝<span class="num">Downloads\agent\計價回測工具\選股說明.txt</span>（建立 115.07.02）。改規則直接改正本，我同步記憶。<br><span class="ev-tag y">✅實證</span>已回測支持　<span class="ev-tag m">🟡中性</span>驗過但 edge 薄／方向性參考　<span class="ev-tag n">⚠️未驗</span>沒驗過，不准包裝成有效</p>
+    </div>
+
+    <div class="rules">
+
+      <div class="rule key">
+        <span class="kicker">兩句關鍵字</span>
+        <h3>怎麼叫我</h3>
+        <ul>
+          <li>「<b>幫我選股</b>」＝廣度模式：掃全市場給一份短名單（不是叫你全買）</li>
+          <li>「<b>幫我分析 XXXX</b>」＝深度模式：單一檔深挖五模板（財報／估值／產業／風險）</li>
+          <li>先選股找方向 → 看中哪檔再叫我分析它，最省時間</li>
+        </ul>
+      </div>
+
+      <div class="rule key">
+        <span class="kicker">固定流程</span>
+        <h3>撈 → 判盤 → 逆勢強度 → 決定</h3>
+        <ol>
+          <li><b>撈</b>：全市場海選候選（五區塊／三模式）</li>
+          <li><b>判盤</b>：牛／熊／垃圾？先決定要不要出手、出幾成</li>
+          <li><b>逆勢強度</b>：候選分 🟢逆勢升／🟡跟盤／🔴逆勢弱三堆</li>
+          <li><b>決定</b>：明講「這種盤，這幾檔可考慮／其餘等／或整體空手」</li>
+        </ol>
+        <p>🔴 絕不准只丟一張名單。沒有對帳段＝流程沒跑完。</p>
+      </div>
+
+      <div class="rule">
+        <span class="kicker">判盤 三塊缺一不可</span>
+        <h3>每次都要出的三塊</h3>
+        <ol>
+          <li><b>國際儀表板</b>：美四大／SOX／VIX／日經／KOSPI／NVDA／MU／台積 ADR／油金匯＋頭條原因</li>
+          <li><b>主線接棒六狀態</b>：衝刺中／排隊接棒／還太早／傳完／快掉棒／過半場 —— 沒有明確標註＝沒做完</li>
+          <li><b>台股大盤</b>：指數／家數比／20MA 乖離／量</li>
+        </ol>
+        <p>🔴 20MA 乖離固定用 Yahoo <span class="num">^TWII</span> 日線自算，不是「抓不到就跳過」。</p>
+      </div>
+
+      <div class="rule key">
+        <span class="kicker">進場三關 · 硬閘門</span>
+        <h3>任一紅燈就不進</h3>
+        <ol>
+          <li><b>關1 大盤止穩</b>：當日跌逾 1.5% 或漲跌比 &lt;0.3 ＝未止穩，不追　<span class="ev-tag m">🟡</span>實測等紅K 再進 vs 大跌日直接進幾乎打平（4.49% vs 4.69%），此關價值在少接刀的風控，<b>不是會買更便宜</b></li>
+          <li><b>關2 籌碼</b>：外資／投信連買連賣<b>必查必揭露</b>　<span class="ev-tag y">✅</span>連 3 買小加分（投信 fwd20 +8.52%／外資 +8.27% vs 基準 +7.04%）；<b>連賣自動紅燈實證不支持</b>，改為警示由你裁量</li>
+          <li><b>關3 催化劑＋停損</b>：講不出具體催化劑、或設不出停損價＝不進</li>
+        </ol>
+        <p>三關全綠才進；任一紅或未驗證，最多列「觀察，止穩再看」，不下實單。</p>
+      </div>
+
+      <div class="rule">
+        <span class="kicker">進場前 5 題</span>
+        <h3>逐檔自檢，第 4 關最常被跳</h3>
+        <ol>
+          <li><b>集中度</b>：加進去會不會更歪向已重壓的主題？</li>
+          <li><b>防追高</b>：大盤／個股是不是剛急拉？</li>
+          <li><b>復甦初期</b>：挑的是初升段還是末端／頂峰？頂峰不進　<span class="ev-tag n">⚠️</span>循環位置判定無法機械化，未驗證</li>
+          <li>🔴 <b>籌碼</b>：連買連賣查了嗎？法人資料缺，就別當已驗證</li>
+          <li><b>紀律</b>：催化劑講得出嗎？停損設哪？敢認賠嗎？</li>
+        </ol>
+      </div>
+
+      <div class="rule">
+        <span class="kicker">四個硬閘門</span>
+        <h3>每次必套</h3>
+        <ol>
+          <li>🔴 <b>頂峰剔除</b>：主線標🔴頂峰／過熱 → 該主線個股一律剔除，不管分數多高（教訓：旺宏在記憶體頂峰被湊進名單，賠 18.9%）</li>
+          <li><b>時框標籤</b>：每檔強制標 短打／波段／長線，別拿短打當長線凹</li>
+          <li><b>三段分離</b>：分數只排名、不加信心。同一檔在多區塊出現＝參考，不是越多次越該買</li>
+          <li>🔴 <b>籌碼誠實</b>：法人抓不到就明講「未驗證」</li>
+        </ol>
+      </div>
+
+      <div class="rule key">
+        <span class="kicker">三模式</span>
+        <h3>兩桶怎麼分</h3>
+        <p><b>穩桶 70%｜模式A 低點錯殺</b>　賺價值回歸、分批長抱。三題全過才算錯殺：①這次跌是公司利空還是非公司？②護城河／賺錢能力有沒有變？③估值對它自己歷史到便宜了嗎？　<span class="ev-tag y">✅</span>三題過組 fwd20 中位 +5.58%／勝 66% vs 價值陷阱組 +1.90%／勝 54% —— 但<b>只在 20 日以上視野有效</b></p>
+        <p><b>飆桶 30%｜模式B 飆股</b>　賺戴維斯雙擊。三條件缺一不可：①題材在復甦初期非頂峰 ②催化劑明確 ③籌碼卡位　<span class="ev-tag n">⚠️</span>復甦初期判定未驗證</p>
+        <p><b>飆桶 30%｜模式C 動能確認</b>（與 B 共用額度不疊加）　不等便宜也不等復甦初期，直接抓「已經在漲＋籌碼 confirmed 在買」：①相對強度為正 ②外資或投信連 3 買 ③爆量創高照樣可以進　<span class="ev-tag y">✅</span>近高追強 fwd60 中位 +27.35%／勝 80% 遠贏低檔突破 +8.44%／勝 63%（⚠️含重倖存者偏誤，只取方向）</p>
+      </div>
+
+      <div class="rule key">
+        <span class="kicker">真假低點總開關</span>
+        <h3>比背 14 型更重要的一句話</h3>
+        <p style="font-size:15px;color:var(--ink);font-weight:700;">「這個『低』的原因，會不會消失？」</p>
+        <ul>
+          <li><b>會消失</b>（暫時／非基本面／情緒／外部）→ 價格會回來 ＝ 好低點</li>
+          <li><b>不會消失</b>（基本面真壞／結構性衰退／被時代拋棄）→ 價值陷阱，越攤越平。低 PE 是市場在說它以後賺更少</li>
+        </ul>
+        <p>例：台積因外資調節跌＝原因會消失＝好低點；技術落後的面板廠跌到很便宜＝結構性＝陷阱。</p>
+      </div>
+
+      <div class="rule">
+        <span class="kicker">處置分三種</span>
+        <h3>判對低點還要用對抱法</h3>
+        <ul>
+          <li><b>甲 好低點·長抱型</b>＝價值錯殺：分批買，抱到價值回歸，不趕時間</li>
+          <li><b>乙 好低點·時效型</b>＝事件催化劑（ETF 納入／財報將爆／庫藏股）：抓事件日期，兌現後脫手，<b>快進快出別長抱</b></li>
+          <li><b>丙 壞低點</b>＝價值陷阱：根本不買、不碰</li>
+        </ul>
+        <p>🔴 判錯處置＝對的低點用錯抱法照樣賠。</p>
+      </div>
+
+      <div class="rule">
+        <span class="kicker">型② 利空過度反應</span>
+        <h3>允許「有真利空」，只問殺過頭沒</h3>
+        <p><b>訊號</b>：單日跌幅 ≥5%，之後 5 個交易日內第一天「當天最低未破前一天最低」→ 該天進場。</p>
+        <p><span class="ev-tag y">✅</span>120 檔×2 年：20 天後中位 +6.49%／勝 66.9% vs 基準 +1.53%／勝 55.9%。訊號樣本 2,270 次。</p>
+        <p><b>持有</b>：10–20 天分批出，別當長抱。<b>停損</b>：進場價 ×97%。<br>🔴 型② 只套關1、關2，<b>不套催化劑關</b> —— 它是純價格訊號。</p>
+      </div>
+
+      <div class="rule">
+        <span class="kicker">停損總表</span>
+        <h3>進場就設好，不憑感覺</h3>
+        <ul>
+          <li><b>事件短打</b>：進場價 × 97%</li>
+          <li><b>波段</b>：跌破 MA5 收盤，或進場價 × 93%，取較近</li>
+          <li><b>潛伏層</b>：進場價 × 97%，或 5 個交易日不動就出</li>
+          <li><b>趨勢跟蹤</b>：跌破 20MA 收盤</li>
+        </ul>
+        <p><b>倉位＝基準倉位 × 大盤折扣</b>：乖離 &lt;5% ×1.0／5–7% ×0.7／7–10% ×0.5／&gt;10% ×0.3</p>
+      </div>
+
+      <div class="rule">
+        <span class="kicker">出場／汰弱換強</span>
+        <h3>補「只會買不會賣」的洞</h3>
+        <ul>
+          <li><b>短打</b>：事件過 或 −3% → 出（不套動能續抱）</li>
+          <li><b>波段</b>：跌破 20MA 收盤 → 出</li>
+          <li><b>趨勢／主升段</b>：跌破 20MA 收盤，或相對強度從前 20% 掉到中後段 → 出</li>
+          <li><b>每月一次汰弱換強</b>：掉出動能前段的換掉；法人連賣、論點走鐘的先出，不等跌破均線</li>
+        </ul>
+        <p>🔴 <b>季線開關只關飆桶／動能</b>，不關穩桶模式A 崩盤分批 —— 那是相反邏輯（逆勢價值非追強）。把兩者塞同一個「破季線空手」桶，就是 115.07.17-20 漏接台積電的病根。</p>
+      </div>
+
+      <div class="rule">
+        <span class="kicker">崩盤分批 三鐵則</span>
+        <h3>型③ 恐慌深跌才用</h3>
+        <ol>
+          <li><b>要夠深</b>：≥−15% 才乾淨（5 個獨立事件 fwd20 五戰五勝、fwd60 中位 +15.71%／勝 80%）；−10~−15% 半山腰只小額試單</li>
+          <li><b>要抱 60 天</b>：20 天太短會被二次探底洗掉</li>
+          <li><b>分批不猜底</b>：底部差幾天差很多，一次 all-in 可能買在錯的那天</li>
+        </ol>
+        <p><span class="ev-tag y">✅</span>^TWII 2016–2026 跨 COVID／2022 熊／2024 日圓崩／2025 關稅崩，去叢集後只算獨立事件。淺跌 0~−6% 無 edge。</p>
+      </div>
+
+      <div class="rule">
+        <span class="kicker">逆勢強度 三堆</span>
+        <h3>這是風控標籤，不是選漲依據</h3>
+        <ul>
+          <li>🟢 <b>逆勢升</b>：大盤跌它抗跌／收紅 ＋ 法人逆勢買 ＋ 有量 ＋ 技術站穩</li>
+          <li>🟡 <b>跟盤浮動</b>：沒特別強也沒特別弱</li>
+          <li>🔴 <b>逆勢弱</b>：跟著跌 ＋ 籌碼被倒 → 就算基本面好，現在也不碰</li>
+        </ul>
+        <p>🔴 <span class="ev-tag y">✅</span><b>實測推翻「只留🟢」</b>：大跌日收紅的股後 10 日 +3.15%／勝 56%，跟著跌的反而 +4.26%／勝 62%。要賺反彈，數據支持在止穩訊號後買錯殺超跌的，而非只買抗跌的。</p>
+      </div>
+
+      <div class="rule">
+        <span class="kicker">集中度</span>
+        <h3>揭露，不幫你砍好股</h3>
+        <p>集中沒有不好，集中在有把握的好股收益可觀，這是你的選擇。做法：好股照列照推，旁邊頂多一句「這會加重你的 AI 集中」，讓你自己權衡。</p>
+        <p><b>不設硬上限剔股、不叫你別再加、不硬推分散。</b>唯一保留：提醒一次風險張力（你自訂只忍 −25%，高度集中一起跌會放大波動），提醒完就尊重決定。</p>
+      </div>
+
+      <div class="rule">
+        <span class="kicker">三種盤</span>
+        <h3>各自怎麼打</h3>
+        <ul>
+          <li>🐂 <b>牛市</b>（站上季線向上、家數比 &gt;1）：主攻、飆桶開、追強勢；跌破月線減、季線出　<b>← 現在在這</b></li>
+          <li>🐻 <b>熊市</b>（跌破季線向下、家數比 &lt;0.5）：保命、飆桶關、降倉空手、別接刀</li>
+          <li>🥊 <b>垃圾／拉扯盤</b>（季線走平、上下穿）：最傷人、大幅減交易、停損更緊</li>
+        </ul>
+      </div>
+
+      <div class="rule">
+        <span class="kicker">已知弱點</span>
+        <h3>這些會讓數字失真，方向可參考、絕對值別信</h3>
+        <ol>
+          <li><b>倖存者偏誤</b>：樣本＝今天成交值前 60~100 大＝活下來的贏家，會高估「買強勢」類策略</li>
+          <li><b>單一 regime</b>：多數資料只有 2024–2026 ＝一段 AI 大多頭，動能結論在空頭可能反過來</li>
+          <li><b>視窗重疊</b>：大跌日常連著來，樣本不獨立，統計顯著性比看起來低</li>
+          <li><b>參數是拍的</b>：連「3」天、跌深「20%」、持有「20 天」都沒最佳化</li>
+          <li><b>沒扣成本稅費</b>：短打類扣掉來回約 0.6% 後會更難看</li>
+          <li><b>程式可能有 bug</b>：曾自抓到 0050 分割假 −74.8%、FinMind close=0、限流悄悄掉樣本</li>
+        </ol>
+      </div>
+
+      <div class="rule">
+        <span class="kicker">已知缺口</span>
+        <h3>照實講的兩個洞</h3>
+        <ul>
+          <li><b>好公司觀察清單</b>原文寫 34 檔、實際只列出 25 檔，另 9 檔從未被記錄 —— 每次掃描都只掃了這 25 檔</li>
+          <li><b>EPS 成長</b>：bulk 端點只給最新單季、沒有去年同季，算不出 EPS 的 YoY。成長暫用月營收累計 YoY 當代理，EPS-YoY 標「未接」</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== 10 紀錄本 ========== -->
+  <section id="book">
+    <div class="sec-head">
+      <p class="eyebrow">11 — 你寫的</p>
+      <h2>紀錄本：填了會存下來</h2>
+      <p class="sub">這一區跟上面不同：01–10 段是我更新的（你改了會被我下次重發布蓋掉），<b>這一段才是你的</b> —— 改了就存在這頁裡，我下輪讀得到</p>
+    </div>
+
+    <div class="book">
+      <div class="book-head">
+        <span class="t">我的持倉</span>
+        <span class="hint">🔴 <b>加碼那筆直接改這裡的股數與成本</b>，比打字給我快。填了我下輪才算得出保本價與飆桶額度。</span>
+        <span class="rw" id="rwchip">可編輯</span>
+      </div>
+      <div class="scroll">
+        <table>
+          <thead><tr><th>代號</th><th>名稱</th><th>股數</th><th>成本均價</th><th>停損</th><th>停利</th><th></th></tr></thead>
+          <tbody artifact-sync id="holdings">
+            <tr>
+              <td class="n"><span contenteditable="true">2327</span></td>
+              <td><span contenteditable="true">國巨*</span></td>
+              <td class="n"><span contenteditable="true">300</span></td>
+              <td class="n"><span contenteditable="true">607.19</span></td>
+              <td class="n"><span contenteditable="true">—</span></td>
+              <td class="n"><span contenteditable="true">—</span></td>
+              <td><button class="mini" data-act="delrow" type="button">刪除</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="btnrow"><button type="button" id="addhold">＋ 新增一列持倉</button></div>
+
+      <div class="sect-lbl">待裁示 / 待辦</div>
+      <ul class="todos" artifact-sync id="todos">
+        <li data-done="0"><input type="checkbox" aria-label="完成"><span class="txt" contenteditable="true">🔴 國巨加碼的股數／成交價／日期 —— 填進上面持倉表，我才能重算均價、保本價、停損與集中度</span><button class="mini" data-act="deltodo" type="button">刪</button></li>
+        <li data-done="0"><input type="checkbox" aria-label="完成"><span class="txt" contenteditable="true">🔴🔴 第一筆門檻今天已觸發（收 44,719.35 &lt; 季線 44,811.97）—— 12 檔候選見第 07 段，要不要下、下多少，等你裁示</span><button class="mini" data-act="deltodo" type="button">刪</button></li>
+        <li data-done="0"><input type="checkbox" aria-label="完成"><span class="txt" contenteditable="true">飆桶維持關，但今天新名單贏 2.29pp —— 「開關該不該只看季線」我要再回測</span><button class="mini" data-act="deltodo" type="button">刪</button></li>
+        <li data-done="0"><input type="checkbox" aria-label="完成"><span class="txt" contenteditable="true">8/26 NVDA 財報前，決定 AI 部位要不要先降</span><button class="mini" data-act="deltodo" type="button">刪</button></li>
+        <li data-done="0"><input type="checkbox" aria-label="完成"><span class="txt" contenteditable="true">決定這頁一天更新幾次（建議 08:20 盤前＋16:20 盤尾，盤中隨叫）</span><button class="mini" data-act="deltodo" type="button">刪</button></li>
+      </ul>
+      <div class="btnrow"><button type="button" id="addtodo">＋ 新增一項</button></div>
+
+      <div class="sect-lbl">盤中筆記</div>
+      <artifact-sync><div class="memo" contenteditable="true" id="memo"></div></artifact-sync>
+
+      <div class="btnrow">
+        <button type="button" id="csv">匯出 AI 族群兩桶 CSV</button>
+        <span class="hint" id="csvmsg" style="font-size:12px;color:var(--muted);"></span>
+      </div>
+    </div>
+    <p class="note">🔴 我還沒驗過我排程更新盤面時會不會蓋掉你在這區寫的東西 —— 開排程前我會先測一次再跟你講。</p>
+  </section>
+
+  <footer>
+    <div>
+      <span class="legend"><span class="swatch" style="background:var(--up)"></span>漲</span>
+      <span class="legend"><span class="swatch" style="background:var(--down)"></span>跌</span>
+      台股慣例配色
+    </div>
+    <div>🔴 絕不保證穩賺。這是流程輸出不是明牌，實盤紀錄擺著：模擬倉第一期 0/5。每條建議的實證狀態都已標明。</div>
+    <div><b>本輪沒跑的（誠實揭露）：</b>T86 個股三大法人買賣超 8/19 版尚未發布（第 08 段仍是 8/18）／意騰-KY、jpp-KY、AES-KY 三檔在 t187ap17_L 查無營益率，題2 只用營收面判定／催化劑法說行事曆沿用 8/18 版未重驗／官方類股指數未逐類抓／⑥C 價值成長區塊未重跑／好公司清單仍只有 25 檔（選股說明.txt 原文寫 34 檔，缺 9 檔的已知缺口未補）。</div>
+    <div>資料來源：TWSE MI_INDEX 8/19 收盤行情、TAIEX MI_5MINS_HIST（130 個交易日算均線）、OpenAPI t187ap05_L 月營收與 t187ap17_L 綜合損益、TWSE MI_INDEX 每日收盤行情、T86 三大法人（8/13–8/18）、BWIBBU 本益比與股價淨值比（8/18，財報年季 115/2）、FMTQIK 量能、期交所臺股期貨契約規格與三大法人未平倉（8/18）、Yahoo Finance ^TWII／^SOX／^GSPC／^IXIC／^DJI／^VIX／^N225／^KS11／NVDA／MU／TSM／2327.TW。選股規則正本＝Downloads\agent\計價回測工具\選股說明.txt，對帳紀錄＝同資料夾 選股對帳紀錄.txt。</div>
+    <div>🔒 本頁含你的持倉與資金配置，預設私人；要分享才會產生對外連結。盤中價會跳動，下單前以你手機看盤即時價為準。</div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var chip = document.getElementById('rwchip');
+  function setChip(text, bg, fg){
+    if (!chip) return;
+    chip.textContent = text;
+    chip.style.background = bg; chip.style.color = fg;
+  }
+
+  document.addEventListener('claude:sync-off', function(){
+    setChip('這次改動存不起來', 'var(--pending-bg)', 'var(--pending)');
+  });
+  document.addEventListener('claude:sync-lost', function(){
+    setChip('連線不穩，排隊中', 'var(--accent-soft)', 'var(--accent)');
+  });
+
+  function use(name){
+    return new Promise(function(resolve){
+      var tries = 0;
+      (function poll(){
+        try{
+          if (window.claude && typeof window.claude.use === 'function'){
+            window.claude.use(name).then(resolve, function(){ resolve(null); });
+            return;
+          }
+        }catch(e){}
+        if (++tries > 40){ resolve(null); return; }
+        setTimeout(poll, 100);
+      })();
+    });
+  }
+
+  use('artifact').then(function(a){
+    if (a) setChip('可編輯，會存下來', 'var(--down-bg)', 'var(--down)');
+    else   setChip('可編輯（未連上儲存）', 'var(--pending-bg)', 'var(--pending)');
+  });
+
+  var holdings = document.getElementById('holdings');
+  document.getElementById('addhold').addEventListener('click', function(){
+    var tr = document.createElement('tr');
+    ['n','','n','n','n','n'].forEach(function(cls, i){
+      var td = document.createElement('td');
+      if (cls) td.className = cls;
+      var sp = document.createElement('span');
+      sp.setAttribute('contenteditable','true');
+      sp.textContent = (i === 1) ? '點這裡填' : '—';
+      td.appendChild(sp);
+      tr.appendChild(td);
+    });
+    var tdb = document.createElement('td');
+    var btn = document.createElement('button');
+    btn.className = 'mini'; btn.type = 'button';
+    btn.setAttribute('data-act','delrow'); btn.textContent = '刪除';
+    tdb.appendChild(btn); tr.appendChild(tdb);
+    holdings.appendChild(tr);
+  });
+  holdings.addEventListener('click', function(e){
+    var b = e.target.closest('[data-act="delrow"]');
+    if (!b) return;
+    var tr = b.closest('tr'); if (tr) tr.remove();
+  });
+
+  var todos = document.getElementById('todos');
+  document.getElementById('addtodo').addEventListener('click', function(){
+    var li = document.createElement('li');
+    li.setAttribute('data-done','0');
+    var cb = document.createElement('input');
+    cb.type = 'checkbox'; cb.setAttribute('aria-label','完成');
+    var sp = document.createElement('span');
+    sp.className = 'txt'; sp.setAttribute('contenteditable','true');
+    sp.textContent = '新的一項…';
+    var del = document.createElement('button');
+    del.className = 'mini'; del.type = 'button';
+    del.setAttribute('data-act','deltodo'); del.textContent = '刪';
+    li.appendChild(cb); li.appendChild(sp); li.appendChild(del);
+    todos.appendChild(li);
+  });
+  todos.addEventListener('click', function(e){
+    var d = e.target.closest('[data-act="deltodo"]');
+    if (d){ var li = d.closest('li'); if (li) li.remove(); }
+  });
+  todos.addEventListener('change', function(e){
+    if (e.target.type !== 'checkbox') return;
+    var li = e.target.closest('li');
+    if (li) li.setAttribute('data-done', e.target.checked ? '1' : '0');
+  });
+
+  var msg = document.getElementById('csvmsg');
+  function buildCsv(){
+    var lines = ['﻿桶,代號,名稱,分類,價格,漲跌%'];
+    document.querySelectorAll('#ai .panel').forEach(function(panel){
+      var bucket = panel.querySelector('.panel-head .t').textContent.trim();
+      panel.querySelectorAll('.r').forEach(function(r){
+        var nameEl = r.querySelector('.name');
+        var em = nameEl.querySelector('em');
+        var cat = em ? em.textContent.trim() : '';
+        var nm = nameEl.textContent.replace(cat, '').trim();
+        lines.push([bucket, r.querySelector('.code').textContent.trim(), nm, cat,
+                    r.querySelector('.px').textContent.trim(),
+                    r.querySelector('.chg').textContent.trim()].join(','));
+      });
+    });
+    return lines.join('\r\n');
+  }
+  document.getElementById('csv').addEventListener('click', function(){
+    msg.textContent = '準備中…';
+    use('downloads').then(function(d){
+      if (!d){ msg.textContent = '這個畫面不支援存檔'; return null; }
+      var data = buildCsv();
+      return d.save({filename:'選股_20260819收盤.csv', data:data}).catch(function(err){
+        if (err && err.code === 'extension_not_enabled'){
+          return d.save({filename:'選股_20260819收盤.txt', data:data});
+        }
+        throw err;
+      });
+    }).then(function(res){ if (res) msg.textContent = '已交給你的裝置存檔'; })
+      .catch(function(err){
+        var c = err && err.code;
+        if (c === 'declined') msg.textContent = '你取消了存檔';
+        else if (c === 'rate_limited') msg.textContent = '剛剛才存過，等一下再按';
+        else msg.textContent = '存不了：' + (c || '未知原因');
+      });
+  });
+})();
+</script>
