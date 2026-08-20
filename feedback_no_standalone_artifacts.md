@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: ae7d8384-da45-402c-8165-326541c3bb19
-  modified: 2026-08-20T03:33:47.034Z
+  modified: 2026-08-20T03:41:36.564Z
 ---
 
 🔴🔴**(2026/08/18 大例外，本條規則從此只管「本機檔」)** 使用者當場要求把盤面分析做成網頁並說「越來越聰明的版本當然好」、「網頁的呈現方式目前有朝向我想要看的方向」。→ **claude.ai Artifact 看盤台是要繼續養的交付物，不是本條禁止的對象。** 網址固定 `https://claude.ai/code/artifact/06c9658a-9f94-4b94-bf87-78608b1b4efc`（重發布同一個 file path 就更新同一網址，別開新頁）。
@@ -22,6 +22,7 @@ metadata:
   - **stage2 雲端**＝**直接改寫他既有的三支「額度視窗錨定」routine**（`trig_01N6vg…`06:00／`trig_01GKzS…`11:10／`trig_013muP…`16:20），不另開 routine＝**零額外雲端成本**，錨定功能照舊。它 clone repo → 讀 `artifact/stock_dashboard.html` → 發布回固定網址。model 用 haiku-4-5。
   - 兩段差 20~30 分鐘讓本機先跑完；雲端有兩道閘：**週末（`date -u +%u` 為 6/7）不發布**、**HTML 最後 commit 距今 >6 小時就不發布**（＝他電腦沒開，寧可不發也不發舊的）。
 - 🔴🔴 **0820 實測結論（別再重測）**：①**雲端沙箱 egress 封鎖所有股市網域** —— openapi.twse.com.tw、www.twse.com.tw（MI_INDEX 與 T86）、tw.stock.yahoo.com、query1.finance.yahoo.com、stooq.com、www.cnyes.com 全部 `EGRESS_BLOCKED`；雲端只有 **WebSearch** 與 **claude.ai artifact** 通得了 → **雲端絕對不能自己跑選股**，硬跑＝拿搜尋摘要當收盤價＝掰數字。②**headless `claude -p` 沒有 Artifact 工具**（ToolSearch 查無）→ 本機排程發不了網頁。③**雲端 session 有 Artifact 工具、也 clone 得到 repo**。
+- 🔴 **本機排程的坑（0820 實際踩到）**：`$prompt | & claude.exe -p ...` 這種**用管線餵 stdin 的寫法在工作排程底下會秒死**，LastTaskResult ＝ `3221225786`（0xC000013A ＝ STATUS_CONTROL_C_EXIT），log 只留下 start 那一行。原因是排程沒有 console。**正解＝把 prompt 當引數傳**：`& $claudeExe -p $prompt --model … --permission-mode bypassPermissions`。改完 LastTaskResult 變 `267009`（＝執行中）就對了。
 - 🔴 **發布的三個坑（照做，別自己發明）**：①**發布前一定要先 WebFetch 一次該 artifact 網址**，否則報 `This session hasn't viewed the latest version of the artifact`；②**不要傳 `capabilities`、不要傳 `contract`** —— 伺服器自動沿用 `{artifact, downloads}` / `0.2.4`，傳了反而會覆蓋掉；③**favicon 固定 📈**、url 一字不差、`file_path` 用 repo 裡那支。
 - **正本 HTML ＝ repo 的 `artifact/stock_dashboard.html`**（0820 從已發布頁抓回、剝掉 frame-runtime 外殼後入庫，963 行）。**不要再依賴 session scratchpad 的 stock-0818.html**。改頁面＝原地 Edit 這支檔，不重建。
 - ⚠️ **兩支一次性測試 routine 已停用**（`trig_01Xs1Zah2gtsnFAXZoUPbyGP` 等），留著當紀錄，別重新啟用。
