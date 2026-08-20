@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: ae7d8384-da45-402c-8165-326541c3bb19
-  modified: 2026-08-18T03:15:02.350Z
+  modified: 2026-08-20T03:33:47.034Z
 ---
 
 🔴🔴**(2026/08/18 大例外，本條規則從此只管「本機檔」)** 使用者當場要求把盤面分析做成網頁並說「越來越聰明的版本當然好」、「網頁的呈現方式目前有朝向我想要看的方向」。→ **claude.ai Artifact 看盤台是要繼續養的交付物，不是本條禁止的對象。** 網址固定 `https://claude.ai/code/artifact/06c9658a-9f94-4b94-bf87-78608b1b4efc`（重發布同一個 file path 就更新同一網址，別開新頁）。
@@ -13,11 +13,18 @@ metadata:
 - **能力已開**：`capabilities:{artifact:{},downloads:true}`。持倉表/待裁示/筆記做成 `artifact-sync` 區塊＝他自己填、存在頁面裡、我下次讀得回來；CSV 匯出用 downloads。
 - 🔴 **做不到的別答應**：頁面被 CSP 擋外網，**不能自己去打 TWSE**；可用 capability 只有 artifact/downloads/mcp/self，他的連接器(Gmail/日曆/Drive/M365)沒有股市源。「自動更新」＝我排程重跑後重發布同一網址，不是頁面自己抓。
 - 🔴 **踩過的雷**：在頁面腳本裡同步檢查 `window.claude` 就判定沒能力 → 它掛載比腳本晚，會把整頁鎖成唯讀（0818 他回報「想改持股都不能改」）。正解＝輪詢等它出現，且**永遠不因偵測不到就鎖欄位**，只據實顯示狀態。
-- ⚠️ **未驗**：我排程重發布盤面時，會不會蓋掉他在 sync 區塊寫的持倉/筆記 —— 開排程前必須先實測。
+- ⚠️ **仍未驗（唯一剩下的）**：重發布會不會蓋掉他在第 11 段 sync 區塊寫的持倉／筆記。0820 已實際重發布過一次（內容相同的 HTML），**要他重整頁面確認第 11 段東西還在**；他回報前不要當作已驗。
 - **0818 收工時的狀態＝單一頁十段**（使用者要求「統一呈現在一個頁面，先不要很多分頁」）：01大盤儀表板／02對帳段／03主線六狀態／04AI族群兩桶／05兩桶決定／06模式C名單／07盤尾籌碼／08催化劑行事曆／**09選股規則全文**／10可編輯紀錄本；頂端 sticky 錨點導覽。舊頁 `ef4c82eb-0855-42ae-9493-8d2ea0e49e66`（今早那輪「115.08.18 台股判讀」）內容已全部併入，待他決定刪不刪。
 - **資料新鮮度必分三種標明**：我這輪剛抓的即時／最後完整日K／別輪跑的未複驗（VIX、成交量百分位、模式C名單、SCFI 屬第三類）。口徑不同的數字兩個都列並標口徑（例：8/17 成交金額 一般股票 9,071 億 vs 含權證 9,811 億），不准挑好看的講。
-🔴 **更新頻率（0818 建議，待他裁示才定案）＝每天 2 次自動＋盤中隨叫**：08:20 盤前（夜盤／美股／開盤前大盤段）、16:20 盤尾（T86 約 16:00 才出齊，他自評最有價值）；**盤中不排程**，他打一句「更新看盤台」我才跑。理由＝盤中指數與族群漲跌他手機看盤軟體本來就有，排了是重複花錢；四時段全排＝20 次／週，砍成 10 次／週，砍掉的都是他手機已經有的。
-- **鐘點要對齊他既有的額度視窗**：現有「額度視窗錨定」routine 開窗時間（台北）＝06:00 / 11:10 / 16:20 / 21:30（另有 02:00 那支已停用）。排在窗內＝不多開新的 5 小時窗。16:20 那支剛好就是盤尾籌碼時點。
+🔴🔴🔴 **(2026/08/20 裁示定案＋全部實測完畢) 更新頻率＝跟額度視窗一起跑，三時段：台北 06:00 / 11:10 / 16:20**（他原話「要跟我跑額度的來源時間一起跑」「就是6點 11點 16點那個」，**21:30 不含**）。
+- 🔴 **架構＝兩段式，因為沒有任何一邊同時具備「抓得到股市資料」與「發得了 Artifact」**：
+  - **stage1 本機**（Windows 工作排程 `看盤台更新-盤前/盤中/盤尾`，週一~五 **05:30 / 10:40 / 16:00**）→ 跑 `C:\Users\Seal_Lo\Downloads\agent\dashboard_update.ps1 -Slot PreOpen|Intraday|Close`，它把 `dashboard_prompt.md`（{SLOT} 代換）餵給 `claude.exe -p --model claude-sonnet-5 --permission-mode bypassPermissions`；本機網路通，實抓 TWSE → 改 `memory\artifact\stock_dashboard.html` → 寫回選股對帳紀錄 → git push。log 在 `agent\logs\dashboard\`（留最新 60 支）。
+  - **stage2 雲端**＝**直接改寫他既有的三支「額度視窗錨定」routine**（`trig_01N6vg…`06:00／`trig_01GKzS…`11:10／`trig_013muP…`16:20），不另開 routine＝**零額外雲端成本**，錨定功能照舊。它 clone repo → 讀 `artifact/stock_dashboard.html` → 發布回固定網址。model 用 haiku-4-5。
+  - 兩段差 20~30 分鐘讓本機先跑完；雲端有兩道閘：**週末（`date -u +%u` 為 6/7）不發布**、**HTML 最後 commit 距今 >6 小時就不發布**（＝他電腦沒開，寧可不發也不發舊的）。
+- 🔴🔴 **0820 實測結論（別再重測）**：①**雲端沙箱 egress 封鎖所有股市網域** —— openapi.twse.com.tw、www.twse.com.tw（MI_INDEX 與 T86）、tw.stock.yahoo.com、query1.finance.yahoo.com、stooq.com、www.cnyes.com 全部 `EGRESS_BLOCKED`；雲端只有 **WebSearch** 與 **claude.ai artifact** 通得了 → **雲端絕對不能自己跑選股**，硬跑＝拿搜尋摘要當收盤價＝掰數字。②**headless `claude -p` 沒有 Artifact 工具**（ToolSearch 查無）→ 本機排程發不了網頁。③**雲端 session 有 Artifact 工具、也 clone 得到 repo**。
+- 🔴 **發布的三個坑（照做，別自己發明）**：①**發布前一定要先 WebFetch 一次該 artifact 網址**，否則報 `This session hasn't viewed the latest version of the artifact`；②**不要傳 `capabilities`、不要傳 `contract`** —— 伺服器自動沿用 `{artifact, downloads}` / `0.2.4`，傳了反而會覆蓋掉；③**favicon 固定 📈**、url 一字不差、`file_path` 用 repo 裡那支。
+- **正本 HTML ＝ repo 的 `artifact/stock_dashboard.html`**（0820 從已發布頁抓回、剝掉 frame-runtime 外殼後入庫，963 行）。**不要再依賴 session scratchpad 的 stock-0818.html**。改頁面＝原地 Edit 這支檔，不重建。
+- ⚠️ **兩支一次性測試 routine 已停用**（`trig_01Xs1Zah2gtsnFAXZoUPbyGP` 等），留著當紀錄，別重新啟用。
 - 🔴 **省力關鍵在「更新方式」不在頻率**：不重建整頁。**WebFetch 這個 artifact 網址可以把整份 HTML 拉回來**（0818 實測 81.9KB，會落成本機檔給我讀）→ 只 Edit 變動的數字段 → 發布回**同一個 file path** → 網址不變、他只留一個書籤。原始 HTML 只存在某輪的 session scratchpad（`stock-0818.html`），**不要依賴那個路徑**，一律用 WebFetch 取回當正本。
 - 🔴 **兩件未驗，沒驗不准開排程**：①雲端 routine 的 allowed_tools 裡沒有 Artifact，能不能重發布這頁**未證實** → 要開就先跑一支一次性測試 routine，失敗就退回「他打一句、我在本機跑」；②重發布會不會蓋掉他在第 10 段 artifact-sync 區塊寫的持倉／筆記 → 測法＝請他在「盤中筆記」打一行字，我重發布，他重整看還在不在。
 - **「每日盤前台股簡報」routine（`trig_01VvpscHwEzPRodfn7azHCg3`）自 2026/06/26 起 `enabled:false`，等於早就沒在跑**。功能與看盤台重疊，傾向直接改寫成「更新看盤台」，不要兩套並存。

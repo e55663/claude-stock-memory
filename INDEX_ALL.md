@@ -35,7 +35,7 @@
 - [🔴🔴盲測污染:寫進索引=案子永久燒掉](feedback_blindtest_system_reminder_contamination_0804.md) — 開場強制載入擋不掉;測試案索引只寫狀態別寫發現
 - [三層權限政策](feedback_permission_tiers.md) — bypassPermissions+22條毀滅級deny
 - [🔴跨裝置同步手冊](project_cross_device_setup.md) — repo=e55663/claude-stock-memory;三台對接雲端不需同時開;一律從Downloads\agent開(打cc);設定用symlink版控;Mac那套是重建版;Mac硬碟清理待辦 / [Statusline](reference_statusline_powershell_fix.md) / [agent自動](project_ai_agent_automation.md)
-- [🔴🔴本機檔別產,但雲端看盤台要養(0818二版)](feedback_no_standalone_artifacts.md) — Artifact 看盤台=他要的交付物;🔴更新頻率建議每天2次(08:20盤前/16:20盤尾)+盤中隨叫,對齊他既有額度視窗06:00/11:10/16:20/21:30,待裁示;🔴省力關鍵=WebFetch拉回整份HTML只改數字再發布同一file path,不重建;兩件未驗(雲端routine有無Artifact權/重發布會不會蓋掉他寫的第10段);盤前簡報routine自0626已停用;頁面不能自己打TWSE;window.claude掛載比腳本晚別同步判定就鎖唯讀
+- [🔴🔴🔴看盤台自動更新已上線(0820定案)](feedback_no_standalone_artifacts.md) — 三時段06:00/11:10/16:20跟額度視窗一起跑;兩段式=本機排程05:30/10:40/16:00抓TWSE改HTML推repo,雲端額度視窗routine讀repo發布(不另開routine=零額外成本);🔴雲端egress封鎖全部股市網域(TWSE/Yahoo/stooq/cnyes)所以雲端不能自己選股;🔴headless claude -p沒有Artifact工具;發布前必先WebFetch該網址,不准傳capabilities/contract,favicon固定📈;正本HTML=repo artifact/stock_dashboard.html;僅剩「重發布會不會蓋掉第11段筆記」待他回報
 
 ## 個人生活
 - [🔴使用者檔案](user_profile.md) — 羅慶人/營造業副主任/品管+主任牌;🔴月生活費週期23號到23號非日曆月;飲料預設無糖;海外要勸阻衝動購買;表格不要橫向捲動
