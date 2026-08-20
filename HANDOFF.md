@@ -16,9 +16,12 @@
   3. 解法＝stage1 本機排程（05:30/10:40/16:00，週一~五）抓資料改 HTML 推 repo；stage2 **直接改寫他既有三支「額度視窗錨定」routine** 去讀 repo 發布，不另開 routine ＝ 零額外雲端成本。
   4. 已實測雲端從 repo 發布成功（同網址、capabilities 自動沿用）。正本 HTML 入庫 `artifact/stock_dashboard.html`。
 - **他的態度**：「我看後續怎麼處理 再改成適合我的模式」→ 先讓它跑，時段／頻率之後他會調。全部可逆（本機 `Unregister-ScheduledTask`；雲端把 prompt 改回「只回 OK」）。
-- **停在哪（🔴 收工時仍未完成，接手先看這段）**
-  - 11:32 第一次手動觸發**失敗**：`$prompt | & claude.exe -p` 管線餵 stdin 在排程底下秒死（0xC000013A）。已改成把 prompt 當引數傳，11:40 重跑，**45 秒後仍在執行中（267009）＝ 這次起得來了**，但**整輪跑完的結果我沒看到就收工了**。
-  - 🔴 **接手第一件事＝去看 `Downloads\agent\logs\dashboard\` 最新那支 log**，確認有沒有跑完、HTML 有沒有被改、有沒有 push 成功。**別假設它成功了。**
+- **🔴🔴 停在哪＝本機 stage1 兩次都失敗，整條線目前是斷的，接手先修這個**
+  - 11:32 觸發：`$prompt | & claude.exe -p`（管線餵 stdin）→ `LastTaskResult 3221225786`（0xC000013A ＝ STATUS_CONTROL_C_EXIT），log 只有 start 一行。
+  - 改成把 prompt 當引數傳（`& $claudeExe -p $prompt …`），11:40 再觸發 → **一樣 3221225786**，log 一樣只有 start 一行。**我一度在 45 秒時看到 267009 就對他說「這次起得來了」，那是誤判（267009 只是「執行中」，最後仍失敗），已當場更正。**
+  - ⇒ **結論：`claude.exe -p` 在 Windows 工作排程底下跑不起來，原因未定案。**還沒排除的方向：沒有 console／要不要改用 `cmd.exe /c … > log 2>&1` 包一層／要不要勾「以最高權限執行」／`--output-format text` 或 `stream-json`。**下次接手要實際測到成功才算修好，不准再看到「執行中」就宣告成功。**
+  - 另外查到：這台**現在在用電池**（`Win32_Battery.BatteryStatus = 1`）。用預設設定建的排程會卡在 **Queued** 不執行；看盤台那三支我已設 `AllowStartIfOnBatteries`，所以會啟動（是啟動後才死的，兩件事不要混）。
+  - 雲端 stage2 那三支**是好的**（已實測發布成功），但本機沒推新 HTML，它們會走「超過 6 小時不發布」那道閘 → 頁面就停在 8/19 內容。
 - **🔴 待裁示／下一步**
   1. **他要重整看盤台，確認第 11 段「我的紀錄本」（持倉／待辦／盤中筆記）有沒有被重發布蓋掉** —— 這是唯一剩下的未驗項。
   2. 本機那三支排程**要他電腦開著**才會跑（已設 WakeToRun＋StartWhenAvailable）；若他常關機，要改別的做法。
