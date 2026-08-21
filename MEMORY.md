@@ -92,7 +92,7 @@
 - [🔴0806:141E執行預算送簽](project_141E_execution_budget_0806.md) — 空白簽呈格式+會議紀錄草稿已產出;七疑義未解;缺大包合約與戶數
 - 🔴0805: [打法說明壓縮完成](project_taofa_compression_0805.md)四份全壓/原文封存同活頁簿/hook擋裸.Save() · [問題總表74題](project_issue_master_sheet_0805.md)141A第3分頁待答 · [批次](project_billing_batch_state_0805.md)7月報表差132,530未解(平安#15已0812歸檔)
 - 🔴0804批次(未結): [30件歸檔](project_billing_batch_state_0804.md)待裁示6項
-- [出差報帳](reference_travel_reimbursement.md) — 1.公司\出差報帳;本期4趟8,915待送
+- [出差報帳](reference_travel_reimbursement.md) — 母夾+子夾;計程車不進憑證明細;115070304已核;本期4趟8,405待送(缺7/29去程票)
 
 
 ## 🔴 第二層索引（本檔查無就去讀，不准直接說沒有）
