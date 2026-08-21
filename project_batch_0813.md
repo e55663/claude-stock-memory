@@ -61,3 +61,7 @@ metadata:
 3. **他貼的圖會落地成檔案，我沒去撿**（崇鼎報價 jpg、終止契約書 png 留在根目錄）→ 收尾前要掃 Downloads 根目錄。
 
 相關：[[feedback_no_abbreviating_user_given_names_0813]]、[[reference_pure_budget_memo_format_0807]]、[[feedback_rejection_handling_by_me_0811]]、[[reference_tracking_report_problem_block_0811]]
+
+
+## ✅115.08.21 結案：memo 通則B
+「第3點＝品名＋金額」經使用者 115.08.21 於 141A 雜支一(零用金)#11 定版 → **部分成立，只限【零用金／憑證彙總型】**；有明確數量×單價的 SC 件維持「品名 數量x單價=金額」。詳見 [[reference_memo_item3_po_vs_sc]] 與兩本請款單打法說明 ■三十七。
