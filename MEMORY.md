@@ -28,7 +28,7 @@
 - [🔴🔴memo標準打法範本](reference_billing_memo_standard_template.md) — 區間+#期數換行+拆自辦代辦(G4全額)+扣款行簽名句+檢附看角色
 - [🔴🔴🔴問題清單分頁制度](feedback_issue_list_sheet_workflow_0803.md) — 規則釐清完寫進打法說明+記憶;找總表列掃全欄
 - [🔴🔴🔴0803正確模式+計價本回測](feedback_billing_book_correct_mode_0803.md) — memo不放敘述段;期數只能同合約號內比;搬列用整列Cut→Insert
-- [🔴🔴memo第3點PO/SC分流+零用金型(0821)](reference_memo_item3_po_vs_sc.md) — PO只寫品名+數量;SC寫數量x單價=金額;零用金憑證彙總型只寫品名+金額
+- [🔴🔴🔴memo第3點依工項性質分流(0824)](reference_memo_item3_by_work_nature_0824.md) — 他親手改6件:工程項目類只寫品名(多項用概括名)、材料機具勞安衛才寫數量x單價=金額、逐日列控型連工數也不寫、單一項目不換行;檢附不得與缺件矛盾;🔴②型不寫行通表句、扣款採算術正確值 兩條待確認
 - [🔴🔴總表待核/核定兩區](reference_billing_book_summary_layout_0803.md) — 特別說明欄取消改由夾名承載;141A/141E都已上線
 - [🔴計價本格式鐵則](reference_billing_book_format_rules.md) — ABH必設公式/期數最舊在上/新分頁放範本(6)旁/問題件分頁不刪
 - [🔴🔴請款項目欄寫法](reference_billing_item_column_format.md) — 一項一行,只放品名規格數量單位單價金額=議價基準
@@ -70,7 +70,7 @@
 - [🔴141E執行預算進行中](project_141E_execution_budget_0806.md) — 執行預算730,447,811;七個疑義;缺附件一大包合約+戶數
 
 ## 修改單/入預算
-- [🔴🔴🔴修改單memo四型決策樹(0812定版)+括弧選詞(0813)+丁型三點版(0821)](reference_pure_budget_memo_format_0807.md) — 🔴範本只取8月起的件,8月前不參考;甲純預算(括弧只寫預算調整/J4空=四點/C4不帶金額/E4只兩段小計)乙非業變動合約(採購句=五點/C4講合約面+預算面)丙業變(三數,範本150不抄158);🔴括弧=K02-2「內容」欄挑詞:1.1三選/1.2九選(含工地管理),業變非業變不可互借詞,舊「工地管理不准寫」已作廢
+- [🔴🔴🔴修改單memo四型決策樹(0812定版)+括弧選詞(0813)+丁型三點版(0821)](reference_pure_budget_memo_format_0807.md) — 🔴範本只取8月起的件;甲純預算(括弧只寫預算調整/J4空=四點/C4不帶金額)乙非業變動合約(採購句=五點)丙業變(三數,範本150不抄158);🔴括弧=K02-2「內容」欄挑詞:1.1三選/1.2九選,業變非業變不可互借詞
 - [🔴🔴🔴修改單邏輯＝請款單邏輯](feedback_change_order_follows_billing_logic_0807.md) — 動手前兩份打法說明都要讀;先進夾再審核;每夾必附查核記錄.txt逐條走
 - [修改單範本](reference_change_order_template.md) — 填7格→A7自動組裝,署名羅慶人
 - [碳費基金範式](reference_carbon_fee_change_order.md) — 非業變/淨0/工程專案主管◎決
