@@ -118,3 +118,11 @@ $t=[IO.File]::ReadAllText($p,[Text.Encoding]::UTF8)
 - **刪暫存 xlsx 不要用 Remove-Item**：安全 hook 會把它誤判成刪系統根路徑而**整條指令完全不執行**（本輪整支腳本被擋、檔案一個字都沒動，回頭看 mtime 才發現）。改用 [System.IO.File]::Delete()。同理，指令文字裡也不要出現那句被擋的錯誤訊息，會連寫檔都被擋。
 - **PowerShell -like/-notlike 比對含中括號的字串會失敗**：MEMORY.md 索引行是 [標題](檔名) 格式，中括號是萬用字元。要用 .Contains() 判斷、.Replace() 取代。
 - **COM 偶發 Workbooks.Open 回 null／原檔被鎖**：先查 Get-Process EXCEL 與 ~$ 鎖檔；是自己的 COM 沒釋放就補 ReleaseComObject＋[GC]::Collect()＋Start-Sleep 2 重跑；**是使用者開著就停下來請他關檔，不硬蓋**（他開檔期間磁碟版本＝我上次寫的基準，關檔後可直接補寫；但他若存過檔就要以新版為基準重做，不可用舊暫存蓋回去）。
+## 🔴[math]::Round 是 banker's rounding，不等於 Excel 的 ROUND（115.08.25 踩到）
+PowerShell/.NET 的 `[math]::Round(x,0)` 預設 `MidpointRounding.ToEven`：**53262.5 會變 53262、1118512.5 會變 1118512**，
+而 Excel 的 `ROUND()` 是 away-from-zero（53263／1118513）。回測腳本拿 `[math]::Round` 去驗 Excel 的 ROUND 公式結果，
+遇到 .5 結尾就會**假 FAIL**（115.08.25 金鈺昌#6 稅金 1,065,250×5%＝53,262.5 就踩到，且我第一次還誤判成「測項寫死」修錯方向）。
+**寫法**：`[math]::Round(, 0, [MidpointRounding]::AwayFromZero)`。凡是要與 Excel ROUND／請款單稅金／含稅金額對數字的地方一律加這個參數。
+**連帶**：廠商請款單常把稅金與合計存成未四捨五入的原值（如 53,262.5／1,118,512.5），儲存格格式讓它看起來是整數；
+對數字時要抓 `.Value2` 原值再自己 ROUND，不要只看 `.Text`，並在查核記錄揭露 0.5 元差與「以計價本 H 欄 ROUND 值為準」。
+【回測測項】腳本內凡出現 `[math]::Round(` 且用於比對 Excel 金額者，必須帶 `[MidpointRounding]::AwayFromZero`（應為 0 筆例外）。
