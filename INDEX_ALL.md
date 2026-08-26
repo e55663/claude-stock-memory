@@ -8,7 +8,7 @@
 - [🔴🔴🔴模擬部位≠實際持倉(0811)](feedback_simulated_vs_real_holdings_0811.md) — 第三次犯;沒他親口說過買進不得寫成持倉更不得給加減碼建議
 - [持倉與觀察](portfolio_watchlist.md) — 🔴唯一確認=2327國巨300股@607.19(0811);其餘全部未確認,2330/00981A/QQQM/NVDA只能標「上次確認為準」
 - [🔴國巨2327部位手冊(0813更新)](project_yageo_2327_position_0811.md) — 0813漲停662已進第一壓力帶650-700;型②超額4.9倍、20日到期8/28;保本611/停損575;外資8/11-8/12連兩日賣;佔飆桶額度76%;0811減半建議短期被打臉但理由未推翻
-- [🔴0818選股現況(接手先讀)](project_stock_state_0813.md) — 檔名仍0813但內容已更新到0818;🔴實算否定價量背離(量第68百分位/家數比1.197,別再拿8/13-14大量日當基準);穩桶續空手(季線上接深跌edge -0.90pp);距60日高-3.95%崩盤分批不觸發;模式C籌碼補正後21檔;🔴我點名「最乾淨」連四輪負貢獻已停用;🔴0050剔除國巨風險實算=零(市值第18名)
+- [🔴0826選股現況(接手先讀)](project_stock_state_0813.md) — 🔴檔名仍0813但內容已更新到0826收盤;🔴集中度閘門首次實際擋下航運連坐(萬海-9.09%/陽明-9.43%,但空運照漲=海運單一族群);🔴盤中名單只能當草稿(同日13:00的13檔→收盤16檔);模式C收盤16檔按距60日高分三堆;家數比3.10自算(官方14:30才出);距60日高-4.00%型③不觸發,下一筆觸發價42,967;兩桶都不出手。舊0818重點:🔴實算否定價量背離(量第68百分位/家數比1.197,別再拿8/13-14大量日當基準);穩桶續空手(季線上接深跌edge -0.90pp);距60日高-3.95%崩盤分批不觸發;模式C籌碼補正後21檔;🔴我點名「最乾淨」連四輪負貢獻已停用;🔴0050剔除國巨風險實算=零(市值第18名)
 - [🔴🔴🔴型②不套催化劑關+我的品質加篩是負貢獻(0818擴充)](feedback_type2_no_catalyst_needed_0813.md) — 純價格訊號只套關1關2;🔴0818第四次驗證病根擴散到模式C→定案「只給規則命中+逐檔揭露,不再點名最乾淨/高信心」;🔴另定案:因資料落後而標「揭露」的名單,隔日補齊必須回頭重跑並公告差異(0817模式C誤列2618/3189、漏列5檔)
 - [🔴🔴低PE≠超跌(0811)](reference_pe_compression_not_oversold_0811.md) — PE超高→個位數實際0檔;壓縮主因是8月財報季換分母;現在個位數PE的清一色循環股且這波在漲
 - [🔴🔴🔴廣度背離不是警訊(0811回測)](reference_breadth_divergence_backtest_0811.md) — 1214天跨2022熊市;多頭裡家數比越低fwd20越好且參數穩健;🔴真正該怕的是空頭中的全面普漲日(fwd20 -0.17%/勝48.9%);家數比中位1.01別再說「常態跌多漲少」
@@ -34,8 +34,8 @@
 - [🔴🔴模型/額度/派工手冊](reference_model_cost_and_dispatch_0806.md) — 切模型四層權限+中途切cache失效更貴;額度三筆(每輪注入最貴);規則層vs案件層;汰舊換新;派工三條件+🔴子代理禁動計價本/修改單本/交付檔;gate-dispatcher四層設計
 - [🔴🔴盲測污染:寫進索引=案子永久燒掉](feedback_blindtest_system_reminder_contamination_0804.md) — 開場強制載入擋不掉;測試案索引只寫狀態別寫發現
 - [三層權限政策](feedback_permission_tiers.md) — bypassPermissions+22條毀滅級deny
-- [🔴跨裝置同步手冊](project_cross_device_setup.md) — repo=e55663/claude-stock-memory;三台對接雲端不需同時開;一律從Downloads\agent開(打cc);設定用symlink版控;Mac那套是重建版;Mac硬碟清理待辦 / [Statusline](reference_statusline_powershell_fix.md) / [agent自動](project_ai_agent_automation.md)
-- [🔴🔴🔴看盤台自動更新已上線(0820定案)](feedback_no_standalone_artifacts.md) — 三時段06:00/11:10/16:20跟額度視窗一起跑;兩段式=本機排程05:30/10:40/16:00抓TWSE改HTML推repo,雲端額度視窗routine讀repo發布(不另開routine=零額外成本);🔴雲端egress封鎖全部股市網域(TWSE/Yahoo/stooq/cnyes)所以雲端不能自己選股;🔴headless claude -p沒有Artifact工具;發布前必先WebFetch該網址,不准傳capabilities/contract,favicon固定📈;正本HTML=repo artifact/stock_dashboard.html;僅剩「重發布會不會蓋掉第11段筆記」待他回報
+- [🔴跨裝置同步手冊+🔴同機多session會互踩(0826)](project_cross_device_setup.md) — 🔴共用檔一律append-only,絕不按位元組偏移量重寫;查「誰改了這個檔」看.claude\projects\*.jsonl transcript的tool_use.input.command;repo=e55663/claude-stock-memory;三台對接雲端不需同時開;一律從Downloads\agent開(打cc);設定用symlink版控;Mac那套是重建版;Mac硬碟清理待辦 / [Statusline](reference_statusline_powershell_fix.md) / [agent自動](project_ai_agent_automation.md)
+- [🔴🔴🔴看盤台(0826整頁定版)](feedback_no_standalone_artifacts.md) — 🔴0826:三排程自8/24起連6次exit 0xC000013A秒退、根因未確認(手動schtasks /Run可成功);頁面定版01~10結構+「資料新鮮度」四格表,**這頁只放本輪實算、沒重跑的段落不准用舊數字佔位**;刪區塊要連script選擇器一起檢查;發布流程=WebFetch後還要把存下來的HTML逐行Read完才准publish; 三時段06:00/11:10/16:20跟額度視窗一起跑;兩段式=本機排程05:30/10:40/16:00抓TWSE改HTML推repo,雲端額度視窗routine讀repo發布(不另開routine=零額外成本);🔴雲端egress封鎖全部股市網域(TWSE/Yahoo/stooq/cnyes)所以雲端不能自己選股;🔴headless claude -p沒有Artifact工具;發布前必先WebFetch該網址,不准傳capabilities/contract,favicon固定📈;正本HTML=repo artifact/stock_dashboard.html;僅剩「重發布會不會蓋掉第11段筆記」待他回報
 
 ## 個人生活
 - [🔴使用者檔案](user_profile.md) — 羅慶人/營造業副主任/品管+主任牌;🔴月生活費週期23號到23號非日曆月;飲料預設無糖;海外要勸阻衝動購買;表格不要橫向捲動

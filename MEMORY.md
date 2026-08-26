@@ -28,7 +28,7 @@
 - [🔴🔴memo標準打法範本](reference_billing_memo_standard_template.md) — 區間+#期數換行+拆自辦代辦(G4全額)+扣款行簽名句+檢附看角色
 - [🔴🔴🔴問題清單分頁制度](feedback_issue_list_sheet_workflow_0803.md) — 規則釐清完寫進打法說明+記憶;找總表列掃全欄
 - [🔴🔴🔴0803正確模式+計價本回測](feedback_billing_book_correct_mode_0803.md) — memo不放敘述段;期數只能同合約號內比;搬列用整列Cut→Insert
-- [🔴🔴🔴memo第3點依工項性質分流(0824)](reference_memo_item3_by_work_nature_0824.md) — 他親手改6件:工程項目類只寫品名(多項用概括名)、材料機具勞安衛才寫數量x單價=金額、逐日列控型連工數也不寫、單一項目不換行;檢附不得與缺件矛盾;🔴②型不寫行通表句、扣款採算術正確值 兩條待確認
+- [🔴🔴🔴memo第3點依工項性質分流(0824)](reference_memo_item3_by_work_nature_0824.md) — 他親手改6件:工程項目類只寫品名(多項用概括名)、材料機具勞安衛才寫數量x單價=金額、逐日列控型連工數也不寫、單一項目不換行;檢附不得與缺件矛盾;🔴②型不寫行通表句、扣款採算術正確值 兩條待確認;另見[PO/SC分流](reference_memo_item3_po_vs_sc.md)
 - [🔴🔴總表待核/核定兩區](reference_billing_book_summary_layout_0803.md) — 特別說明欄取消改由夾名承載;141A/141E都已上線
 - [🔴計價本格式鐵則](reference_billing_book_format_rules.md) — ABH必設公式/期數最舊在上/新分頁放範本(6)旁/問題件分頁不刪
 - [🔴🔴請款項目欄寫法](reference_billing_item_column_format.md) — 一項一行,只放品名規格數量單位單價金額=議價基準
