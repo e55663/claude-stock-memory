@@ -41,3 +41,15 @@ metadata:
 🔴**(2026/06/17)`桌面\股票掃描結果.txt` 又出現＝不是我選股產生的,是 Windows 排程「台股訊號掃描」每日跑 `C:\Users\Seal_Lo\Documents\股票腳本\股票訊號掃描.ps1` 吐的。使用者說「不要再產生」→ 我已 `Disable-ScheduledTask 台股訊號掃描`(可逆,腳本沒刪)。** 若日後又冒出來,先查這個排程是否被重新啟用。
 
 **How to apply:** 選股結果直接在對話講完即可，不主動生成 txt/html/儀表板檔。**唯一例外**：使用者的個人記帳 Excel `數字清單`（那是他長期在用的資料檔，不是我硬塞的工具）→ 見 [[project-budget-spreadsheet]]。要做檔案前先問，不要預設產出。關聯 [[feedback-brainless-order-system]]。
+
+## 🔴 排程失效病灶（115.08.26 實查，未解）
+- 三個排程（看盤台更新-盤前/盤中/盤尾）自 **8/24 16:00 起連 6 次**全部 exit 3221225786 ＝  xC000013A（STATUS_CONTROL_C_EXIT），log 只有開頭那行、**沒有 end 行**＝連 powershell 宿主一起被砍。頁面正本因此停在 8/24 10:56。
+- dashboard_update.ps1 註解早就寫過同一個錯誤碼（原因是把 prompt 用 pipe 餵進 claude.exe），現在已改成當參數傳，**所以不是同一個病因**。claude.exe 8/26 10:28 自動更新過，但失敗從 8/24 就開始＝不是更新造成的。
+- 12:50 手動 schtasks /Run "看盤台更新-盤中" → **跑成功**（exit 0，12:50:27~12:58:19，push bab1530）。⇒ 腳本本身沒壞，是環境/時機性。🔴 **根因未確認**，下一個觀察點＝16:20 盤尾那輪。
+- 排查用指令：Get-ScheduledTask 看盤台更新-* | Get-ScheduledTaskInfo（看 LastTaskResult）＋ Downloads\agent\logs\dashboard\*.log（只有 44~47 bytes＝秒退）。
+
+## 兩段式的時間差（他問「網址有沒有更新」時要先講的）
+- 本機推 repo ≠ 網址更新。雲端 routine 只在 **06:00／11:10／16:20** 讀 repo 發布。12:57 才 push 的內容，要等 16:20 才會自己上線。
+- 🔴 我在 Claude Code 這邊**可以直接發布**（帶 url 參數更新同一網址），115.08.26 13:05 實測成功；capabilities {artifact, downloads} 與 contract 0.2.4 會自動沿用，不要自己傳。
+- 發布前會被要求「先看過線上版」：**WebFetch 該網址 → 把它存下來的整份 HTML 用 Read 逐行讀完** 才准發布，只 WebFetch 不夠。
+- 「重發布會不會蓋掉第 11 段筆記」：115.08.26 比對過線上版與本機版的第 11 段（持倉 300@607.19、5 條待辦、盤中筆記空白）**完全一致＝他當時沒寫東西**，所以這次發布沒有東西可蓋。**這題仍未真正驗證**，等他實際寫過筆記之後再測一次。
