@@ -49,3 +49,21 @@ metadata:
 - **待辦**：Tahoe 更新完他想叫我做**硬碟清理**（重複檔/舊下載/不用的 App/大檔）。他提「清理」可直接接手，**刪除前先列清單給他確認**。
 
 相關：[[feedback_mac_vs_windows_stock_selection]]、[[feedback_permission_tiers]]、[[reference_statusline_powershell_fix]]、[[project_gate_dispatcher_0731]]、[[reference_git_path_windows]]
+
+## 🔴🔴 同一台機器同時開兩個 session 會互相踩（115.08.26 實例，非假設）
+- 8/26 當天同時有三個寫入者在動 `Downloads\agent\計價回測工具\選股對帳紀錄.txt`：
+  ①上午那個 session（269d12c5）②12:50 的看盤台排程 headless run（f89a3ffc）③我（2eb8fefd）。
+- **13:39 上午那個 session 用「保留位元組 0~363990 的 head ＋ 第 934 行以後的 tail」重寫整份檔**，
+  把它自己當天寫的三段（10:58 選股／11:25 國巨可以留嗎／2018 漲價循環實證）抽掉，
+  同時刪掉 `選股逐檔明細_1150826.txt`。它有寫「保留其他 session 的段落」並自驗，**我的兩段確實沒被動到**。
+- 🔴 **教訓不是「誰做錯」，是「按位元組偏移量重寫共用檔」這個手法本身很危險**：
+  它假設別人沒有同時在寫。當天剛好沒撞到是運氣，不是設計。
+- **往後對 選股對帳紀錄.txt 一律 append-only**（`cat >>` 或 `AppendAllText`），
+  要移除舊段落就明講、單獨做一次，不要跟寫入混在同一道指令裡。
+- **排查招式（有效，下次直接用）**：session transcript 在
+  `.claude\projects\C--Users-Seal-Lo-Downloads-agent\*.jsonl`，一行一個事件。
+  用 `ConvertFrom-Json` 取 `.message.content` 裡 `type=tool_use` 的 `input.command`，
+  就能查出「是誰、幾點、下了哪一道指令改了這個檔」。檔案時間戳對不上時先查這裡，不要憑猜。
+- **內容還救得回來**：被刪的三段在 269d12c5 的 transcript heredoc 裡是全文；
+  `選股逐檔明細_1150826.txt` 的來源 `blocks0826.txt`(88KB) 還在該 session 的 scratchpad。
+  🔴 但那是別的 session 刻意刪的，**未經使用者裁示不要自己還原**。
