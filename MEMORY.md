@@ -85,15 +85,14 @@
 - [🔴🔴🔴歸檔流程手冊+路徑地圖](reference_archive_workflow_0806.md) — 🔴0812路徑全改(工地→2.工地/五桶進「3.請款單 修改單」/活件=該夾直屬);先staging(時間窗全掃)/夾名兩空格點格式/請款有月份夾修改單沒有/問題夾🔴/建夾當下查重刪舊留新/「歸檔」=已確認別再翻舊txt/歸檔後刪該案記憶
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 ## 進行中批次（新→舊）
-- [🔴🔴🔴0825批次四件](project_batch_0825.md) — 金鈺昌#6退件(溢計96,250+超約588,250,G欄維持送件值);143議價12,144,320比前購高827,840、保固金3%→1%少242,887;聖陸#5追加已辦修改單非超約;承洋#5分攤多1元
-- [🔴🔴🔴0824批次13件(六項待裁示)](project_batch_0824.md) — 「改成這樣=審核過=放行」;平安#16活件(核決董事長);攔下加鈦重複計價1,815,216;成駿吊卡代扣差84,480;安和扣款改132,948
+- [🔴🔴🔴0827批次(歸檔10+新進9)](project_batch_0827.md) — 四項待裁示:訊達796,480未議價/竣葦超約48,000/磐鼎保留款未扣45,000/亦鑫三方差169,600+保留款少扣172,908;🔴刪舊留新要先驗涵蓋(我誤刪列控表0842版)
+- [🔴🔴0824/0825批次殘留](project_batch_0824.md) — 大多已於0827歸檔;剩平安#16活件(核決董事長)、金鈺昌#6退件(溢計96,250+超約588,250);「改成這樣=審核過=放行」;另見[0825四件](project_batch_0825.md)
 - [🔴🔴0817~0821批次](project_batch_0817.md) — 🔴翔盛#9退件待補;「下期再扣沒扣」和浚2,300/佑億131,191/金海410,472
-- [🔴0813+0810批次殘留](project_batch_0813.md) — 剩136齊昇/147呂發/崇鼎/宿舍押金差9,000;🔴病灶=議價完成但差異表沒改;請款件維持工地送件值+揭露,修改單件用議定金額;另見project_batch_0810.md
-- [🔴0807修改單殘留兩件](project_change_order_three_0807.md) — 138承園(再退)/143外牆切包(🔴翔博合約查無夾具結構玻璃涉1,702萬)
+- [🔴0813+0810批次殘留](project_batch_0813.md) — 剩136齊昇/147呂發/崇鼎/押金差9,000;🔴病灶=議價完成但差異表沒改;請款件維持送件值+揭露,修改單用議定金額;另見project_batch_0810.md
+- [🔴0807修改單殘留](project_change_order_three_0807.md) — 剩138承園(再退);143已0827歸檔(🔴翔博合約查無夾具結構玻璃1,702萬未解)
 - [🔴0806:141E執行預算送簽](project_141E_execution_budget_0806.md) — 簽呈+會議紀錄草稿已產出;七疑義未解;缺大包合約與戶數
-- 🔴0805: [打法說明壓縮](project_taofa_compression_0805.md)四份全壓 · [問題總表74題](project_issue_master_sheet_0805.md)141A第3分頁待答 · [批次](project_billing_batch_state_0805.md)7月報表差132,530未解
-- 🔴0804批次(未結): [30件歸檔](project_billing_batch_state_0804.md)待裁示6項
-- [出差報帳](reference_travel_reimbursement.md) — 母夾+子夾;計程車不進憑證明細;本期4趟9,485票已齊待送單;事由一律工地視察
+- 🔴0805/0804舊批次: [打法說明壓縮](project_taofa_compression_0805.md) · [問題總表74題](project_issue_master_sheet_0805.md)141A第3分頁待答 · [0805](project_billing_batch_state_0805.md)7月報表差132,530 · [0804 30件歸檔](project_billing_batch_state_0804.md)待裁示6項
+- [出差報帳](reference_travel_reimbursement.md) — 母夾+子夾;計程車不進憑證明細;事由一律工地視察
 
 
 ## 🔴 第二層索引（本檔查無就去讀，不准直接說沒有）
