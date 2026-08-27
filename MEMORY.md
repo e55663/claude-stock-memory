@@ -3,7 +3,7 @@
 > 索引＝地址＋觸發詞，**規則本體在被連到的那個檔裡**。動手前把該主題那個檔打開讀完，不要只憑這行做事。
 
 ## 🔴 最高位階鐵則
-- [🔴🔴🔴正式 Excel 禁止直接改內部 XML](feedback_never_edit_xlsx_xml_directly_0811.md) — COM 逾時就停;不得 ZIP/OpenXML 繞過
+- [🔴🔴🔴正式 Excel 禁止直接改內部 XML](feedback_never_edit_xlsx_xml_directly_0811.md) — COM逾時就停,不得繞過
 - [🔴🔴🔴模擬部位≠實際持倉](feedback_simulated_vs_real_holdings_0811.md) — 沒他親口說買進不得寫成持倉,更不得建議加減碼
 - [🔴🔴私人資料警告](feedback_company_workspace_privacy_warning.md) — 碰個人財務/身分/健康先警告;密碼Token不得貼入
 - [🔴🔴🔴Claude與Codex共用](feedback_claude_codex_shared_workflow.md) — 正本=AGENTS.md＋CLAUDE.md;測到正確才算完成
@@ -16,7 +16,7 @@
 - [🔴🔴🔴只進不退,舊件不回頭改](feedback_rules_forward_only_no_retro_edit_0730.md) — 判準=還會不會再送出
 - [🔴🔴🔴他丟回改好的版本=隱含規則](feedback_user_edit_implies_rule_0730.md) — 逐字比對→反推通則→兩本+記憶同步→回測
 - [🔴🔴🔴記憶=手冊不是日誌](feedback_memory_manual_format_0805.md) — 新規則加進既有手冊,不開新檔;敘事快照一律砍
-- [🔴🔴🔴簽單抽點+❌未查不是放行理由](reference_signature_slip_sampling_rule_0804.md) — ≤20張全核;>20張抽MAX(20,N÷20);有❌不得進4.核准
+- [🔴🔴🔴簽單抽點+❌未查不是放行理由](reference_signature_slip_sampling_rule_0804.md) — >20張抽MAX(20,N÷20);有❌不得進4.核准
 - [🔴🔴查核要逐欄比對](feedback_scrutinize_not_just_open.md) — 「開過檔案」≠「查清楚」
 - [🔴判「尚未簽名」前放大看](feedback_signature_check_before_claiming_unsigned.md) — 手寫常斜寫跨線
 - [🔴🔴🔴重建檔案蓋掉他改好的版本](feedback_never_overwrite_user_edited_file.md) — 寫檔前比對SHA256;原地編輯不重建
@@ -47,7 +47,7 @@
 - [🔴🔴報價單必須根基版本](feedback_quotation_must_be_kindom_form.md) — 非K02-3-PU01-01要警告,不擋件
 - [🔴🔴附件查檢手冊](reference_attachment_checklist_0806.md) — 每件都要列查檢段;五件組+工種速查;機具必COMS
 - [🔴🔴請款太晚要確實稽核](feedback_late_billing_alert.md) — >3個月打延遲句,獨立成段
-- [🔴🔴🔴活件跨月要改計價月(0811)](feedback_billing_month_is_actual_month_0811.md) — 只改活件,同步四處;每月初跑 _跨月活件掃描.ps1
+- [🔴🔴🔴活件跨月要改計價月(0811)](feedback_billing_month_is_actual_month_0811.md) — 每月初跑 _跨月活件掃描.ps1
 - [🔴🔴🔴查核記錄版型(0811)](feedback_audit_txt_readable_format_0811.md) — 結論先行30行內看完;每個❌必附數字
 - [🔴🔴🔴交件前我方要做完(0811)](feedback_finish_my_own_work_before_showing_0811.md) — 我方未執行的不准丟給他看;工地缺件必須揭露
 - [🔴手寫註記要讀完](feedback_handwritten_notes_on_vouchers.md) — 『報支1560』=只認列1,560
@@ -72,7 +72,7 @@
 - [🔴141E執行預算進行中](project_141E_execution_budget_0806.md) — 七個疑義未解;缺大包合約+戶數
 
 ## 修改單/入預算
-- [🔴🔴🔴修改單memo四型決策樹+括弧選詞](reference_pure_budget_memo_format_0807.md) — 甲乙丙丁戊五型;🔴括弧=K02-2「內容」欄挑詞,不可互借
+- [🔴🔴🔴修改單memo四型決策樹+括弧選詞](reference_pure_budget_memo_format_0807.md) — 甲乙丙丁戊五型;括弧回K02-2挑詞
 - [🔴🔴🔴修改單邏輯＝請款單邏輯](feedback_change_order_follows_billing_logic_0807.md) — 動手前兩份打法說明都要讀
 - [修改單範本](reference_change_order_template.md) — 填7格→A7自動組裝,署名羅慶人
 - [碳費基金範式](reference_carbon_fee_change_order.md) — 非業變/淨0

@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: 365bbf1a-11d3-4cf1-8927-79cb45fcc87f
-  modified: 2026-08-27T04:02:31.169Z
+  modified: 2026-08-27T05:46:28.527Z
 ---
 
 # 記憶／打法說明＝手冊，不是日誌
@@ -13,6 +13,12 @@ metadata:
 ## 現行規則（寫任何記憶檔或打法說明條文前讀這層）
 - 🔴🔴 **新規則預設「加進既有主題手冊」，不是開新檔**。開新檔前先問：這條屬於哪本手冊？找得到對應段落就加一行進去（地址成本 0）；真的沒有任何手冊裝得下，才開新檔。**每開一個新檔就是永久多 62B 的索引成本，而且會開始跟別的檔重複。**
 - 現有主題手冊（新規則先往這裡塞）：請款＝`reference_billing_memo_standard_template`／`reference_billing_book_format_rules`／`reference_attachment_checklist_0806`／`feedback_status_sync_and_totals_0806`／`feedback_hangtong_existence_gate`／`feedback_self_vs_deduct_contract`／`feedback_self_audit_no_crutch`；流程＝`reference_archive_workflow_0806`／`reference_change_order_template`／`reference_approval_authority_table`；工具＝`reference_excel_ps_traps_0806`／`feedback_backtest_discipline`；投資＝`reference_stock_strategy_library`／`feedback_crash_playbook_0806`；環境＝`reference_model_cost_and_dispatch_0806`／`project_cross_device_setup`；習慣＝`feedback_work_habits_and_output_0806`。
+- 🔴🔴 **每月汰舊一次**（0827 定）：`memory-health.ps1` 在每月第一次開場會噴一行提醒（stamp 檔 `memory\.monthly-purge-stamp` 記已做的月份）。看到那行就**直接跑** `Downloads\agent\計價回測工具\_記憶月度汰舊.ps1`，照報表 A~D 段處理完，把 `yyyy-MM` 寫進 stamp 檔蓋章。不要問他要不要做。
+  - A＝未結案總表「一、等你裁示」裡案夾已歸檔的項（只掃第一段，第三段是刻意保留的「放行≠問題消失」不得動）→ 確認結案才刪段
+  - B＝索引行每連結 >100 字＝規則被抄進索引存了兩份 → 壓成觸發詞
+  - C＝檔 <2.5KB 且沒人 `[[引用]]`＝地址成本 >2.5% → 併進主題手冊。**例外：最高位階鐵則就算只有 686B 也保留獨立索引行**，開場看得見比省 62B 重要
+  - D＝檔名關鍵詞重疊 → 同主題散在多檔，合併
+  - 收尾一定跑 `_記憶壓縮回測.ps1 -Ref <壓縮前commit> -OnlyRules`，規則層必須 0 缺失
 - 🔴🔴 **批次不准一天開一本**（0827 定）。批次現況一律寫進 [[project_open_items]]（未結案總表），**一件結案就刪那一段**，不開 `project_batch_MMDD.md`。病根：0806 整併後 128 檔，三週開到 164 檔，光地址就多吃 2.2KB，MEMORY.md 撞到 17,000B 上限。
 - 🔴 **索引行＝地址＋觸發詞，不是規則本身**。MEMORY.md 一行控制在 60 字內；規則全文回到被連的那個手冊，動手前把手冊打開讀完。0827 前請款那段一行寫到 440 字，該段一檔就吃掉 MEMORY.md 一半。
 - 檔案固定兩層：`## 現行規則` 在最上面（動手前只讀這層）、`## 回測測項` 在最下面。其餘一律砍。
