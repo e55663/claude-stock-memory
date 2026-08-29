@@ -41,4 +41,4 @@
 - [🔴使用者檔案](user_profile.md) — 羅慶人/營造業副主任/品管+主任牌;🔴月生活費週期23號到23號非日曆月;飲料預設無糖;海外要勸阻衝動購買;表格不要橫向捲動
 - [個人待辦](reference_personal_todo_list.md) — 「幫我記一下」寫進;「我有什麼要做的」讀出
 - [🔴巴黎刷卡順序](reference_paris_card_strategy_0730.md) — DAWHO2.5萬→星展1.5萬→富邦1.5萬→玉山UP選;拒DCC;數字清單在Downloads\個人\
-- [推播](project_personal_todo_push_setup_0714.md) / [記帳Excel](project_budget_spreadsheet.md) / [信用卡](project_credit_card_optimization_2026.md) / [手環](project_luxury_bracelet_purchase_plan.md) / [Gucci](project_vintage_bag_valuation.md) / [巴黎](project_france_trip.md) / [IG](reference_ig_follower_compare.md)
+- [推播](project_personal_todo_push_setup_0714.md) / [記帳Excel](project_budget_spreadsheet.md) / [信用卡](project_credit_card_optimization_2026.md) / [手環](project_luxury_bracelet_purchase_plan.md) / [🔴買包決策(未結案)](project_bag_purchase_0829.md) — 品牌分級Polène≈DeMellier>Verafied;Eclair三材質都嬌貴;Coach看CR/CP/CQ=outlet;含淘寶 / [Gucci](project_vintage_bag_valuation.md) / [巴黎](project_france_trip.md) / [IG](reference_ig_follower_compare.md)
