@@ -30,6 +30,10 @@ metadata:
 - 材質變體：Signature 老花丹寧／素色 indigo／再生拼接／環保棉。
 - 🔴 **專櫃線 vs Outlet 線要分**：型號 **CR／CP／CQ 開頭常為 outlet 線，用料略省**。買前先看內袋皮標型號。
 
+## 🔴 換包鐵則（2026-08-29）
+- 他手上 **Balenciaga Bel Air 嫌不實用、考慮賣掉**（評估見 [[project_vintage_bag_valuation]]）。Bel Air 的病＝軟塌無結構。
+- **賣 Bel Air 的錢不得直接滾去買 Verafied Eclair**：Eclair 更軟、四角更脆弱、二手無流通 → 同一個錯誤放大一次。要換就換有結構、二手有市場的（Coach Tabby／Polène／DeMellier 紋路款）。
+
 ## 待他裁示
 - 走「特色包」＝ Verafied Eclair（純看外型挑材質，接受嬌貴＋賭品質），或走「安全牌」＝ Coach Tabby 丹寧／Polène／DeMellier 紋路款。
 - 🔴 依 [[user_profile]]「海外購物要適當勸阻衝動購買」：Verafied 這種無二手流通的新品牌，下單前要先確認退換貨與運費條件。
