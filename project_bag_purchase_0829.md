@@ -42,7 +42,15 @@ metadata:
 - **Loro Piana 有兩個身分**：①LVMH 旗下自有成衣品牌（2013 併入）②布廠 Loro Piana Fabrics，年產約 500 萬米賣給全世界裁縫與品牌。講「Loro Piana 布」多半是指②。
 - 🔴 **掛 LP 布標 ≠ 成衣品質等於 LP**：布是同一塊，但版型、縫製、內襯、肩線差很多 → **布標只證明布料等級，不證明工藝**。判品質看做的人，不是看布標。
 - LP 布本身也分等級（vicuña／cashmere／Zelander wool 差價數倍）→ 別把所有 LP 標當同一件事。
-- 已知用 LP 布：頂級手工西裝 Brioni（曾獨家秘魯 vicuña）、Kiton、Zegna、Tom Ford、Belvest；MTM 線上 Proper Cloth／Oliver Wicks／Senszio／StudioSuits；布行零售 Rex Fabrics／Joel & Son（可自己買布找裁縫）；另有 **Loro Piana Interiors**（2006 成立）做家具／遊艇／私人飛機／飯店／汽車內裝 B2B。
+- **已知用 LP 布的品牌**（依證據強度）：
+  - 商品頁／官網明寫：**Hugo Boss／BOSS**（BOSS Tailored 的 Super 150 virgin wool 由 LP 廠織；90s–00s 高階線 Einstein／Hera／Zeus 等 model 大量用 LP 羊毛喀什米爾；Made to Measure 可選 LP）、**Herno**（LP 羊毛斜紋＋LP Green Storm System）、**Gorski**（整條 LP 系列）、**Yves Salomon**（官網 LP 布指南）、**Viola Milano**（100% LP yarn 針織）、**Lardini**（官方列出合作布廠含 LP）
+  - 頂級手工西裝（業界公認）：**Brioni**（曾獨家秘魯 vicuña）、**Kiton**、**Zegna**、**Tom Ford**、**Belvest**
+  - MTM／客製可指定 LP 布號：**Proper Cloth**、**Oliver Wicks**、**Senszio**（bunch 766／768）、**StudioSuits**
+  - 自己買布找裁縫（最省）：**Rex Fabrics**、**Joel & Son**、**Pini Parma**、**Fabrics & Fabrics NYC**
+  - 非服裝：**Loro Piana Interiors**（2006 成立）家具／遊艇／私人飛機／飯店／汽車內裝 B2B
+  - 🔴 查無證據、不要跟著講的：Suitsupply、Isaia、Canali、Corneliani、Boglioli、Ring Jacket、Serapian／Valextra
+- 🔴 **同品牌不同線差很大**：Boss 只有高階線／MTM 用 LP，主線多半不是 → **買二手一定翻內襯看織邊布標寫不寫 "Loro Piana"，不能看品牌推定**。
+- 🔴 **我沒查 ≠ 查不到**（0829 教訓）：使用者問「有哪些品牌」時，沒被我搜過的品牌不可講成「查無」，要嘛去查、要嘛講明「這個我沒查」。Boss 就是我沒搜就漏掉。
 - 🔴 **quiet luxury 溢價買的是布，不是道德保證**：2025-07-14 米蘭法院因外包廠剝削移工（時薪 €4／週工時 90 小時）把 Loro Piana 列入司法管理，2026 年提前解除。
 
 ## 淘寶購物省錢（他有興趣，尚未定案）
