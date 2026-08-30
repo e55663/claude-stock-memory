@@ -42,12 +42,14 @@ metadata:
 - **Loro Piana 有兩個身分**：①LVMH 旗下自有成衣品牌（2013 併入）②布廠 Loro Piana Fabrics，年產約 500 萬米賣給全世界裁縫與品牌。講「Loro Piana 布」多半是指②。
 - 🔴 **掛 LP 布標 ≠ 成衣品質等於 LP**：布是同一塊，但版型、縫製、內襯、肩線差很多 → **布標只證明布料等級，不證明工藝**。判品質看做的人，不是看布標。
 - LP 布本身也分等級（vicuña／cashmere／Zelander wool 差價數倍）→ 別把所有 LP 標當同一件事。
-- **已知用 LP 布的品牌**（依證據強度）：
-  - 商品頁／官網明寫：**Hugo Boss／BOSS**（BOSS Tailored 的 Super 150 virgin wool 由 LP 廠織；90s–00s 高階線 Einstein／Hera／Zeus 等 model 大量用 LP 羊毛喀什米爾；Made to Measure 可選 LP）、**Herno**（LP 羊毛斜紋＋LP Green Storm System）、**Gorski**（整條 LP 系列）、**Yves Salomon**（官網 LP 布指南）、**Viola Milano**（100% LP yarn 針織）、**Lardini**（官方列出合作布廠含 LP）
-  - 頂級手工西裝（業界公認）：**Brioni**（曾獨家秘魯 vicuña）、**Kiton**、**Zegna**、**Tom Ford**、**Belvest**
-  - MTM／客製可指定 LP 布號：**Proper Cloth**、**Oliver Wicks**、**Senszio**（bunch 766／768）、**StudioSuits**
-  - 自己買布找裁縫（最省）：**Rex Fabrics**、**Joel & Son**、**Pini Parma**、**Fabrics & Fabrics NYC**
-  - 非服裝：**Loro Piana Interiors**（2006 成立）家具／遊艇／私人飛機／飯店／汽車內裝 B2B
+- **已知用 LP 布的品牌**（0830 逐個查證，依證據強度分層）：
+  - **A 級（商品頁／官網／具體型號可查）**：**Hugo Boss／BOSS**（BOSS Tailored 的 Super 150 virgin wool 由 LP 廠織；90s–00s 高階線 Einstein／Hera／Zeus 大量用 LP；MTM 可選 LP）、**Herno**（LP 羊毛斜紋＋Green Storm System）、**Moorer**（LP Storm System 喀什米爾大衣）、**Mandelli**（LP Storm System field jacket）、**Boglioli**（K-Jacket 100% LP 喀什米爾）、**Ring Jacket**（LP Four Seasons 130s／Model 11 wool-silk seersucker／RMJ-03 Summertime）、**Ralph Lauren Purple Label**（LP 喀什米爾布＋LP 紗針織）、**Canali**（Proposta blazer 用 LP Super 120s 塔斯馬尼亞羊毛）、**Suitsupply**（LP Rain System 外套）、**Gorski**（整條 LP 系列）、**Yves Salomon**（官網 LP 布指南）、**Viola Milano**（100% LP yarn）、**Lardini**（官方列出合作布廠含 LP）
+  - **B 級（媒體／產業報導點名，非品牌官方頁）**：**Hermès**、**Louis Vuitton**、**Fendi**、**Chanel**、**Brunello Cucinelli**（但 BC 主力走自家持股 43% 的 Cariaggi）、**Brioni**（曾獨家秘魯 vicuña）、**Kiton**、**Tom Ford**、**Belvest**、**Brooks Brothers**
+  - **MTM／客製可指定 LP 布號**：**Proper Cloth**、**Oliver Wicks**、**Senszio**（bunch 765／766／768）、**StudioSuits**、**Articles of Style**、**Knot Standard**、**De Oost**（阿姆斯特丹）、**Pini Parma**、**Anatoly & Sons**、**The Armoury × Ring Jacket**
+  - **布行零售（自己買布找裁縫，最省）**：**Rex Fabrics**、**Joel & Son**、**Fabrics & Fabrics NYC**、**A Fabric Place**、**South Pacific Fabrics**
+  - **非服裝**：**Loro Piana Interiors**（2006 成立）家具／遊艇／私人飛機／飯店／汽車內裝 B2B
+  - 🔴 **查過確定不是／查無證據，不要跟著講**：**Cesare Attolini**（主用英國布）、**Zegna**（自家 Trivero 垂直整合，會用他廠布但查無 LP 明確證據；0829 我曾誤列，0830 撤掉）、**Isaia**、**Corneliani**（各查兩輪無果）、**Todd Snyder／Theory／Massimo Dutti／Banana Republic**、**Serapian／Valextra**
+  - LP 自家年產約 500 萬米布，B2B 賣給全世界裁縫與品牌 → 「沒列在上面」多半只是沒公開講，不等於沒用。
   - 🔴 查無證據、不要跟著講的：Suitsupply、Isaia、Canali、Corneliani、Boglioli、Ring Jacket、Serapian／Valextra
 - 🔴 **同品牌不同線差很大**：Boss 只有高階線／MTM 用 LP，主線多半不是 → **買二手一定翻內襯看織邊布標寫不寫 "Loro Piana"，不能看品牌推定**。
 - 🔴 **我沒查 ≠ 查不到**（0829 教訓）：使用者問「有哪些品牌」時，沒被我搜過的品牌不可講成「查無」，要嘛去查、要嘛講明「這個我沒查」。Boss 就是我沒搜就漏掉。
