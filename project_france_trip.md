@@ -5,7 +5,30 @@ metadata:
   node_type: memory
   type: project
   originSessionId: ae7d8384-da45-402c-8165-326541c3bb19
+  modified: 2026-09-01T14:15:54.124Z
 ---
+
+## 🔴🔴 2026/09/01 以 Notion 頁為準的現況（下面 06/19 逐日草案已作廢，別再引用）
+Notion 頁「法國巴黎 2026.09.17」現在是正本，Playwright 可讀（已登入，讀取穩定）。實際 Day 對照：
+- Day1 9/17(四) 桃園 T2 20:30 報到 / 23:30 起飛　Day2 9/18(五) 06:50 落地→羅浮宮周邊+杜樂麗+皇家宮殿+薇薇安拱廊街，15:00 check-in 等男友，晚上瑪黑
+- Day3 9/19(六) 羅浮宮+凡登廣場+聖多諾黑街，晚上香榭+凱旋門　Day4 9/20(日) 奧賽　Day5 9/21(一) 聖禮拜堂+聖母院+拉丁區+聖日耳曼+Le Bon Marché
+- Day6 9/22(二) 大皇宮+小皇宮+凱旋門+香榭，晚上 Il Ristorante+瘋馬秀（吉維尼降為備案）
+- 🔴Day7 9/23(三) **Céline Dion 演唱會 20:00 La Défense Arena**（不是舊記憶寫的 9/25）
+- Day8 9/24(四) 蒙馬特　Day9 9/25(五) 空/百貨退稅日　Day10 9/26(六) 07:00 到機場退稅、11:20 起飛　Day11 9/27(日) 06:50 到桃園
+🔴 他 2026/09/01 貼的背景寫「旅行 9/17～9/28」是錯的，已當面更正：實際巴黎在地 = 9/18 早上 ~ 9/26 早上，沒有 9/27、9/28。以後他再提 9/27/9/28 的巴黎活動一律先擋。
+🔴 頁面最底部有一個 toggle 標題「claude」＝我的專屬區塊，更新一律寫在裡面（新版本往下加，不要蓋掉舊的）。寫法：展開 toggle→游標放行尾→Enter 產生子區塊→`navigator.clipboard.writeText(markdown)`＋真實 Ctrl+V 貼上→**reload 頁面再讀一次驗證**（Notion 底部區塊有虛擬化，reload 後要先 scrollIntoView 才看得到子內容，不要因為讀到空的就以為沒存進去）。2026/09/01 實測這條路徑可靠，比 .fill()/type 可靠得多。
+
+## 🆕 2026/09/01 Loro Piana 購物研究（實查結果）
+- Paul Smith 官網 fr 站男裝 Loro Piana 分類共 15 件：**只有 1 件 Summer Time 羊毛絲格紋 Blazer（藍）€833（原價 €1,190，-30%）適合台灣**；其餘 14 件全是秋冬 Storm System（Harrington/Bomber €1,055–1,070、羊毛背心 €625、三層 Mac/可拆背心大衣 €1,435–1,490）。他記憶中的 Dream Tweed Blazer 已下架。
+- 每次穿著成本粗估：Summer Time ≈ NT$150/次 vs Storm System Harrington ≈ NT$460/次 → 順序 Summer Time 先、Harrington 次、Mac 不考慮（NT$54,000 台灣穿不到）。
+- 巴黎 Paul Smith 五個點：Marais/Rue Pastourelle、Rue de Grenelle、Bd Raspail（以上 11:00–19:00）、Printemps、Le Bon Marché（10:00–20:00）。
+- 🔴 購物不另開一天：9/21(Day5) Le Bon Marché 那天同時有 Paul Smith 專櫃＋LP 專櫃＋兩間 Paul Smith 獨立店步行 5–10 分＝LP 主場，留 2.5 小時試穿；9/25(Day9) 老佛爺/春天補位＋當天開完所有退稅單。
+- 未查證不得當確認：BOSS 巴黎當季 LP 庫存與折數、Officine Générale/De Bonne Facture 是否用 LP、Brooks Brothers 巴黎實體點、台北百貨檔期。
+
+## 🆕 2026/09/01 巴黎同志活動（用實際窗口過濾完）
+- ✅ B.Boat Summer Cruise Closing 9/22(二) 19:00–02:00，20:30 開船 22:30 回岸，4 Quai Saint-Bernard 75005（queer.paris 官方確認）。🔴撞當晚瘋馬秀+Il Ristorante 要三選一；隔天 9/23 演唱會，建議只搭船段 22:30 就走。
+- ✅ Drag Race France Live S4，Casino de Paris，9/24–10/3 週三至週六 20:00，€19–109（官方確認）。窗口內只有 9/24、9/25 → 建議 9/24。
+- ❌ Bitch Party 9/18（落地當天+鐵塔燈光秀，不建議）／Monarch 9/25（隔天 06:45 去機場）／Lust 9/26／Drag Bingo 9/27（人已在飛機上）。
 
 ## ✅ 住宿確認（2026/07/02）
 **Britannique Hotel - Paris Centre**，20 Av. Victoria, 75001 Paris（1區，Châtelet旁，步行：聖禮拜堂5分/Notre-Dame 10分/瑪黑區15分/羅浮宮15分）
@@ -100,7 +123,7 @@ metadata:
 
 ⚠️ 此為旅遊規劃,跟股票/記帳無關,是新的獨立主題。
 
-## 逐日行程草案(2026/06/19出、依實際機票修正,巴黎當基地不換旅館;**2026/06/24依男友反饋再修正**)
+## ⛔已作廢 逐日行程草案(2026/06/19出;2026/09/01 已被 Notion 正本取代,只留作歷史,不准拿來排行程)
 **排程已避開主要景點公休日(奧塞週一休/羅浮宮週二休/龐畢度週二休)。** 9/18(五)早上抵達雖是紅眼班機後,但07:55落地+通關提行李約上午即可到公寓,當天仍排了行程,只是節奏可彈性放慢(累的話晚上凱旋門夜景可省略移到別天)。
 - 9/18(五) **[更新2026/07/02]** 使用者單獨抵達（男友下午才到）。CDG 07:55→RER B→09:00-09:30飯店寄行李→早餐→聖禮拜堂（步行5分，€15/NT$555，建議買線上票）→Notre-Dame外觀→瑪黑區午餐（menu du jour €15-20）→Place des Vosges逛→15:00 check-in休息→男友到後傍晚一起去艾菲爾鐵塔+Trocadéro（夕陽+21:00燈光秀）
 - 9/19(六) 羅浮宮(整個上午,🔴要先訂時段),午餐杜樂麗周邊,下午Place Vendôme+Rue Saint-Honoré逛街(開始累積退稅單),晚上瑪黑區
