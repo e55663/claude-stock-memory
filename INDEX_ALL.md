@@ -34,7 +34,7 @@
 - [🔴🔴模型/額度/派工手冊](reference_model_cost_and_dispatch_0806.md) — 切模型四層權限+中途切cache失效更貴;額度三筆(每輪注入最貴);規則層vs案件層;汰舊換新;派工三條件+🔴子代理禁動計價本/修改單本/交付檔;gate-dispatcher四層設計
 - [🔴🔴盲測污染:寫進索引=案子永久燒掉](feedback_blindtest_system_reminder_contamination_0804.md) — 開場強制載入擋不掉;測試案索引只寫狀態別寫發現
 - [三層權限政策](feedback_permission_tiers.md) — bypassPermissions+22條毀滅級deny
-- [🔴跨裝置同步手冊+🔴同機多session會互踩(0826)](project_cross_device_setup.md) — 🔴共用檔一律append-only,絕不按位元組偏移量重寫;查「誰改了這個檔」看.claude\projects\*.jsonl transcript的tool_use.input.command;repo=e55663/claude-stock-memory;三台對接雲端不需同時開;一律從Downloads\agent開(打cc);設定用symlink版控;Mac那套是重建版;Mac硬碟清理待辦 / [Statusline](reference_statusline_powershell_fix.md) / [agent自動](project_ai_agent_automation.md)
+- [🔴跨裝置同步手冊+🔴同機多session會互踩(0826)](project_cross_device_setup.md) — 🔴共用檔一律append-only,絕不按位元組偏移量重寫;查「誰改了這個檔」看.claude\projects\*.jsonl transcript的tool_use.input.command;repo=e55663/claude-stock-memory;三台對接雲端不需同時開;Claude打cc/Codex打cx進Downloads\agent;cx依賴PS profile;設定用symlink版控;Mac那套是重建版;Mac硬碟清理待辦 / [Statusline](reference_statusline_powershell_fix.md) / [agent自動](project_ai_agent_automation.md)
 - [🔴🔴🔴看盤台(0826整頁定版)](feedback_no_standalone_artifacts.md) — 🔴0826:三排程自8/24起連6次exit 0xC000013A秒退、根因未確認(手動schtasks /Run可成功);頁面定版01~10結構+「資料新鮮度」四格表,**這頁只放本輪實算、沒重跑的段落不准用舊數字佔位**;刪區塊要連script選擇器一起檢查;發布流程=WebFetch後還要把存下來的HTML逐行Read完才准publish; 三時段06:00/11:10/16:20跟額度視窗一起跑;兩段式=本機排程05:30/10:40/16:00抓TWSE改HTML推repo,雲端額度視窗routine讀repo發布(不另開routine=零額外成本);🔴雲端egress封鎖全部股市網域(TWSE/Yahoo/stooq/cnyes)所以雲端不能自己選股;🔴headless claude -p沒有Artifact工具;發布前必先WebFetch該網址,不准傳capabilities/contract,favicon固定📈;正本HTML=repo artifact/stock_dashboard.html;僅剩「重發布會不會蓋掉第11段筆記」待他回報
 
 ## 個人生活

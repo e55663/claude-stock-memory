@@ -13,7 +13,7 @@ metadata:
 ## 現行架構
 - 單一真相＝私人 GitHub repo **`e55663/claude-stock-memory`**。三台都跟雲端對接，**不需要兩台同時開機**；唯一紀律＝來源那台要成功 push，下一台才拿得到。
 - 記憶實際位置：`C:\Users\Seal_Lo\.claude\projects\C--Users-Seal-Lo-Downloads-agent\memory`（git init 在原地，保留本機記憶回想）。
-- 🔴 **使用者一律從 `C:\Users\Seal_Lo\Downloads\agent` 開 Claude**（終端機打 `cc`；`Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1` 的 `CC` 函式與 `.local\bin\CC.cmd` 都已固定 cd 到這裡）。從家目錄開會載到已搬空的舊專案。
+- 🔴 **使用者一律從 `C:\Users\Seal_Lo\Downloads\agent` 開 AI 工具**：Claude 打 `cc`、Codex 打 `cx`。`CX` 函式已固定先切到此處再啟動 Codex，離開時自動 push；但它目前只存在於 PowerShell profile，若終端機顯示「running scripts is disabled」，`cx` 就不會載入。此時不要直接打裸 `codex`，要先修復 profile 載入。從家目錄開會載到已搬空的舊專案。
 - git.exe **不在 PATH**：要用完整路徑 `C:\Users\Seal_Lo\AppData\Local\Programs\Git\cmd\git.exe`。
 - 認證＝**GCM OAuth**（無 token 明文），存在 Windows 認證管理員。若出現 `127.0.0.1:<port>/...oauth/authorize` 彈窗＝GCM 本機重新登入，不是外部威脅；用 `Get-NetTCPConnection -LocalPort <port>` 查沒程式在聽＝過期殘留可忽略。
 - 🔴 兩台**不要同時改同一份檔案**（autopush 有 `pull --rebase --autostash` 重試，但同時改仍可能衝突）。
