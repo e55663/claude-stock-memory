@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 365bbf1a-11d3-4cf1-8927-79cb45fcc87f
-  modified: 2026-09-01T06:03:18.335Z
+  modified: 2026-09-01T06:08:35.665Z
 ---
 
 # Excel COM 與 PowerShell 踩雷手冊
@@ -132,3 +132,18 @@ PowerShell/.NET 的 `[math]::Round(x,0)` 預設 `MidpointRounding.ToEven`：**53
 **連帶**：廠商請款單常把稅金與合計存成未四捨五入的原值（如 53,262.5／1,118,512.5），儲存格格式讓它看起來是整數；
 對數字時要抓 `.Value2` 原值再自己 ROUND，不要只看 `.Text`，並在查核記錄揭露 0.5 元差與「以計價本 H 欄 ROUND 值為準」。
 【回測測項】腳本內凡出現 `[math]::Round(` 且用於比對 Excel 金額者，必須帶 `[MidpointRounding]::AwayFromZero`（應為 0 筆例外）。
+
+## 🔴🔴 StartsWith/EndsWith/IndexOf 預設是「文化敏感比對」，會誤中不相干的行（115.09.01 蓋掉查核記錄三行）
+.NET 的 `String.StartsWith(string)` 預設 `StringComparison.CurrentCulture`，會做語言學正規化：
+**圈碼數字（①②⑧）、emoji 變體選擇符（U+FE0F）、零寬字元等在定序上可被忽略**，
+所以 `$line.StartsWith("⑧ ")` 會**匹配到開頭是 🖊️ 的那一行**。
+115.09.01 東和#6 查核記錄就是這樣中招：我要改「🔴未解 ⑧」，腳本卻定位到「✅已查 ⑧」，
+**把已查 ⑧⑨⑩ 三行整段覆蓋掉**（用 `$lines[$i+3]` 切片，所以是靜默刪除，不會報錯）。
+**寫法**：字串定位一律指定 Ordinal —— `$s.StartsWith($p,[StringComparison]::Ordinal)`。
+`String.Contains(string)` 在 .NET Framework 是 ordinal，安全；`-like`／`-match`／`-eq` 也安全。
+**連帶鐵則**：凡是「找到某行→連同後面 N 行一起取代」的切片式改檔，
+① 定位條件必須唯一（同一份檔常有兩個 ⑧：已查清單一個、未解清單一個，要用整句前綴不是編號）；
+② 改之前先把命中行 `Write-Output` 出來自己看，確認是目標行才寫檔；
+③ 寫檔前後比對行數，行數變化要等於預期。
+**還原**：查核記錄的內容在計價本 M/備註欄有同源紀錄，可逐字還原；還原後要在檔內揭露事故，不可默默補回去。
+【回測測項】腳本內 `.StartsWith(` / `.EndsWith(` / `.IndexOf(` 未帶 `[StringComparison]::Ordinal` 者（應為 0 筆）。
