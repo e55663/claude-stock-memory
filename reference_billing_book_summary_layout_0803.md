@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 8630909a-8c12-49ce-905c-634babdaf80c
-  modified: 2026-08-03T09:11:58.262Z
+  modified: 2026-09-02T06:14:56.482Z
 ---
 
 **總表版面（115.08.03 定，141A 已上線；141E 俟使用者確認後比照）**
@@ -23,4 +23,20 @@ metadata:
 
 **Why:** 使用者要「每次打開總表就快速釐清哪些送出了、哪些還在等」，特別說明欄塞滿狀態文字讓總表變雜；問題清單則是他明講的用意——「有些地方邏輯釐清，我跟你釐清完之後，你再寫進打法說明還有記憶裡面，這樣對我未來的效益比較高」，所以那張表是**規則沉澱的管線**，不是單純待辦。
 
-**How to apply:** 改版前必做①複製整本備份並記 SHA256 ②重建用有界範圍（A1:S200）不要用整張 Cells，否則 Excel 忙碌時回 0x800AC472 ③格式設定逐步 try/catch，別讓裝飾步驟失敗把資料白做 ④先把所有超連結目標讀出存檔，重建後逐一接回，寫入前做「目標分頁存在性檢查」，任一不存在就中止不寫。相關：[[feedback_status_sync_five_places]]、[[reference_billing_book_format_rules]]、[[feedback_never_overwrite_user_edited_file]]、[[reference_billing_review_deadlines]]
+**How to apply:** 改版前必做①複製整本備份並記 SHA256 ②重建用有界範圍（A1:S200）不要用整張 Cells，否則 Excel 忙碌時回 0x800AC472 ③格式設定逐步 try/catch，別讓裝飾步驟失敗把資料白做 ④先把所有超連結目標讀出存檔，重建後逐一接回，寫入前做「目標分頁存在性檢查」，任一不存在就中止不寫。
+
+## 🔴🔴 搬區／刪列必做超連結「一致性」檢查（115.09.02 加，141E 實證）
+
+**存在性檢查通過 ≠ 指對**。上面 How to apply ④ 只擋斷鏈；斷鏈會報錯所以看得見，**錯指不會報錯，只會安靜地點進錯的分頁**，是更難發現的傷害。
+
+- **病灶**：`Range("M10:O10").Delete(xlShiftUp)` 這類刪列上移，Excel 把儲存格文字往上移，但 Hyperlink 物件的對應沒同步 → 整段變成「第 r 列的超連結指向第 r−1 列的分頁」的連鎖錯位，一路傳染到該區最後一列。
+- **115.09.02 實證**：141E 計價本總表 32 條超連結有 **24 條錯指**（斷鏈 0），成因就是歷史上搬區沒同步。發現點＝搬移工薪資時讀出 N10 的目標竟是 `'機具租賃費用(零用金)'!A1`（那是 N9 的項目）。已逐條修正並驗到「斷鏈 0／不一致 0」。同日檢查 141A：104 條、斷鏈 0、8 條「不一致」全為良性（項目欄用字與分頁名寫法不同但指向正確，如押金類統一指 `管理費請款單`），**141A 無錯位**。
+- **檢查法（搬區／刪列前後各跑一次，比對差異）**：對每條 Hyperlink 取其所在列的「項目欄文字」＋右鄰「廠商欄文字」，組成 `項目(廠商)`，與 `SubAddress` 去掉 `!A1` 與單引號後的分頁名比對；不等就是嫌疑。
+- **修正時的判準**：只在 `項目(廠商)`（或多一空格的 `項目 (廠商)`）在分頁清單中**唯一命中**時才改，多候選或無對應一律留著列清單問，不猜。
+- 🔴 逐條只對**單一 Hyperlink 物件**呼叫 `$cell.Hyperlinks(1).Delete()` 再 `Hyperlinks.Add`；**絕不**對整張 Worksheet/Range 呼叫 `.Hyperlinks.Delete()`（會清空全表，見 [[feedback_verbatim_memo_no_self_edit]]）。
+- 蒐集待修清單時**先跑完迴圈存成陣列再改**，不要邊列舉 `$ws.Hyperlinks` 邊增刪（集合會變動）。
+- 改完務必把字體改回標楷體（`Hyperlinks.Add` 會套回 Microsoft JhengHei UI），並重驗「斷鏈數／不一致數」都是 0 才算完成。
+
+**回測測項**：T7 兩本總表逐條驗 `項目(廠商)` vs 目標分頁名，錯指數應為 0（良性差異需逐條列白名單，不得整批放行）。
+
+相關：[[feedback_status_sync_five_places]]、[[reference_billing_book_format_rules]]、[[feedback_never_overwrite_user_edited_file]]、[[reference_billing_review_deadlines]]、[[reference_excel_ps_traps_0806]]
