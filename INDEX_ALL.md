@@ -19,7 +19,7 @@
 - [🔴🔴🔴推薦前必跑對照組](feedback_benchmark_comparison_required_0730.md) — 「買0050就好」推翻整套;前N名出口前加對照組
 - [金融股資料庫](reference_financial_stocks_data_0730.md) — 除權息/填息率/PB在最貴端;TWT49U參數startDate
 - [🔴🔴題1要逐檔查個股新聞](feedback_thesis1_needs_stock_specific_news.md) — 廣達GDS稀釋漏查吃-9.9%;跌最深≠能接
-- [🔴法說好不是進場理由](feedback_earnings_call_not_entry_reason.md) — 後5日中位-0.24%輸基準17pp;等回檔
+- [🔴🔴🔴基本面利多不是進場理由(0903全市場擴充)](feedback_earnings_call_not_entry_reason.md) — n=5,482實證:消息前68.9%股價已漲=市場先反應;看到消息才買超額60日-1.38%;🔴決定成敗的是消息出爐時股價位置,在高點附近+0.89%/勝51.7%是唯一正的,距高跌逾40%則-4.12%/勝39.9%(p=0.0001,8年度全負)=便宜又有基本面最差
 - [🔴停損紀律](feedback_stoploss_discipline_lessons_0720.md) — 同組兩檔觸停損整組出清
 - [🔴TWSE抓法](reference_twse_api_same_day_data.md) — 當日別用STOCK_DAY_ALL;改RWD MI_INDEX;BWIBBU的PE在第3欄
 - [🔴主線題材表(選股必看)](macro_themes.md) — 循環位置/已動未動/催化劑;飆股藏在復甦初期
