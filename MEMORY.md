@@ -85,7 +85,7 @@
 - [備份即刪](feedback_delete_temp_backups.md) / [讀完整](feedback_read_files_completely.md) / [git位置](reference_git_path_windows.md)
 
 ## 歸檔/資料夾
-- [🔴🔴🔴歸檔流程手冊+路徑地圖](reference_archive_workflow_0806.md) — 0812路徑全改;夾名兩空格;刪舊留新要先驗涵蓋;歸檔後刪該案記憶
+- [🔴🔴🔴歸檔流程手冊+路徑地圖](reference_archive_workflow_0806.md) — 0812路徑全改;夾名兩空格;刪舊留新要先驗涵蓋;歸檔後刪該案記憶;🆕工地母表版本管控【檔名一字不改·用哪版看他哪則訊息附的·同月份不同版不是重複檔】(■四十二)
 - [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 - [出差報帳](reference_travel_reimbursement.md) — 母夾+子夾;事由一律工地視察
 
