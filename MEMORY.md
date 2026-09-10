@@ -50,7 +50,7 @@
 - [🔴🔴🔴活件跨月要改計價月(0811)](feedback_billing_month_is_actual_month_0811.md) — 每月初跑 _跨月活件掃描.ps1
 - [🔴🔴🔴查核記錄版型(0811)](feedback_audit_txt_readable_format_0811.md) — 結論先行30行內看完;每個❌必附數字
 - [🔴🔴🔴交件前我方要做完(0811)](feedback_finish_my_own_work_before_showing_0811.md) — 我方未執行的不准丟給他看;工地缺件必須揭露
-- [🔴手寫註記要讀完](feedback_handwritten_notes_on_vouchers.md) — 『報支1560』=只認列1,560
+- [🔴🔴手寫註記要讀完+我方眼加≠事實](feedback_handwritten_notes_on_vouchers.md) — 『報支1560』=只認列1,560;🆕判讀模糊先懷疑自己的眼睛,兩個以上錨定指同一數字時我方眼加不得推翻、不准下修計價金額(■四十六)
 - [混凝土必查抽磅](reference_concrete_material_billing_format.md) — 抽磅效益分頁易漏
 - [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 只用他這輪給的
 - [🔴🔴給的欄位值不准縮寫(0813)](feedback_no_abbreviating_user_given_names_0813.md) — 「太長」不是理由;五個落點都要全名
