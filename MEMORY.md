@@ -26,7 +26,7 @@
 
 ## 請款/計價 規則（動手前一定要開對應檔）
 - [🔴🔴狀態同步與合計列](feedback_status_sync_and_totals_0806.md) — 一件改要同步四處;開審前先四查;資料夾是真相
-- [🔴🔴🔴行通表門檻四大類](feedback_hangtong_existence_gate.md) — 沒登記不予計價;115.08起①型直接不予;季別＝施作月
+- [🔴🔴🔴行通表門檻四大類](feedback_hangtong_existence_gate.md) — 沒登記不予計價;115.08起①型直接不予;季別＝施作月;🆕三綁定【第5點行通表句⇔第4點檢附行通表⇔夾內母檔】四大類件三者缺一即漏(■四十七)
 - [🔴🔴memo標準打法範本](reference_billing_memo_standard_template.md) — 八行固定結構;檢附看角色不看抬頭
 - [🔴🔴🔴memo第3點依工項性質分流(0824)](reference_memo_item3_by_work_nature_0824.md) — 判準=數字有無現成出處;另見[PO/SC分流](reference_memo_item3_po_vs_sc.md)
 - [🔴🔴🔴問題清單分頁制度](feedback_issue_list_sheet_workflow_0803.md) — 問題總表在141A計價本第3分頁,新題續編C53
