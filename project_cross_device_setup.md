@@ -67,3 +67,16 @@ metadata:
 - **內容還救得回來**：被刪的三段在 269d12c5 的 transcript heredoc 裡是全文；
   `選股逐檔明細_1150826.txt` 的來源 `blocks0826.txt`(88KB) 還在該 session 的 scratchpad。
   🔴 但那是別的 session 刻意刪的，**未經使用者裁示不要自己還原**。
+
+## 🔴 手機（claude.ai/code 雲端）能做／不能做（2026-09-11 實查）
+判準＝**資料在帳號／雲端，還是在這台電腦**。
+
+- ✅ **能做**：Google 行事曆／Gmail／Drive——工具名 `mcp__claude_ai_*` ＝綁帳號的連接器，實查本機 `.claude.json` 只設了 playwright，這些不在本機，所以換哪台都在；記憶 repo 全部檔案（待辦清單、規則手冊）；一般問答與上網查資料。
+- ❌ **不能做**：任何本機檔——`桌面\計價本`、修改單本、`Downloads\工地\`、`數字清單.xlsx` → **請款核對／修改單／入預算／歸檔手機一律做不了**；也跑不了 PowerShell 與 Excel COM。
+- ❌ **選股不能做，兩個獨立原因**：①流程正本 `選股說明.txt`(79KB)、`選股對帳紀錄.txt`(540KB) 只在 `Downloads\agent\計價回測工具\`，repo 沒收 → 手機拿不到，沒對帳段＝流程沒跑完；②雲端 egress 封鎖 TWSE／Yahoo／stooq／鉅亨 → 抓不到行情（見 [[feedback_no_standalone_artifacts]]）。①納入 repo 可解，②解不了；真要讓手機能選股只能走看盤台那套兩段式（本機排程抓資料推 repo，雲端只讀 repo 算）。
+- 🔴 **出國期間只有手機**（如 2026/09/17-09/27 巴黎）：行事曆＋待辦＋記憶可用，工地與選股全部停擺 → **出發前要把該批請款結掉**。
+
+## 行事曆（2026-09-11 起上線）
+- 主庫＝**Google 行事曆 e55663@gmail.com**（不是 iCloud）。理由：我碰得到 Google、碰不到 Apple；iPhone 加 Google 帳號後內建行事曆就看得到。
+- 🔴 iCloud 與 Google **不互通**，舊 iCloud 事件要手動匯（iCloud.com 公開行事曆→下載 .ics→Google 匯入→**匯完立刻取消公開勾選**）；iPhone 要把「預設行事曆」改成 Google 那本，否則新增的事還是掉進 iCloud。
+- 分流：**有日期時間→行事曆**（我排）；**沒時間但要做→`reference_personal_todo_list.md`**（每晚 20:30 雲端 routine 推播，見 [[project_personal_todo_push_setup_0714]]）；**待辦有了日期→從清單搬進行事曆，不兩邊重複**。
