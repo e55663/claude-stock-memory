@@ -7,7 +7,7 @@
 ## 投資
 - [🔴🔴🔴模擬部位≠實際持倉(0811)](feedback_simulated_vs_real_holdings_0811.md) — 第三次犯;沒他親口說過買進不得寫成持倉更不得給加減碼建議
 - [持倉與觀察](portfolio_watchlist.md) — 🔴唯一確認=2327國巨300股@607.19(0811);其餘全部未確認,2330/00981A/QQQM/NVDA只能標「上次確認為準」
-- [🔴國巨2327部位手冊(0813更新)](project_yageo_2327_position_0811.md) — 0813漲停662已進第一壓力帶650-700;型②超額4.9倍、20日到期8/28;保本611/停損575;外資8/11-8/12連兩日賣;佔飆桶額度76%;0811減半建議短期被打臉但理由未推翻
+- [🔴國巨2327部位手冊](project_yageo_2327_position_0811.md) — 700股@585;集中度超桶;箱底456.5/箱頂662;長抱不再勸賣
 - [🔴0826選股現況(接手先讀)](project_stock_state_0813.md) — 🔴檔名仍0813但內容已更新到0826收盤;🔴集中度閘門首次實際擋下航運連坐(萬海-9.09%/陽明-9.43%,但空運照漲=海運單一族群);🔴盤中名單只能當草稿(同日13:00的13檔→收盤16檔);模式C收盤16檔按距60日高分三堆;家數比3.10自算(官方14:30才出);距60日高-4.00%型③不觸發,下一筆觸發價42,967;兩桶都不出手。舊0818重點:🔴實算否定價量背離(量第68百分位/家數比1.197,別再拿8/13-14大量日當基準);穩桶續空手(季線上接深跌edge -0.90pp);距60日高-3.95%崩盤分批不觸發;模式C籌碼補正後21檔;🔴我點名「最乾淨」連四輪負貢獻已停用;🔴0050剔除國巨風險實算=零(市值第18名)
 - [🔴🔴🔴型②不套催化劑關+我的品質加篩是負貢獻(0818擴充)](feedback_type2_no_catalyst_needed_0813.md) — 純價格訊號只套關1關2;🔴0818第四次驗證病根擴散到模式C→定案「只給規則命中+逐檔揭露,不再點名最乾淨/高信心」;🔴另定案:因資料落後而標「揭露」的名單,隔日補齊必須回頭重跑並公告差異(0817模式C誤列2618/3189、漏列5檔)
 - [🔴🔴低PE≠超跌(0811)](reference_pe_compression_not_oversold_0811.md) — PE超高→個位數實際0檔;壓縮主因是8月財報季換分母;現在個位數PE的清一色循環股且這波在漲
@@ -25,7 +25,7 @@
 - [🔴主線題材表(選股必看)](macro_themes.md) — 循環位置/已動未動/催化劑;飆股藏在復甦初期
 - [全市場](reference_full_market_screen.md) / [評分](feedback_stock_selection_system.md) / [選股閘門](feedback_stock_completeness_gate.md) / [🔴🔴進場5題+他抓買點的方法+🆕0819術語禁縮寫](reference_stock_entry_checklist.md) 看前高✅實證(模式C骨幹)、看KD🟡20/80已測edge僅+0.12pp不採用但交叉版未測;給進場點要翻成他的語言;🔴0819「你那些縮寫我都看不懂」=PE/PB/EPS/BPS/TTM第一次出現必附中文全名+白話一句,先講白話結論再放數字;規則0818就有我0819照樣違反 / [飆股洞察](feedback_flystock_lessons.md) / [集中度標註](feedback_concentration_flag_not_filter.md) / [無腦掛單](feedback_brainless_order_system.md)
 - [🔴策略庫(查表)](reference_stock_strategy_library.md) — 20大策略+書籍雷達+課程要點+風險等級表;正本=選股說明.txt優先
-- [框架完結](project_stock_framework_refactor.md) / [🔴🔴對帳制度+0818實績攤帳](project_stock_track_record.md) / [模擬倉(停用)](project_paper_trading.md) / [課程教材](reference_trading_course_source.md)
+- [框架實證戰績板](project_stock_framework_refactor.md) / [🔴🔴對帳制度+0818實績攤帳](project_stock_track_record.md) / [模擬倉(停用)](project_paper_trading.md) / [課程教材](reference_trading_course_source.md)
 - [分析師模板](feedback_stock_analyst_deep_dive.md) / [附股價時戳](feedback_always_show_price_with_timestamp.md) / [查法說日期](feedback_proactive_earnings_calendar.md) / [符號標反](reference_webfetch_price_sign_flip.md)
 - [Mac海選](feedback_mac_vs_windows_stock_selection.md) `full_market_scan.py`+T86 selectType=ALL / [重心是錢](user_money_first_focus.md) 從ROI給數字絕不掰
 - [0730崩盤留下的規則](project_market_crash_0730_state.md) — 🔴分批「至少過兩項」已於0807證偽作廢改深度刻度;2022-06型三項判定首次實測也判反(抓不到企業獲利面);反彈日不等於止穩+待跑80萬試算
