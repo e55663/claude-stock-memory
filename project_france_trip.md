@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: ae7d8384-da45-402c-8165-326541c3bb19
-  modified: 2026-09-01T14:15:54.124Z
+  modified: 2026-09-15T07:04:22.957Z
 ---
 
 ## 🔴🔴 2026/09/01 以 Notion 頁為準的現況（下面 06/19 逐日草案已作廢，別再引用）
@@ -17,6 +17,10 @@ Notion 頁「法國巴黎 2026.09.17」現在是正本，Playwright 可讀（已
 - Day8 9/24(四) 蒙馬特　Day9 9/25(五) 空/百貨退稅日　Day10 9/26(六) 07:00 到機場退稅、11:20 起飛　Day11 9/27(日) 06:50 到桃園
 🔴 他 2026/09/01 貼的背景寫「旅行 9/17～9/28」是錯的，已當面更正：實際巴黎在地 = 9/18 早上 ~ 9/26 早上，沒有 9/27、9/28。以後他再提 9/27/9/28 的巴黎活動一律先擋。
 🔴 頁面最底部有一個 toggle 標題「claude」＝我的專屬區塊，更新一律寫在裡面（新版本往下加，不要蓋掉舊的）。寫法：展開 toggle→游標放行尾→Enter 產生子區塊→`navigator.clipboard.writeText(markdown)`＋真實 Ctrl+V 貼上→**reload 頁面再讀一次驗證**（Notion 底部區塊有虛擬化，reload 後要先 scrollIntoView 才看得到子內容，不要因為讀到空的就以為沒存進去）。2026/09/01 實測這條路徑可靠，比 .fill()/type 可靠得多。
+🔴🔴 2026/09/15 更可靠的寫法：在已登入的 Notion 分頁裡用 browser_evaluate 呼叫 Notion 內部 API——讀用 `/api/v3/loadPageChunk`＋`syncRecordValues`（連收合的 toggle 子內容都讀得到），寫用 `/api/v3/saveTransactionsFanout`（set 建 block＋listBefore/listAfter 排位置），寫完用 syncRecordValues 讀回驗證。一次建 82 個 block 零失誤。spaceId 6d482174-edd0-4d6d-a137-78c525b8eee1。
+- 使用者的正本行程 header 已改名「看這邊行程」（不是 Claude 區塊）；比對行程一律用這段。
+- 已建子頁「✅ 巴黎打卡清單」（id 7098d883234e4818b5b7c79a9d1c52f9，放在「看這邊行程」正上方）：他 Google 地圖星號＋想去清單的巴黎點 70 個，照區域分十段 to_do，附 Google 地圖 ftid 連結，行程沒排的標 ⚠️。
+- Google 地圖清單讀法：Playwright 瀏覽器已登入他的 Google。一般清單攔 `entitylist/getlist` 回應（d[0][8] 為點，it[1][5] 座標、it[1][6] 兩段十進位轉 64 位元 hex＝ftid）；「已加星號」不走 getlist，要攔 `search?tbm=map` 並滾動面板。連結格式 `https://www.google.com/maps/place/?ftid=0x…:0x…` 實測可開。
 
 ## 🆕 2026/09/01 Loro Piana 購物研究（實查結果）
 - Paul Smith 官網 fr 站男裝 Loro Piana 分類共 15 件：**只有 1 件 Summer Time 羊毛絲格紋 Blazer（藍）€833（原價 €1,190，-30%）適合台灣**；其餘 14 件全是秋冬 Storm System（Harrington/Bomber €1,055–1,070、羊毛背心 €625、三層 Mac/可拆背心大衣 €1,435–1,490）。他記憶中的 Dream Tweed Blazer 已下架。
