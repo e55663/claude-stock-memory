@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: ae7d8384-da45-402c-8165-326541c3bb19
-  modified: 2026-09-15T08:08:19.778Z
+  modified: 2026-09-15T08:21:21.048Z
 ---
 
 ## 🔴🔴 2026/09/01 以 Notion 頁為準的現況（下面 06/19 逐日草案已作廢，別再引用）
@@ -19,7 +19,7 @@ Notion 頁「法國巴黎 2026.09.17」現在是正本，Playwright 可讀（已
 🔴 頁面最底部有一個 toggle 標題「claude」＝我的專屬區塊，更新一律寫在裡面（新版本往下加，不要蓋掉舊的）。寫法：展開 toggle→游標放行尾→Enter 產生子區塊→`navigator.clipboard.writeText(markdown)`＋真實 Ctrl+V 貼上→**reload 頁面再讀一次驗證**（Notion 底部區塊有虛擬化，reload 後要先 scrollIntoView 才看得到子內容，不要因為讀到空的就以為沒存進去）。2026/09/01 實測這條路徑可靠，比 .fill()/type 可靠得多。
 🔴🔴 2026/09/15 更可靠的寫法：在已登入的 Notion 分頁裡用 browser_evaluate 呼叫 Notion 內部 API——讀用 `/api/v3/loadPageChunk`＋`syncRecordValues`（連收合的 toggle 子內容都讀得到），寫用 `/api/v3/saveTransactionsFanout`（set 建 block＋listBefore/listAfter 排位置），寫完用 syncRecordValues 讀回驗證。一次建 82 個 block 零失誤。spaceId 6d482174-edd0-4d6d-a137-78c525b8eee1。
 - 使用者的正本行程 header 已改名「看這邊行程」（不是 Claude 區塊）；比對行程一律用這段。
-- 已建子頁「✅ 巴黎打卡清單」（id 7098d883234e4818b5b7c79a9d1c52f9，放在「看這邊行程」正上方）。🔴他要的結構＝照 Day 分（可收合標題），每天內分五段，標題固定＝「① 必去」「② 電影場景」「③ 吃的」「④ 買的」「⑤ 網美拍照點」（🔴他嫌「你地圖存的／我推薦／你點名的牌子／你行程有寫」這類字眼雜，一律不寫；頁首說明文字他自己刪了，別加回）；🥐甜點可頌、🍜河粉、💰便宜；③④⑤是我推薦，🔴不管那天排多滿都要推，他自己挑（「推薦的夠好我就會考慮」）。2026/09/15 版共 141 項。他點名的牌子：Polène、Alohas、Bonastre、Sœur、Lemaire、Chrome Hearts、A.P.C.、Les Ateliers Auguste（皆已放入）；Verafied 查不到、DeMellier 和 NOESI（米蘭包）巴黎查無實體店，全附 Google 地圖 ftid 連結，行程沒排標 ⚠️。改前先整頁讀回——他會自己動格式（例：把標題改成可收合）。
+- 已建子頁「✅ 巴黎打卡清單」（id 7098d883234e4818b5b7c79a9d1c52f9，放在「看這邊行程」正上方）。🔴他要的結構＝照 Day 分（可收合標題），🔴版型（09/15 定案）＝每天可收合標題 → 分類小標題 → Notion「簡單表格」兩欄「項目｜備註」（欄寬 120/200 免左右滑）；🔴他嫌 Notion 資料庫（工具列/視圖標籤/頁面圖示）雜、也不要分類混在同一表，別再用資料庫。每天內分五段，標題固定＝「① 必去」「② 電影場景」「③ 吃的」「④ 買的」「⑤ 網美拍照點」（🔴他嫌「你地圖存的／我推薦／你點名的牌子／你行程有寫」這類字眼雜，一律不寫；頁首說明文字他自己刪了，別加回）；🥐甜點可頌、🍜河粉、💰便宜；③④⑤是我推薦，🔴不管那天排多滿都要推，他自己挑（「推薦的夠好我就會考慮」）。2026/09/15 版共 141 項。他點名的牌子：Polène、Alohas、Bonastre、Sœur、Lemaire、Chrome Hearts、A.P.C.、Les Ateliers Auguste（皆已放入）；Verafied 查不到、DeMellier 和 NOESI（米蘭包）巴黎查無實體店，全附 Google 地圖 ftid 連結，行程沒排標 ⚠️。改前先整頁讀回——他會自己動格式（例：把標題改成可收合）。
 - Google 地圖清單讀法：Playwright 瀏覽器已登入他的 Google。一般清單攔 `entitylist/getlist` 回應（d[0][8] 為點，it[1][5] 座標、it[1][6] 兩段十進位轉 64 位元 hex＝ftid）；「已加星號」不走 getlist，要攔 `search?tbm=map` 並滾動面板。連結格式 `https://www.google.com/maps/place/?ftid=0x…:0x…` 實測可開。
 
 ## 🆕 2026/09/01 Loro Piana 購物研究（實查結果）
