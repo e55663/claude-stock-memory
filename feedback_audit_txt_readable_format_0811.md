@@ -1,6 +1,6 @@
 ---
 name: feedback_audit_txt_readable_format_0811
-description: "查核記錄.txt 一律用「結論先行＋30秒看懂＋逐項一行＋出處收後段」版型,不准再打文字牆;範本在 Downloads\\agent\\查核記錄_版型範本.txt"
+description: "查核記錄.txt 一律用「結論先行＋30秒看懂＋逐項一行＋出處收後段」版型,不准再打文字牆;範本在 Downloads\\agent\\查核記錄_版型範本.txt;併入:每夾必附查核記錄+寫計價本分頁前驗A4四件套"
 metadata: 
   node_type: memory
   type: feedback
@@ -37,4 +37,16 @@ metadata:
 **Why:** 使用者是唯一讀者，看不懂＝這份查核等於沒做；他明講看得很累。
 **How to apply:** 新建任何 查核記錄.txt 第一動就套範本；舊活件重打時順手改版。
 
-相關：[[feedback_per_case_audit_txt_and_sheet_target_0723]]、[[feedback_copy_friendly_plaintext]]、[[feedback_billing_month_is_actual_month_0811]]
+相關：（本檔下段）、[[feedback_copy_friendly_plaintext]]、[[feedback_billing_month_is_actual_month_0811]]
+
+## 🔴🔴【每夾必附查核記錄＋寫計價本分頁前必驗A4】（原 feedback_per_case_audit_txt_and_sheet_target_0723，115.09.15 併入）
+
+115.07.23 兩條規則，已寫進兩本計價本打法說明（141E A130/A132、141A A123/A125）：
+
+1. 🔴每夾必附查核記錄.txt（使用者原話「每個資料夾內都有查核紀錄很棒,我之後都要有」）：每一件請款/修改單整理夾都要有，不只問題案。內容＝打法說明逐條走的查核結果＋金額核對＋缺件/待裁示＋狀態歷程，狀態一改就更新。歸檔時查核記錄.txt**保留**跟著搬（查核軌跡）；要刪的是缺件標註txt＋夾名問題後綴（與[[feedback_problem_case_folder_with_note]]的「刪txt」指的是缺件說明類，不是查核記錄）。
+
+2. 🔴寫計價本分頁前必驗A4：祥欣案事故——計價本同廠商有多期分頁且名稱只差一個空格（「工地保全(祥欣)」#5 vs「工地保全 (祥欣)」#2），我用名稱regex找目標寫到#2舊分頁，B4歷史memo被蓋、無備份、歸檔夾也沒有根基請款單PDF＝**原文永久遺失**。規則：寫任何分頁前先讀A4確認期數＋計價月一致；同時改檔前自建備份（這次沒做才救不回）。#2分頁B4/K4已清空，重建文字需使用者核可（絕不掰）。
+
+**Why:** 第1條是使用者點名要的制度；第2條是真實資料毀損事故，代價已發生。
+
+**How to apply:** 開新案第一動建查核記錄.txt；狀態五處同步時txt一起改。寫Excel目標驗證**四件套**：A4期數驗證→改前備份→寫後回讀驗證→**格式與參照列比對**（字型/字號/框線四邊/對齊/列高，跟上一期或範本列逐項同；台泥B5案：7/15建列時就是12號無框線，我只改字回報「打好了」被使用者抓「框線格式為啥不一樣」——說「打好了」之前格式也要過）。修法＝參照列整列 Copy→PasteSpecial(xlPasteFormats)+RowHeight 同步，值不動。

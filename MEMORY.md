@@ -8,7 +8,7 @@
 - [🔴🔴私人資料警告](feedback_company_workspace_privacy_warning.md) — 碰個人財務/身分/健康先警告;密碼Token不得貼入
 - [🔴🔴🔴Claude與Codex共用](feedback_claude_codex_shared_workflow.md) — 正本=AGENTS.md＋CLAUDE.md;測到正確才算完成
 - [🔴換手交接](HANDOFF.md) — 接手先讀最新段;🔴只留5段,收尾＝驗收不是產出
-- [🔴🔴🔴核決層級別背對照表](reference_approval_authority_table.md) — 工地流程沒有執行副總;一律回K02-2原表看◎決;🆕機電項目一律會辦許惠國(會辦≠核決)
+- [🔴🔴🔴核決層級別背對照表](reference_approval_authority_table.md) — 回K02-2原表看◎決;工地流程無執行副總;機電會辦許惠國
 - [🔴🔴判斷要有根據](feedback_evidence_required_no_assumptions.md) — 該跑的資料當場跑;不能跨股票池借用
 - [🔴🔴🔴資料都在Downloads自己找](feedback_find_answers_in_downloads.md) — 找不到留空白,絕不寫「待使用者提供」
 - [🔴🔴閘門也要用在自己的memo](feedback_gate_applies_to_my_own_output.md) — 查別人100分查自己0分
@@ -16,7 +16,7 @@
 - [🔴🔴🔴只進不退,舊件不回頭改](feedback_rules_forward_only_no_retro_edit_0730.md) — 判準=還會不會再送出
 - [🔴🔴🔴他丟回改好的版本=隱含規則](feedback_user_edit_implies_rule_0730.md) — 逐字比對→反推通則→兩本+記憶同步→回測
 - [🔴🔴🔴記憶=手冊不是日誌](feedback_memory_manual_format_0805.md) — 新規則加進既有手冊,不開新檔;敘事快照一律砍
-- [🔴🔴🔴簽單抽點+❌未查不是放行理由](reference_signature_slip_sampling_rule_0804.md) — >20張抽MAX(20,N÷20);有❌不得進4.核准;🆕抽點只適用同型佐證附件,【發票/請款單/合約逐張逐份核不得抽樣】,合訂PDF先清點份數(■四十三)
+- [🔴🔴🔴簽單抽點+❌未查不是放行理由](reference_signature_slip_sampling_rule_0804.md) — >20張才抽點;發票/請款單/合約不抽樣(■四十三)
 - [🔴🔴查核要逐欄比對](feedback_scrutinize_not_just_open.md) — 「開過檔案」≠「查清楚」
 - [🔴判「尚未簽名」前放大看](feedback_signature_check_before_claiming_unsigned.md) — 手寫常斜寫跨線
 - [🔴🔴🔴重建檔案蓋掉他改好的版本](feedback_never_overwrite_user_edited_file.md) — 寫檔前比對SHA256;原地編輯不重建
@@ -26,12 +26,12 @@
 
 ## 請款/計價 規則（動手前一定要開對應檔）
 - [🔴🔴狀態同步與合計列](feedback_status_sync_and_totals_0806.md) — 一件改要同步四處;開審前先四查;資料夾是真相
-- [🔴🔴🔴行通表門檻四大類](feedback_hangtong_existence_gate.md) — 沒登記不予計價;115.08起①型直接不予;季別＝施作月;🆕三綁定【第5點行通表句⇔第4點檢附行通表⇔夾內母檔】四大類件三者缺一即漏(■四十七)
+- [🔴🔴🔴行通表門檻四大類](feedback_hangtong_existence_gate.md) — ①②型/非四類;季別＝施作月;三綁定(■四十七/四十八)
 - [🔴🔴memo標準打法範本](reference_billing_memo_standard_template.md) — 八行固定結構;檢附看角色不看抬頭
-- [🔴🔴🔴memo第3點依工項性質分流(0824)](reference_memo_item3_by_work_nature_0824.md) — 判準=數字有無現成出處;另見[PO/SC分流](reference_memo_item3_po_vs_sc.md)
+- [🔴🔴🔴memo第3點依工項性質分流(0824)](reference_memo_item3_by_work_nature_0824.md) — 判準=數字有無現成出處;含PO/SC分流+零用金只寫品名金額
 - [🔴🔴🔴問題清單分頁制度](feedback_issue_list_sheet_workflow_0803.md) — 問題總表在141A計價本第3分頁,新題續編C53
 - [🔴🔴🔴0803正確模式+計價本回測](feedback_billing_book_correct_mode_0803.md) — memo不放敘述段;期數只能同合約號內比
-- [🔴🔴總表待核/核定兩區](reference_billing_book_summary_layout_0803.md) — 141A/141E都已上線;🆕搬區/刪列必驗超連結一致性(錯指不報錯);🆕修改單本總表欄位錯位前三項自檢驗不到→動總表後必跑_修改單總表驗證.ps1(兩本都跑)
+- [🔴🔴總表待核/核定兩區](reference_billing_book_summary_layout_0803.md) — 搬區驗超連結;動修改單總表必跑驗證腳本
 - [🔴計價本格式鐵則](reference_billing_book_format_rules.md) — A/B/H必設公式,memo絕不打死純文字
 - [🔴🔴請款項目欄寫法](reference_billing_item_column_format.md) — 一項一行=議價基準
 - [🔴🔴🔴回測制度](feedback_backtest_discipline.md) — A層驗規則有寫/B層驗真的執行;每批另寫本輪專用回測
@@ -39,7 +39,6 @@
 - [廠商別名對照](reference_vendor_alias_gate_pass.md) — 德沃＝安達
 - [🔴數字走Excel掃描件當佐證](feedback_billing_cp_workflow_excel_first.md) — 先歸夾→一案案審→確認才動計價本
 - [🔴🔴實作實算≠超約+首期>20萬提議價](feedback_asbuilt_billing_negotiation_reminder_0723.md)
-- [🔴🔴每夾必附查核記錄+寫前驗A4](feedback_per_case_audit_txt_and_sheet_target_0723.md) — 分頁名差一空格會蓋掉歷史memo
 - [自辦vs代扣](feedback_self_vs_deduct_contract.md) — 扣自己=扣款,扣別家=加扣
 - [🔴PO=合約 vs SC=零星](reference_po_vs_sc_pricing.md) — PO超出要追加;SC新項目要議價
 - [🔴🔴PO合約付款辦法逐期核](reference_po_contract_payment_terms_check_0807.md) — 分段比例與保留款%逐期核
@@ -48,9 +47,9 @@
 - [🔴🔴附件查檢手冊](reference_attachment_checklist_0806.md) — 每件都要列查檢段;五件組+工種速查;機具必COMS
 - [🔴🔴請款太晚要確實稽核](feedback_late_billing_alert.md) — >3個月打延遲句,獨立成段
 - [🔴🔴🔴活件跨月要改計價月(0811)](feedback_billing_month_is_actual_month_0811.md) — 每月初跑 _跨月活件掃描.ps1
-- [🔴🔴🔴查核記錄版型(0811)](feedback_audit_txt_readable_format_0811.md) — 結論先行30行內看完;每個❌必附數字
+- [🔴🔴🔴查核記錄版型+每夾必附+寫前驗A4](feedback_audit_txt_readable_format_0811.md) — 結論先行30行內看完;每個❌必附數字;分頁名差一空格會蓋掉歷史memo
 - [🔴🔴🔴交件前我方要做完(0811)](feedback_finish_my_own_work_before_showing_0811.md) — 我方未執行的不准丟給他看;工地缺件必須揭露
-- [🔴🔴手寫註記要讀完+我方眼加≠事實](feedback_handwritten_notes_on_vouchers.md) — 『報支1560』=只認列1,560;🆕判讀模糊先懷疑自己的眼睛,兩個以上錨定指同一數字時我方眼加不得推翻、不准下修計價金額(■四十六)
+- [🔴🔴手寫註記要讀完+我方眼加≠事實](feedback_handwritten_notes_on_vouchers.md) — 報支金額;錨定優先於眼加(■四十六)
 - [混凝土必查抽磅](reference_concrete_material_billing_format.md) — 抽磅效益分頁易漏
 - [memo逐字打不准自己改](feedback_verbatim_memo_no_self_edit.md) — 只用他這輪給的
 - [🔴🔴給的欄位值不准縮寫(0813)](feedback_no_abbreviating_user_given_names_0813.md) — 「太長」不是理由;五個落點都要全名
@@ -72,7 +71,7 @@
 - [🔴141E執行預算進行中](project_141E_execution_budget_0806.md) — 七個疑義未解;缺大包合約+戶數
 
 ## 修改單/入預算
-- [🔴🔴🔴修改單memo四型決策樹+括弧選詞](reference_pure_budget_memo_format_0807.md) — 甲乙丙丁戊五型;括弧回K02-2挑詞;🆕定版一落地【當天要掃全部活件同型件】不是只改那一件(■四十二);🆕跟前次修改單合計→成本取採購議價後合約成本+逐件列金額格式(■四十九)
+- [🔴🔴🔴修改單memo決策樹+括弧選詞](reference_pure_budget_memo_format_0807.md) — 判型看起因;既有單價定義;有無合約分流(■四十~五十一)
 - [🔴🔴🔴修改單邏輯＝請款單邏輯](feedback_change_order_follows_billing_logic_0807.md) — 動手前兩份打法說明都要讀
 - [修改單範本](reference_change_order_template.md) — 填7格→A7自動組裝,署名羅慶人
 - [碳費基金範式](reference_carbon_fee_change_order.md) — 非業變/淨0
@@ -85,8 +84,8 @@
 - [備份即刪](feedback_delete_temp_backups.md) / [讀完整](feedback_read_files_completely.md) / [git位置](reference_git_path_windows.md)
 
 ## 歸檔/資料夾
-- [🔴🔴🔴歸檔流程手冊+路徑地圖](reference_archive_workflow_0806.md) — 0812路徑全改;夾名兩空格;刪舊留新要先驗涵蓋;歸檔後刪該案記憶;🆕工地母表版本管控【檔名一字不改·用哪版看他哪則訊息附的·同月份不同版不是重複檔】(■四十二)
-- [報問題附出處](feedback_flag_problems_with_source.md) / [來源檔別改](feedback_flag_source_errors_vendor_by_invoice.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
+- [🔴🔴🔴歸檔流程手冊+路徑地圖](reference_archive_workflow_0806.md) — 路徑地圖;刪舊留新驗涵蓋;母表版本管控(■四十二)
+- [報問題附出處+來源檔別改](feedback_flag_problems_with_source.md) / [純文字](feedback_copy_friendly_plaintext.md) / [要快](feedback_work_faster_batch_operations.md) / [寫todo](feedback_batch_todo_workflow.md)
 - [出差報帳](reference_travel_reimbursement.md) — 母夾+子夾;事由一律工地視察
 
 ## 進行中（🔴 批次不再一天開一本，全部寫進這一個檔）

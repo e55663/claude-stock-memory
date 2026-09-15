@@ -24,4 +24,4 @@ metadata:
 
 **官網已核卡**:星展eco/國泰CUBE/玉山Unicard/玉山UBear/永豐DAWHO/永豐SPORT/第一iLEO/中信LINEPay/中信ALLME/富邦Costco/台新Richart/凱基魔BUY(冷凍)/彰銀my購/星展饗樂。**參考待核**:富邦J/JU/momo、聯邦吉鶴/賴點、國泰蝦皮、合庫i享樂、中信foodpanda/英雄聯盟。
 
-備份 `Downloads\數字清單_備份*.xlsx`、`信用卡PPT-2022_備份*.pptx`(2026/7/1建),PPT做完+使用者確認後刪。相關:[[project_budget_spreadsheet]] [[project_france_trip]] [[feedback_flag_source_errors_vendor_by_invoice]]
+備份 `Downloads\數字清單_備份*.xlsx`、`信用卡PPT-2022_備份*.pptx`(2026/7/1建),PPT做完+使用者確認後刪。相關:[[project_budget_spreadsheet]] [[project_france_trip]] [[feedback_flag_problems_with_source]]
