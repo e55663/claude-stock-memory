@@ -167,3 +167,8 @@ Platinum Global Dining Collection 巴黎名單(部分,共約159間,完整名單�
 
 訂位方式:打給卡片背面的Platinum Travel & Dining Concierge,或用Resy App的「Global Dining Access」功能(需綁卡確認資格),憑特殊保留席位訂位,熱門名廚餐廳(Guy Savoy/Le Meurice)還是建議越早訂越好。
 - 來源:[Amex Global Dining Program官網](https://global.americanexpress.com/card-benefits/detail/platinum-dining-program/platinum)、[Platinum Dining 巴黎清單](https://platinumdining.caffeinesoftware.com/france/paris)、[Amex法國官網美食頁](https://www.americanexpress.com/fr/benefices/the-platinum-card/gastronomie.html)
+
+## 🆕 2026/09/16 已建子頁「🛡️ 保險清單」
+- block id `8c867587-da12-4487-b00c-6c133dd7d0ee`，掛在正本頁 root content index 2（緊接「✅ 巴黎打卡清單」之後）。版型同打卡清單：sub_header+toggleable 五大段 → sub_sub_header 項目名 → bulleted_list／to_do。共 89 blocks，已逐層讀回驗證。
+- 五段＝①已經有的（台新 Richart 卡附贈，逐項寫保額＋什麼狀況才賠＋要什麼單據）②還需要買的三項＋投保規格 to_do ③不用買、不用辦 ④出事當下怎麼做 ⑤待確認。
+- 🔴 一次 saveTransactionsFanout 送 178 ops（89 blocks）成功，零失誤；驗證法＝syncRecordValues 遞迴 walk 比對實際文字。
