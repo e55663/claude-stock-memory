@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 365bbf1a-11d3-4cf1-8927-79cb45fcc87f
-  modified: 2026-08-06T03:13:21.040Z
+  modified: 2026-09-16T00:59:21.633Z
 ---
 
 # 跨裝置同步（Windows／Mac／手機雲端）
@@ -75,6 +75,14 @@ metadata:
 - ❌ **不能做**：任何本機檔——`桌面\計價本`、修改單本、`Downloads\工地\`、`數字清單.xlsx` → **請款核對／修改單／入預算／歸檔手機一律做不了**；也跑不了 PowerShell 與 Excel COM。
 - ❌ **選股不能做，兩個獨立原因**：①流程正本 `選股說明.txt`(79KB)、`選股對帳紀錄.txt`(540KB) 只在 `Downloads\agent\計價回測工具\`，repo 沒收 → 手機拿不到，沒對帳段＝流程沒跑完；②雲端 egress 封鎖 TWSE／Yahoo／stooq／鉅亨 → 抓不到行情（見 [[feedback_no_standalone_artifacts]]）。①納入 repo 可解，②解不了；真要讓手機能選股只能走看盤台那套兩段式（本機排程抓資料推 repo，雲端只讀 repo 算）。
 - 🔴 **出國期間只有手機**（如 2026/09/17-09/27 巴黎）：行事曆＋待辦＋記憶可用，工地與選股全部停擺 → **出發前要把該批請款結掉**。
+
+## 🔴 Remote Control：手機可以操作本機檔（2026-09-16 查官方文件）
+上面那段「手機碰不到本機檔」的前提是**雲端 session**。改用 **Remote Control** 就碰得到——它是把手機/網頁當成「這台電腦上那個 session 的螢幕」，執行與檔案存取全在本機，所以請款核對、修改單、入預算、選股（本機有正本與 TWSE 連線）**手機都能跑**。
+- 成立條件（缺一不可）：①電腦開機且醒著、連得上網 ②終端機視窗不能關，`claude` 程序要活著（關掉＝幾秒內顯示 offline）③用 claude.ai 帳號登入（Pro/Max，API key 不支援）④在專案目錄跑過一次 claude 接受 workspace trust（家目錄不算）⑤`ANTHROPIC_BASE_URL` 不可指向非官方端點；`DISABLE_TELEMETRY`／`DO_NOT_TRACK`／`CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC`／`DISABLE_GROWTHBOOK` 任一有設都會讓功能旗標查不到而失效。
+- 啟動三選一：`claude remote-control`（server 模式，可顯示 QR，Ctrl+C 停掉後同目錄 `claude remote-control -c` 可接回）／`claude --remote-control`（互動＋遠端）／session 內打 `/remote-control`。要每個 session 都自動連＝`/config` 開「Enable Remote Control for all sessions」或 settings.json 設 `remoteControlAtStartup: true`。
+- 手機端：Claude App 下排 Code 分頁或 claude.ai/code，找有電腦圖示＋綠點的 session；權限提示會轉發到手機按。
+- 睡眠/斷網會自動重連，但**關機、Windows Update 重開機、跳電就叫不醒**（遠端無法喚醒本機）。長期離線用前要先 `powercfg /change standby-timeout-ac 0` 之類關睡眠＋暫停自動更新。
+- 出國情境（如 2026/09/17 巴黎）：電腦留家裡開著才有這條路；沒開＝退回雲端 session 的限制。
 
 ## 行事曆（2026-09-11 起上線）
 - 主庫＝**Google 行事曆 e55663@gmail.com**（不是 iCloud）。理由：我碰得到 Google、碰不到 Apple；iPhone 加 Google 帳號後內建行事曆就看得到。
