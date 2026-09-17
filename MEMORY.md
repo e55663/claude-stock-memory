@@ -71,7 +71,7 @@
 - [🔴141E執行預算進行中](project_141E_execution_budget_0806.md) — 七個疑義未解;缺大包合約+戶數
 
 ## 修改單/入預算
-- [🔴🔴🔴修改單memo決策樹+括弧選詞](reference_pure_budget_memo_format_0807.md) — 判型看起因;既有單價定義;有無合約分流(■四十~五十一)
+- [🔴🔴🔴修改單memo決策樹+括弧選詞](reference_pure_budget_memo_format_0807.md) — 判型看起因;既有單價定義;有無合約分流(■四十~五十四);結案PDF成控欄=定版,業變第一點不寫利潤率
 - [🔴🔴🔴修改單邏輯＝請款單邏輯](feedback_change_order_follows_billing_logic_0807.md) — 動手前兩份打法說明都要讀
 - [修改單範本](reference_change_order_template.md) — 填7格→A7自動組裝,署名羅慶人
 - [碳費基金範式](reference_carbon_fee_change_order.md) — 非業變/淨0
