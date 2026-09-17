@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: ae7d8384-da45-402c-8165-326541c3bb19
-  modified: 2026-09-15T10:00:19.608Z
+  modified: 2026-09-17T08:30:37.786Z
 ---
 
 ## 🔴🔴 2026/09/01 以 Notion 頁為準的現況（下面 06/19 逐日草案已作廢，別再引用）
@@ -167,6 +167,10 @@ Platinum Global Dining Collection 巴黎名單(部分,共約159間,完整名單�
 
 訂位方式:打給卡片背面的Platinum Travel & Dining Concierge,或用Resy App的「Global Dining Access」功能(需綁卡確認資格),憑特殊保留席位訂位,熱門名廚餐廳(Guy Savoy/Le Meurice)還是建議越早訂越好。
 - 來源:[Amex Global Dining Program官網](https://global.americanexpress.com/card-benefits/detail/platinum-dining-program/platinum)、[Platinum Dining 巴黎清單](https://platinumdining.caffeinesoftware.com/france/paris)、[Amex法國官網美食頁](https://www.americanexpress.com/fr/benefices/the-platinum-card/gastronomie.html)
+
+## 🆕 2026/09/17 鞋子（限帶三雙＋想晨跑）
+- 他鞋櫃約43雙。實穿回饋：XT-6、990v5 上班久穿好穿；UltraBOOST 太軟腳底膩；日本暴走時 Track/XT-6 累了換 Ghost Sprint(adidas) 反而舒服。🔴偏好＝有緩震但穩定有支撐，討厭久站鞋底過軟下陷（Bondi/UltraBOOST 類不推）。
+- 建議三雙：XT-6（晨跑＋雨天，濕石板抓地）／990v5（走整天主力）／Ghost Sprint（穿搭＋換腳感）。
 
 ## 🆕 2026/09/16 已建子頁「🛡️ 保險清單」
 - block id `8c867587-da12-4487-b00c-6c133dd7d0ee`，掛在正本頁 root content index 2（緊接「✅ 巴黎打卡清單」之後）。版型同打卡清單：sub_header+toggleable 五大段 → sub_sub_header 項目名 → bulleted_list／to_do。共 89 blocks，已逐層讀回驗證。
